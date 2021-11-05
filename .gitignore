@@ -1,0 +1,42 @@
+# Temporary folders #
+#####################
+temp
+template
+output
+input-cache
+fsh-generated
+
+# Don't commit this because it's so large #
+###########################################
+validator_cli.jar
+publisher.jar
+
+# Windows generated files #
+###########################
+Thumbs.db
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.idea
+
+# backup files #
+################
+*.bak
+
+# IDE folders and files
+.vscode
+*.code-workspace
+
+# nodejs files/directories
+package.json
+package-lock.json
+node_modules/
+
+# cache folders
+__pycache__/
+
+# non-project folders
+logs/
+notebooks/
