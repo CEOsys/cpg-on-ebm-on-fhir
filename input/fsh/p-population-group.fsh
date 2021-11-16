@@ -1,6 +1,6 @@
-Profile: PICOPopulation
+Profile: PICOPopulationGroup
 Parent: Group
-Id: pico-population
+Id: pico-population-group
 Title: "PICO Population"
 Description: ""
 * type 1..1
@@ -24,7 +24,7 @@ Description: ""
     * code 1.. MS
 
 Instance: pico-population
-InstanceOf: pico-population
+InstanceOf: pico-population-group
 Usage: #example
 Title: "pico-population"
 Description: ""

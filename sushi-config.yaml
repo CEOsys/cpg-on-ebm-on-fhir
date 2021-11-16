@@ -3,11 +3,11 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: cpg.ceosys.de
-canonical: https://www.netzwerk-universitätsmedizin.de/fhir
+canonical: https://www.ceosys.de
 name: Clinical Guideline Recommendations
 status: draft
 version: 0.1.0
-fhirVersion: 4.6.0
+fhirVersion: 4.6.0-ci
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:

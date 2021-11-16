@@ -1,0 +1,631 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://data.cochrane.org/ontologies/pico/",
+  "version": "NA",
+  "name": "http://data.cochrane.org/ontologies/pico/",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Cochrane",
+  "description": "The PICO ontology describes questions in evidence based healthcare with the intention of supporting the publishing of evidence as linked data.",
+  "valueSet": "http://data.cochrane.org/ontologies/pico/?vs",
+  "hierarchyMeaning": "is-a",
+  "compositional": false,
+  "versionNeeded": false,
+  "content": "complete",
+  "count": 26,
+  "filter": [
+    {
+      "code": "root",
+      "operator": [
+        "="
+      ],
+      "value": "True or false."
+    },
+    {
+      "code": "deprecated",
+      "operator": [
+        "="
+      ],
+      "value": "True or false."
+    },
+    {
+      "code": "imported",
+      "operator": [
+        "="
+      ],
+      "value": "True or false"
+    }
+  ],
+  "property": [
+    {
+      "code": "parent",
+      "description": "Parent codes.",
+      "type": "code"
+    },
+    {
+      "code": "imported",
+      "description": "Indicates if the concept is imported from another code system.",
+      "type": "boolean"
+    },
+    {
+      "code": "root",
+      "description": "Indicates if this concept is a root concept (i.e. Thing is equivalent or a direct parent)",
+      "type": "boolean"
+    },
+    {
+      "code": "deprecated",
+      "description": "Indicates if this concept is deprecated.",
+      "type": "boolean"
+    }
+  ],
+  "concept": [
+    {
+      "code": "Age",
+      "display": "Age",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "InterventionProvider",
+      "display": "InterventionProvider",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Dose",
+      "display": "Dose",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "AssessmentScale",
+      "display": "AssessmentScale",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Treatment",
+      "display": "Treatment",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "InterventionRationale",
+      "display": "InterventionRationale",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Setting",
+      "display": "Setting",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Thing",
+      "display": "Thing",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "root",
+          "valueBoolean": true
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Outcome",
+      "display": "Outcome",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Schedule",
+      "display": "Schedule",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "OutcomeDomain",
+      "display": "OutcomeDomain",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "InterventionClassification",
+      "display": "Intervention Classification",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "PICO",
+      "display": "PICO",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Intervention",
+      "display": "Intervention",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "OutcomeClassification",
+      "display": "OutcomeClassification",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Population",
+      "display": "Population",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "OutcomeGroup",
+      "display": "OutcomeGroup",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "AppliedIntervention",
+      "display": "AppliedIntervention",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "AggregationMethod",
+      "display": "AggregationMethod",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Sex",
+      "display": "Sex",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "SocialContext",
+      "display": "SocialContext",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "InterventionGroup",
+      "display": "InterventionGroup",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Duration",
+      "display": "Duration",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "ModeOfDelivery",
+      "display": "ModeOfDelivery",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "Condition",
+      "display": "Condition",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "code": "SpecificMetric",
+      "display": "SpecificMetric",
+      "property": [
+        {
+          "code": "imported",
+          "valueBoolean": false
+        },
+        {
+          "code": "parent",
+          "valueCode": "Thing"
+        },
+        {
+          "code": "root",
+          "valueBoolean": false
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": false
+        }
+      ]
+    }
+  ]
+}

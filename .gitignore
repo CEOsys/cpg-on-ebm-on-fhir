@@ -25,6 +25,8 @@ Thumbs.db
 ################
 *.bak
 
+
+
 # IDE folders and files
 .vscode
 *.code-workspace

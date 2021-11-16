@@ -1,0 +1,411 @@
+@prefix : <http://data.cochrane.org/ontologies/core/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://data.cochrane.org/ontologies/core/> .
+
+<http://data.cochrane.org/ontologies/core/> rdf:type owl:Ontology ;
+                                             <http://purl.org/dc/elements/1.1/abstract> """The Cochrane Core ontology describes the entities and concepts that exist in the domain of evidence based healthcare.
+    It is used for the construction of the Cochrane Linked Data Vocabulary containing some 400k terms including Interventions (Drugs, Procedures etc), Populations (Age, Sex, Condition), and clinical Outcomes."""@en ;
+                                             <http://purl.org/dc/elements/1.1/creator> "Chris Mavergames" ,
+                                                                                       "Julian Everett" ,
+                                                                                       "Lorne Becker" ,
+                                                                                       "Paul Wilton" ,
+                                                                                       "Silver Oliver" ;
+                                             <http://purl.org/dc/elements/1.1/publisher> "Cochrane" ;
+                                             <http://purl.org/dc/terms/created> "2014-02-06"^^xsd:date ;
+                                             <http://purl.org/dc/terms/description> "The Cochrane Core ontology describes the entities and concepts that exist in the domain of evidence based healthcare."@en ;
+                                             <http://purl.org/dc/terms/modified> "2019-09-06"^^xsd:date ;
+                                             <http://purl.org/dc/terms/rights> "Copyright Cochrane 2020. Creative Commons License: CC BY-NC-ND : Attribution-NonCommercial-NoDerivs : https://creativecommons.org/licenses/by-nc-nd/4.0"@en ;
+                                             <http://purl.org/dc/terms/title> "Cochrane Core Vocabulary Ontology"@en ;
+                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "cc" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.cochrane.org/ontologies/core/" ;
+                                             <http://schema.org/image> "https://data.cochrane.org/ontologies/pico/PICO-ontology.png" ;
+                                             rdfs:comment "The Cochrane Core ontology describes the entities and concepts that exist in the domain of evidence based healthcare."@en ;
+                                             owl:versionInfo "2.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://data.cochrane.org/ontologies/core/label
+:label rdf:type owl:AnnotationProperty ;
+       rdfs:subPropertyOf rdfs:label .
+
+
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#alternateLabel
+rdfs:alternateLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#longLabel
+rdfs:longLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#shortLabel
+rdfs:shortLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://data.cochrane.org/ontologies/core/broaderConcept
+:broaderConcept rdf:type owl:ObjectProperty ;
+                rdfs:domain :Concept ;
+                rdfs:range :Concept ;
+                rdfs:comment "Relates a Concept to a broader one in the same concept scheme."@en ;
+                rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                rdfs:label "broaderConcept"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/equivalentConcept
+:equivalentConcept rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Concept ;
+                   rdfs:range :Concept ;
+                   rdfs:comment "Relates a Concept to an equivalent one."@en ;
+                   rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                   rdfs:label "equivalentConcept"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/inCategory
+:inCategory rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :broaderConcept ;
+            rdfs:domain :Concept ;
+            rdfs:range :AppliedIntervention ;
+            rdfs:comment "Relates an intervention to an intervention category."@en ;
+            rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+            rdfs:label "inCategory"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/inConceptScheme
+:inConceptScheme rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Concept ;
+                 rdfs:range :ConceptScheme ;
+                 rdfs:comment "Relates a Concept to its ConceptScheme"@en ;
+                 rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                 rdfs:label "inConceptScheme"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/narrowerConcept
+:narrowerConcept rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Concept ;
+                 rdfs:range :Concept ;
+                 rdfs:comment "Relates a Concept to a narrower one in the same concept scheme."@en ;
+                 rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                 rdfs:label "narrowerConcept"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://data.cochrane.org/ontologies/core/alternateLabel
+:alternateLabel rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Thing ;
+                rdfs:range rdf:langString ;
+                rdfs:alternateLabel "alternateLabel"@en ;
+                rdfs:comment "The alternate label or synonym of something."@en ;
+                rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> .
+
+
+###  http://data.cochrane.org/ontologies/core/label
+:label rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Thing ;
+       rdfs:range rdf:langString .
+
+
+###  http://data.cochrane.org/ontologies/core/lastModifiedDate
+:lastModifiedDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Concept ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "The date/time a concept was last modified (workflow/provenance)."@en ;
+                  rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                  rdfs:label "lastModifiedDate"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/longLabel
+:longLabel rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Thing ;
+           rdfs:range rdf:langString ;
+           rdfs:comment "The long label of something."@en ;
+           rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+           rdfs:longLabel "longLabel"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/modifiedBy
+:modifiedBy rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Concept ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The agent that modified the concept (workflow/provenance)."@en ;
+            rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+            rdfs:label "modifiedBy"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/shortLabel
+:shortLabel rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Thing ;
+            rdfs:range rdf:langString ;
+            rdfs:comment "The short label of something."@en ;
+            rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+            rdfs:shortLabel "shortLabel"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://data.cochrane.org/ontologies/core/Age
+:Age rdf:type owl:Class ;
+     rdfs:subClassOf :Concept ;
+     rdfs:comment "A Age of some defined population."@en ;
+     rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+     rdfs:label "Age"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/AggregationMethod
+:AggregationMethod rdf:type owl:Class ;
+                   rdfs:subClassOf :Concept ;
+                   rdfs:comment "An Aggregation method used in defining an outcome."@en ;
+                   rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                   rdfs:label "AggregationMethod"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/AppliedIntervention
+:AppliedIntervention rdf:type owl:Class ;
+                     rdfs:subClassOf :Concept ;
+                     rdfs:comment "Am applied intervention used to treat some condition"@en ;
+                     rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                     rdfs:label "AppliedIntervention"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/AssessmentScale
+:AssessmentScale rdf:type owl:Class ;
+                 rdfs:subClassOf :Concept ;
+                 rdfs:comment "An AssessmentScale that an outcome is measured against."@en ;
+                 rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                 rdfs:label "AssessmentScale"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Concept
+:Concept rdf:type owl:Class ;
+         rdfs:subClassOf :Thing ;
+         rdfs:comment "A vocabulary concept"@en ;
+         rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+         rdfs:label "Concept"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/ConceptScheme
+:ConceptScheme rdf:type owl:Class ;
+               rdfs:subClassOf :Thing ;
+               rdfs:comment "A scheme that a concept exists within"@en ;
+               rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+               rdfs:label "ConceptScheme"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Condition
+:Condition rdf:type owl:Class ;
+           rdfs:subClassOf :Concept ;
+           rdfs:comment "A Condition of some defined population."@en ;
+           rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+           rdfs:label "Condition"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf :Material ;
+        rdfs:comment "A Device used as intervention"@en ;
+        rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+        rdfs:label "Device"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/DeviceCategory
+:DeviceCategory rdf:type owl:Class ;
+                rdfs:subClassOf :InterventionCategory ;
+                rdfs:comment "A category or class of Device"@en ;
+                rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                rdfs:label "DeviceCategory"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Drug
+:Drug rdf:type owl:Class ;
+      rdfs:subClassOf :Material ;
+      rdfs:comment "A Drug used as intervention"@en ;
+      rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+      rdfs:label "Drug"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/DrugCategory
+:DrugCategory rdf:type owl:Class ;
+              rdfs:subClassOf :InterventionCategory ;
+              rdfs:comment "A category or class of drug"@en ;
+              rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+              rdfs:label "DrugCategory"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/InterventionCategory
+:InterventionCategory rdf:type owl:Class ;
+                      rdfs:subClassOf :AppliedIntervention ;
+                      rdfs:comment "A category or class of applied intervention"@en ;
+                      rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                      rdfs:label "InterventionCategory"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/InterventionClassification
+:InterventionClassification rdf:type owl:Class ;
+                            rdfs:subClassOf :Concept ;
+                            rdfs:comment "The classification of an intervention."@en ;
+                            rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                            rdfs:label "InterventionClassification"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/InterventionProvider
+:InterventionProvider rdf:type owl:Class ;
+                      rdfs:subClassOf :Concept ;
+                      rdfs:comment "Some agent that provides or delivers an intervention."@en ;
+                      rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                      rdfs:label "InterventionProvider"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/InterventionRationale
+:InterventionRationale rdf:type owl:Class ;
+                       rdfs:subClassOf :Concept ;
+                       rdfs:comment "The rationale for providing an intervention."@en ;
+                       rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                       rdfs:label "InterventionRationale"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Material
+:Material rdf:type owl:Class ;
+          rdfs:subClassOf :AppliedIntervention ;
+          rdfs:comment "A material used as intervention"@en ;
+          rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+          rdfs:label "Material"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/ModeOfDelivery
+:ModeOfDelivery rdf:type owl:Class ;
+                rdfs:subClassOf :Concept ;
+                rdfs:comment "The mechanism by which an intervention is delivered."@en ;
+                rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                rdfs:label "ModeOfDelivery"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/OutcomeClassification
+:OutcomeClassification rdf:type owl:Class ;
+                       rdfs:subClassOf :Concept ;
+                       rdfs:comment "The classification of an outcome."@en ;
+                       rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                       rdfs:label "OutcomeClassification"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Procedure
+:Procedure rdf:type owl:Class ;
+           rdfs:subClassOf :AppliedIntervention ;
+           rdfs:comment "A Procedure used as intervention"@en ;
+           rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+           rdfs:label "Procedure"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/ProcedureCategory
+:ProcedureCategory rdf:type owl:Class ;
+                   rdfs:subClassOf :InterventionCategory ;
+                   rdfs:comment "A category or class of procedure"@en ;
+                   rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                   rdfs:label "ProcedureCategory"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Setting
+:Setting rdf:type owl:Class ;
+         rdfs:subClassOf :Concept ;
+         rdfs:comment "The setting in which an intervention is delivered (eg clininc, hospital, at home)."@en ;
+         rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+         rdfs:label "Setting"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Sex
+:Sex rdf:type owl:Class ;
+     rdfs:subClassOf :Concept ;
+     rdfs:comment "A Sex of some defined population."@en ;
+     rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+     rdfs:label "Sex"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/SpecificMetric
+:SpecificMetric rdf:type owl:Class ;
+                rdfs:subClassOf :Concept ;
+                rdfs:comment "A specific metric used in defining an outcome."@en ;
+                rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+                rdfs:label "SpecificMetric"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Thing
+:Thing rdf:type owl:Class ;
+       rdfs:comment "A Thing"@en ;
+       rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+       rdfs:label "Thing"@en .
+
+
+###  http://data.cochrane.org/ontologies/core/Treatment
+:Treatment rdf:type owl:Class ;
+           rdfs:subClassOf :Concept ;
+           rdfs:comment "A Treatment some population is undergoing."@en ;
+           rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+           rdfs:label "Treatment"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:label rdfs:comment "The label of something."@en ;
+       rdfs:isDefinedBy <http://data.cochrane.org/ontologies/core/> ;
+       rdfs:label "label"@en .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
