@@ -9,15 +9,21 @@ Description: ""
 * entry 4..* MS
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
+* entry ^slicing.rules = #closed
 * entry contains
-  Guideline 1..* MS
+  Guideline 1..1 MS
+  and GuidelineRecommendation 1..* MS
   and Population 1..* MS
   and Intervention 1..* MS
   and Outcome 0..* MS
+  and PopulationGroup 1..* MS
 * entry[Guideline]
   * resource 1.. MS
   * resource only Guideline
+  * fullUrl 1..1 MS
+* entry[GuidelineRecommendation]
+  * resource 1.. MS
+  * resource only GuidelineRecommendation
   * fullUrl 1..1 MS
 * entry[Population]
   * resource 1.. MS
@@ -30,6 +36,10 @@ Description: ""
 * entry[Outcome]
   * resource 1.. MS
   * resource only OutcomeEvidenceVariable
+  * fullUrl 1..1 MS
+* entry[PopulationGroup]
+  * resource 1.. MS
+  * resource only PopulationGroup
   * fullUrl 1..1 MS
 
 Invariant: bdl-1
@@ -44,13 +54,19 @@ Title: "Guideline Recommendation Example"
 Description: ""
 * entry[Guideline]
   * resource = GuidelineExample
-  * fullUrl = "https://www.covid-evidenz.de/guidelines/guideline-example"
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example"
+* entry[GuidelineRecommendation]
+  * resource = ExampleGuidelineRecommendation
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-recommendation-example"
 * entry[Population]
   * resource = ExamplePopulation
-  * fullUrl = "https://www.covid-evidenz.de/guidelines/guideline-example/population"
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population"
 * entry[Intervention]
   * resource = ExampleIntervention
-  * fullUrl = "https://www.covid-evidenz.de/guidelines/guideline-example/intervention"
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention"
 * entry[Outcome]
   * resource = ExampleOutcome
-  * fullUrl = "https://www.covid-evidenz.de/guidelines/guideline-example/outcome"
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
+* entry[PopulationGroup]
+  * resource = ExamplePopulationGroup
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"

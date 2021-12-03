@@ -1,7 +1,7 @@
-Profile: PICOPopulationGroup
+Profile: PopulationGroup
 Parent: Group
-Id: pico-population-group
-Title: "PICO Population"
+Id: population-group
+Title: "Population"
 Description: ""
 * type 1..1
 * type = #person
@@ -23,10 +23,10 @@ Description: ""
     * system 1.. MS
     * code 1.. MS
 
-Instance: pico-population
-InstanceOf: pico-population-group
+Instance: ExamplePopulationGroup
+InstanceOf: population-group
 Usage: #example
-Title: "pico-population"
+Title: "population"
 Description: ""
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "Condition - COVID-19"

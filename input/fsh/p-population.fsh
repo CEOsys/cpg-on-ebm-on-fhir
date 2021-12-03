@@ -9,7 +9,7 @@ Title: "Population Evidence Variable"
 * characteristic 1..* MS
 * characteristic.type 1..1 MS
 * characteristic.type from CochranePICOPopulation (required)
-* characteristic.definition[x] only Reference(PICOPopulationGroup)
+* characteristic.definition[x] only Reference(PopulationGroup)
 
 Instance: ExamplePopulation
 InstanceOf: population-evidence-variable
@@ -23,4 +23,4 @@ Description: ""
 * name = "PopulationExample"
 * characteristic[+]
   * type = $cochrane-pico#Population
-  * definitionReference = Reference(pico-population)
+  * definitionReference = Reference(population)

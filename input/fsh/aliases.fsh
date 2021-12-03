@@ -10,7 +10,11 @@ Alias: $cochrane-pico = http://data.cochrane.org/ontologies/pico/
 Alias: $cochrane-core = http://data.cochrane.org/ontologies/core/
 Alias: $cochrane-ld = https://data.cochrane.org/concepts/
 
-Alias: $ceosys = https://www.covid-evidenz.de
+Alias: $ceosys = https://www.ceosys.de
 
 Alias: $cs-focus-characteristic = http://terminology.hl7.org/CodeSystem/focus-characteristic-code
 Alias: $vs-focus-characteristic = http://hl7.org/fhir/ValueSet/focus-characteristic-code
+Alias: $cs-variable-role = http://terminology.hl7.org/CodeSystem/variable-role
+
+Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $cs-data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
