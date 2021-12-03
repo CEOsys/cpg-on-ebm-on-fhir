@@ -11,7 +11,7 @@ Description: "The Cochrane Core ontology describes the entities and concepts tha
 * ^compositional = false
 * ^versionNeeded = false
 * ^content = #complete
-* ^count = 26
+* ^count = 25 // duplicate #Thing removed
 * ^filter[0].code = #root
 * ^filter[=].operator = #=
 * ^filter[=].value = "True or false."
