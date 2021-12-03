@@ -6,39 +6,29 @@ output
 input-cache
 fsh-generated
 
-# Don't commit this because it's so large #
+# IG publisher files #
 ###########################################
 validator_cli.jar
 publisher.jar
-
-# Windows generated files #
-###########################
-Thumbs.db
+_gencontinuous.bat
+_gencontinuous.sh
 
 # OS generated files #
-######################
+###########################
 .DS_Store
-.DS_Store?
-.idea
-
-# backup files #
-################
-*.bak
-
-
+Thumbs.db
 
 # IDE folders and files
+###########################
 .vscode
 *.code-workspace
+.idea
 
 # nodejs files/directories
-package.json
+###########################
 package-lock.json
 node_modules/
 
 # cache folders
+###########################
 __pycache__/
-
-# non-project folders
-logs/
-notebooks/
