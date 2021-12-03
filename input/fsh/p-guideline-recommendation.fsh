@@ -1,8 +1,11 @@
+
+// Author: Gregor Lichtner @glichtner
 Profile: GuidelineRecommendation
 Parent: Evidence
 Id: guideline-recommendation
 Title: "Guideline Recommendation"
 Description: ""
+* insert metadata(2021-12-03, #draft, 0.1.0)
 * variableDefinition ^slicing.discriminator.type = #value
 * variableDefinition ^slicing.discriminator.path = "variableRole"
 * variableDefinition ^slicing.rules = #closed
@@ -22,7 +25,6 @@ Description: ""
   * variableRole = $cs-variable-role#measuredVariable
   * intended 1..1 MS
   * intended only Reference(OutcomeEvidenceVariable)
-
 
 Instance: ExampleGuidelineRecommendation
 InstanceOf: guideline-recommendation

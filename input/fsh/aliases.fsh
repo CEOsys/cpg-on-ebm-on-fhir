@@ -1,3 +1,4 @@
+// Author: Gregor Lichtner @glichtner
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
 Alias: $sctIntl2021 = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20210731
@@ -15,6 +16,7 @@ Alias: $ceosys = https://www.ceosys.de
 Alias: $cs-focus-characteristic = http://terminology.hl7.org/CodeSystem/focus-characteristic-code
 Alias: $vs-focus-characteristic = http://hl7.org/fhir/ValueSet/focus-characteristic-code
 Alias: $cs-variable-role = http://terminology.hl7.org/CodeSystem/variable-role
+Alias: $cs-resource-type = http://hl7.org/fhir/resource-types
 
 Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $cs-data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason

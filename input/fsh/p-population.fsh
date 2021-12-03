@@ -1,7 +1,9 @@
+// Author: Gregor Lichtner @glichtner
 Profile: PopulationEvidenceVariable
 Parent: EvidenceVariable
 Id: population-evidence-variable
 Title: "Population Evidence Variable"
+* insert metadata(2021-12-03, #draft, 0.1.0)
 * identifier 1..* MS
 * name 1..1 MS
 * characteristicCombination 1..1 MS

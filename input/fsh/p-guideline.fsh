@@ -1,8 +1,10 @@
+// Author: Gregor Lichtner @glichtner
 Profile: Guideline
 Parent: EvidenceReport
 Id: guideline
 Title: "Evidence Report Guideline"
 Description: ""
+* insert metadata(2021-12-03, #draft, 0.1.0)
 //* ^title 1..1 MS
 //* ^text 1..1 MS
 * status 1..1 MS

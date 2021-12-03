@@ -1,3 +1,4 @@
+// Author: Gregor Lichtner @glichtner
 RuleSet: metadata(date, status, version)
 * ^version = "{version}"
 * ^date = "{date}"

@@ -1,3 +1,4 @@
+// Author: Gregor Lichtner @glichtner
 Extension: Descriptive
 Id: ceosys-extension-descriptive
 Title: "Descriptive"

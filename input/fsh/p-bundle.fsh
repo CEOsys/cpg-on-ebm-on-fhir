@@ -1,3 +1,4 @@
+// Author: Gregor Lichtner @glichtner
 Profile: GuidelineRecommendationBundle
 Parent: Bundle
 Id: guideline-recommendation-bundle

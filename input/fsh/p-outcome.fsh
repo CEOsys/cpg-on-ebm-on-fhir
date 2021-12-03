@@ -1,3 +1,4 @@
+// Author: Gregor Lichtner @glichtner
 Profile: OutcomeEvidenceVariable
 Parent: EvidenceVariable
 Id: outcome-evidence-variable

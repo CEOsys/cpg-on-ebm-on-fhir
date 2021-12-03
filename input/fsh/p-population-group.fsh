@@ -1,8 +1,10 @@
+// Author: Gregor Lichtner @glichtner
 Profile: PopulationGroup
 Parent: Group
 Id: population-group
 Title: "Population"
 Description: ""
+* insert metadata(2021-12-03, #draft, 0.1.0)
 * type 1..1
 * type = #person
 * actual 1..1 MS
