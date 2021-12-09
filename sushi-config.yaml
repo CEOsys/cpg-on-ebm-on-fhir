@@ -5,6 +5,7 @@
 id: cpg.ceosys.de
 canonical: https://www.ceosys.de/fhir
 name: Clinical Guideline Recommendations
+title: Clinical Guideline Recommendations
 status: draft
 version: 0.1.0
 fhirVersion: 4.6.0
@@ -52,5 +53,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludeexample: 'true'
   extension-domain: # An external domain fro which extensions are allowed to come (else they'll be flagged as invalid when validating).
   - https://www.netzwerk-universitaetsmedizin.de
-  - https://napkon.de
   - https://simplifier.net

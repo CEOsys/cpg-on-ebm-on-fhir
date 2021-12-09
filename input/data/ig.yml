@@ -1,0 +1,179 @@
+contact:
+- name: "Charit\xE9 - Universit\xE4tsmedizin Berlin"
+  telecom:
+  - system: url
+    value: https://www.charite.de/
+definition:
+  page:
+    generation: html
+    nameUrl: toc.html
+    page:
+    - generation: markdown
+      nameUrl: index.html
+      title: Clinical Guideline Recommendations
+    - generation: markdown
+      nameUrl: profiles.html
+      title: Profiles
+    - generation: markdown
+      nameUrl: codesystems.html
+      title: Code Systems
+    - generation: markdown
+      nameUrl: valuesets.html
+      title: Value Sets
+    - generation: markdown
+      nameUrl: extensions.html
+      title: Extensions
+    - generation: markdown
+      nameUrl: examples.html
+      title: Examples
+    - generation: html
+      nameUrl: downloads.html
+      title: Downloads
+    - generation: markdown
+      nameUrl: changelog.html
+      title: Change Log
+    title: Table of Contents
+  parameter:
+  - code: copyrightyear
+    value: 2021+
+  - code: releaselabel
+    value: ci-build
+  - code: active-tables
+    value: 'true'
+  - code: apply-contact
+    value: 'false'
+  - code: apply-jurisdiction
+    value: 'false'
+  - code: apply-publisher
+    value: 'false'
+  - code: apply-version
+    value: 'false'
+  - code: show-inherited-invariants
+    value: 'false'
+  - code: usage-stats-opt-out
+    value: 'true'
+  - code: excludexml
+    value: 'false'
+  - code: excludejsn
+    value: 'false'
+  - code: excludettl
+    value: 'true'
+  - code: excludemap
+    value: 'true'
+  - code: excludeexample
+    value: 'true'
+  - code: extension-domain
+    value: https://www.netzwerk-universitaetsmedizin.de
+  - code: extension-domain
+    value: https://napkon.de
+  - code: extension-domain
+    value: https://simplifier.net
+  resource:
+  - exampleBoolean: false
+    name: Evidence Report Guideline
+    reference:
+      reference: StructureDefinition/guideline
+  - exampleBoolean: false
+    name: Guideline Recommendation
+    reference:
+      reference: StructureDefinition/guideline-recommendation
+  - exampleBoolean: false
+    name: Guideline Recommendation Bundle
+    reference:
+      reference: StructureDefinition/guideline-recommendation-bundle
+  - exampleBoolean: false
+    name: Intervention Activity
+    reference:
+      reference: StructureDefinition/intervention-activity
+  - exampleBoolean: false
+    name: Intervention Evidence Variable
+    reference:
+      reference: StructureDefinition/intervention-evidence-variable
+  - exampleBoolean: false
+    name: Outcome Evidence Variable
+    reference:
+      reference: StructureDefinition/outcome-evidence-variable
+  - exampleBoolean: false
+    name: Population Evidence Variable
+    reference:
+      reference: StructureDefinition/population-evidence-variable
+  - exampleBoolean: false
+    name: Population
+    reference:
+      reference: StructureDefinition/population-group
+  - description: Descriptive or actual.
+    exampleBoolean: false
+    name: Descriptive
+    reference:
+      reference: StructureDefinition/ceosys-extension-descriptive
+  - exampleBoolean: false
+    name: ReferenceActivityDefinition
+    reference:
+      reference: StructureDefinition/ReferenceActivityDefinition
+  - description: All codes from the Cochrane PICO ontology.
+    exampleBoolean: false
+    name: Cochrane PICO
+    reference:
+      reference: ValueSet/cochrane-pico
+  - exampleBoolean: false
+    name: Cochrane PICO Intervention
+    reference:
+      reference: ValueSet/cochrane-pico-intervention
+  - exampleBoolean: false
+    name: Cochrane PICO Population
+    reference:
+      reference: ValueSet/cochrane-pico-population
+  - description: The Cochrane Core ontology describes the entities and concepts that
+      exist in the domain of evidence based healthcare.
+    exampleBoolean: false
+    name: CochraneCoreOntology
+    reference:
+      reference: CodeSystem/cochrane-core-ontology
+  - description: The PICO ontology describes questions in evidence based healthcare
+      with the intention of supporting the publishing of evidence as linked data.
+    exampleBoolean: false
+    name: CochranePICOOntology
+    reference:
+      reference: CodeSystem/cochrane-pico-ontology
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation-bundle
+    name: Guideline Recommendation Example
+    reference:
+      reference: Bundle/EvidenceReportGuidelineRecommendationExample
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
+    name: Example of a guideline recommendation
+    reference:
+      reference: Evidence/ExampleGuidelineRecommendation
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-evidence-variable
+    name: Example Intervention
+    reference:
+      reference: EvidenceVariable/ExampleIntervention
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
+    name: Example Outcome
+    reference:
+      reference: EvidenceVariable/ExampleOutcome
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: Example Population
+    reference:
+      reference: EvidenceVariable/ExamplePopulation
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: population
+    reference:
+      reference: Group/ExamplePopulationGroup
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
+    name: Example
+    reference:
+      reference: EvidenceReport/GuidelineExample
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: InterventionActivity
+    reference:
+      reference: ActivityDefinition/InterventionActivity
+fhirVersion:
+- 4.6.0
+id: cpg.ceosys.de
+name: ClinicalGuidelineRecommendations
+packageId: cpg.ceosys.de
+publisher: "Charit\xE9 - Universit\xE4tsmedizin Berlin"
+resourceType: ImplementationGuide
+status: draft
+url: https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de
+version: 0.1.0
