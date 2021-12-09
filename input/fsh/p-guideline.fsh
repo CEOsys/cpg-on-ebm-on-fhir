@@ -10,7 +10,6 @@ Description: ""
 * status 1..1 MS
 * identifier 1..* MS
 //* identifier.system = https://app.magicapp.org/#/guidelines
-
 * subject
   * characteristic 1..* MS // TODO: slice characteristic by code.coding[cochrane] or focuescode
     * code 1..1 MS

@@ -3,6 +3,7 @@ Profile: OutcomeEvidenceVariable
 Parent: EvidenceVariable
 Id: outcome-evidence-variable
 Title: "Outcome Evidence Variable"
+* insert metadata(2021-12-03, #draft, 0.1.0)
 * identifier 1..* MS
 * name 1..1 MS
 
