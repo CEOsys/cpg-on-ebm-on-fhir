@@ -23,6 +23,8 @@ do
   wget -q https://build.fhir.org/$fhir_package_name -O $fhir_package_name
   tar -zxf $fhir_package_name
   rm $fhir_package_name
+
+  ln -s $fhir_path $fhir_path_current
 done
 
 ls -al $HOME/.fhir/packages
