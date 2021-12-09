@@ -1,11 +1,11 @@
 // Author: Gregor Lichtner @glichtner
 Profile: OutcomeEvidenceVariable
-Parent: EvidenceVariable
+Parent: PICOEvidenceVariable
 Id: outcome-evidence-variable
 Title: "Outcome Evidence Variable"
 * insert metadata(2021-12-03, #draft, 0.1.0)
-* identifier 1..* MS
-* name 1..1 MS
+* characteristic 1..* MS
+  * type from CochranePICOOutcome (required)
 
 Instance: ExampleOutcome
 InstanceOf: outcome-evidence-variable
@@ -17,3 +17,7 @@ Description: ""
   * system = $ceosys
   * value = "outcome-example"
 * name = "OutcomeExample"
+* characteristic
+  * type = $cochrane-pico#Outcome
+  * definitionCodeableConcept
+    * text = "OutcomeExample"

@@ -18,6 +18,7 @@ Description: ""
   and Intervention 1..* MS
   and Outcome 0..* MS
   and PopulationGroup 1..* MS
+  and InterventionActivity 0..* MS
 * entry[Guideline]
   * resource 1.. MS
   * resource only Guideline
@@ -41,6 +42,10 @@ Description: ""
 * entry[PopulationGroup]
   * resource 1.. MS
   * resource only PopulationGroup
+  * fullUrl 1..1 MS
+* entry[InterventionActivity]
+  * resource 1.. MS
+  * resource only InterventionActivity
   * fullUrl 1..1 MS
 
 Invariant: bdl-1

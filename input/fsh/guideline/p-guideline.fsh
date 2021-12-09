@@ -5,12 +5,19 @@ Id: guideline
 Title: "Evidence Report Guideline"
 Description: ""
 * insert metadata(2021-12-03, #draft, 0.1.0)
-//* ^title 1..1 MS
-//* ^text 1..1 MS
-* status 1..1 MS
+* insert profile("This profile is intended to be used as a description of clinical practice guideline.")
 * identifier 1..* MS
-//* identifier.system = https://app.magicapp.org/#/guidelines
-* subject
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier contains MAGICapp 0..1 MS
+* identifier[MAGICapp].type 1.. MS
+* identifier[MAGICapp].type = $cs-v2-0203#RI
+* identifier[MAGICapp].system 1.. MS
+* identifier[MAGICapp].system = "https://app.magicapp.org/#/guidelines"
+* identifier[MAGICapp].value 1.. MS
+* extension contains EvidenceReportVersion named version 1..1 MS
+* subject MS
   * characteristic 1..* MS // TODO: slice characteristic by code.coding[cochrane] or focuescode
     * code 1..1 MS
       * coding ^slicing.discriminator.type = #pattern
@@ -45,6 +52,7 @@ Description: ""
   * system = $ceosys
   * value = "guideline example"
 * status = #active
+* extension[version].valueString = "0.1.0"
 * subject[+]
   * characteristic[+]
     * code.coding[cochrane] = $cochrane-pico#Population

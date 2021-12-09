@@ -1,0 +1,6 @@
+// Author: Gregor Lichtner @glichtner
+ValueSet: RecommendationStrength
+Id: ceosys-vs-recommendation-strength
+Title: "Recommendation Strength"
+Description: ""
+* include codes from system ceosys-cs-recommendation-strength
