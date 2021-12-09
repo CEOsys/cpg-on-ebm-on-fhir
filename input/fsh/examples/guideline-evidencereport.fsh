@@ -1,3 +1,4 @@
+// Author: Gregor Lichtner @glichtner
 Instance: COVID19IntensiveCareTreatmentGuideline
 InstanceOf: guideline
 Usage: #example
@@ -13,7 +14,6 @@ Description: "COVID19 Intensive Care Treatment Guideline"
     * valueReference = Reference(PopulationExample)
 * section[+]
   * title = "Stationäre Therapie von COVID-19 Patienten"
-
 
 Instance: DexamethasoneRecommendation
 InstanceOf: guideline-recommendation
