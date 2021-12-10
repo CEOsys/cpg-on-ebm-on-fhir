@@ -6,7 +6,7 @@ Title: "Guideline Recommendation Bundle"
 Description: ""
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * obeys bdl-1
-* type = #transaction
+* type = #collection
 * entry 4..* MS
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"

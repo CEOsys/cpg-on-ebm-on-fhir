@@ -74,11 +74,12 @@ Description: ""
   * intended = Reference(ExampleIntervention)
 * variableDefinition[Outcome]
   * intended = Reference(ExampleOutcome)
-* certainty[overall]
+* certainty[+]
   * description = "very low"
+  * type = $cs-certainty-type#Overall "Overall certainty"
   * rating = $cs-certainty-rating#very-low "Very low quality"
 * certainty[+]
   * type = $cs-certainty-type#RiskOfBias "Risk of bias"
-  * rating = $cs-certainty-rating#no-concern "No concern"
+  * rating = $cs-certainty-rating#no-concern "No serious concern"
 
 * insert recommendation-strength(#strong-for)

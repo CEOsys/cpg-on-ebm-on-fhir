@@ -18,4 +18,4 @@ Description: ""
 * name = "PopulationExample"
 * characteristic[+]
   * type = $cochrane-pico#Population
-  * definitionReference = Reference(population)
+  * definitionReference = Reference(ExamplePopulationGroup)

@@ -57,8 +57,8 @@ Description: ""
   * characteristic[+]
     * code.coding[cochrane] = $cochrane-pico#Population
     * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#population
-    * valueReference = Reference(PopulationExample)
+    * valueReference = Reference(ExamplePopulation)
   * characteristic[+]
     * code.coding[cochrane] = $cochrane-pico#Intervention
     * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#exposure
-    * valueReference = Reference(InterventionExample)
+    * valueReference = Reference(ExampleIntervention)
