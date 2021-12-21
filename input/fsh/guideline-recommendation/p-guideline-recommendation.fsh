@@ -26,24 +26,49 @@ Description: "Single recommendation from a clinical practice guideline."
 * variableDefinition ^slicing.discriminator.path = "variableRole"
 * variableDefinition ^slicing.rules = #closed
 * variableDefinition contains
-  Population 1..1 MS
-  and Intervention 1..1 MS
-  and Outcome 0..1 MS
-* variableDefinition[Population]
+  population 1..1 MS
+  and intervention 1..1 MS
+  and measuredVariable 0..1 MS
+* variableDefinition[population]
   * variableRole = $cs-variable-role#population
   * intended 1..1 MS
   * intended only Reference(PopulationEvidenceVariable)
-* variableDefinition[Intervention]
+* variableDefinition[intervention]
   * variableRole = $cs-variable-role#exposure
   * intended 1..1 MS
   * intended only Reference(InterventionEvidenceVariable)
-* variableDefinition[Outcome]
+* variableDefinition[measuredVariable]
   * variableRole = $cs-variable-role#measuredVariable
   * intended 1..1 MS
-  * intended only Reference(OutcomeEvidenceVariable)
+  * intended only Reference(MeasuredVariableEvidenceVariable)
 
 * extension contains $ext-strengthOfRecommendation named strengthOfRecommendation 1..1 MS
 * extension[strengthOfRecommendation].valueCodeableConcept from ceosys-vs-recommendation-strength (required)
+
+* statistic 0..* MS
+* statistic ^slicing.discriminator.type = #value
+* statistic ^slicing.discriminator.path = "type"
+* statistic ^slicing.rules = #open
+* statistic contains netBenefit 0..1 MS
+* statistic[netBenefit]
+  * description 1..
+  * description = "Net Benefit" // TODO: make clearer
+  * quantity 1..1 MS
+  * statisticType 1..1 MS
+  * statisticType = $cs-statistic-type#0000424 "Risk Difference"
+  * attributeEstimate 1..* MS
+  * attributeEstimate ^slicing.discriminator.type = #value
+  * attributeEstimate ^slicing.discriminator.path = "type"
+  * attributeEstimate ^slicing.rules = #open
+  * attributeEstimate contains confidenceInterval 1..1 MS
+  * attributeEstimate[confidenceInterval]
+    * type 1..1
+      * coding
+        * system 1..
+        * code 1..
+        * display 1..
+    * type = $cs-attribute-estimate-type#C53324 "Confidence interval"
+    * range 1..1 MS
 
 * certainty 1..* MS
 * certainty ^slicing.discriminator.type = #value
@@ -55,6 +80,7 @@ Description: "Single recommendation from a clinical practice guideline."
   * type = $cs-certainty-type#Overall "Overall certainty"
   * rating 1..1
 
+// TODO: add example of net benefit
 Instance: ExampleGuidelineRecommendation
 InstanceOf: guideline-recommendation
 Usage: #example
@@ -68,12 +94,12 @@ Description: ""
 * date = "2020-01-01"
 * description = "This is an example of a guideline recommendation."
 
-* variableDefinition[Population]
+* variableDefinition[population]
   * intended = Reference(ExamplePopulation)
-* variableDefinition[Intervention]
+* variableDefinition[intervention]
   * intended = Reference(ExampleIntervention)
-* variableDefinition[Outcome]
-  * intended = Reference(ExampleOutcome)
+//* variableDefinition[measuredVariable]
+//  * intended = Reference(ExampleMeasuredVariable)
 * certainty[+]
   * description = "very low"
   * type = $cs-certainty-type#Overall "Overall certainty"

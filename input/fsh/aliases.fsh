@@ -28,4 +28,7 @@ Alias: $cs-evidence-quality = http://terminology.hl7.org/CodeSystem/evidence-qua
 Alias: $cs-recommendation-strength = http://terminology.hl7.org/CodeSystem/recommendation-strength
 Alias: $vs-recommendation-strength = http://hl7.org/fhir/ValueSet/recommendation-strength
 
+Alias: $cs-statistic-type = http://terminology.hl7.org/CodeSystem/statistic-type
+Alias: $cs-attribute-estimate-type = http://terminology.hl7.org/CodeSystem/attribute-estimate-type
+
 Alias: $ext-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation

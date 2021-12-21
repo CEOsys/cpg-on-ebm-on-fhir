@@ -12,38 +12,38 @@ Description: ""
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
-  Guideline 1..1 MS
-  and GuidelineRecommendation 1..* MS
-  and Population 1..* MS
-  and Intervention 1..* MS
-  and Outcome 0..* MS
-  and PopulationGroup 1..* MS
-  and InterventionActivity 0..* MS
-* entry[Guideline]
+  guideline 1..1 MS
+  and guidelineRecommendation 1..* MS
+  and population 1..* MS
+  and intervention 1..* MS
+  and measuredVariable 0..* MS
+  and populationGroup 1..* MS
+  and interventionActivity 0..* MS
+* entry[guideline]
   * resource 1.. MS
   * resource only Guideline
   * fullUrl 1..1 MS
-* entry[GuidelineRecommendation]
+* entry[guidelineRecommendation]
   * resource 1.. MS
   * resource only GuidelineRecommendation
   * fullUrl 1..1 MS
-* entry[Population]
+* entry[population]
   * resource 1.. MS
   * resource only PopulationEvidenceVariable
   * fullUrl 1..1 MS
-* entry[Intervention]
+* entry[intervention]
   * resource 1.. MS
   * resource only InterventionEvidenceVariable
   * fullUrl 1..1 MS
-* entry[Outcome]
+* entry[measuredVariable]
   * resource 1.. MS
-  * resource only OutcomeEvidenceVariable
+  * resource only MeasuredVariableEvidenceVariable
   * fullUrl 1..1 MS
-* entry[PopulationGroup]
+* entry[populationGroup]
   * resource 1.. MS
   * resource only PopulationGroup
   * fullUrl 1..1 MS
-* entry[InterventionActivity]
+* entry[interventionActivity]
   * resource 1.. MS
   * resource only InterventionActivity
   * fullUrl 1..1 MS
@@ -58,21 +58,22 @@ InstanceOf: guideline-recommendation-bundle
 Usage: #example
 Title: "Guideline Recommendation Example"
 Description: ""
-* entry[Guideline]
+* entry[guideline]
   * resource = GuidelineExample
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example"
-* entry[GuidelineRecommendation]
+* entry[guidelineRecommendation]
   * resource = ExampleGuidelineRecommendation
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-recommendation-example"
-* entry[Population]
+* entry[population]
   * resource = ExamplePopulation
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population"
-* entry[Intervention]
+* entry[intervention]
   * resource = ExampleIntervention
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention"
-* entry[Outcome]
-  * resource = ExampleOutcome
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
-* entry[PopulationGroup]
+// TODO: add example ?
+//* entry[Outcome]
+//  * resource = ExampleOutcome
+//  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
+* entry[populationGroup]
   * resource = ExamplePopulationGroup
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"
