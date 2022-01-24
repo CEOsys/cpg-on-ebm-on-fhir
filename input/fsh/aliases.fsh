@@ -23,6 +23,7 @@ Alias: $cs-data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absen
 
 Alias: $cs-v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $cs-certainty-rating = http://terminology.hl7.org/CodeSystem/certainty-rating
+Alias: $vs-certainty-rating = http://terminology.hl7.org/ValueSet/certainty-rating
 Alias: $cs-certainty-type = http://terminology.hl7.org/CodeSystem/certainty-type
 Alias: $cs-evidence-quality = http://terminology.hl7.org/CodeSystem/evidence-quality
 Alias: $cs-recommendation-strength = http://terminology.hl7.org/CodeSystem/recommendation-strength
@@ -30,5 +31,6 @@ Alias: $vs-recommendation-strength = http://hl7.org/fhir/ValueSet/recommendation
 
 Alias: $cs-statistic-type = http://terminology.hl7.org/CodeSystem/statistic-type
 Alias: $cs-attribute-estimate-type = http://terminology.hl7.org/CodeSystem/attribute-estimate-type
+Alias: $cs-characteristic-combination = http://hl7.org/fhir/characteristic-combination
 
 Alias: $ext-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation

@@ -16,7 +16,8 @@ Description: ""
   and guidelineRecommendation 1..* MS
   and population 1..* MS
   and intervention 1..* MS
-  and measuredVariable 0..* MS
+  and outcome 0..* MS
+  and netEffect 0..* MS
   and populationGroup 1..* MS
   and interventionActivity 0..* MS
 * entry[guideline]
@@ -35,9 +36,13 @@ Description: ""
   * resource 1.. MS
   * resource only InterventionEvidenceVariable
   * fullUrl 1..1 MS
-* entry[measuredVariable]
+* entry[outcome]
   * resource 1.. MS
-  * resource only MeasuredVariableEvidenceVariable
+  * resource only OutcomeEvidenceVariable
+  * fullUrl 1..1 MS
+* entry[netEffect]
+  * resource 1.. MS
+  * resource only NetEffectEvidenceVariable
   * fullUrl 1..1 MS
 * entry[populationGroup]
   * resource 1.. MS
@@ -70,10 +75,6 @@ Description: ""
 * entry[intervention]
   * resource = ExampleIntervention
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention"
-// TODO: add example ?
-//* entry[Outcome]
-//  * resource = ExampleOutcome
-//  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
 * entry[populationGroup]
   * resource = ExamplePopulationGroup
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"

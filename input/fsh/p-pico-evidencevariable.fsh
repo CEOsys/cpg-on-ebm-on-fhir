@@ -7,7 +7,7 @@ Title: "PICO Evidence Variable"
 * ^abstract = true
 * name 1..1 MS
 * characteristicCombination 1..1 MS
-* characteristicCombination.code = #any-of
+* characteristicCombination.code = $cs-characteristic-combination#any-of
 * characteristic 1..* MS
   * type 1..1 MS
   * type from CochranePICO (required)

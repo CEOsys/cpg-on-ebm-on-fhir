@@ -12,11 +12,14 @@ Description: "" // TODO: description
 * identifier ^slicing.rules = #open
 * identifier contains MAGICapp 0..1 MS
 * identifier[MAGICapp].type 1.. MS
-* identifier[MAGICapp].type = $cs-v2-0203#RI
+* identifier[MAGICapp].type = $cs-v2-0203#RI "Resource identifier"
 * identifier[MAGICapp].system 1.. MS
 * identifier[MAGICapp].system = "https://app.magicapp.org/#/guidelines"
 * identifier[MAGICapp].value 1.. MS
-* extension contains EvidenceReportVersion named version 1..1 MS
+// TODO: Add these fields once they are available for EvidenceReport (and remove work-around extensions)
+// * version 1..1 MS
+// * name 1..1 MS
+* extension contains EvidenceReportVersion named version 1..1 MS // TODO: Work around for missing "version" attribute in EvidenceReport. Remove once available.
 * subject MS
   * characteristic 1..* MS // TODO: slice characteristic by code.coding[cochrane] or focuescode
     * code 1..1 MS
@@ -47,7 +50,7 @@ Instance: GuidelineExample
 InstanceOf: guideline
 Usage: #example
 Title: "Example"
-Description: ""
+Description: "Example of a guideline resource"
 * identifier
   * system = $ceosys
   * value = "guideline example"
