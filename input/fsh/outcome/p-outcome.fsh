@@ -2,7 +2,7 @@
 Profile: OutcomeEvidenceVariable
 Parent: PICOEvidenceVariable
 Id: outcome-evidence-variable
-Title: "Outcome Evidence Variable"
+Title: "Outcome"
 Description: "Description of the outcome element of a PICO construct that evidence is about."
 * insert metadata(2021-12-21, #draft, 0.1.0)
 * name 1..1 MS

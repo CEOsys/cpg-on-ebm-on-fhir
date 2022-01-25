@@ -2,7 +2,7 @@
 Profile: NetEffectEvidenceVariable
 Parent: EvidenceVariable
 Id: net-effect-evidence-variable
-Title: "Net Effect Evidence Variable"
+Title: "Net Effect"
 Description: "Net Effect for the provided evidence, calculated by aggregation of importance-weighted outcomes."
 * insert metadata(2021-12-21, #draft, 0.1.0)
 * name 1..1 MS

@@ -1,8 +1,8 @@
 // Author: Gregor Lichtner @glichtner
-Profile: GuidelineRecommendationBundle
+Profile: GuidelineBundle
 Parent: Bundle
-Id: guideline-recommendation-bundle
-Title: "Guideline Recommendation Bundle"
+Id: guideline-bundle
+Title: "Guideline Bundle"
 Description: "Collection of all resources that represent a single clinical practice guideline."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * obeys bdl-1
@@ -59,7 +59,7 @@ Expression: "entry.first().resource.is(EvidenceReport)"
 Severity: #error
 
 Instance: EvidenceReportGuidelineRecommendationExample
-InstanceOf: guideline-recommendation-bundle
+InstanceOf: guideline-bundle
 Usage: #example
 Title: "Guideline Recommendation Example"
 Description: "Example of a clinical practice guideline representation bundle."

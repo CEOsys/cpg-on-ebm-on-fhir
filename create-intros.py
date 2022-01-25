@@ -134,7 +134,7 @@ with open(profiles_fname, 'w') as f:
         else:
             resource_type = 'profile'
 
-        f.write(f"{{% include  {resource_type}-reference.md name='{name}' %}}\n")
+        f.write(f"{{% include {resource_type}-reference.md name='{name}' %}}\n")
 
 print(valuesets_fname.name)
 with open(valuesets_fname, "w") as f:

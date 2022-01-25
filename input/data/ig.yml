@@ -72,17 +72,17 @@ definition:
     name: Clinical Practice Guideline
     reference:
       reference: StructureDefinition/guideline
+  - description: Collection of all resources that represent a single clinical practice
+      guideline.
+    exampleBoolean: false
+    name: Guideline Bundle
+    reference:
+      reference: StructureDefinition/guideline-bundle
   - description: Single recommendation from a clinical practice guideline.
     exampleBoolean: false
     name: Guideline Recommendation
     reference:
       reference: StructureDefinition/guideline-recommendation
-  - description: Collection of all resources that represent a single clinical practice
-      guideline.
-    exampleBoolean: false
-    name: Guideline Recommendation Bundle
-    reference:
-      reference: StructureDefinition/guideline-recommendation-bundle
   - description: Definition of an activity that is part of an intervention in the
       context of a clinical practice guideline recommendation.
     exampleBoolean: false
@@ -98,13 +98,13 @@ definition:
   - description: Net Effect for the provided evidence, calculated by aggregation of
       importance-weighted outcomes.
     exampleBoolean: false
-    name: Net Effect Evidence Variable
+    name: Net Effect
     reference:
       reference: StructureDefinition/net-effect-evidence-variable
   - description: Description of the outcome element of a PICO construct that evidence
       is about.
     exampleBoolean: false
-    name: Outcome Evidence Variable
+    name: Outcome
     reference:
       reference: StructureDefinition/outcome-evidence-variable
   - description: Description of the a PICO element that knowledge is about. This abstract
@@ -195,7 +195,7 @@ definition:
     reference:
       reference: Evidence/DexamethasoneRecommendation
   - description: Example of a clinical practice guideline representation bundle.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation-bundle
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
     name: Guideline Recommendation Example
     reference:
       reference: Bundle/EvidenceReportGuidelineRecommendationExample
