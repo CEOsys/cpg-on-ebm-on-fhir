@@ -65,48 +65,74 @@ definition:
   - code: extension-domain
     value: https://www.netzwerk-universitaetsmedizin.de
   - code: extension-domain
-    value: https://napkon.de
-  - code: extension-domain
     value: https://simplifier.net
   resource:
-  - exampleBoolean: false
+  - description: Representation of an evidence-based clinical practice guideline.
+    exampleBoolean: false
     name: Evidence Report Guideline
     reference:
       reference: StructureDefinition/guideline
-  - exampleBoolean: false
+  - description: Single recommendation from a clinical practice guideline.
+    exampleBoolean: false
     name: Guideline Recommendation
     reference:
       reference: StructureDefinition/guideline-recommendation
-  - exampleBoolean: false
+  - description: This bundle contains the whole collection of resources that represent
+      a single clinical practice guideline.
+    exampleBoolean: false
     name: Guideline Recommendation Bundle
     reference:
       reference: StructureDefinition/guideline-recommendation-bundle
-  - exampleBoolean: false
+  - description: Definition of an activity that is part of an intervention in the
+      context of a clinical practice guideline recommendation.
+    exampleBoolean: false
     name: Intervention Activity
     reference:
       reference: StructureDefinition/intervention-activity
-  - exampleBoolean: false
+  - description: Description of the intervention element of a PICO construct that
+      evidence is about.
+    exampleBoolean: false
     name: Intervention Evidence Variable
     reference:
       reference: StructureDefinition/intervention-evidence-variable
-  - exampleBoolean: false
+  - description: Net Effect for the provided evidence, calculated by aggregation or
+      importance-weighted outcomes.
+    exampleBoolean: false
+    name: Net Effect Evidence Variable
+    reference:
+      reference: StructureDefinition/net-effect-evidence-variable
+  - description: Description of the outcome element of a PICO construct that evidence
+      is about.
+    exampleBoolean: false
     name: Outcome Evidence Variable
     reference:
       reference: StructureDefinition/outcome-evidence-variable
-  - exampleBoolean: false
+  - description: Description of the a PICO element that knowledge is about. This abstract
+      resource is used as parent for all PICO (population, intervention, outcome)
+      evidence variables.
+    exampleBoolean: false
+    name: PICO Evidence Variable
+    reference:
+      reference: StructureDefinition/pico-evidence-variable
+  - description: Description of the population element of a PICO construct that evidence
+      is about.
+    exampleBoolean: false
     name: Population Evidence Variable
     reference:
       reference: StructureDefinition/population-evidence-variable
-  - exampleBoolean: false
+  - description: Characterization of a group of patients or subjects for which a clinical
+      guideline recommends a treatment or intervention.
+    exampleBoolean: false
     name: Population
     reference:
       reference: StructureDefinition/population-group
-  - description: Descriptive or actual.
+  - description: Version of EvidenceReport.
     exampleBoolean: false
-    name: Descriptive
+    name: EvidenceReport Version
     reference:
-      reference: StructureDefinition/ceosys-extension-descriptive
-  - exampleBoolean: false
+      reference: StructureDefinition/ceosys-extension-evidencereport-version
+  - description: Adds the possibility to reference an ActivityDefinition resource
+    exampleBoolean: false
     name: ReferenceActivityDefinition
     reference:
       reference: StructureDefinition/ReferenceActivityDefinition
@@ -115,14 +141,32 @@ definition:
     name: Cochrane PICO
     reference:
       reference: ValueSet/cochrane-pico
-  - exampleBoolean: false
+  - description: All Intervention codes from the Cochrane PICO ontology.
+    exampleBoolean: false
     name: Cochrane PICO Intervention
     reference:
       reference: ValueSet/cochrane-pico-intervention
-  - exampleBoolean: false
+  - description: All Outcome codes from the Cochrane PICO ontology.
+    exampleBoolean: false
+    name: Cochrane PICO Outcome
+    reference:
+      reference: ValueSet/cochrane-pico-outcome
+  - description: All Population codes from the Cochrane PICO ontology.
+    exampleBoolean: false
     name: Cochrane PICO Population
     reference:
       reference: ValueSet/cochrane-pico-population
+  - description: Strength of a clinical guideline recommendation
+    exampleBoolean: false
+    name: Recommendation Strength
+    reference:
+      reference: ValueSet/ceosys-vs-recommendation-strength
+  - description: Codes for clinical guideline recommendation representation missing
+      from other code systems
+    exampleBoolean: false
+    name: CEOsys Code System
+    reference:
+      reference: CodeSystem/ceosys-code-system
   - description: The Cochrane Core ontology describes the entities and concepts that
       exist in the domain of evidence based healthcare.
     exampleBoolean: false
@@ -135,36 +179,65 @@ definition:
     name: CochranePICOOntology
     reference:
       reference: CodeSystem/cochrane-pico-ontology
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation-bundle
+  - description: Strength of a clinical guideline recommendation
+    exampleBoolean: false
+    name: Recommendation Strength
+    reference:
+      reference: CodeSystem/ceosys-cs-recommendation-strength
+  - description: COVID19 Intensive Care Treatment Guideline
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
+    name: Example
+    reference:
+      reference: EvidenceReport/COVID19IntensiveCareTreatmentGuideline
+  - description: Dexamethasone in critically ill patients with COVID-19.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
+    name: Example
+    reference:
+      reference: Evidence/DexamethasoneRecommendation
+  - description: Example of a clinical practice guideline representation bundle.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation-bundle
     name: Guideline Recommendation Example
     reference:
       reference: Bundle/EvidenceReportGuidelineRecommendationExample
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
+  - description: Example of a single clinical practice guideline recommendation.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
     name: Example of a guideline recommendation
     reference:
       reference: Evidence/ExampleGuidelineRecommendation
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-evidence-variable
+  - description: Example of an intervention as part of a clinical practice guideline.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-evidence-variable
     name: Example Intervention
     reference:
       reference: EvidenceVariable/ExampleIntervention
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
+  - description: Example of a net effect with a single outcome
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-evidence-variable
+    name: Example Net Effect
+    reference:
+      reference: EvidenceVariable/ExampleNetEffect
+  - description: Example of an outcome evidence variable
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
     name: Example Outcome
     reference:
       reference: EvidenceVariable/ExampleOutcome
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+  - description: Example of a population element of a PICO construct that evidence
+      is about.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
     name: Example Population
     reference:
       reference: EvidenceVariable/ExamplePopulation
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+  - description: 'Example of a population group: COVID-19 patients.'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
     name: population
     reference:
       reference: Group/ExamplePopulationGroup
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
+  - description: Example of a guideline resource
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: Example
     reference:
       reference: EvidenceReport/GuidelineExample
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
-    name: InterventionActivity
+  - description: An active intervention activity.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: Example Intervention Activity
     reference:
       reference: ActivityDefinition/InterventionActivity
 fhirVersion:
@@ -175,5 +248,6 @@ packageId: cpg.ceosys.de
 publisher: "Charit\xE9 - Universit\xE4tsmedizin Berlin"
 resourceType: ImplementationGuide
 status: draft
+title: Clinical Guideline Recommendations
 url: https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de
 version: 0.1.0

@@ -12,6 +12,7 @@ output_path = base_path / 'input' / 'intro-notes'
 ig_fname = base_path / 'input' / 'data' / 'ig.yml'
 linklist_fname = base_path / 'input' / 'includes' / 'link-list-generated.md'
 profiles_fname = base_path / 'input' / 'pagecontent' / 'profiles-generated.md'
+valuesets_fname = base_path / 'input' / 'pagecontent' / 'valuesets-generated.md'
 
 template_md = """
 {% assign id = {{include.id}} %}
@@ -58,6 +59,7 @@ This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | 
 linklist_general = {
     "SNOMEDCT": "http://snomed.info/sct",
     "LOINC": "http://loinc.org/",
+    "UCUM": "http://unitsofmeasure.org",
     "VSdataAbsentReason": "http://hl7.org/fhir/R4/valueset-data-absent-reason.html",
 }
 
@@ -91,11 +93,15 @@ with open(ig_fname, 'r') as f:
     ig = yaml.safe_load(f)
 
 linklist = {}
+linklist_vs = {}
 
 for resource in ig["definition"]["resource"]:
     ref = resource["reference"]["reference"]
 
-    if not ref.startswith('StructureDefinition/'):
+    if ref.startswith('ValueSet/'):
+        linklist_vs[resource["name"]] = ref.replace('/', '-') + '.html'
+
+    if not ref.startswith('StructureDefinition/') and not ref.startswith('Questionnaire/'):
       continue
 
     fname = output_path / (ref.replace('/', '-') + '-intro.md')
@@ -123,7 +129,17 @@ print(profiles_fname.name)
 with open(profiles_fname, 'w') as f:
     f.write('### Profiles\n\n')
     for name in linklist:
-        f.write(f"{{% include resource-reference.md name='{name}' %}}\n")
+        if linklist[name].split('-')[0] == 'Questionnaire':
+            resource_type = 'questionnaire'
+        else:
+            resource_type = 'profile'
 
+        f.write(f"{{% include  {resource_type}-reference.md name='{name}' %}}\n")
+
+print(valuesets_fname.name)
+with open(valuesets_fname, "w") as f:
+    f.write('### Value Sets\n\n')
+    for name in linklist_vs:
+        f.write(f"{{% include valueset-reference.md name='{name}' %}}\n")
 
 print("Done")
