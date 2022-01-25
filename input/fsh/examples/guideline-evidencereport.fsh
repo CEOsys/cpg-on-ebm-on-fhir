@@ -8,9 +8,7 @@ Description: "COVID19 Intensive Care Treatment Guideline."
 * extension[version].valueString = "1.0"
 * status = #retired
 * subject[+]
-  * characteristic[+]
-    * code.coding[cochrane] = $cochrane-pico#Population
-    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#population
+  * characteristic[population]
     * valueReference = Reference(PopulationExample)
 * section[+]
   * title = "Stationäre Therapie von COVID-19 Patienten"

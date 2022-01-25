@@ -22,29 +22,29 @@ Description: "Representation of an evidence-based clinical practice guideline."
 * extension contains EvidenceReportVersion named version 1..1 MS // TODO: Work around for missing "version" attribute in EvidenceReport. Remove once available.
 * subject MS
   * characteristic 1..* MS // TODO: slice characteristic by code.coding[cochrane] or focuescode
+  * characteristic ^slicing.discriminator.type = #pattern
+  * characteristic ^slicing.discriminator.path = "code.coding"
+  * characteristic ^slicing.rules = #open
+  * characteristic contains
+      population 1..* MS
     * code 1..1 MS
       * coding ^slicing.discriminator.type = #pattern
       * coding ^slicing.discriminator.path = "$this"
-      * coding ^slicing.rules = #closed
+      * coding ^slicing.rules = #open
       * coding contains
-          cochrane 1..1 and focusCharacteristicCode 1..*
+          cochrane 0..1 and focusCharacteristicCode 1..1
       * coding[cochrane] from CochranePICO (required)
         * system 1..1 MS
         * code 1..1 MS
       * coding[focusCharacteristicCode] from $vs-focus-characteristic (required)
         * system 1..1 MS
         * code 1..1 MS
-/*
-* subject
-  * characteristic[+].code = $cochrane-pico#Population
-    * value[x] only Reference(PopulationEvidenceVariable)
-  * characteristic[+]
-    * code = $cochrane-pico#Intervention
-    //* valueReference only Reference(PICOPopulationGroup) // TODO: Define
-  * characteristic[+]
-    * code = $cochrane-pico#Reecommendation
-    //* valueReference only Reference(PICOPopulationGroup) // TODO: Define
-  */
+    * value[x] only Reference
+    * valueReference only Reference(PICOEvidenceVariable)
+  * characteristic[population]
+    * code
+      * coding[focusCharacteristicCode] = $cs-focus-characteristic#population "Population"
+    * valueReference only Reference(PopulationEvidenceVariable)
 
 Instance: GuidelineExample
 InstanceOf: guideline
@@ -56,12 +56,9 @@ Description: "Example of a guideline resource."
   * value = "guideline example"
 * status = #active
 * extension[version].valueString = "0.1.0"
-* subject[+]
-  * characteristic[+]
-    * code.coding[cochrane] = $cochrane-pico#Population
-    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#population
+* subject
+  * characteristic[population]
+    //* code.coding[cochrane] = $cochrane-pico#Population
+    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#population "Population"
+    //* code.coding = $cs-focus-characteristic#population "Population"
     * valueReference = Reference(ExamplePopulation)
-  * characteristic[+]
-    * code.coding[cochrane] = $cochrane-pico#Intervention
-    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#exposure
-    * valueReference = Reference(ExampleIntervention)
