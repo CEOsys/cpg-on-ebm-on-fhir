@@ -123,8 +123,6 @@ Description: "Example of a single clinical practice guideline recommendation."
   * intended = Reference(ExamplePopulation)
 * variableDefinition[intervention]
   * intended = Reference(ExampleIntervention)
-//* variableDefinition[measuredVariable]
-//  * intended = Reference(ExampleMeasuredVariable)
 * certainty[+]
   * description = "very low"
   * type = $cs-certainty-type#Overall "Overall certainty"

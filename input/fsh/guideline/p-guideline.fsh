@@ -20,8 +20,19 @@ Description: "Representation of an evidence-based clinical practice guideline."
 // * version 1..1 MS
 // * name 1..1 MS
 * extension contains EvidenceReportVersion named version 1..1 MS // TODO: Work around for missing "version" attribute in EvidenceReport. Remove once available.
+* type 1..1 MS
+  * coding ^slicing.discriminator.type = #pattern
+  * coding ^slicing.discriminator.path = "$this"
+  * coding ^slicing.rules = #open
+  * coding contains ceosys 1..1 and cochrane 1..1
+  * coding[ceosys] = CEOsysCodeSystem#clinical-practice-guideline
+    * system 1.. MS
+    * code 1.. MS
+  * coding[cochrane] = $cochrane-ld#e07eN1w1Rwswg4 "Guidelines"
+    * system 1.. MS
+    * code 1.. MS
 * subject MS
-  * characteristic 1..* MS // TODO: slice characteristic by code.coding[cochrane] or focuescode
+  * characteristic 1..* MS
   * characteristic ^slicing.discriminator.type = #pattern
   * characteristic ^slicing.discriminator.path = "code.coding"
   * characteristic ^slicing.rules = #open
