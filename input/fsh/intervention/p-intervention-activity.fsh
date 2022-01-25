@@ -3,7 +3,7 @@ Profile: InterventionActivity
 Parent: ActivityDefinition
 Id: intervention-activity
 Title: "Intervention Activity"
-Description: ""
+Description: "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * subject[x] only CodeableConcept
 * subjectCodeableConcept 1..1 MS
@@ -12,7 +12,7 @@ Description: ""
 Instance: InterventionActivity
 InstanceOf: intervention-activity
 Usage: #example
-Title: ""
-Description: ""
+Title: "Example Intervention Activity"
+Description: "An active intervention activity."
 * name = "InterventionActivity"
 * status = #active

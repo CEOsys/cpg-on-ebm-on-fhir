@@ -3,7 +3,7 @@ Profile: GuidelineRecommendationBundle
 Parent: Bundle
 Id: guideline-recommendation-bundle
 Title: "Guideline Recommendation Bundle"
-Description: ""
+Description: "Collection of all resources that represent a single clinical practice guideline."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * obeys bdl-1
 * type = #collection
@@ -54,7 +54,7 @@ Description: ""
   * fullUrl 1..1 MS
 
 Invariant: bdl-1
-Description: "First element of Bundle must be an EvidenceReport"
+Description: "First element of Bundle must be an EvidenceReport."
 Expression: "entry.first().resource.is(EvidenceReport)"
 Severity: #error
 
@@ -62,7 +62,7 @@ Instance: EvidenceReportGuidelineRecommendationExample
 InstanceOf: guideline-recommendation-bundle
 Usage: #example
 Title: "Guideline Recommendation Example"
-Description: ""
+Description: "Example of a clinical practice guideline representation bundle."
 * entry[guideline]
   * resource = GuidelineExample
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example"

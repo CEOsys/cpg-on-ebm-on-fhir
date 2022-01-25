@@ -111,7 +111,7 @@ Instance: ExampleGuidelineRecommendation
 InstanceOf: guideline-recommendation
 Usage: #example
 Title: "Example of a guideline recommendation"
-Description: ""
+Description: "Example of a single clinical practice guideline recommendation."
 * status = #active
 * identifier[MAGICapp].value = "12345"
 * version = "1.0.0"

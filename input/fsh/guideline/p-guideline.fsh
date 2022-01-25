@@ -2,8 +2,8 @@
 Profile: Guideline
 Parent: EvidenceReport
 Id: guideline
-Title: "Evidence Report Guideline"
-Description: "" // TODO: description
+Title: "Clinical Practice Guideline"
+Description: "Representation of an evidence-based clinical practice guideline."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * insert profile("This profile is intended to be used as a description of clinical practice guideline.")
 * identifier 1..* MS
@@ -50,7 +50,7 @@ Instance: GuidelineExample
 InstanceOf: guideline
 Usage: #example
 Title: "Example"
-Description: "Example of a guideline resource"
+Description: "Example of a guideline resource."
 * identifier
   * system = $ceosys
   * value = "guideline example"

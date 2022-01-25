@@ -3,7 +3,7 @@ Instance: COVID19IntensiveCareTreatmentGuideline
 InstanceOf: guideline
 Usage: #example
 Title: "Example"
-Description: "COVID19 Intensive Care Treatment Guideline"
+Description: "COVID19 Intensive Care Treatment Guideline."
 * identifier[MAGICapp].value = "5062"
 * extension[version].valueString = "1.0"
 * status = #retired

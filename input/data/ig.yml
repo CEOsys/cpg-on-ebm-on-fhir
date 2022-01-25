@@ -69,7 +69,7 @@ definition:
   resource:
   - description: Representation of an evidence-based clinical practice guideline.
     exampleBoolean: false
-    name: Evidence Report Guideline
+    name: Clinical Practice Guideline
     reference:
       reference: StructureDefinition/guideline
   - description: Single recommendation from a clinical practice guideline.
@@ -77,8 +77,8 @@ definition:
     name: Guideline Recommendation
     reference:
       reference: StructureDefinition/guideline-recommendation
-  - description: This bundle contains the whole collection of resources that represent
-      a single clinical practice guideline.
+  - description: Collection of all resources that represent a single clinical practice
+      guideline.
     exampleBoolean: false
     name: Guideline Recommendation Bundle
     reference:
@@ -92,10 +92,10 @@ definition:
   - description: Description of the intervention element of a PICO construct that
       evidence is about.
     exampleBoolean: false
-    name: Intervention Evidence Variable
+    name: Intervention
     reference:
       reference: StructureDefinition/intervention-evidence-variable
-  - description: Net Effect for the provided evidence, calculated by aggregation or
+  - description: Net Effect for the provided evidence, calculated by aggregation of
       importance-weighted outcomes.
     exampleBoolean: false
     name: Net Effect Evidence Variable
@@ -117,52 +117,52 @@ definition:
   - description: Description of the population element of a PICO construct that evidence
       is about.
     exampleBoolean: false
-    name: Population Evidence Variable
+    name: Population
     reference:
       reference: StructureDefinition/population-evidence-variable
   - description: Characterization of a group of patients or subjects for which a clinical
       guideline recommends a treatment or intervention.
     exampleBoolean: false
-    name: Population
+    name: Population Group
     reference:
       reference: StructureDefinition/population-group
-  - description: Version of EvidenceReport.
+  - description: Adds version attribute to EvidenceReport.
     exampleBoolean: false
     name: EvidenceReport Version
     reference:
       reference: StructureDefinition/ceosys-extension-evidencereport-version
-  - description: Adds the possibility to reference an ActivityDefinition resource
+  - description: Adds the possibility to reference an ActivityDefinition resource.ReferenceActivityDefinition
     exampleBoolean: false
-    name: ReferenceActivityDefinition
+    name: Reference Activity Definition
     reference:
-      reference: StructureDefinition/ReferenceActivityDefinition
+      reference: StructureDefinition/reference-activity-definition
   - description: All codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO
     reference:
       reference: ValueSet/cochrane-pico
-  - description: All Intervention codes from the Cochrane PICO ontology.
+  - description: All intervention codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO Intervention
     reference:
       reference: ValueSet/cochrane-pico-intervention
-  - description: All Outcome codes from the Cochrane PICO ontology.
+  - description: All outcome codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO Outcome
     reference:
       reference: ValueSet/cochrane-pico-outcome
-  - description: All Population codes from the Cochrane PICO ontology.
+  - description: All population codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO Population
     reference:
       reference: ValueSet/cochrane-pico-population
-  - description: Strength of a clinical guideline recommendation
+  - description: Strength of a clinical guideline recommendation.
     exampleBoolean: false
     name: Recommendation Strength
     reference:
       reference: ValueSet/ceosys-vs-recommendation-strength
   - description: Codes for clinical guideline recommendation representation missing
-      from other code systems
+      from other code systems.
     exampleBoolean: false
     name: CEOsys Code System
     reference:
@@ -179,12 +179,12 @@ definition:
     name: CochranePICOOntology
     reference:
       reference: CodeSystem/cochrane-pico-ontology
-  - description: Strength of a clinical guideline recommendation
+  - description: Strength of a clinical guideline recommendation.
     exampleBoolean: false
     name: Recommendation Strength
     reference:
       reference: CodeSystem/ceosys-cs-recommendation-strength
-  - description: COVID19 Intensive Care Treatment Guideline
+  - description: COVID19 Intensive Care Treatment Guideline.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: Example
     reference:
@@ -209,12 +209,12 @@ definition:
     name: Example Intervention
     reference:
       reference: EvidenceVariable/ExampleIntervention
-  - description: Example of a net effect with a single outcome
+  - description: Example of a net effect with a single outcome.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-evidence-variable
     name: Example Net Effect
     reference:
       reference: EvidenceVariable/ExampleNetEffect
-  - description: Example of an outcome evidence variable
+  - description: Example of an outcome evidence variable.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
     name: Example Outcome
     reference:
@@ -230,7 +230,7 @@ definition:
     name: population
     reference:
       reference: Group/ExamplePopulationGroup
-  - description: Example of a guideline resource
+  - description: Example of a guideline resource.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: Example
     reference:

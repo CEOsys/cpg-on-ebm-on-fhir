@@ -3,7 +3,7 @@ Profile: NetEffectEvidenceVariable
 Parent: EvidenceVariable
 Id: net-effect-evidence-variable
 Title: "Net Effect Evidence Variable"
-Description: "Net Effect for the provided evidence, calculated by aggregation or importance-weighted outcomes."
+Description: "Net Effect for the provided evidence, calculated by aggregation of importance-weighted outcomes."
 * insert metadata(2021-12-21, #draft, 0.1.0)
 * name 1..1 MS
 * characteristicCombination 1..1 MS
@@ -18,7 +18,7 @@ Instance: ExampleNetEffect
 InstanceOf: net-effect-evidence-variable
 Usage: #example
 Title: "Example Net Effect"
-Description: "Example of a net effect with a single outcome"
+Description: "Example of a net effect with a single outcome."
 * status = #active
 * identifier
   * system = $ceosys

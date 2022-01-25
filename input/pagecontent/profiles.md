@@ -1,16 +1,15 @@
 ### Guidelines
-{% include  profile-reference.md name='Evidence Report Guideline' %}
+{% include  profile-reference.md name='Clinical Practice Guideline' %}
 {% include  profile-reference.md name='Guideline Recommendation' %}
 {% include  profile-reference.md name='Guideline Recommendation Bundle' %}
 
 ### Population
 {% include  profile-reference.md name='Population' %}
-{% include  profile-reference.md name='Population Evidence Variable' %}
+{% include  profile-reference.md name='Population Group' %}
 
 ### Intervention/Exposure
+{% include  profile-reference.md name='Intervention' %}
 {% include  profile-reference.md name='Intervention Activity' %}
-{% include  profile-reference.md name='Intervention Evidence Variable' %}
-{% include  profile-reference.md name='ReferenceActivityDefinition' %}
 
 ### Outcome
 {% include  profile-reference.md name='Outcome Evidence Variable' %}

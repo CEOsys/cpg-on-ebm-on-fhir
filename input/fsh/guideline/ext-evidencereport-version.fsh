@@ -2,7 +2,7 @@
 Extension: EvidenceReportVersion
 Id: ceosys-extension-evidencereport-version
 Title: "EvidenceReport Version"
-Description: "Version of EvidenceReport."
+Description: "Adds version attribute to EvidenceReport."
 * insert metadata(2021-11-16, #draft, 0.1.0)
 * . ^short = "Version"
 * . ^definition = "Extension used on EvidenceReport resources to describe the guideline version."

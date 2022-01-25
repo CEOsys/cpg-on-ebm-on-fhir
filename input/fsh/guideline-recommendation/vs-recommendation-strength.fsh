@@ -2,5 +2,5 @@
 ValueSet: RecommendationStrength
 Id: ceosys-vs-recommendation-strength
 Title: "Recommendation Strength"
-Description: ""
+Description: "Strength of a clinical guideline recommendation."
 * include codes from system ceosys-cs-recommendation-strength

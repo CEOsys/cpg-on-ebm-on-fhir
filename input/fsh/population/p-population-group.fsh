@@ -2,8 +2,8 @@
 Profile: PopulationGroup
 Parent: Group
 Id: population-group
-Title: "Population"
-Description: ""
+Title: "Population Group"
+Description: "Characterization of a group of patients or subjects for which a clinical guideline recommends a treatment or intervention."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * type 1..1
 * type = #person
@@ -29,7 +29,7 @@ Instance: ExamplePopulationGroup
 InstanceOf: population-group
 Usage: #example
 Title: "population"
-Description: ""
+Description: "Example of a population group: COVID-19 patients."
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "Condition - COVID-19"
   * code.coding[sct] = $sctIntl2021#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
