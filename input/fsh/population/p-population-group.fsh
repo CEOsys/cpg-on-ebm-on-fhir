@@ -28,7 +28,7 @@ Description: "Characterization of a group of patients or subjects for which a cl
 Instance: ExamplePopulationGroup
 InstanceOf: population-group
 Usage: #example
-Title: "population"
+Title: "Example Population Group"
 Description: "Example of a population group: COVID-19 patients."
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "Condition - COVID-19"

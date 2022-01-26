@@ -2,7 +2,7 @@
 Instance: COVID19IntensiveCareTreatmentGuideline
 InstanceOf: guideline
 Usage: #example
-Title: "Example"
+Title: "COVID19 Intensive Care Treatment Guideline"
 Description: "COVID19 Intensive Care Treatment Guideline."
 * identifier[MAGICapp].value = "5062"
 * extension[version].valueString = "1.0"
@@ -18,7 +18,7 @@ Description: "COVID19 Intensive Care Treatment Guideline."
 Instance: DexamethasoneRecommendation
 InstanceOf: guideline-recommendation
 Usage: #example
-Title: "Example"
+Title: "Dexamethasone for critically ill COVID-19 patients"
 Description: "Dexamethasone in critically ill patients with COVID-19."
 * identifier[MAGICapp].value = "80618"
 * status = #retired

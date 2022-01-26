@@ -1,5 +1,6 @@
 CodeSystem: CochraneCoreOntology
 Id: cochrane-core-ontology
+Title: "Cochrane Core Ontology"
 Description: "The Cochrane Core ontology describes the entities and concepts that exist in the domain of evidence based healthcare."
 * ^url = $cochrane-core
 * ^version = "2.0.1"

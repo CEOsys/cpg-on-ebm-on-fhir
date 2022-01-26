@@ -73,7 +73,7 @@ Description: "Representation of an evidence-based clinical practice guideline."
 Instance: GuidelineExample
 InstanceOf: guideline
 Usage: #example
-Title: "Example"
+Title: "Example Guideline"
 Description: "Example of a guideline resource."
 * identifier
   * system = $ceosys

@@ -1,5 +1,6 @@
 CodeSystem: CochranePICOOntology
 Id: cochrane-pico-ontology
+Title: "Cochrane PICO Ontology"
 Description: "The PICO ontology describes questions in evidence based healthcare with the intention of supporting the publishing of evidence as linked data."
 * ^url = $cochrane-pico
 * ^version = "4.0.1"

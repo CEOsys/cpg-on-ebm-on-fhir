@@ -110,7 +110,7 @@ Description: "Single recommendation from a clinical practice guideline."
 Instance: ExampleGuidelineRecommendation
 InstanceOf: guideline-recommendation
 Usage: #example
-Title: "Example of a guideline recommendation"
+Title: "Example Guideline Recommendation"
 Description: "Example of a single clinical practice guideline recommendation."
 * status = #active
 * identifier[MAGICapp].value = "12345"

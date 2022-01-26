@@ -1,6 +1,6 @@
 // Author: Gregor Lichtner @glichtner
 Extension: ReferenceActivityDefinition
-Id: reference-activity-definition
+Id: ceosys-extension-reference-activity-definition
 Title: "Reference Activity Definition"
 Description: "Adds the possibility to reference an ActivityDefinition resource."
 * insert metadata(2021-12-03, #draft, 0.1.0)
