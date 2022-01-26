@@ -15,7 +15,7 @@ Description: "Characterization of a group of patients or subjects for which a cl
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains
-      cochrane 1..1 and sct 1..*
+      cochrane 0..* and sct 1..*
   * coding[cochrane]
     * ^patternCoding.system = $cochrane-ld
     * system 1.. MS

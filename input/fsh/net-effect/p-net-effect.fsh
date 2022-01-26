@@ -13,6 +13,7 @@ Description: "Net Effect for the provided evidence, calculated by aggregation of
   * type from CochranePICOOutcome (required)
   * definition[x] only Reference
   * definitionReference only Reference(OutcomeEvidenceVariable)
+* characteristic.exclude = false
 
 Instance: ExampleNetEffect
 InstanceOf: net-effect-evidence-variable
