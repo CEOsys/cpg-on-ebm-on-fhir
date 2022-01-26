@@ -2,7 +2,7 @@
 # Clinical Practice Guidelines on FHIR
 
 [![FHIR Validation](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml/badge.svg)](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml)
-[![FHIR Validation](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml/badge.svg)](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml)
+[![ImplementationGuide Publisher](https://github.com/CEOsys/fhir-cpg/actions/workflows/ig-publish.yml/badge.svg)](https://github.com/CEOsys/fhir-cpg/actions/workflows/ig-publish.yml)
 
 ## Quick start
 This implementation guide describes an [evidence-based medicine on FHIR (EBMonFHIR)][EMBonFHIR] approach to represent clinical practice guidelines using FHIR resources.
