@@ -3,6 +3,11 @@
 
 ### Guidance
 
+This profile represents a single clinical practice guideline. It summarizes the guideline metadata (such as identifier, publisher, author, editor, status) and links the [Population EvidenceVariable][Population] and [Intervention EvidenceVariable][Intervention] resources in the `subject` field, to indicate the focus of the report, as well as the individual [Guideline Recommendation Evidence resources][Guideline Recommendation] via the `section` field.
+
+It thus provides a structured presentation of the whole guideline contents including the guideline metadata.
+
+<img alt="FHIR Guideline" src="08-guideline.png" style="width:35%;" />
 
 
 {% capture resource_inheritance %}

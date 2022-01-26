@@ -131,11 +131,11 @@ definition:
     name: EvidenceReport Version
     reference:
       reference: StructureDefinition/ceosys-extension-evidencereport-version
-  - description: Adds the possibility to reference an ActivityDefinition resource.ReferenceActivityDefinition
+  - description: Adds the possibility to reference an ActivityDefinition resource.
     exampleBoolean: false
     name: Reference Activity Definition
     reference:
-      reference: StructureDefinition/reference-activity-definition
+      reference: StructureDefinition/ceosys-extension-reference-activity-definition
   - description: All codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO
@@ -170,13 +170,13 @@ definition:
   - description: The Cochrane Core ontology describes the entities and concepts that
       exist in the domain of evidence based healthcare.
     exampleBoolean: false
-    name: CochraneCoreOntology
+    name: Cochrane Core Ontology
     reference:
       reference: CodeSystem/cochrane-core-ontology
   - description: The PICO ontology describes questions in evidence based healthcare
       with the intention of supporting the publishing of evidence as linked data.
     exampleBoolean: false
-    name: CochranePICOOntology
+    name: Cochrane PICO Ontology
     reference:
       reference: CodeSystem/cochrane-pico-ontology
   - description: Strength of a clinical guideline recommendation.
@@ -186,12 +186,12 @@ definition:
       reference: CodeSystem/ceosys-cs-recommendation-strength
   - description: COVID19 Intensive Care Treatment Guideline.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
-    name: Example
+    name: COVID19 Intensive Care Treatment Guideline
     reference:
       reference: EvidenceReport/COVID19IntensiveCareTreatmentGuideline
   - description: Dexamethasone in critically ill patients with COVID-19.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
-    name: Example
+    name: Dexamethasone for critically ill COVID-19 patients
     reference:
       reference: Evidence/DexamethasoneRecommendation
   - description: Example of a clinical practice guideline representation bundle.
@@ -201,7 +201,7 @@ definition:
       reference: Bundle/EvidenceReportGuidelineRecommendationExample
   - description: Example of a single clinical practice guideline recommendation.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
-    name: Example of a guideline recommendation
+    name: Example Guideline Recommendation
     reference:
       reference: Evidence/ExampleGuidelineRecommendation
   - description: Example of an intervention as part of a clinical practice guideline.
@@ -227,12 +227,12 @@ definition:
       reference: EvidenceVariable/ExamplePopulation
   - description: 'Example of a population group: COVID-19 patients.'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: population
+    name: Example Population Group
     reference:
       reference: Group/ExamplePopulationGroup
   - description: Example of a guideline resource.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
-    name: Example
+    name: Example Guideline
     reference:
       reference: EvidenceReport/GuidelineExample
   - description: An active intervention activity.

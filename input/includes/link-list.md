@@ -11,7 +11,19 @@
 [EvidenceReport Version]: StructureDefinition-ceosys-extension-evidencereport-version.html
 [Reference Activity Definition]: StructureDefinition-reference-activity-definition.html
 
+[CEOsys Code System]: CodeSystem-ceosys-code-system.html
+[CochraneCoreOntology]: CodeSystem-cochrane-core-ontology.html
+[CochranePICOOntology]: CodeSystem-cochrane-pico-ontology.html
+[Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
+
+[Cochrane PICO]: ValueSet-cochrane-pico.html
+[Cochrane PICO Intervention]: ValueSet-cochrane-pico-intervention.html
+[Cochrane PICO Outcome]: ValueSet-cochrane-pico-outcome.html
+[Cochrane PICO Population]: ValueSet-cochrane-pico-population.html
+[Recommendation Strength]: ValueSet-ceosys-vs-recommendation-strength.html
+
 [SNOMEDCT]: http://snomed.info/sct
+[COCHRANELD]: https://data.cochrane.org/concepts/
 [LOINC]: http://loinc.org/
 [UCUM]: http://unitsofmeasure.org
 [VSdataAbsentReason]: http://hl7.org/fhir/R4/valueset-data-absent-reason.html

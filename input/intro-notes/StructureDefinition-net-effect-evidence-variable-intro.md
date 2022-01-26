@@ -3,7 +3,20 @@
 
 ### Guidance
 
+This profile describe the metadata of the net effect for a specific [Guideline Recommendation][Guideline Recommendation] and references the [Outcomes][Outcome] that are aggregated to yield the net effect.
 
+For more information on the net effect, see
+[Alper, B. S. et al. Defining certainty of net benefit: a GRADE concept paper. BMJ Open 9, e027445 (2019)](https://bmjopen.bmj.com/content/9/6/e027445.long).
+
+| Field | Description |
+| ----- | ----------- |
+| `characteristicCombination` | Fixed to `#net-effect`. |
+| `characteristic.type` | Type of outcome (from [Cochrane PICO Outcome value set][Cochrane PICO Outcome]). |
+| `characteristic.definition` | Reference to a [Outcome EvidenceVariable resource][Outcome] describing the (expected) outcome. |
+| `characteristic.exclude` | Fixed to `false`. |
+{:.grid}
+
+<img alt="FHIR Net Effect" src="05-net-effect.png" style="width:100%;" />
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.

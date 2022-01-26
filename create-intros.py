@@ -39,6 +39,7 @@ linklist_general = {
     "CEOSYS": "https://covid-evidenz.de/",
     "NUM": "https://www.netzwerk-universitaetsmedizin.de/",
     "EMBonFHIR": "https://confluence.hl7.org/display/CDS/EBMonFHIR",
+    "COCHRANELD": "https://data.cochrane.org/concepts/",
 }
 
 if not ig_fname.exists():
@@ -79,6 +80,9 @@ for resource in ig["definition"]["resource"]:
     if ref.startswith('ValueSet/'):
         linklist_vs[resource["name"]] = ref.replace('/', '-') + '.html'
 
+    if ref.startswith('CodeSystem/'):
+        linklist[resource["name"]] = ref.replace('/', '-') + '.html'
+
     if not ref.startswith('StructureDefinition/') and not ref.startswith('Questionnaire/'):
       continue
 
@@ -97,11 +101,15 @@ if not linklist_fname.parent.exists():
 
 print(linklist_fname.name)
 with open(linklist_fname, 'w') as f:
-    for k, v in linklist.items():
-        f.write(f'[{k}]: {v}\n')
-    f.write("\n")
-    for k, v in linklist_general.items():
-        f.write(f'[{k}]: {v}\n')
+    def write_links(ll, newline=True):
+        for k, v in ll.items():
+            f.write(f'[{k}]: {v}\n')
+        if newline:
+            f.write("\n")
+
+    write_links(linklist)
+    write_links(linklist_vs)
+    write_links(linklist_general, newline=False)
 
 print(profiles_fname.name)
 with open(profiles_fname, 'w') as f:

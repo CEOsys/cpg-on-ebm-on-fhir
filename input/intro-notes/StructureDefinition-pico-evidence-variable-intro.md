@@ -3,6 +3,7 @@
 
 ### Guidance
 
+Abstract profile used as parent to describe the [Population][Population], [Intervention][Intervention] and [Outcome][Outcome] of a specific [Guideline Recommendation][Guideline Recommendation]. This profile is not used directly, but serves as a collection of constraints common to said EvidenceVariable resources. See the specific EvidenceVariable definitions for more information.
 
 
 {% capture resource_inheritance %}

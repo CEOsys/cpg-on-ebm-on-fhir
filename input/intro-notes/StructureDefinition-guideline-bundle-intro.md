@@ -16,6 +16,8 @@ This bundle is used to collect all resources of a specific clinical practice gui
   * [Net Effect][Net Effect]
   * [Outcome][Outcome]
 
+<img alt="FHIR Bundle" src="09-bundle.png" style="width:35%;" />
+
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.
 {% endcapture %}

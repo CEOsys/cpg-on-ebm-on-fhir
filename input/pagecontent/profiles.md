@@ -1,7 +1,6 @@
 ### Guidelines
 {% include profile-reference.md name='Clinical Practice Guideline' %}
 {% include profile-reference.md name='Guideline Recommendation' %}
-{% include profile-reference.md name='Guideline Bundle' %}
 
 ### Population
 {% include profile-reference.md name='Population' %}
@@ -18,4 +17,5 @@
 {% include profile-reference.md name='Net Effect' %}
 
 ### Other
+{% include profile-reference.md name='Guideline Bundle' %}
 {% include profile-reference.md name='PICO Evidence Variable' %}

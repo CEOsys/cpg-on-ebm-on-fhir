@@ -1,9 +1,10 @@
+{% include variables.md %}
 {% assign id = {{include.id}} %}
 {% assign resource = site.data.structuredefinitions.[id] %}
 
 ### Guidance
 
-This extension provides a version attribute for the [EvidenceReport resource](http://build.fhir.org/evidencereport.html), as it currently does not implement the field ([FHIR 5.0.0-snapshot1](http://hl7.org/fhir/5.0.0-snapshot1/)), although it is derived from [MetadataResource](http://build.fhir.org/metadataresource.html) and thus should implement the version attribute.
+This extension provides a version attribute for the [EvidenceReport resource]({{ fhir_base_url }}evidencereport.html), as it currently does not implement the field ([FHIR 5.0.0-snapshot1](http://hl7.org/fhir/5.0.0-snapshot1/)), although it is derived from [MetadataResource]({{ fhir_base_url }}metadataresource.html) and thus should implement the version attribute.
 
 
 {% capture resource_inheritance %}
