@@ -38,6 +38,8 @@ Description: "Representation of an evidence-based clinical practice guideline."
   * characteristic ^slicing.rules = #open
   * characteristic contains
       population 1..* MS
+      and intervention 1..* MS
+      and outcome 0..* MS
     * code 1..1 MS
       * coding ^slicing.discriminator.type = #pattern
       * coding ^slicing.discriminator.path = "$this"
@@ -53,9 +55,20 @@ Description: "Representation of an evidence-based clinical practice guideline."
     * value[x] only Reference
     * valueReference only Reference(PICOEvidenceVariable)
   * characteristic[population]
-    * code
-      * coding[focusCharacteristicCode] = $cs-focus-characteristic#population "Population"
+    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#population "Population"
     * valueReference only Reference(PopulationEvidenceVariable)
+  * characteristic[intervention]
+    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#exposure "Exposure"
+    * valueReference only Reference(InterventionEvidenceVariable)
+  * characteristic[outcome]
+    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#outcome "Outcome"
+    * valueReference only Reference(OutcomeEvidenceVariable)
+* section 1..* MS
+  * title 1..1 MS
+  * focus 1..1 MS
+  * focus = CEOsysCodeSystem#guideline-recommendation "Clinical practice guideline recommendation"
+  * focusReference only Reference(GuidelineRecommendation)
+
 
 Instance: GuidelineExample
 InstanceOf: guideline
@@ -69,7 +82,15 @@ Description: "Example of a guideline resource."
 * extension[version].valueString = "0.1.0"
 * subject
   * characteristic[population]
-    //* code.coding[cochrane] = $cochrane-pico#Population
     * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#population "Population"
-    //* code.coding = $cs-focus-characteristic#population "Population"
     * valueReference = Reference(ExamplePopulation)
+  * characteristic[intervention]
+    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#exposure "Exposure"
+    * valueReference = Reference(ExampleIntervention)
+  * characteristic[outcome]
+    * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#outcome "Outcome"
+    * valueReference = Reference(ExampleOutcome)
+* section
+  * title = "Example Guideline Recommendation"
+  * focus = CEOsysCodeSystem#guideline-recommendation "Clinical practice guideline recommendation"
+  * focusReference = Reference(ExampleGuidelineRecommendation)

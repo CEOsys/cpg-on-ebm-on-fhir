@@ -7,9 +7,11 @@ Description: "COVID19 Intensive Care Treatment Guideline."
 * identifier[MAGICapp].value = "5062"
 * extension[version].valueString = "1.0"
 * status = #retired
-* subject[+]
+* subject
   * characteristic[population]
-    * valueReference = Reference(PopulationExample)
+    * valueReference = Reference(ExamplePopulation)
+  * characteristic[intervention]
+    * valueReference = Reference(ExampleIntervention)
 * section[+]
   * title = "Stationäre Therapie von COVID-19 Patienten"
 
