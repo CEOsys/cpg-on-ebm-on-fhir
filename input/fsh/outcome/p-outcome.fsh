@@ -6,9 +6,11 @@ Title: "Outcome"
 Description: "Description of the outcome element of a PICO construct that evidence is about."
 * insert metadata(2021-12-21, #draft, 0.1.0)
 * name 1..1 MS
+* characteristicCombination.code = $cs-characteristic-combination#all-of "All of"
 * characteristic 1..* MS
   * type 1..1 MS
   * type from CochranePICOOutcome (required)
+* characteristic.exclude = false
 
 Instance: ExampleOutcome
 InstanceOf: outcome-evidence-variable

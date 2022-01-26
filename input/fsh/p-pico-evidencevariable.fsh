@@ -8,7 +8,6 @@ Description: "Description of the a PICO element that knowledge is about. This ab
 * ^abstract = true
 * name 1..1 MS
 * characteristicCombination 1..1 MS
-* characteristicCombination.code = $cs-characteristic-combination#any-of
 * characteristic 1..* MS
   * type 1..1 MS
   * type from CochranePICO (required)
