@@ -1,8 +1,8 @@
 
 # Clinical Practice Guidelines on EBMonFHIR
 
-[![FHIR Validation](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml/badge.svg)](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml)
-[![ImplementationGuide Publisher](https://github.com/CEOsys/fhir-cpg/actions/workflows/ig-publish.yml/badge.svg)](https://github.com/CEOsys/fhir-cpg/actions/workflows/ig-publish.yml)
+[![FHIR Validation](https://github.com/CEOsys/cpg-on-ebm-on-fhir/actions/workflows/fhir-validate.yml/badge.svg)](https://github.com/CEOsys/cpg-on-ebm-on-fhir/actions/workflows/fhir-validate.yml)
+[![ImplementationGuide Publisher](https://github.com/CEOsys/cpg-on-ebm-on-fhir/actions/workflows/ig-publish.yml/badge.svg)](https://github.com/CEOsys/cpg-on-ebm-on-fhir/actions/workflows/ig-publish.yml)
 
 ## Quick start
 This implementation guide describes an [evidence-based medicine on FHIR (EBMonFHIR)][EMBonFHIR] approach to represent clinical practice guidelines using FHIR resources.
@@ -10,13 +10,13 @@ This implementation guide describes an [evidence-based medicine on FHIR (EBMonFH
 Apart from representing the actual treatment recommendations provided by the guidelines, a large set of metadata regarding the guideline creation process (risk of bias, certainty, authorships etc.) is also encoded.
 The representation of clinical practice guidelines is oriented to the PICO (population, intervention/exposure, comparator, outcome) framework.
 
-For detailed information, please visit the [Implementation Guide](https://ceosys.github.io/fhir-cpg/)!
+For detailed information, please visit the [Implementation Guide](https://ceosys.github.io/cpg-on-ebm-on-fhir/)!
 
 ## Summary
 
 The following diagram provides an overview of the different profiles used in this implementation guide and their relationship:
 
-![FHIR structure overview](https://github.com/CEOsys/fhir-cpg/raw/main/input/images/fhir-structure-overview.png)
+![FHIR structure overview](https://github.com/CEOsys/cpg-on-ebm-on-fhir/raw/main/input/images/fhir-structure-overview.png)
 
 ## Description
 
@@ -53,31 +53,31 @@ Additionally, the following profiles are used to specify a guideline:
 ## Links
 * [Netzwerk Universitätsmedizin (NUM)][NUM]
 * [COVID-19 Evidence Ecosystem (CEOsys)][CEOSYS]
-* [GitHub project](https://github.com/CEOsys/fhir-cpg)
+* [GitHub project](https://github.com/CEOsys/cpg-on-ebm-on-fhir)
 
-[Clinical Practice Guideline]: https://ceosys.github.io/fhir-cpg/StructureDefinition-guideline.html
-[Guideline Bundle]: https://ceosys.github.io/fhir-cpg/StructureDefinition-guideline-bundle.html
-[Guideline Recommendation]: https://ceosys.github.io/fhir-cpg/StructureDefinition-guideline-recommendation.html
-[Intervention Activity]: https://ceosys.github.io/fhir-cpg/StructureDefinition-intervention-activity.html
-[Intervention]: https://ceosys.github.io/fhir-cpg/StructureDefinition-intervention-evidence-variable.html
-[Net Effect]: https://ceosys.github.io/fhir-cpg/StructureDefinition-net-effect-evidence-variable.html
-[Outcome]: https://ceosys.github.io/fhir-cpg/StructureDefinition-outcome-evidence-variable.html
-[PICO Evidence Variable]: https://ceosys.github.io/fhir-cpg/StructureDefinition-pico-evidence-variable.html
-[Population]: https://ceosys.github.io/fhir-cpg/StructureDefinition-population-evidence-variable.html
-[Population Group]: https://ceosys.github.io/fhir-cpg/StructureDefinition-population-group.html
-[EvidenceReport Version]: https://ceosys.github.io/fhir-cpg/StructureDefinition-ceosys-extension-evidencereport-version.html
-[Reference Activity Definition]: https://ceosys.github.io/fhir-cpg/StructureDefinition-reference-activity-definition.html
+[Clinical Practice Guideline]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-guideline.html
+[Guideline Bundle]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-guideline-bundle.html
+[Guideline Recommendation]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-guideline-recommendation.html
+[Intervention Activity]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-intervention-activity.html
+[Intervention]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-intervention-evidence-variable.html
+[Net Effect]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-net-effect-evidence-variable.html
+[Outcome]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-outcome-evidence-variable.html
+[PICO Evidence Variable]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-pico-evidence-variable.html
+[Population]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-population-evidence-variable.html
+[Population Group]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-population-group.html
+[EvidenceReport Version]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-ceosys-extension-evidencereport-version.html
+[Reference Activity Definition]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-reference-activity-definition.html
 
-[CEOsys Code System]: https://ceosys.github.io/fhir-cpg/CodeSystem-ceosys-code-system.html
-[CochraneCoreOntology]: https://ceosys.github.io/fhir-cpg/CodeSystem-cochrane-core-ontology.html
-[CochranePICOOntology]: https://ceosys.github.io/fhir-cpg/CodeSystem-cochrane-pico-ontology.html
-[Recommendation Strength]: https://ceosys.github.io/fhir-cpg/CodeSystem-ceosys-cs-recommendation-strength.html
+[CEOsys Code System]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-ceosys-code-system.html
+[CochraneCoreOntology]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-cochrane-core-ontology.html
+[CochranePICOOntology]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-cochrane-pico-ontology.html
+[Recommendation Strength]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-ceosys-cs-recommendation-strength.html
 
-[Cochrane PICO]: https://ceosys.github.io/fhir-cpg/ValueSet-cochrane-pico.html
-[Cochrane PICO Intervention]: https://ceosys.github.io/fhir-cpg/ValueSet-cochrane-pico-intervention.html
-[Cochrane PICO Outcome]: https://ceosys.github.io/fhir-cpg/ValueSet-cochrane-pico-outcome.html
-[Cochrane PICO Population]: https://ceosys.github.io/fhir-cpg/ValueSet-cochrane-pico-population.html
-[Recommendation Strength]: https://ceosys.github.io/fhir-cpg/ValueSet-ceosys-vs-recommendation-strength.html
+[Cochrane PICO]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico.html
+[Cochrane PICO Intervention]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico-intervention.html
+[Cochrane PICO Outcome]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico-outcome.html
+[Cochrane PICO Population]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico-population.html
+[Recommendation Strength]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-ceosys-vs-recommendation-strength.html
 
 [SNOMEDCT]: http://snomed.info/sct
 [COCHRANELD]: https://data.cochrane.org/concepts/
