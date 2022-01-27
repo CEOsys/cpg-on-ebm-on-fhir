@@ -1,5 +1,5 @@
 
-# Clinical Practice Guidelines on FHIR
+# Clinical Practice Guidelines on EBMonFHIR
 
 [![FHIR Validation](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml/badge.svg)](https://github.com/CEOsys/fhir-cpg/actions/workflows/fhir-validate.yml)
 [![ImplementationGuide Publisher](https://github.com/CEOsys/fhir-cpg/actions/workflows/ig-publish.yml/badge.svg)](https://github.com/CEOsys/fhir-cpg/actions/workflows/ig-publish.yml)
@@ -41,17 +41,14 @@ Additionally, the following profiles are used to specify a guideline:
 | Guideline Bundle | [Bundle][Guideline Bundle] | Bundle of all resources of a single clinical practice guideline. | All other resources in this IG. |
 
 
-
-
-
 ## Authors
-* [Gregor Lichtner](https://github.com/glichtner) (Charité -- Universitäsmedizin Berlin)
-* Falk von Dincklage (Charité -- Universitäsmedizin Berlin)
-* Claudia Spies (Charité -- Universitäsmedizin Berlin)
-* Carlo Jurth (Charité -- Universitäsmedizin Berlin)
+* [Gregor Lichtner](https://github.com/glichtner) (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
+* Falk von Dincklage (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
+* Carlo Jurth (Charité -- Universitätsmedizin Berlin)
 
 ## Involved organizations
 * [Charité -- Universitätsmedizin Berlin](https://www.charite.de)
+* [University Medicine Greifswald](https://www.medizin.uni-greifswald.de/de/home/)
 
 ## Links
 * [Netzwerk Universitätsmedizin (NUM)][NUM]

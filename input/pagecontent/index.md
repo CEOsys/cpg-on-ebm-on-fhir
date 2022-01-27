@@ -41,14 +41,15 @@ In short, a [single guideline recommendation][Guideline Recommendation] describe
 
 <br/>
 
-### Authors
-* [Gregor Lichtner](https://github.com/glichtner) (Charité -- Universitäsmedizin Berlin)
-* Falk von Dincklage (Charité -- Universitäsmedizin Berlin)
-* Claudia Spies (Charité -- Universitäsmedizin Berlin)
-* Carlo Jurth (Charité -- Universitäsmedizin Berlin)
 
-### Involved organizations
+## Authors
+* [Gregor Lichtner](https://github.com/glichtner) (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
+* Falk von Dincklage (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
+* Carlo Jurth (Charité -- Universitätsmedizin Berlin)
+
+## Involved organizations
 * [Charité -- Universitätsmedizin Berlin](https://www.charite.de)
+* [University Medicine Greifswald](https://www.medizin.uni-greifswald.de/de/home/)
 
 ### Links
 * [Netzwerk Universitätsmedizin (NUM)][NUM]
