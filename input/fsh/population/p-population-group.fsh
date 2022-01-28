@@ -39,6 +39,9 @@ Description: "Characterization of a group of patients or subjects for which a cl
       * ^patternCoding.system = $sct
       * system 1.. MS
       * code 1.. MS
+  * extension contains 
+    GroupCharacteristicLinkId named linkId 0..1 MS and
+    RelatedCharacteristic named relatedCharacteristic 0..* MS
 
 Instance: ExamplePopulationGroup
 InstanceOf: population-group
