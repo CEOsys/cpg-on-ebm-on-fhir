@@ -16,7 +16,7 @@ This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | 
 {{ resource_inheritance | strip_newlines }}
 
 #### Recommendation Strength
-The strength of the recommendation is supplied via the [Strength of Recommendation extension](http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation). Valid codes are given in the [Recommendation Strength value set][Recommendation Strength] and are as follows:
+The strength of the recommendation is supplied via the [Strength of Recommendation extension](http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation). Valid codes are given in the [Recommendation Strength value set][VS Recommendation Strength] and are as follows:
 
 {% include ValueSet-ceosys-vs-recommendation-strength-expansion.xhtml %}
 {:.grid}

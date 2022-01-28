@@ -126,16 +126,37 @@ definition:
     name: Population Group
     reference:
       reference: StructureDefinition/population-group
+  - description: Adds date attribute to EvidenceReport.
+    exampleBoolean: false
+    name: EvidenceReport Date
+    reference:
+      reference: StructureDefinition/ceosys-extension-evidencereport-date
   - description: Adds version attribute to EvidenceReport.
     exampleBoolean: false
     name: EvidenceReport Version
     reference:
       reference: StructureDefinition/ceosys-extension-evidencereport-version
+  - description: Unique id for the characteristic in the Group
+    exampleBoolean: false
+    name: Group Characteristic Link Id
+    reference:
+      reference: StructureDefinition/group-characteristic-link-id
   - description: Adds the possibility to reference an ActivityDefinition resource.
     exampleBoolean: false
     name: Reference Activity Definition
     reference:
       reference: StructureDefinition/ceosys-extension-reference-activity-definition
+  - description: Adds the possibility to a characteristic to specify a temporal relationship
+      with another characteristic.
+    exampleBoolean: false
+    name: Related Characteristic
+    reference:
+      reference: StructureDefinition/related-characteristic
+  - description: Types of relationships between characteristics
+    exampleBoolean: false
+    name: Characteristic Relationship Type
+    reference:
+      reference: ValueSet/characteristic-relationship-type
   - description: All codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO
@@ -156,6 +177,21 @@ definition:
     name: Cochrane PICO Population
     reference:
       reference: ValueSet/cochrane-pico-population
+  - description: Degree of consensus reached
+    exampleBoolean: false
+    name: Rating Consensus
+    reference:
+      reference: ValueSet/rating-consensus
+  - description: Codes from EvidenceCertaintyRating related to overall quality
+    exampleBoolean: false
+    name: Rating Overall Quality
+    reference:
+      reference: ValueSet/rating-overall-quality
+  - description: Codes from EvidenceCertaintyRating related to risk of bias
+    exampleBoolean: false
+    name: Rating Risk Of Bias
+    reference:
+      reference: ValueSet/rating-risk-of-bias
   - description: Strength of a clinical guideline recommendation.
     exampleBoolean: false
     name: Recommendation Strength
@@ -167,6 +203,11 @@ definition:
     name: CEOsys Code System
     reference:
       reference: CodeSystem/ceosys-code-system
+  - description: Types of relationships between characteristics
+    exampleBoolean: false
+    name: Characteristic Relationship Type
+    reference:
+      reference: CodeSystem/characteristic-relationship-type
   - description: The Cochrane Core ontology describes the entities and concepts that
       exist in the domain of evidence based healthcare.
     exampleBoolean: false
@@ -189,6 +230,11 @@ definition:
     name: COVID19 Intensive Care Treatment Guideline
     reference:
       reference: EvidenceReport/COVID19IntensiveCareTreatmentGuideline
+  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: Dexamethasone Application
+    reference:
+      reference: ActivityDefinition/DexamethasoneApplication
   - description: Dexamethasone in critically ill patients with COVID-19.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
     name: Dexamethasone for critically ill COVID-19 patients
@@ -240,6 +286,54 @@ definition:
     name: Example Intervention Activity
     reference:
       reference: ActivityDefinition/InterventionActivity
+  - description: 'Intervention for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: Dexamethasone Therapy'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-evidence-variable
+    name: Intervention Dexamethasone Application
+    reference:
+      reference: EvidenceVariable/InterventionDexamethasoneApplication
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, ARDS'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: 'Population: COVID19 / ARDS'
+    reference:
+      reference: Group/PopulationCOVID19ARDS
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Oxygen-Saturation<90'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: 'Population: COVID19 / Oxygen saturation < 90%'
+    reference:
+      reference: Group/PopulationCOVID19OxygenSaturationLt90
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Respiratory Rate > 30/min'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: 'Population: COVID19 / Respiratory Rate > 30 /min'
+    reference:
+      reference: Group/PopulationCOVID19RespiratoryRateGt30
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Sepsis'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: 'Population: COVID19 / Sepsis'
+    reference:
+      reference: Group/PopulationCOVID19Sepsis
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Vasopressor Therapy'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: Population COVID19 Vasopressor Therapy
+    reference:
+      reference: Group/PopulationCOVID19VasopressorTherapy
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Ventilated'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: Population COVID19 Ventilated
+    reference:
+      reference: Group/PopulationCOVID19Ventilated
+  - description: Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: 'Population: Critically Ill COVID-19 Patients'
+    reference:
+      reference: EvidenceVariable/PopulationCriticallyIllCOVID19Patients
 fhirVersion:
 - 5.0.0-snapshot1
 id: cpg.ceosys.de

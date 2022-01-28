@@ -42,12 +42,12 @@ In short, a [single guideline recommendation][Guideline Recommendation] describe
 <br/>
 
 
-## Authors
+### Authors
 * [Gregor Lichtner](https://github.com/glichtner) (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
 * Falk von Dincklage (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
 * Carlo Jurth (Charité -- Universitätsmedizin Berlin)
 
-## Involved organizations
+### Involved organizations
 * [Charité -- Universitätsmedizin Berlin](https://www.charite.de)
 * [University Medicine Greifswald](https://www.medizin.uni-greifswald.de/de/home/)
 

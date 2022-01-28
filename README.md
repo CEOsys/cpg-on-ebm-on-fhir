@@ -65,19 +65,37 @@ Additionally, the following profiles are used to specify a guideline:
 [PICO Evidence Variable]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-pico-evidence-variable.html
 [Population]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-population-evidence-variable.html
 [Population Group]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-population-group.html
+[EvidenceReport Date]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-ceosys-extension-evidencereport-date.html
 [EvidenceReport Version]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-ceosys-extension-evidencereport-version.html
-[Reference Activity Definition]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-reference-activity-definition.html
+[Group Characteristic Link Id]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-group-characteristic-link-id.html
+[Reference Activity Definition]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-ceosys-extension-reference-activity-definition.html
+[Related Characteristic]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/StructureDefinition-related-characteristic.html
 
 [CEOsys Code System]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-ceosys-code-system.html
-[CochraneCoreOntology]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-cochrane-core-ontology.html
-[CochranePICOOntology]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-cochrane-pico-ontology.html
-[Recommendation Strength]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-ceosys-cs-recommendation-strength.html
+[CS Characteristic Relationship Type]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-characteristic-relationship-type.html
+[Cochrane Core Ontology]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-cochrane-core-ontology.html
+[Cochrane PICO Ontology]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-cochrane-pico-ontology.html
+[CS Recommendation Strength]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/CodeSystem-ceosys-cs-recommendation-strength.html
 
+[VS Characteristic Relationship Type]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-characteristic-relationship-type.html
 [Cochrane PICO]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico.html
 [Cochrane PICO Intervention]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico-intervention.html
 [Cochrane PICO Outcome]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico-outcome.html
 [Cochrane PICO Population]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-cochrane-pico-population.html
-[Recommendation Strength]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-ceosys-vs-recommendation-strength.html
+[Rating Consensus]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-rating-consensus.html
+[Rating Overall Quality]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-rating-overall-quality.html
+[Rating Risk Of Bias]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-rating-risk-of-bias.html
+[VS Recommendation Strength]: https://github.com/CEOsys/cpg-on-ebm-on-fhir/ValueSet-ceosys-vs-recommendation-strength.html
+
+[SNOMEDCT]: http://snomed.info/sct
+[COCHRANELD]: https://data.cochrane.org/concepts/
+[LOINC]: http://loinc.org/
+[UCUM]: http://unitsofmeasure.org
+[VSdataAbsentReason]: http://hl7.org/fhir/R4/valueset-data-absent-reason.html
+[CEOSYS]: https://covid-evidenz.de/
+[NUM]: https://www.netzwerk-universitaetsmedizin.de/
+[EMBonFHIR]: https://confluence.hl7.org/display/CDS/EBMonFHIR
+
 
 [SNOMEDCT]: http://snomed.info/sct
 [COCHRANELD]: https://data.cochrane.org/concepts/

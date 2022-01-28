@@ -25,7 +25,13 @@ Description: "Characterization of a group of patients or subjects for which a cl
       * ^patternCoding.system = $sct
       * system 1.. MS
       * code 1.. MS
-  * valueCodeableConcept
+  // explicitly allowing all valid types for value[x] as otherwise it seems to restrict the value to CodeableConcept
+  * value[x] 1..1 MS
+  * valueBoolean 0..1
+  * valueQuantity 0..1
+  * valueRange 0..1
+  * valueReference 0..1
+  * valueCodeableConcept 0..1
     * coding ^slicing.discriminator.type = #pattern
     * coding ^slicing.discriminator.path = "$this"
     * coding ^slicing.rules = #open
@@ -39,7 +45,7 @@ Description: "Characterization of a group of patients or subjects for which a cl
       * ^patternCoding.system = $sct
       * system 1.. MS
       * code 1.. MS
-  * extension contains 
+  * extension contains
     GroupCharacteristicLinkId named linkId 0..1 MS and
     RelatedCharacteristic named relatedCharacteristic 0..* MS
 

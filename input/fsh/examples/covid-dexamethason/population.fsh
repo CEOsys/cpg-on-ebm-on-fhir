@@ -1,7 +1,6 @@
 /**************/
 /* Population */
 /**************/
-
 Instance: PopulationCriticallyIllCOVID19Patients
 InstanceOf: population-evidence-variable
 Usage: #example
@@ -46,7 +45,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * name = "Population_COVID19_Oxygen_Saturation_lt_90_percent"
 * text
   * status = #generated
-  * div = "<p>Population for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Oxygen-Saturation&lt;90</p>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">aPopulation for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Oxygen-Saturation&lt;90</div>"
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
   * code.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
@@ -76,7 +75,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * name = "Population_COVID19_Respiratory_Rate_lt_30_per_min"
 * text
   * status = #generated
-  * div = "<p>Population for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Respiratory Rate &gt; 30/min</p>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">aPopulation for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Respiratory Rate &gt; 30/min</div>"
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
   * code.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
@@ -84,7 +83,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * characteristic[=].exclude = false
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#r4hp3qg8yn71 "Respiratory Rate"
-  * code.coding[sct] = $sct#86290005 "Respiratory measure (observable entity)"
+  * code.coding[sct] = $sct#86290005 "Respiratory rate (observable entity)"
   * valueRange.low = 30 '{breaths}/min' "{breaths}/min"
 * characteristic[=].exclude = false
 
@@ -100,7 +99,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * name = "Population_COVID19_ARDS"
 * text
   * status = #generated
-  * div = "<p>Population for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, ARDS</p>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">aPopulation for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, ARDS</div>"
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
   * code.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
@@ -124,7 +123,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * name = "Population_COVID19_Sepsis"
 * text
   * status = #generated
-  * div = "<p>Population for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Sepsis</p>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">aPopulation for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Sepsis</div>"
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
   * code.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
@@ -148,7 +147,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * name = "Population_COVID19_Ventilated"
 * text
   * status = #generated
-  * div = "<p>Population for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Ventilated</p>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">aPopulation for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Ventilated</div>"
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
   * code.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
@@ -173,13 +172,13 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * name = "Population_COVID19_Vasopressor_Therapy"
 * text
   * status = #generated
-  * div = "<p>Population for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Vasopressor Therapy</p>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">aPopulation for guideline from https://app.magicapp.org/#/guidelines / 5062 with characteristics: COVID-19, Vasopressor Therapy</div>"
 * characteristic[+]
   * code.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
   * code.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
   * valueBoolean = true
 * characteristic[=].exclude = false
 * characteristic[+]
-  * code = $ceosys#vasopressor-therapy "Vasopressor Therapy"
+  * code = $sct#870386000 "Vasopressor therapy (procedure)"
   * valueBoolean = true
 * characteristic[=].exclude = false

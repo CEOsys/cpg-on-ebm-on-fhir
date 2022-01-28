@@ -101,14 +101,14 @@ if not linklist_fname.parent.exists():
 
 print(linklist_fname.name)
 with open(linklist_fname, 'w') as f:
-    def write_links(ll, newline=True):
+    def write_links(ll, prefix="", newline=True):
         for k, v in ll.items():
-            f.write(f'[{k}]: {v}\n')
+            f.write(f'[{prefix}{k}]: {v}\n')
         if newline:
             f.write("\n")
 
     write_links(linklist)
-    write_links(linklist_vs)
+    write_links(linklist_vs, prefix="VS ")
     write_links(linklist_general, newline=False)
 
 print(profiles_fname.name)

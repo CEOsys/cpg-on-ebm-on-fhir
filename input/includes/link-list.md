@@ -8,19 +8,27 @@
 [PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
 [Population]: StructureDefinition-population-evidence-variable.html
 [Population Group]: StructureDefinition-population-group.html
+[EvidenceReport Date]: StructureDefinition-ceosys-extension-evidencereport-date.html
 [EvidenceReport Version]: StructureDefinition-ceosys-extension-evidencereport-version.html
-[Reference Activity Definition]: StructureDefinition-reference-activity-definition.html
+[Group Characteristic Link Id]: StructureDefinition-group-characteristic-link-id.html
+[Reference Activity Definition]: StructureDefinition-ceosys-extension-reference-activity-definition.html
+[Related Characteristic]: StructureDefinition-related-characteristic.html
 
 [CEOsys Code System]: CodeSystem-ceosys-code-system.html
-[CochraneCoreOntology]: CodeSystem-cochrane-core-ontology.html
-[CochranePICOOntology]: CodeSystem-cochrane-pico-ontology.html
-[Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
+[CS Characteristic Relationship Type]: CodeSystem-characteristic-relationship-type.html
+[Cochrane Core Ontology]: CodeSystem-cochrane-core-ontology.html
+[Cochrane PICO Ontology]: CodeSystem-cochrane-pico-ontology.html
+[CS Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
 
-[Cochrane PICO]: ValueSet-cochrane-pico.html
-[Cochrane PICO Intervention]: ValueSet-cochrane-pico-intervention.html
-[Cochrane PICO Outcome]: ValueSet-cochrane-pico-outcome.html
-[Cochrane PICO Population]: ValueSet-cochrane-pico-population.html
-[Recommendation Strength]: ValueSet-ceosys-vs-recommendation-strength.html
+[VS Characteristic Relationship Type]: ValueSet-characteristic-relationship-type.html
+[VS Cochrane PICO]: ValueSet-cochrane-pico.html
+[VS Cochrane PICO Intervention]: ValueSet-cochrane-pico-intervention.html
+[VS Cochrane PICO Outcome]: ValueSet-cochrane-pico-outcome.html
+[VS Cochrane PICO Population]: ValueSet-cochrane-pico-population.html
+[VS Rating Consensus]: ValueSet-rating-consensus.html
+[VS Rating Overall Quality]: ValueSet-rating-overall-quality.html
+[VS Rating Risk Of Bias]: ValueSet-rating-risk-of-bias.html
+[VS Recommendation Strength]: ValueSet-ceosys-vs-recommendation-strength.html
 
 [SNOMEDCT]: http://snomed.info/sct
 [COCHRANELD]: https://data.cochrane.org/concepts/
