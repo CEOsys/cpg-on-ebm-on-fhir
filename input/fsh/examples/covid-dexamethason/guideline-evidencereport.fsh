@@ -26,8 +26,9 @@ Description: "Dexamethasone in critically ill patients with COVID-19."
 * version = "1.0.0"
 * title = "Dexamethason bei kritisch kranken Patienten mit COVID-19"
 * description = "Bei Patienten mit schwerer (SpO2 < 90 %, Atemfrequenz > 30/min) oder kritischer (ARDS, Sepsis, Beatmung, Vasopressorengabe) COVID-19-Erkrankung soll eine Therapie mit Dexamethason erfolgen. Die Dosis beträgt 6 mg Dexamethason p. o./i. v. täglich für 10 Tage."
-* variableDefinition[population]
+* variableDefinition[+]
   * intended = Reference(ExamplePopulation)
+
 * variableDefinition[intervention]
   * intended = Reference(ExampleIntervention)
 * certainty[overall]

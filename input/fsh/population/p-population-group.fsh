@@ -10,20 +10,35 @@ Description: "Characterization of a group of patients or subjects for which a cl
 * actual 1..1 MS
 * actual = false
 * characteristic 1..* MS
-* characteristic.code
-  * coding ^slicing.discriminator.type = #pattern
-  * coding ^slicing.discriminator.path = "$this"
-  * coding ^slicing.rules = #open
-  * coding contains
-      cochrane 0..* and sct 1..*
-  * coding[cochrane]
-    * ^patternCoding.system = $cochrane-ld
-    * system 1.. MS
-    * code 1.. MS
-  * coding[sct]
-    * ^patternCoding.system = $sct
-    * system 1.. MS
-    * code 1.. MS
+* characteristic
+  * code
+    * coding ^slicing.discriminator.type = #pattern
+    * coding ^slicing.discriminator.path = "$this"
+    * coding ^slicing.rules = #open
+    * coding contains
+        cochrane 0..* and sct 1..*
+    * coding[cochrane]
+      * ^patternCoding.system = $cochrane-ld
+      * system 1.. MS
+      * code 1.. MS
+    * coding[sct]
+      * ^patternCoding.system = $sct
+      * system 1.. MS
+      * code 1.. MS
+  * valueCodeableConcept
+    * coding ^slicing.discriminator.type = #pattern
+    * coding ^slicing.discriminator.path = "$this"
+    * coding ^slicing.rules = #open
+    * coding contains
+        cochrane 0..* and sct 1..*
+    * coding[cochrane]
+      * ^patternCoding.system = $cochrane-ld
+      * system 1.. MS
+      * code 1.. MS
+    * coding[sct]
+      * ^patternCoding.system = $sct
+      * system 1.. MS
+      * code 1.. MS
 
 Instance: ExamplePopulationGroup
 InstanceOf: population-group
