@@ -27,7 +27,7 @@ Description: "Single recommendation from a clinical practice guideline."
 * variableDefinition contains
   population 1..1 MS
   and intervention 1..1 MS
-  and outcome 0..1 MS
+  and outcome 0..* MS
   and netEffect 0..*
 * variableDefinition[population]
   * variableRole = $cs-variable-role#population
@@ -95,16 +95,22 @@ Description: "Single recommendation from a clinical practice guideline."
 * certainty contains
   overall 1..1 MS
   and riskOfBias 0..1 MS
+  and consensus 0..1 MS
 * certainty[overall]
   * type 1..
   * type = $cs-certainty-type#Overall "Overall certainty"
   * rating 1..1
-  * rating from $vs-certainty-rating (required)
+  * rating from rating-overall-quality (required)
 * certainty[riskOfBias]
   * type 1..
   * type = $cs-certainty-type#RiskOfBias "Risk of bias"
   * rating 1..1
-  * rating from $vs-certainty-rating (required)
+  * rating from rating-risk-of-bias (required)
+* certainty[consensus]
+  * type 1..
+  * type = CEOsysCodeSystem#consensus "Consensus"
+  * rating 1..1
+  * rating from rating-consensus (required)
 
 // TODO: add example of net benefit
 Instance: ExampleGuidelineRecommendation
@@ -130,4 +136,7 @@ Description: "Example of a single clinical practice guideline recommendation."
 * certainty[+]
   * type = $cs-certainty-type#RiskOfBias "Risk of bias"
   * rating = $cs-certainty-rating#no-concern "No serious concern"
+* certainty[+]
+  * type = CEOsysCodeSystem#consensus "Consensus"
+  * rating = $cs-recommendation-strength#strong "Strong"
 * insert recommendation-strength(#strong-for)

@@ -6,3 +6,5 @@ Description: "Codes for clinical guideline recommendation representation missing
 * #relative-importance-weighting "Relative importance weighting for use in weighted linear combinations"
 * #clinical-practice-guideline "Clinical practice guideline"
 * #guideline-recommendation "Clinical practice guideline recommendation"
+* #consensus "Consensus"
+
