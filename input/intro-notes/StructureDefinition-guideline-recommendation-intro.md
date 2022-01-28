@@ -7,7 +7,7 @@
 
 This profile encodes a single recommendation from a clincal practice guideline. Next to metadata such as `identifier`, `version`, `title`, `date` and `description`, this resource holds the definitions of the population (via references to [Population EvidenceVariable resources][Population]), intervention (via references to [Intervention EvidenceVariable resources][Intervention]) and optionally outcome (via references to [Outcome EvidenceVariable resources][Outcome]) and net effect (via references to [Net Effect EvidenceVariable resources][Net Effect]) that the guideline recommendation adresseses.
 
-<img alt="FHIR Guideline Recommendation" src="01-guideline-recommendation.png" style="width:100%;" />
+{% include fhir-structure-detailed.md name='01-guideline-recommendation' alt='FHIR Guideline Recommendation' %}
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.

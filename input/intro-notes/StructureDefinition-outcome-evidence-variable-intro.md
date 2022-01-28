@@ -12,7 +12,7 @@ This profile describe the metadata of the outcome for a specific [Guideline Reco
 | `characteristic.exclude` | Fixed to `false`. |
 {:.grid}
 
-<img alt="FHIR Outcome" src="04-outcome.png" style="width:100%;" />
+{% include fhir-structure-detailed.md name='04-outcome' alt='FHIR Outcome' %}
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.

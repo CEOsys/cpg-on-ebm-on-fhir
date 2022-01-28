@@ -14,7 +14,7 @@ This profile describe the metadata of a recommended intervention for a specific 
 | `characteristic.exclude` | Whether to exclude the referenced [Intervention ActivityDefinition resources][Intervention Activity] from the guideline recommendation. |
 {:.grid}
 
-<img alt="FHIR Intervention" src="03-intervention.png" style="width:100%;" />
+{% include fhir-structure-detailed.md name='03-intervention' alt='FHIR Intervention' %}
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.

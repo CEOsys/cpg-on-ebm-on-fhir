@@ -13,7 +13,7 @@ The characteristics of the patient group are coded using the `characteristic` fi
 {:.grid}
 
 
-<img alt="FHIR Intervention Activity" src="07-intervention-activity.png" style="width:100%;" />
+{% include fhir-structure-detailed.md name='07-intervention-activity' alt='FHIR Intervention Activity' %}
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.

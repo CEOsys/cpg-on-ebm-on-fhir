@@ -15,7 +15,7 @@ The characteristics of the patient group are coded using the `characteristic` fi
 | `characteristic.value[x]` | Value of the `code` defining the population. |
 {:.grid}
 
-<img alt="FHIR Population Group" src="06-population-group.png" style="width:100%;" />
+{% include fhir-structure-detailed.md name='06-population-group' alt='FHIR Population Group' %}
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.
