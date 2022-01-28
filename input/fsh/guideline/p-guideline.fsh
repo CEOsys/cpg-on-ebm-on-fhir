@@ -19,7 +19,9 @@ Description: "Representation of an evidence-based clinical practice guideline."
 // TODO: Add these fields once they are available for EvidenceReport (and remove work-around extensions)
 // * version 1..1 MS
 // * name 1..1 MS
+// * date 1..1 MS
 * extension contains EvidenceReportVersion named version 1..1 MS // TODO: Work around for missing "version" attribute in EvidenceReport. Remove once available.
+* extension contains EvidenceReportDate named date 1..1 MS // TODO: Work around for missing "date" attribute in EvidenceReport. Remove once available.
 * type 1..1 MS
   * coding ^slicing.discriminator.type = #pattern
   * coding ^slicing.discriminator.path = "$this"
@@ -37,7 +39,7 @@ Description: "Representation of an evidence-based clinical practice guideline."
   * characteristic ^slicing.discriminator.path = "code.coding"
   * characteristic ^slicing.rules = #open
   * characteristic contains
-      population 1..* MS
+      population 1..* MS // multiple populations/intervention because a guideline can have multiple recommendations
       and intervention 1..* MS
       and outcome 0..* MS
     * code 1..1 MS
@@ -80,6 +82,7 @@ Description: "Example of a guideline resource."
   * value = "guideline example"
 * status = #active
 * extension[version].valueString = "0.1.0"
+* extension[date].valueDateTime = "2022-01-28"
 * subject
   * characteristic[population]
     * code.coding[focusCharacteristicCode] = $cs-focus-characteristic#population "Population"
