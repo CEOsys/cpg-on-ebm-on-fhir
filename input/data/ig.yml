@@ -10,7 +10,7 @@ definition:
     page:
     - generation: markdown
       nameUrl: index.html
-      title: Clinical Guideline Recommendations (CPG) on EBMonFHIR
+      title: Clinical Practice Guidelines (CPG) on EBMonFHIR
     - generation: markdown
       nameUrl: profiles.html
       title: Profiles
@@ -342,6 +342,6 @@ packageId: cpg.ceosys.de
 publisher: "Charit\xE9 - Universit\xE4tsmedizin Berlin"
 resourceType: ImplementationGuide
 status: draft
-title: Clinical Guideline Recommendations (CPG) on EBMonFHIR
+title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de
 version: 0.1.0

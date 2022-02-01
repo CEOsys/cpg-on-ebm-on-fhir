@@ -5,7 +5,7 @@
 id: cpg.ceosys.de
 canonical: https://www.ceosys.de/fhir
 name: CPG-on-EBMonFHIR
-title: Clinical Guideline Recommendations (CPG) on EBMonFHIR
+title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
 version: 0.1.0
 fhirVersion: 5.0.0-snapshot1
@@ -17,7 +17,7 @@ publisher:
 
 pages:
   index.md:
-    title: Clinical Guideline Recommendations (CPG) on EBMonFHIR
+    title: Clinical Practice Guidelines (CPG) on EBMonFHIR
   profiles.md:
   codesystems.md:
     title: Code Systems
