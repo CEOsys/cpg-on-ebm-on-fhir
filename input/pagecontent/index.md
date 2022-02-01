@@ -54,6 +54,6 @@ In short, a [single guideline recommendation][Guideline Recommendation] describe
 ### Links
 * [Netzwerk Universitätsmedizin (NUM)][NUM]
 * [COVID-19 Evidence Ecosystem (CEOsys)][CEOSYS]
-* [GitHub project](https://github.com/CEOsys/fhir-cpg)
+* [GitHub project](https://github.com/CEOsys/cpg-on-ebm-on-fhir)
 
 {% include link-list.md %}
