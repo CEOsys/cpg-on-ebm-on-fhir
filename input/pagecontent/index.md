@@ -28,7 +28,7 @@ Additionally, the following profiles are used to specify a guideline:
 
 The following diagram provides an overview of the different profiles used in this implementation guide and their relationship:
 
-<img alt="FHIR package structure overview" src="fhir-structure-overview.png" style="width:100%;" />
+{% include fhir-structure-overview.md %}
 
 ### Detailed
 
@@ -37,7 +37,7 @@ The following diagram provides a more detailed view on the important fields of t
 In short, a [single guideline recommendation][Guideline Recommendation] describes a specific group of patients (the "population"), for which a certain treatment (or the absence from treatment) is recommened (the "intervention"). As the guideline recommendations are based on meta-analyses of clinical studies, the expected outcome of the recommended intervention on the patients may also be encoded. This additionally allows to specify the net effect of the recommendation by weighting the individual outcomes by their relative importance. For more information on the net effect, see [Alper, B. S. et al. Defining certainty of net benefit: a GRADE concept paper. BMJ Open 9, e027445 (2019)](https://bmjopen.bmj.com/content/9/6/e027445.long).
 
 {% include fhir-structure-detailed.md name='fhir-structure-detailed' alt='FHIR Structure Detailed' %}
-<img alt="FHIR package bundle" src="fhir-structure-bundle.png" style="max-width:74%;" />
+{% include fhir-structure-bundle.md %}
 
 <br/>
 

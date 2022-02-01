@@ -7,7 +7,7 @@ This profile represents a single clinical practice guideline. It summarizes the 
 
 It thus provides a structured presentation of the whole guideline contents including the guideline metadata.
 
-{% include fhir-structure-detailed.md name='08-guideline' alt='FHIR Guideline' %}
+<img src="08-guideline.png" alt="FHIR Guideline" />
 
 
 {% capture resource_inheritance %}
