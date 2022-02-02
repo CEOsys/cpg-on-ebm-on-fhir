@@ -6,9 +6,12 @@ table.grid td, table.grid th, td {
   font-size: 15px;
 }
 
+p {
+  overflow:auto;
+}
+
 p, li {
   font-size: 16px;
-  overflow:auto;
 }
 
 .navbar .nav li > a {
