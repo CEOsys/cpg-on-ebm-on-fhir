@@ -52,6 +52,9 @@ Description: "Example of a guideline resource."
 * extension[version].valueString = "0.1.0"
 * section
   * title = "Example Guideline Recommendation"
+  * text
+    * status = #generated
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an example guideline recommendation.</div>"
   * focus = Reference(ExampleGuidelineRecommendation)
 
 Instance: ExampleOrganization
