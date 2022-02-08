@@ -8,8 +8,8 @@
 [PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
 [Population]: StructureDefinition-population-evidence-variable.html
 [Population Group]: StructureDefinition-population-group.html
-[EvidenceReport Date]: StructureDefinition-ceosys-extension-evidencereport-date.html
-[EvidenceReport Version]: StructureDefinition-ceosys-extension-evidencereport-version.html
+[Composition Publication Status]: StructureDefinition-ceosys-extension-composition-publication-status.html
+[Composition Version]: StructureDefinition-ceosys-extension-composition-version.html
 [Group Characteristic Link Id]: StructureDefinition-group-characteristic-link-id.html
 [Reference Activity Definition]: StructureDefinition-ceosys-extension-reference-activity-definition.html
 [Related Characteristic]: StructureDefinition-related-characteristic.html

@@ -9,7 +9,7 @@ The main elements of a clinical practice guideline in the context of this FHIR i
 
 | Name | FHIR Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| Clinical Practice Guideline | [EvidenceReport][Clinical Practice Guideline] | Representation of the whole guideline. | [Guideline Recommendations][Guideline Recommendation] |
+| Clinical Practice Guideline | [Composition][Clinical Practice Guideline] | Representation of the whole guideline. | [Guideline Recommendations][Guideline Recommendation] |
 | Guideline Recommendation | [Evidence][Guideline Recommendation] | Representation of a single recommendation from a guideline | [Population][Population], [Intervention][Intervention], [Outcome][Outcome] and [Net Effect][Net Effect] pertinent to the guideline recommendation. |
 | Population | [EvidenceVariable][Population] | Description of the population to which a specific guideline recommendation applies. | [Population Groups][Population Group] making up the population addressed in the recommendation. |
 | Intervention | [EvidenceVariable][Intervention] | Description of recommmended intervention addressed in a specific guideline recommendation. | [Intervention Activities][Intervention Activity] specified in the guideline recommendation. |

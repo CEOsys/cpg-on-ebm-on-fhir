@@ -55,11 +55,11 @@ Description: "Collection of all resources that represent a single clinical pract
   * fullUrl 1..1 MS
 
 Invariant: bdl-1
-Description: "First element of Bundle must be an EvidenceReport."
-Expression: "entry.first().resource.is(EvidenceReport)"
+Description: "First element of Bundle must be an Composition."
+Expression: "entry.first().resource.is(Compositoin)"
 Severity: #error
 
-Instance: EvidenceReportGuidelineRecommendationExample
+Instance: GuidelineRecommendationExample
 InstanceOf: guideline-bundle
 Usage: #example
 Title: "Guideline Recommendation Example"

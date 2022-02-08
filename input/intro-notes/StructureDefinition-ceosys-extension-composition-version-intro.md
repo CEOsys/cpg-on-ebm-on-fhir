@@ -3,6 +3,7 @@
 
 ### Guidance
 
+This extension provides a version attribute for the [Composition resource]({{ fhir_base_url }}composition.html).
 
 
 {% capture resource_inheritance %}

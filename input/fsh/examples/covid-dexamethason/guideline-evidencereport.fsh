@@ -4,29 +4,28 @@ InstanceOf: guideline
 Usage: #example
 Title: "COVID19 Intensive Care Treatment Guideline"
 Description: "COVID19 Intensive Care Treatment Guideline."
-* identifier[+]
-  * value = "5062"
-  * system = "https://app.magicapp.org/#/guidelines"
-* identifier[+]
+* identifier
   * system = "https://www.awmf.org/"
   * value = "113-001"
+* status = #final
+* date = "2021-02-23"
 * extension[version].valueString = "4.0"
-* extension[date].valueDateTime = "2021-02-23"
-* status = #retired
-* publisher = "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V."
-* author[+]
-  * name = "CEOsys Team"
-* subject
-  * characteristic[population]
-    * valueReference = Reference(PopulationCriticallyIllCOVID19Patients)
-  * characteristic[intervention]
-    * valueReference = Reference(ExampleIntervention)
+* extension[publicationStatus].valueCode = #retired
+* title = "Empfehlungen zur stationären Therapie von Patienten mit COVID-19 - Living Guideline"
+* author[+] = Reference(AWMFOrganization)
 * section[+]
   * title = "Stationäre Therapie von COVID-19 Patienten"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Steroide: Bei Patienten mit schwerer (SpO2 &lt; 90 %, Atemfrequenz &gt; 30/min) oder kritischer (ARDS, Sepsis, Beatmung, Vasopressorengabe) COVID-19-Erkrankung soll eine Therapie mit Dexamethason erfolgen.</div>"
-  * focusReference = Reference(DexamethasoneRecommendation)
+  * focus = Reference(DexamethasoneRecommendation)
+
+Instance: AWMFOrganization
+InstanceOf: Organization
+Usage: #example
+Title: "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V"
+Description: "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V"
+* name = "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V."
 
 Instance: DexamethasoneRecommendation
 InstanceOf: guideline-recommendation

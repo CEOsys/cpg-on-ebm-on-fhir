@@ -34,3 +34,5 @@ Alias: $cs-attribute-estimate-type = http://terminology.hl7.org/CodeSystem/attri
 Alias: $cs-characteristic-combination = http://hl7.org/fhir/characteristic-combination
 Alias: $cs-evidence-report-section = http://terminology.hl7.org/CodeSystem/evidence-report-section
 Alias: $ext-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation
+
+Alias: $vs-publication-status = http://hl7.org/fhir/ValueSet/publication-status

@@ -126,16 +126,16 @@ definition:
     name: Population Group
     reference:
       reference: StructureDefinition/population-group
-  - description: Adds date attribute to EvidenceReport.
+  - description: Adds publication status attribute to Composition.
     exampleBoolean: false
-    name: EvidenceReport Date
+    name: Composition Publication Status
     reference:
-      reference: StructureDefinition/ceosys-extension-evidencereport-date
-  - description: Adds version attribute to EvidenceReport.
+      reference: StructureDefinition/ceosys-extension-composition-publication-status
+  - description: Adds version attribute to Composition.
     exampleBoolean: false
-    name: EvidenceReport Version
+    name: Composition Version
     reference:
-      reference: StructureDefinition/ceosys-extension-evidencereport-version
+      reference: StructureDefinition/ceosys-extension-composition-version
   - description: Unique id for the characteristic in the Group
     exampleBoolean: false
     name: Group Characteristic Link Id
@@ -225,11 +225,18 @@ definition:
     name: Recommendation Strength
     reference:
       reference: CodeSystem/ceosys-cs-recommendation-strength
+  - description: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
+      (AWMF) e.V
+    exampleBoolean: true
+    name: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
+      (AWMF) e.V
+    reference:
+      reference: Organization/AWMFOrganization
   - description: COVID19 Intensive Care Treatment Guideline.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: COVID19 Intensive Care Treatment Guideline
     reference:
-      reference: EvidenceReport/COVID19IntensiveCareTreatmentGuideline
+      reference: Composition/COVID19IntensiveCareTreatmentGuideline
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
     name: Dexamethasone Application
@@ -240,11 +247,6 @@ definition:
     name: Dexamethasone for critically ill COVID-19 patients
     reference:
       reference: Evidence/DexamethasoneRecommendation
-  - description: Example of a clinical practice guideline representation bundle.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
-    name: Guideline Recommendation Example
-    reference:
-      reference: Bundle/EvidenceReportGuidelineRecommendationExample
   - description: Example of a single clinical practice guideline recommendation.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
     name: Example Guideline Recommendation
@@ -260,6 +262,11 @@ definition:
     name: Example Net Effect
     reference:
       reference: EvidenceVariable/ExampleNetEffect
+  - description: Example of a organization resource.
+    exampleBoolean: true
+    name: Example Organization
+    reference:
+      reference: Organization/ExampleOrganization
   - description: Example of an outcome evidence variable.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
     name: Example Outcome
@@ -280,7 +287,12 @@ definition:
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: Example Guideline
     reference:
-      reference: EvidenceReport/GuidelineExample
+      reference: Composition/GuidelineExample
+  - description: Example of a clinical practice guideline representation bundle.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
+    name: Guideline Recommendation Example
+    reference:
+      reference: Bundle/GuidelineRecommendationExample
   - description: An active intervention activity.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
     name: Example Intervention Activity
