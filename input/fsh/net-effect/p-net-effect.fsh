@@ -5,6 +5,7 @@ Id: net-effect-evidence-variable
 Title: "Net Effect"
 Description: "Net Effect for the provided evidence, calculated by aggregation of importance-weighted outcomes."
 * insert metadata(2021-12-21, #draft, 0.1.0)
+* insert profile("This profile is used to describe the net effect related to a clinical guideline recommendation.")
 * name 1..1 MS
 * characteristicCombination 1..1 MS
   * code = $cs-characteristic-combination#net-effect

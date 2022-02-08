@@ -17,6 +17,7 @@ Description: "Single recommendation from a clinical practice guideline."
 * identifier[MAGICapp].system = "https://api.magicapp.org/api/v1/recommendations"
 * identifier[MAGICapp].value 1.. MS
 // * name 1..1 MS // TODO: Missing in Evidence resource, add once available.
+* status 1..1 MS
 * version 1..1 MS
 * title 1..1 MS
 * date 1..1 MS

@@ -3,6 +3,7 @@ CodeSystem: CharacteristicRelationshipType
 Id: characteristic-relationship-type
 Title: "Characteristic Relationship Type"
 Description: "Types of relationships between characteristics"
+* insert metadata(2021-12-21, #draft, 0.1.0)
 * #before-start "Before Start" "The characteristic must be performed before the start of the related characteristic."
 * #before "Before" "The characteristic must be performed before the related characteristic."
 * #before-end "Before End" "The characteristic must be performed before the end of the related characteristic."

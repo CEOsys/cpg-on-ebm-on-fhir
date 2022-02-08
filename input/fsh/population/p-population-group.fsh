@@ -5,6 +5,7 @@ Id: population-group
 Title: "Population Group"
 Description: "Characterization of a group of patients or subjects for which a clinical guideline recommends a treatment or intervention."
 * insert metadata(2021-12-03, #draft, 0.1.0)
+* insert profile("This profile is used to describe the group of patients or subjects for which a clinical guideline recommends a treatment or intervention.")
 * type 1..1
 * type = #person
 * actual 1..1 MS

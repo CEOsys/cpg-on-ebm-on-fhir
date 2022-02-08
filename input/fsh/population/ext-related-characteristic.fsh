@@ -3,6 +3,9 @@ Extension: RelatedCharacteristic
 Id: related-characteristic
 Title: "Related Characteristic"
 Description: "Adds the possibility to a characteristic to specify a temporal relationship with another characteristic."
+* insert metadata(2022-01-31, #draft, 0.1.0)
+* ^context.type = #element
+* ^context.expression = "Group.characteristic"
 * extension contains
     targetId 1..1 and
     relationship 1..1

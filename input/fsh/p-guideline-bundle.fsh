@@ -5,6 +5,7 @@ Id: guideline-bundle
 Title: "Guideline Bundle"
 Description: "Collection of all resources that represent a single clinical practice guideline."
 * insert metadata(2021-12-03, #draft, 0.1.0)
+* insert profile("This profile is a guideline bundle")
 * obeys bdl-1
 * type = #collection
 * entry 4..* MS

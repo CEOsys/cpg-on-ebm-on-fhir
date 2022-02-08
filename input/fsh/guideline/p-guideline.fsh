@@ -20,6 +20,7 @@ Description: "Representation of an evidence-based clinical practice guideline."
 // * version 1..1 MS
 // * name 1..1 MS
 // * date 1..1 MS
+* status 1..1 MS
 * extension contains EvidenceReportVersion named version 1..1 MS // TODO: Work around for missing "version" attribute in EvidenceReport. Remove once available.
 * extension contains EvidenceReportDate named date 1..1 MS // TODO: Work around for missing "date" attribute in EvidenceReport. Remove once available.
 * type 1..1 MS

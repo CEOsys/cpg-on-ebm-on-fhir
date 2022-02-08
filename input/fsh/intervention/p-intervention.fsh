@@ -5,6 +5,7 @@ Id: intervention-evidence-variable
 Title: "Intervention"
 Description: "Description of the intervention element of a PICO construct that evidence is about."
 * insert metadata(2021-12-03, #draft, 0.1.0)
+* insert profile("This profile is used to describe the intervention element of a PICO construct that evidence is about.")
 * characteristicCombination.code = $cs-characteristic-combination#all-of "All of"
 * characteristic 1..* MS
   * type from CochranePICOIntervention (required)
