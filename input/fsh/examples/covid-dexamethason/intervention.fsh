@@ -15,18 +15,33 @@ Description: "Intervention for guideline from https://app.magicapp.org/#/guideli
 * characteristic[+]
   * type = $cochrane-pico#Intervention
   * definitionReference
-    * extension[ReferenceActivityDefinition].valueReference = Reference(DexamethasoneApplication)
+    * extension[ReferencePlanDefinition].valueReference = Reference(DexamethasoneApplicationPlan)
     * display = "Dexamethasone Application"
 
 /*************************/
 /* Intervention Activity */
 /*************************/
 
-Instance: DexamethasoneApplication
+Instance: DexamethasoneApplicationPlan
+InstanceOf: intervention-plan
+Usage: #example
+Title: "Dexamethasone Application"
+Description: "Application of Dexamethasone: 6 mg once per day for 10 days"
+* name = "Dexamaethasone_Application"
+* title = "Dexamaethasone Application"
+* version = "1.0"
+* date = "2022-02-14"
+* status = #active
+* description = "Application of Dexamethasone: 6 mg once per day for 10 days"
+* action[+]
+  * definitionCanonical = Canonical(DexamethasoneApplicationActivity)
+
+Instance: DexamethasoneApplicationActivity
 InstanceOf: intervention-activity
 Usage: #example
 Title: "Dexamethasone Application"
 Description: "Application of Dexamethasone: 6 mg once per day for 10 days"
+* url = "https://www.ceosys.de/fhir/canonical/intervention-activity/example"
 * status = #active
 * code = $sct#182832007 "Procedure related to management of drug administration (procedure)"
 * productCodeableConcept = $sct#372584003 "Dexamethasone (substance)"

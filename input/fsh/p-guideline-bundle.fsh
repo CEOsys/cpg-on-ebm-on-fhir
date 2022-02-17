@@ -20,6 +20,7 @@ Description: "Collection of all resources that represent a single clinical pract
   and outcome 0..* MS
   and netEffect 0..* MS
   and populationGroup 1..* MS
+  and interventionPlan 0..* MS
   and interventionActivity 0..* MS
 * entry[guideline]
   * resource 1.. MS
@@ -48,6 +49,10 @@ Description: "Collection of all resources that represent a single clinical pract
 * entry[populationGroup]
   * resource 1.. MS
   * resource only PopulationGroup
+  * fullUrl 1..1 MS
+* entry[interventionPlan]
+  * resource 1.. MS
+  * resource only InterventionPlan
   * fullUrl 1..1 MS
 * entry[interventionActivity]
   * resource 1.. MS
@@ -79,3 +84,9 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[populationGroup]
   * resource = ExamplePopulationGroup
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"
+* entry[interventionPlan]
+  * resource = ExampleInterventionPlan
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-plan"
+* entry[interventionActivity]
+  * resource = ExampleInterventionActivity
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-activity"

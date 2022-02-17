@@ -14,8 +14,11 @@ Description: "Representation of an evidence-based clinical practice guideline."
 * title 1..1 MS
 * date 1..1 MS
 * status 1..1 MS
+//* version 1..1 MS // TODO: uncomment once version field available (see https://jira.hl7.org/browse/FHIR-34159 )
+//* name 1..1 MS // TODO: uncomment once name field available (see https://jira.hl7.org/browse/FHIR-34159 )
+//* url 1..1 MS // TODO: uncomment once url field available (see https://jira.hl7.org/browse/FHIR-34159 )
 * extension contains
-  CompositionVersion named version 1..1 MS
+  CompositionVersion named version 1..1 MS // TODO: replace by actual version field once available
   and CompositionPublicationStatus named publicationStatus 1..1 MS
 * encounter 0..0
 * subject 0..0

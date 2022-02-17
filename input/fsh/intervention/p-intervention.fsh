@@ -10,7 +10,8 @@ Description: "Description of the intervention element of a PICO construct that e
 * characteristic 1..* MS
   * type from CochranePICOIntervention (required)
   * definitionReference
-    * extension contains ReferenceActivityDefinition named ReferenceActivityDefinition 0..1
+    * extension contains ReferencePlanDefinition named ReferencePlanDefinition 0..1
+    * extension[ReferencePlanDefinition].valueReference only Reference(InterventionPlan)
     * display 1..1
 
 Instance: ExampleIntervention
@@ -23,5 +24,5 @@ Description: "Example of an intervention as part of a clinical practice guidelin
 * characteristic[+]
   * type = $cochrane-pico#Intervention
   * definitionReference
-    * extension[ReferenceActivityDefinition].valueReference = Reference(InterventionActivity)
+    * extension[ReferencePlanDefinition].valueReference = Reference(ExampleInterventionPlan)
     * display = "TestIntervention"
