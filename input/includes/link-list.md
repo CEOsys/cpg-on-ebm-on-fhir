@@ -3,6 +3,7 @@
 [Guideline Recommendation]: StructureDefinition-guideline-recommendation.html
 [Intervention Activity]: StructureDefinition-intervention-activity.html
 [Intervention]: StructureDefinition-intervention-evidence-variable.html
+[Intervention Plan]: StructureDefinition-intervention-plan.html
 [Net Effect]: StructureDefinition-net-effect-evidence-variable.html
 [Outcome]: StructureDefinition-outcome-evidence-variable.html
 [PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
@@ -11,14 +12,14 @@
 [Composition Publication Status]: StructureDefinition-ceosys-extension-composition-publication-status.html
 [Composition Version]: StructureDefinition-ceosys-extension-composition-version.html
 [Group Characteristic Link Id]: StructureDefinition-group-characteristic-link-id.html
-[Reference Activity Definition]: StructureDefinition-ceosys-extension-reference-activity-definition.html
+[Reference Plan Definition]: StructureDefinition-ceosys-extension-reference-plan-definition.html
 [Related Characteristic]: StructureDefinition-related-characteristic.html
 
 [CEOsys Code System]: CodeSystem-ceosys-code-system.html
-[CS Characteristic Relationship Type]: CodeSystem-characteristic-relationship-type.html
+[Characteristic Relationship Type]: CodeSystem-characteristic-relationship-type.html
 [Cochrane Core Ontology]: CodeSystem-cochrane-core-ontology.html
 [Cochrane PICO Ontology]: CodeSystem-cochrane-pico-ontology.html
-[CS Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
+[Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
 
 [VS Characteristic Relationship Type]: ValueSet-characteristic-relationship-type.html
 [VS Cochrane PICO]: ValueSet-cochrane-pico.html

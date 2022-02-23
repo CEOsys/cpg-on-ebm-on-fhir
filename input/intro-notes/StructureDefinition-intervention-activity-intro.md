@@ -5,15 +5,9 @@
 
 This profile defines a specific recommended activity as part of an [Intervention][Intervention] recommended by a specific [Guideline Recommendation][Guideline Recommendation].
 
-The characteristics of the patient group are coded using the `characteristic` field.
+The actions defined using htis profile are combined to a plan using the [Intervention Plan profile][Intervention Plan].
 
-| Field | Description |
-| ----- | ----------- |
-| `subjectCodeableConcept` | Fixed to `#patient` |
-{:.grid}
-
-
-{% include fhir-structure-detailed.md name='07-intervention-activity' alt='FHIR Intervention Activity' %}
+{% include fhir-structure-detailed.md name='08-intervention-activity' alt='FHIR Intervention Activity' %}
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.

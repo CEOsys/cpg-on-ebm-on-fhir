@@ -95,6 +95,12 @@ definition:
     name: Intervention
     reference:
       reference: StructureDefinition/intervention-evidence-variable
+  - description: Definition of an activity that is part of an intervention in the
+      context of a clinical practice guideline recommendation.
+    exampleBoolean: false
+    name: Intervention Plan
+    reference:
+      reference: StructureDefinition/intervention-plan
   - description: Net Effect for the provided evidence, calculated by aggregation of
       importance-weighted outcomes.
     exampleBoolean: false
@@ -141,11 +147,11 @@ definition:
     name: Group Characteristic Link Id
     reference:
       reference: StructureDefinition/group-characteristic-link-id
-  - description: Adds the possibility to reference an ActivityDefinition resource.
+  - description: Adds the possibility to reference an PlanDefinition resource.
     exampleBoolean: false
-    name: Reference Activity Definition
+    name: Reference Plan Definition
     reference:
-      reference: StructureDefinition/ceosys-extension-reference-activity-definition
+      reference: StructureDefinition/ceosys-extension-reference-plan-definition
   - description: Adds the possibility to a characteristic to specify a temporal relationship
       with another characteristic.
     exampleBoolean: false
@@ -237,11 +243,21 @@ definition:
     name: COVID19 Intensive Care Treatment Guideline
     reference:
       reference: Composition/COVID19IntensiveCareTreatmentGuideline
+  - description: COVID19 Intensive Care Treatment Guideline (Bundle).
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
+    name: COVID19 Intensive Care Treatment Guideline
+    reference:
+      reference: Bundle/COVID19IntensiveCareTreatmentGuidelineBundle
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
     name: Dexamethasone Application
     reference:
-      reference: ActivityDefinition/DexamethasoneApplication
+      reference: ActivityDefinition/DexamethasoneApplicationActivity
+  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
+    name: Dexamethasone Application
+    reference:
+      reference: PlanDefinition/DexamethasoneApplicationPlan
   - description: Dexamethasone in critically ill patients with COVID-19.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
     name: Dexamethasone for critically ill COVID-19 patients
@@ -257,6 +273,16 @@ definition:
     name: Example Intervention
     reference:
       reference: EvidenceVariable/ExampleIntervention
+  - description: An active intervention activity.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: Example Intervention Activity
+    reference:
+      reference: ActivityDefinition/ExampleInterventionActivity
+  - description: An active intervention plan.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
+    name: Example Intervention plan
+    reference:
+      reference: PlanDefinition/ExampleInterventionPlan
   - description: Example of a net effect with a single outcome.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-evidence-variable
     name: Example Net Effect
@@ -293,11 +319,6 @@ definition:
     name: Guideline Recommendation Example
     reference:
       reference: Bundle/GuidelineRecommendationExample
-  - description: An active intervention activity.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
-    name: Example Intervention Activity
-    reference:
-      reference: ActivityDefinition/InterventionActivity
   - description: 'Intervention for guideline from https://app.magicapp.org/#/guidelines
       / 5062 with characteristics: Dexamethasone Therapy'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-evidence-variable
