@@ -14,7 +14,8 @@ linklist_fname = base_path / 'input' / 'includes' / 'link-list-generated.md'
 profiles_fname = base_path / 'input' / 'pagecontent' / 'profiles-generated.md'
 valuesets_fname = base_path / 'input' / 'pagecontent' / 'valuesets-generated.md'
 
-template_md = """{% assign id = {{include.id}} %}
+template_md = """{% include variables.md %}
+{% assign id = {{include.id}} %}
 {% assign resource = site.data.structuredefinitions.[id] %}
 
 ### Guidance

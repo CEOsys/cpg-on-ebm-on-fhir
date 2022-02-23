@@ -1,3 +1,4 @@
+{% include variables.md %}
 {% assign id = {{include.id}} %}
 {% assign resource = site.data.structuredefinitions.[id] %}
 

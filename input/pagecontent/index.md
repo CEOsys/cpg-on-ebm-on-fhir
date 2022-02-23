@@ -1,3 +1,5 @@
+{% include variables.md %}
+
 ### Summary
 
 This implementation guide describes an [evidence-based medicine on FHIR (EBMonFHIR)][EMBonFHIR] approach to represent clinical practice guidelines using FHIR resources.
@@ -7,23 +9,24 @@ The representation of clinical practice guidelines is oriented to the PICO (popu
 
 The main elements of a clinical practice guideline in the context of this FHIR implementation guide is represented in the following table:
 
-| Name | FHIR Resource | Description | References |
+| Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| Clinical Practice Guideline | [Composition][Clinical Practice Guideline] | Representation of the whole guideline. | [Guideline Recommendations][Guideline Recommendation] |
-| Guideline Recommendation | [Evidence][Guideline Recommendation] | Representation of a single recommendation from a guideline | [Population][Population], [Intervention][Intervention], [Outcome][Outcome] and [Net Effect][Net Effect] pertinent to the guideline recommendation. |
-| Population | [EvidenceVariable][Population] | Description of the population to which a specific guideline recommendation applies. | [Population Groups][Population Group] making up the population addressed in the recommendation. |
-| Intervention | [EvidenceVariable][Intervention] | Description of recommmended intervention addressed in a specific guideline recommendation. | [Intervention Activities][Intervention Activity] specified in the guideline recommendation. |
-| Outcome | [EvidenceVariable][Outcome] | Description of the (expected) outcome of a specific guideline recommendation | - |
+| [Clinical Practice Guideline][Clinical Practice Guideline] | [Composition]({{ fhir_base_url }}composition.html) | Representation of the whole guideline. | [Guideline Recommendations][Guideline Recommendation] |
+| [Guideline Recommendation][Guideline Recommendation] | [Evidence]({{ fhir_base_url }}evidence.html) | Representation of a single recommendation from a guideline | [Population][Population], [Intervention][Intervention], [Outcome][Outcome] and [Net Effect][Net Effect] pertinent to the guideline recommendation. |
+| [Population][Population] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Description of the population to which a specific guideline recommendation applies. | [Population Groups][Population Group] making up the population addressed in the recommendation. |
+| [Intervention][Intervention] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Description of recommmended intervention addressed in a specific guideline recommendation. | [Intervention Plans][Intervention Plan] specified in the guideline recommendation. |
+| [Outcome][Outcome] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Description of the (expected) outcome of a specific guideline recommendation | - |
 {:.grid}
 
 Additionally, the following profiles are used to specify a guideline:
 
-| Name | FHIR Resource | Description | References |
+| Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| Population Group | [Group][Population Group] | Characterization of a group of patients or subjects for which a clinical guideline recommends a treatment or intervention. | - |
-| Intervention Activity | [ActivityDefinition][Intervention Activity] | Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation. | - |
-| Net Effect | [EvidenceVariable][Net Effect] | Description of the net effect of a guideline recommendation. | (Expected) [Outcomes][Outcome] of a guideline recommendation. |
-| Guideline Bundle | [Bundle][Guideline Bundle] | Bundle of all resources of a single clinical practice guideline. | All other resources in this IG. |
+| [Population Group][Population Group]| [Group]({{ fhir_base_url }}group.html) | Characterization of a group of patients or subjects for which a clinical guideline recommends a treatment or intervention. | - |
+| [Intervention Plan][Intervention Plan] | [PlanDefinition]({{ fhir_base_url }}plandefinition.html) | Definition of plan that is part of an intervention in the context of a clinical practice guideline recommendation. | - |
+| [Intervention Activity][Intervention Activity] | [ActivityDefinition]({{ fhir_base_url }}activitydefinition.html) | Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation. | - |
+| [Net Effect][Net Effect] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Description of the net effect of a guideline recommendation. | (Expected) [Outcomes][Outcome] of a guideline recommendation. |
+| [Guideline Bundle] | [Bundle]({{ fhir_base_url }}bundle.html) | Bundle of all resources of a single clinical practice guideline. | All other resources in this IG. |
 {:.grid}
 
 The following diagram provides an overview of the different profiles used in this implementation guide and their relationship:

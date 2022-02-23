@@ -1,9 +1,10 @@
+{% include variables.md %}
 {% assign id = {{include.id}} %}
 {% assign resource = site.data.structuredefinitions.[id] %}
 
 ### Guidance
 
-This extension adds the possibility to specify temporal relationships between individual characteristics (e.g. of a Group]({{ fhir_base_url }}/group.html) resource. It is used in conjunction with the [Group Characteristic Link Id extension][Group Characteristic Link Id], which provides an identifier to each characteristic that can be used to reference individual characteristics.
+This extension adds the possibility to specify temporal relationships between individual characteristics (e.g. of a Group]({{ fhir_base_url }}group.html) resource. It is used in conjunction with the [Group Characteristic Link Id extension][Group Characteristic Link Id], which provides an identifier to each characteristic that can be used to reference individual characteristics.
 
 The following fields are used to specify the temporal relationship between different entries of characteristic:
 

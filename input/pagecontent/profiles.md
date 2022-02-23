@@ -8,6 +8,7 @@
 
 ### Intervention/Exposure
 {% include profile-reference.md name='Intervention' %}
+{% include profile-reference.md name='Intervention Plan' %}
 {% include profile-reference.md name='Intervention Activity' %}
 
 ### Outcome
