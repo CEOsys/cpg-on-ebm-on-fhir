@@ -94,24 +94,56 @@ Description: "Single recommendation from a clinical practice guideline."
 * certainty ^slicing.discriminator.path = "type"
 * certainty ^slicing.rules = #open
 * certainty contains
-  overall 1..1 MS
-  and riskOfBias 0..1 MS
-  and consensus 0..1 MS
-* certainty[overall]
-  * type 1..
-  * type = $cs-certainty-type#Overall "Overall certainty"
-  * rating 1..1
-  * rating from rating-overall-quality (required)
-* certainty[riskOfBias]
-  * type 1..
-  * type = $cs-certainty-type#RiskOfBias "Risk of bias"
-  * rating 1..1
-  * rating from rating-risk-of-bias (required)
+  consensus 0..1 MS
+  and benefitAndHarms 0..1 MS
+  and certaintyOfEvidence 1..1 MS
+  and preferenceAndValues 0..1 MS
+  and resources 0..1 MS
+  and equity 0..1 MS
+  and acceptability 0..1 MS
+  and feasibility 0..1 MS
 * certainty[consensus]
   * type 1..
   * type = CEOsysCodeSystem#consensus "Consensus"
   * rating 1..1
-  * rating from rating-consensus (required)
+  * rating from vs-rating-consensus (required)
+* certainty[benefitAndHarms]
+  * type 1..
+  * type = $cs-etd-certainty-type#benefit-and-harms "Benefit and harms"
+  * rating 1..1
+  * rating from vs-rating-benefit-and-harms (required)
+* certainty[certaintyOfEvidence]
+  * type 1..
+  * type = $cs-certainty-type#Overall "Overall certainty"
+  * rating 1..1
+  * rating from vs-rating-certainty-of-evidence (required)
+* certainty[preferenceAndValues]
+  * type 1..
+  * type = $cs-etd-certainty-type#preference-and-values "Preference and values"
+  * rating 1..1
+  * rating from vs-rating-preference-and-values (required)
+* certainty[resources]
+  * type 1..
+  * type = $cs-etd-certainty-type#resources "Resources"
+  * rating 1..1
+  * rating from vs-rating-resources (required)
+* certainty[equity]
+  * type 1..
+  * type = $cs-etd-certainty-type#equity "Equity"
+  * rating 1..1
+  * rating from vs-rating-equity (required)
+* certainty[acceptability]
+  * type 1..
+  * type = $cs-etd-certainty-type#acceptability "Acceptability"
+  * rating 1..1
+  * rating from vs-rating-acceptability (required)
+* certainty[feasibility]
+  * type 1..
+  * type = $cs-etd-certainty-type#feasibility "Feasibility"
+  * rating 1..1
+  * rating from vs-rating-feasibility (required)
+
+
 
 // TODO: add example of net benefit
 Instance: ExampleGuidelineRecommendation

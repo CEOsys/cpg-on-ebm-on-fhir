@@ -22,6 +22,8 @@ Description: "Collection of all resources that represent a single clinical pract
   and populationGroup 1..* MS
   and interventionPlan 0..* MS
   and interventionActivity 0..* MS
+  and outcomeEvidence 0..* MS
+  and studyCitation 0..* MS
 * entry[guideline]
   * resource 1.. MS
   * resource only Guideline
@@ -58,10 +60,18 @@ Description: "Collection of all resources that represent a single clinical pract
   * resource 1.. MS
   * resource only InterventionActivity
   * fullUrl 1..1 MS
+* entry[outcomeEvidence]
+  * resource 1.. MS
+  * resource only OutcomeEvidence
+  * fullUrl 1..1 MS
+* entry[studyCitation]
+  * resource 1.. MS
+  * resource only StudyCitation
+  * fullUrl 1..1 MS
 
 Invariant: bdl-1
 Description: "First element of Bundle must be an Composition."
-Expression: "entry.first().resource.is(Compositoin)"
+Expression: "entry.first().resource.is(Composition)"
 Severity: #error
 
 Instance: GuidelineRecommendationExample
@@ -81,6 +91,9 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[intervention]
   * resource = ExampleIntervention
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention"
+* entry[outcome]
+  * resource = ExampleOutcome
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
 * entry[populationGroup]
   * resource = ExamplePopulationGroup
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"
@@ -90,3 +103,9 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[interventionActivity]
   * resource = ExampleInterventionActivity
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-activity"
+* entry[outcomeEvidence]
+  * resource = ExampleOutcomeEvidence
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence"
+* entry[studyCitation]
+  * resource = ExampleCitation
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/citation"

@@ -1,5 +1,6 @@
+// Author: Gregor Lichtner @glichtner
 ValueSet: RatingConsensus
-Id: rating-consensus
+Id: vs-rating-consensus
 Title: "Rating Consensus"
 Description: "Degree of consensus reached"
 * insert metadata(2022-01-31, #draft, 0.1.0)

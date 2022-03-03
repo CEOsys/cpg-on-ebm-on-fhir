@@ -2,7 +2,7 @@
 Extension: ReferencePlanDefinition
 Id: ceosys-extension-reference-plan-definition
 Title: "Reference Plan Definition"
-Description: "Adds the possibility to reference an PlanDefinition resource."
+Description: "Adds the possibility to reference a PlanDefinition resource."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * . ^short = "Reference to Plan Definition resource"
 * . ^definition = "Reference to PlanDefinition resource"

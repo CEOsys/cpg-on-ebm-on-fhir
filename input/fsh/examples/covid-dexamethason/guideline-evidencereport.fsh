@@ -42,7 +42,7 @@ Description: "Dexamethasone in critically ill patients with COVID-19."
   * intended = Reference(PopulationCriticallyIllCOVID19Patients)
 * variableDefinition[intervention]
   * intended = Reference(InterventionDexamethasoneApplication)
-* certainty[overall]
+* certainty[certaintyOfEvidence]
   * description = "Low quality"
   * rating = $cs-certainty-rating#low "Low quality"
 * insert recommendation-strength(#strong-for)
