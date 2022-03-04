@@ -2,7 +2,7 @@ Profile: OutcomeEvidence
 Parent: Evidence
 Id: outcome-evidence
 Title: "Outcome Evidence"
-Description: ""
+Description: "A single evidence for an outcome from a specific, single study."
 * citeAs[x] only Reference
 * citeAsReference 1..1
 * studyType 1..1 MS
