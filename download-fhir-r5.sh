@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this script downloads the continuous build of the FHIR specification
+# this script downloads a specific R5 version of FHIR (see fhir_version)
 
 declare -a packages=(
   "hl7.fhir.r5.core.tgz"
@@ -22,7 +22,7 @@ do
   echo "$fhir_path"
   mkdir -p $fhir_path
   cd $fhir_path
-  wget -q https://build.fhir.org/$fhir_package_name -O $fhir_package_name
+  wget -q http://hl7.org/fhir/$fhir_version/$fhir_package_name -O $fhir_package_name
   tar -zxf $fhir_package_name
   rm $fhir_package_name
 
