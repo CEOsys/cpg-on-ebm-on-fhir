@@ -1,4 +1,5 @@
 // Author: Gregor Lichtner @glichtner
+// TODO: Update with proper resources etc
 Profile: GuidelineBundle
 Parent: Bundle
 Id: guideline-bundle
@@ -13,44 +14,29 @@ Description: "Collection of all resources that represent a single clinical pract
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
+ // ListOutcomeEvidence
+ // ArtifactAssessment
   guideline 1..1 MS
-  and guidelineRecommendation 1..* MS
-  and population 1..* MS
-  and intervention 1..* MS
-  and outcome 0..* MS
-  and netEffect 0..* MS
+  and guidelineCitation 0..1 MS
+  and interventionPlan 1..* MS
+  and interventionActivity 1..* MS
   and populationGroup 1..* MS
-  and interventionPlan 0..* MS
-  and interventionActivity 0..* MS
+  and PICOEvidenceVariable 1..* MS // includes Population, StudyEligibilityCriteria, Outcome
+  and recommendationRating 1..* MS
+  and listOutcomeEvidence 0..* MS
   and outcomeEvidence 0..* MS
+  and studyGroup 0..* MS
   and studyCitation 0..* MS
+  and recommendationCitation 0..* MS
+  and netEffect 0..* MS
+
 * entry[guideline]
   * resource 1.. MS
   * resource only Guideline
   * fullUrl 1..1 MS
-* entry[guidelineRecommendation]
+* entry[guidelineCitation]
   * resource 1.. MS
-  * resource only GuidelineRecommendation
-  * fullUrl 1..1 MS
-* entry[population]
-  * resource 1.. MS
-  * resource only PopulationEvidenceVariable
-  * fullUrl 1..1 MS
-* entry[intervention]
-  * resource 1.. MS
-  * resource only InterventionEvidenceVariable
-  * fullUrl 1..1 MS
-* entry[outcome]
-  * resource 1.. MS
-  * resource only OutcomeEvidenceVariable
-  * fullUrl 1..1 MS
-* entry[netEffect]
-  * resource 1.. MS
-  * resource only NetEffectEvidenceVariable
-  * fullUrl 1..1 MS
-* entry[populationGroup]
-  * resource 1.. MS
-  * resource only PopulationGroup
+  * resource only GuidelineCitation
   * fullUrl 1..1 MS
 * entry[interventionPlan]
   * resource 1.. MS
@@ -60,13 +46,41 @@ Description: "Collection of all resources that represent a single clinical pract
   * resource 1.. MS
   * resource only InterventionActivity
   * fullUrl 1..1 MS
+* entry[populationGroup]
+  * resource 1.. MS
+  * resource only PopulationGroup
+  * fullUrl 1..1 MS
+* entry[PICOEvidenceVariable]
+  * resource 1.. MS
+  * resource only PICOEvidenceVariable
+  * fullUrl 1..1 MS
+* entry[recommendationRating]
+  * resource 1.. MS
+  * resource only CPGRecommendationRating
+  * fullUrl 1..1 MS
+* entry[listOutcomeEvidence]
+  * resource 1.. MS
+  * resource only ListOutcomeEvidence
+  * fullUrl 1..1 MS
 * entry[outcomeEvidence]
   * resource 1.. MS
   * resource only OutcomeEvidence
   * fullUrl 1..1 MS
+* entry[studyGroup]
+  * resource 1.. MS
+  * resource only StudyGroup
+  * fullUrl 1..1 MS
 * entry[studyCitation]
   * resource 1.. MS
   * resource only StudyCitation
+  * fullUrl 1..1 MS
+* entry[recommendationCitation]
+  * resource 1.. MS
+  * resource only RecommendationCitation
+  * fullUrl 1..1 MS
+* entry[netEffect]
+  * resource 1.. MS
+  * resource only NetEffectEvidence
   * fullUrl 1..1 MS
 
 Invariant: bdl-1
@@ -79,33 +93,48 @@ InstanceOf: guideline-bundle
 Usage: #example
 Title: "Guideline Recommendation Example"
 Description: "Example of a clinical practice guideline representation bundle."
-* entry[guideline]
+* entry[guideline][+]
   * resource = GuidelineExample
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example"
-* entry[guidelineRecommendation]
-  * resource = ExampleGuidelineRecommendation
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-recommendation-example"
-* entry[population]
-  * resource = ExamplePopulation
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population"
-* entry[intervention]
-  * resource = ExampleIntervention
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention"
-* entry[outcome]
-  * resource = ExampleOutcome
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
-* entry[populationGroup]
-  * resource = ExamplePopulationGroup
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"
-* entry[interventionPlan]
+* entry[guidelineCitation][+]
+  * resource = ExampleGuidelineCitation
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/citation"
+* entry[interventionPlan][+]
   * resource = ExampleInterventionPlan
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-plan"
-* entry[interventionActivity]
+* entry[interventionActivity][+]
   * resource = ExampleInterventionActivity
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-activity"
-* entry[outcomeEvidence]
+* entry[populationGroup][+]
+  * resource = ExamplePopulationGroup
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"
+* entry[PICOEvidenceVariable][+]
+  * resource = ExamplePopulation
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population"
+* entry[recommendationRating][+]
+  * resource = ExampleRecommendationRating
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-rating"
+* entry[listOutcomeEvidence][+]
+  * resource = ExampleListOutcomeEvidence
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/list-outcome-evidence"
+* entry[outcomeEvidence][+]
   * resource = ExampleOutcomeEvidence
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence"
-* entry[studyCitation]
-  * resource = ExampleCitation
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/citation"
+* entry[studyGroup][+]
+  * resource = ExampleStudyGroup
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-group"
+* entry[PICOEvidenceVariable][+] // StudyEligibilityCriteria
+  * resource = ExampleStudyEligibilityCriteria
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria"
+* entry[studyCitation][+]
+  * resource = ExampleStudyCitation
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-citation"
+* entry[PICOEvidenceVariable][+] // Outcome
+  * resource = ExampleOutcome
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
+* entry[recommendationCitation][+]
+  * resource = ExampleRecommendationCitation
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-citation"
+* entry[netEffect][+]
+  * resource = ExampleNetEffect
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/net-effect"

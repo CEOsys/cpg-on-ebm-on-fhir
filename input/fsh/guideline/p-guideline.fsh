@@ -22,12 +22,16 @@ Description: "Representation of an evidence-based clinical practice guideline."
   and CompositionPublicationStatus named publicationStatus 1..1 MS
 * encounter 0..0
 * subject 0..0
+* relatesTo 0..1
+  * type = #citation
+  * resourceReference 1..1
+  * resourceReference only Reference(GuidelineCitation)
 * type 1..1 MS
   * coding ^slicing.discriminator.type = #pattern
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains ceosys 1..1 and cochrane 1..1
-  * coding[ceosys] = CEOsysCodeSystem#clinical-practice-guideline
+  * coding[ceosys] = $cs-ceosys#clinical-practice-guideline
     * system 1.. MS
     * code 1.. MS
   * coding[cochrane] = $cochrane-ld#e07eN1w1Rwswg4 "Guidelines"
@@ -36,8 +40,8 @@ Description: "Representation of an evidence-based clinical practice guideline."
 * section 1..* MS
   * title 1..1 MS
   * code 1..1 MS
-  * code = CEOsysCodeSystem#guideline-recommendation "Clinical practice guideline recommendation"
-  * focus only Reference(GuidelineRecommendation)
+  * code = $cs-ceosys#guideline-recommendation "Clinical practice guideline recommendation"
+  * focus only Reference(InterventionPlan)
 
 Instance: GuidelineExample
 InstanceOf: guideline
@@ -53,16 +57,10 @@ Description: "Example of a guideline resource."
 * status = #final
 * extension[publicationStatus].valueCode = #active
 * extension[version].valueString = "0.1.0"
+* relatesTo.resourceReference = Reference(ExampleGuidelineCitation)
 * section
   * title = "Example Guideline Recommendation"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an example guideline recommendation.</div>"
-  * focus = Reference(ExampleGuidelineRecommendation)
-
-Instance: ExampleOrganization
-InstanceOf: Organization
-Usage: #example
-Title: "Example Organization"
-Description: "Example of a organization resource."
-* name = "Example Organization"
+  * focus = Reference(ExampleInterventionPlan)

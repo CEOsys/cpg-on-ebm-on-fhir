@@ -1,14 +1,47 @@
+// Author: Gregor Lichtner @glichtner
 Profile: OutcomeEvidence
 Parent: Evidence
 Id: outcome-evidence
 Title: "Outcome Evidence"
 Description: "A single evidence for an outcome from a specific, single study."
-* citeAs[x] only Reference
-* citeAsReference 1..1
+* insert metadata(2022-03-04, #draft, 0.1.0)
 * studyType 1..1 MS
 * synthesisType 1..1 MS
-* variableDefinition
+
+* relatedArtifact 1..* MS
+* relatedArtifact ^slicing.discriminator.type = #pattern
+* relatedArtifact ^slicing.discriminator.path = "type"
+* relatedArtifact ^slicing.rules = #open
+* relatedArtifact contains
+    studyCitation 1..* MS
+* relatedArtifact[studyCitation]
+  * type = $cs-related-artifact-type#derived-from
+  * resourceReference 1..1 MS
+  * resourceReference only Reference(StudyCitation)
+
+* variableDefinition ^slicing.discriminator.type = #value
+* variableDefinition ^slicing.discriminator.path = "variableRole"
+* variableDefinition ^slicing.rules = #open
+* variableDefinition contains
+    population 1..* MS and
+    outcome 1..* MS and
+    intervention 0..* and
+    comparator 0..*
+* variableDefinition[population]
+  * variableRole = $cs-variable-role#population
+  * observed 1..1 MS
+  * observed only Reference(StudyGroup)
+* variableDefinition[outcome]
   * variableRole = $cs-variable-role#measuredVariable
+  * observed 1..1 MS
+  * observed only Reference(OutcomeEvidenceVariable)
+* variableDefinition[intervention]
+  * variableRole = $cs-variable-role#exposure
+  * observed 1..1 MS
+* variableDefinition[comparator]
+  * variableRole = $cs-variable-role#referenceExposure
+  * observed 1..1 MS
+
 * statistic 0..* MS
 * statistic ^slicing.discriminator.type = #value
 * statistic ^slicing.discriminator.path = "type"
@@ -86,10 +119,12 @@ Usage: #example
 Title: "Example Outcome Evidence"
 Description: "Example Outcome Evidence"
 * status = #active
-* citeAsReference = Reference(ExampleCitation)
 * studyType = $cs-study-type#RCT
 * synthesisType = $cs-synthesis-type#NotApplicable
+* relatedArtifact[studyCitation].resourceReference = Reference(ExampleStudyCitation)
 * certainty[certaintyOfEvidence]
   * description = "very low"
   * type = $cs-certainty-type#Overall "Overall certainty"
   * rating = $cs-certainty-rating#very-low "Very low quality"
+* variableDefinition[population].observed = Reference(ExampleStudyGroup)
+* variableDefinition[outcome].observed = Reference(ExampleOutcome)

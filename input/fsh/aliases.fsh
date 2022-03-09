@@ -40,3 +40,10 @@ Alias: $vs-publication-status = http://hl7.org/fhir/ValueSet/publication-status
 
 Alias: $cs-etd-certainty-rating = cs-evidence-to-decision-certainty-rating
 Alias: $cs-etd-certainty-type = cs-evidence-to-decision-certainty-type
+
+Alias: $cs-cited-artifact-classification-type = http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type
+Alias: $cs-cited-artifact-status-type = http://terminology.hl7.org/CodeSystem/cited-artifact-status-type
+Alias: $cs-related-artifact-type = http://hl7.org/fhir/related-artifact-type
+Alias: $cs-ceosys = CEOsysCodeSystem
+
+Alias: $cs-citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier

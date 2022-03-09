@@ -7,17 +7,9 @@ Description: "Description of the outcome element of a PICO construct that eviden
 * insert metadata(2021-12-21, #draft, 0.1.0)
 * insert profile("This profile is used to describe the outcome element of a PICO construct that evidence is about.")
 * name 1..1 MS
-* handling 1..1 MS
-* characteristicCombination.code = $cs-characteristic-combination#all-of "All of"
-* characteristic 1..* MS
-  * type 1..1 MS
-  * type from CochranePICOOutcome (required)
-  * definition[x] only Reference
-  * definitionReference
-    * extension contains ReferenceEvidence named ReferenceEvidence 0..1
-    * extension[ReferenceEvidence].valueReference only Reference(OutcomeEvidence)
-    * display 1..1 // to suppress warning that a reference without an actual reference should have a display
-* characteristic.exclude = false
+* handling 1..1 MS // continuous | dichotomous | ordinal | polychotomous
+* characteristic.exclude 1..1
+* characteristic.exclude = false // no need to exclude outcomes
 
 Instance: ExampleOutcome
 InstanceOf: outcome-evidence-variable
@@ -31,7 +23,9 @@ Description: "Example of an outcome evidence variable."
   * value = "outcome-example"
 * name = "Mortality"
 * characteristic
-  * type = $cochrane-pico#Outcome
-  * definitionReference
-    * extension[ReferenceEvidence].valueReference = Reference(ExampleOutcomeEvidence)
-    * display = "Example of an outcome evidence."
+  * typeCodeableConcept = $sct#409651001 "Mortality rate (observable entity)"
+  * valueQuantity
+    * unit = "percent"
+    * system = $ucum
+    * code = #%
+* characteristic[=].exclude = false // no need to exclude outcomes

@@ -67,6 +67,11 @@ definition:
   - code: extension-domain
     value: https://simplifier.net
   resource:
+  - description: Rating of the evidence underlying a clinical practice guideline recommendation
+    exampleBoolean: false
+    name: CPG Recommendation Rating
+    reference:
+      reference: StructureDefinition/cpg-recommendation-rating
   - description: Representation of an evidence-based clinical practice guideline.
     exampleBoolean: false
     name: Clinical Practice Guideline
@@ -78,35 +83,38 @@ definition:
     name: Guideline Bundle
     reference:
       reference: StructureDefinition/guideline-bundle
-  - description: Single recommendation from a clinical practice guideline.
+  - description: Citation of a clinical practice guideline
     exampleBoolean: false
-    name: Guideline Recommendation
+    name: Guideline Citation
     reference:
-      reference: StructureDefinition/guideline-recommendation
+      reference: StructureDefinition/guideline-citation
   - description: Definition of an activity that is part of an intervention in the
       context of a clinical practice guideline recommendation.
     exampleBoolean: false
     name: Intervention Activity
     reference:
       reference: StructureDefinition/intervention-activity
-  - description: Description of the intervention element of a PICO construct that
-      evidence is about.
-    exampleBoolean: false
-    name: Intervention
-    reference:
-      reference: StructureDefinition/intervention-evidence-variable
   - description: Definition of an activity that is part of an intervention in the
       context of a clinical practice guideline recommendation.
     exampleBoolean: false
     name: Intervention Plan
     reference:
       reference: StructureDefinition/intervention-plan
-  - description: Net Effect for the provided evidence, calculated by aggregation of
-      importance-weighted outcomes.
+  - description: List of Outcome Evidences that together form the basis of a clinical
+      practice guideline (CPG)
     exampleBoolean: false
+    name: List Outcome Evidence
+    reference:
+      reference: StructureDefinition/list-outcome-evidence
+  - exampleBoolean: false
     name: Net Effect
     reference:
-      reference: StructureDefinition/net-effect-evidence-variable
+      reference: StructureDefinition/net-effect-evidence
+  - description: A single evidence for an outcome from a specific, single study.
+    exampleBoolean: false
+    name: Outcome Evidence
+    reference:
+      reference: StructureDefinition/outcome-evidence
   - description: Description of the outcome element of a PICO construct that evidence
       is about.
     exampleBoolean: false
@@ -120,6 +128,12 @@ definition:
     name: PICO Evidence Variable
     reference:
       reference: StructureDefinition/pico-evidence-variable
+  - description: Definition of a population (e.g. for guideline recommendation, clinical
+      study).
+    exampleBoolean: false
+    name: Population Definition
+    reference:
+      reference: StructureDefinition/population-definition
   - description: Description of the population element of a PICO construct that evidence
       is about.
     exampleBoolean: false
@@ -132,6 +146,27 @@ definition:
     name: Population Group
     reference:
       reference: StructureDefinition/population-group
+  - description: Citation of a clinical practice guideline recommendation
+    exampleBoolean: false
+    name: Recommendation Citation
+    reference:
+      reference: StructureDefinition/recommendation-citation
+  - description: Citation of a study from which evidence is determined.
+    exampleBoolean: false
+    name: Study Citation
+    reference:
+      reference: StructureDefinition/study-citation
+  - description: Eligibility Criteria for a clinical study
+    exampleBoolean: false
+    name: Study Eligibility Criteria
+    reference:
+      reference: StructureDefinition/study-eligibility-criteria
+  - description: Characterization of a group of patients or subjects that were observed
+      in a clinical study.
+    exampleBoolean: false
+    name: Study Group
+    reference:
+      reference: StructureDefinition/study-group
   - description: Adds publication status attribute to Composition.
     exampleBoolean: false
     name: Composition Publication Status
@@ -142,22 +177,6 @@ definition:
     name: Composition Version
     reference:
       reference: StructureDefinition/ceosys-extension-composition-version
-  - description: Unique id for the characteristic in the Group
-    exampleBoolean: false
-    name: Group Characteristic Link Id
-    reference:
-      reference: StructureDefinition/group-characteristic-link-id
-  - description: Adds the possibility to reference an PlanDefinition resource.
-    exampleBoolean: false
-    name: Reference Plan Definition
-    reference:
-      reference: StructureDefinition/ceosys-extension-reference-plan-definition
-  - description: Adds the possibility to a characteristic to specify a temporal relationship
-      with another characteristic.
-    exampleBoolean: false
-    name: Related Characteristic
-    reference:
-      reference: StructureDefinition/related-characteristic
   - description: Types of relationships between characteristics
     exampleBoolean: false
     name: Characteristic Relationship Type
@@ -183,26 +202,70 @@ definition:
     name: Cochrane PICO Population
     reference:
       reference: ValueSet/cochrane-pico-population
+  - description: Current status of a clinical practice guideline recommendation
+    exampleBoolean: false
+    name: Guideline Recommendation Status
+    reference:
+      reference: ValueSet/guideline-recommendation-status
+  - description: Are the alternatives acceptable for the target population and its
+      implementors?
+    exampleBoolean: false
+    name: Rating Acceptability
+    reference:
+      reference: ValueSet/vs-rating-acceptability
+  - description: Summary of most important benefits and harms
+    exampleBoolean: false
+    name: Rating Benefit And Harms
+    reference:
+      reference: ValueSet/vs-rating-benefit-and-harms
+  - description: Codes from EvidenceCertaintyRating related to certainty of evidence
+    exampleBoolean: false
+    name: Rating Certainty Of Evidence
+    reference:
+      reference: ValueSet/vs-rating-certainty-of-evidence
+  - description: Codes from EvidenceCertaintyRating related to degree of concern
+    exampleBoolean: false
+    name: Rating Concern Degree
+    reference:
+      reference: ValueSet/vs-rating-concern-degree
   - description: Degree of consensus reached
     exampleBoolean: false
     name: Rating Consensus
     reference:
-      reference: ValueSet/rating-consensus
-  - description: Codes from EvidenceCertaintyRating related to overall quality
+      reference: ValueSet/vs-rating-consensus
+  - description: How do the different alternatives affect equity?
     exampleBoolean: false
-    name: Rating Overall Quality
+    name: Rating Equity
     reference:
-      reference: ValueSet/rating-overall-quality
-  - description: Codes from EvidenceCertaintyRating related to risk of bias
+      reference: ValueSet/vs-rating-equity
+  - description: How feasible will it be to implement the different alternatives?
+      Any issues?
     exampleBoolean: false
-    name: Rating Risk Of Bias
+    name: Rating Feasibility
     reference:
-      reference: ValueSet/rating-risk-of-bias
+      reference: ValueSet/vs-rating-feasibility
+  - description: Typical patient preferences and values? Common issues or expected
+      variability?
+    exampleBoolean: false
+    name: Rating Preference And Values
+    reference:
+      reference: ValueSet/vs-rating-preference-and-values
+  - description: Issues with costs or resource use? For whom? Cost-benefit analysis?
+      Implementation or other issues?
+    exampleBoolean: false
+    name: Rating Resources
+    reference:
+      reference: ValueSet/vs-rating-resources
   - description: Strength of a clinical guideline recommendation.
     exampleBoolean: false
     name: Recommendation Strength
     reference:
       reference: ValueSet/ceosys-vs-recommendation-strength
+  - description: Relative effect types
+    exampleBoolean: false
+    name: Relative Effect Type
+    reference:
+      reference: ValueSet/vs-relative-effect-type
   - description: Codes for clinical guideline recommendation representation missing
       from other code systems.
     exampleBoolean: false
@@ -226,53 +289,26 @@ definition:
     name: Cochrane PICO Ontology
     reference:
       reference: CodeSystem/cochrane-pico-ontology
+  - description: GRADE Evidence to Decision (EtD) Framework Certainty Ratings
+    exampleBoolean: false
+    name: Evidence To Decision Certainty Rating
+    reference:
+      reference: CodeSystem/cs-evidence-to-decision-certainty-rating
+  - description: GRADE Evidence to Decision (EtD) Framework Certainty Type
+    exampleBoolean: false
+    name: Evidence To Decision Certainty type
+    reference:
+      reference: CodeSystem/cs-evidence-to-decision-certainty-type
   - description: Strength of a clinical guideline recommendation.
     exampleBoolean: false
     name: Recommendation Strength
     reference:
       reference: CodeSystem/ceosys-cs-recommendation-strength
-  - description: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
-      (AWMF) e.V
-    exampleBoolean: true
-    name: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
-      (AWMF) e.V
+  - description: Example of a Citation of a clinical practice guideline
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
+    name: Example Guideline Citation
     reference:
-      reference: Organization/AWMFOrganization
-  - description: COVID19 Intensive Care Treatment Guideline.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
-    name: COVID19 Intensive Care Treatment Guideline
-    reference:
-      reference: Composition/COVID19IntensiveCareTreatmentGuideline
-  - description: COVID19 Intensive Care Treatment Guideline (Bundle).
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
-    name: COVID19 Intensive Care Treatment Guideline
-    reference:
-      reference: Bundle/COVID19IntensiveCareTreatmentGuidelineBundle
-  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
-    name: Dexamethasone Application
-    reference:
-      reference: ActivityDefinition/DexamethasoneApplicationActivity
-  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
-    name: Dexamethasone Application
-    reference:
-      reference: PlanDefinition/DexamethasoneApplicationPlan
-  - description: Dexamethasone in critically ill patients with COVID-19.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
-    name: Dexamethasone for critically ill COVID-19 patients
-    reference:
-      reference: Evidence/DexamethasoneRecommendation
-  - description: Example of a single clinical practice guideline recommendation.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-recommendation
-    name: Example Guideline Recommendation
-    reference:
-      reference: Evidence/ExampleGuidelineRecommendation
-  - description: Example of an intervention as part of a clinical practice guideline.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-evidence-variable
-    name: Example Intervention
-    reference:
-      reference: EvidenceVariable/ExampleIntervention
+      reference: Citation/ExampleGuidelineCitation
   - description: An active intervention activity.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
     name: Example Intervention Activity
@@ -283,11 +319,16 @@ definition:
     name: Example Intervention plan
     reference:
       reference: PlanDefinition/ExampleInterventionPlan
-  - description: Example of a net effect with a single outcome.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-evidence-variable
+  - description: Example of an outcome list
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/list-outcome-evidence
+    name: Example List Outcome Evidence
+    reference:
+      reference: List/ExampleListOutcomeEvidence
+  - description: Example of a net effect
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-evidence
     name: Example Net Effect
     reference:
-      reference: EvidenceVariable/ExampleNetEffect
+      reference: Evidence/ExampleNetEffect
   - description: Example of a organization resource.
     exampleBoolean: true
     name: Example Organization
@@ -298,6 +339,11 @@ definition:
     name: Example Outcome
     reference:
       reference: EvidenceVariable/ExampleOutcome
+  - description: Example Outcome Evidence
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence
+    name: Example Outcome Evidence
+    reference:
+      reference: Evidence/ExampleOutcomeEvidence
   - description: Example of a population element of a PICO construct that evidence
       is about.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
@@ -309,6 +355,31 @@ definition:
     name: Example Population Group
     reference:
       reference: Group/ExamplePopulationGroup
+  - description: Example of a Citation of a clinical practice guideline recommendation
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
+    name: Example Recommendation Citation
+    reference:
+      reference: Citation/ExampleRecommendationCitation
+  - description: Example of a CPG recommendation rating
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-rating
+    name: Example Recommendation Rating
+    reference:
+      reference: ArtifactAssessment/ExampleRecommendationRating
+  - description: Example Study Citation
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
+    name: Example Study Citation
+    reference:
+      reference: Citation/ExampleStudyCitation
+  - description: Example of Study Eligbility Criteria
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria
+    name: Example Study Eligibility Criteria
+    reference:
+      reference: EvidenceVariable/ExampleStudyEligibilityCriteria
+  - description: 'Example of a population group: COVID-19 patients.'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-group
+    name: Example Population Group
+    reference:
+      reference: Group/ExampleStudyGroup
   - description: Example of a guideline resource.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: Example Guideline
@@ -319,56 +390,8 @@ definition:
     name: Guideline Recommendation Example
     reference:
       reference: Bundle/GuidelineRecommendationExample
-  - description: 'Intervention for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: Dexamethasone Therapy'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-evidence-variable
-    name: Intervention Dexamethasone Application
-    reference:
-      reference: EvidenceVariable/InterventionDexamethasoneApplication
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, ARDS'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: 'Population: COVID19 / ARDS'
-    reference:
-      reference: Group/PopulationCOVID19ARDS
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Oxygen-Saturation<90'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: 'Population: COVID19 / Oxygen saturation < 90%'
-    reference:
-      reference: Group/PopulationCOVID19OxygenSaturationLt90
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Respiratory Rate > 30/min'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: 'Population: COVID19 / Respiratory Rate > 30 /min'
-    reference:
-      reference: Group/PopulationCOVID19RespiratoryRateGt30
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Sepsis'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: 'Population: COVID19 / Sepsis'
-    reference:
-      reference: Group/PopulationCOVID19Sepsis
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Vasopressor Therapy'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: Population COVID19 Vasopressor Therapy
-    reference:
-      reference: Group/PopulationCOVID19VasopressorTherapy
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Ventilated'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: Population COVID19 Ventilated
-    reference:
-      reference: Group/PopulationCOVID19Ventilated
-  - description: Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: 'Population: Critically Ill COVID-19 Patients'
-    reference:
-      reference: EvidenceVariable/PopulationCriticallyIllCOVID19Patients
 fhirVersion:
-- 5.0.0-snapshot1
+- 5.0.0-cibuild
 id: cpg.ceosys.de
 name: CPGonEBMonFHIR
 packageId: cpg.ceosys.de

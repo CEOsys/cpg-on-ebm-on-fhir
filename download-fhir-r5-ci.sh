@@ -8,7 +8,8 @@ declare -a packages=(
 #  "hl7.fhir.r5.examples.tgz"
 )
 
-fhir_version="5.0.0-snapshot1"
+fhir_base_version="5.0.0"
+fhir_version="5.0.0-cibuild" # used only for local FHIR path
 
 echo $HOME
 mkdir -p $HOME/.fhir
@@ -19,6 +20,7 @@ do
   basename="$(basename $fhir_package_name .tgz)"
   fhir_path="$HOME/.fhir/packages/$basename#$fhir_version"
   fhir_path_current="$HOME/.fhir/packages/$basename#current"
+  fhir_path_base="$HOME/.fhir/packages/$basename#$fhir_base_version"
   echo "$fhir_path"
   mkdir -p $fhir_path
   cd $fhir_path
@@ -27,6 +29,11 @@ do
   rm $fhir_package_name
 
   ln -s $fhir_path $fhir_path_current
+  ln -s $fhir_path $fhir_path_base
+
+  find $fhir_path -type f -exec sed -i 's/4.6.0[|]4.6.0/'"$fhir_version"'/g' {} ';'
+  find $fhir_path -type f -exec sed -i 's/4.6.0/'"$fhir_version"'/g' {} ';'
+  sed -i 's/"type": "Core"/"type": "fhir.core"/g' $fhir_path/package/package.json
 done
 
 ls -al $HOME/.fhir/packages

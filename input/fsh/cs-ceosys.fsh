@@ -8,3 +8,6 @@ Description: "Codes for clinical guideline recommendation representation missing
 * #clinical-practice-guideline "Clinical practice guideline"
 * #guideline-recommendation "Clinical practice guideline recommendation"
 * #consensus "Consensus"
+* #strength "Strength of recommendation"
+* #eligibility-criteria "Study Eligibility Criteria"
+* #net-effect "Net effect"
