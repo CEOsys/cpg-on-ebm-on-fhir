@@ -7,7 +7,6 @@ Description: "Description of the population element of a PICO construct that evi
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * insert profile("This profile describes a population defined in clinical practice guideline recommendation.")
 
-
 Instance: ExamplePopulation
 InstanceOf: population-evidence-variable
 Usage: #example

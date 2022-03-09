@@ -18,6 +18,8 @@ Description: "Citation of a clinical practice guideline"
     * type = $cs-cited-artifact-classification-type#publication-type "Publication Type"
     * classifier 1..1
     * classifier = $cs-ceosys#clinical-practice-guideline "Clinical practice guideline"
+  * webLocation 1..*
+    * url 1..1
 
 Instance: ExampleGuidelineCitation
 InstanceOf: guideline-citation
@@ -32,3 +34,4 @@ Description: "Example of a Citation of a clinical practice guideline"
   * title.text = "Example Citation"
   * version.value = "1.0-alpha1"
   * currentState = $cs-cited-artifact-status-type#archived "Archived"
+  * webLocation.url = "https://example.com/guideline/exampleIdentifier"

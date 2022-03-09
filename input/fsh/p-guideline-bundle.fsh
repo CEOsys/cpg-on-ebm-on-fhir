@@ -14,8 +14,6 @@ Description: "Collection of all resources that represent a single clinical pract
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
- // ListOutcomeEvidence
- // ArtifactAssessment
   guideline 1..1 MS
   and guidelineCitation 0..1 MS
   and interventionPlan 1..* MS

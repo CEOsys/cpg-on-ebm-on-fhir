@@ -7,6 +7,12 @@ Description: "Rating of the evidence underlying a clinical practice guideline re
 * insert metadata(2022-03-04, #draft, 0.1.0)
 * artifact[x] only Reference
 * artifactReference only Reference(ListOutcomeEvidence)
+//* version 1..1 MS // TODO: uncomment if version
+* extension contains
+  ArtifactAssessmentVersion named version 1..1 MS and // TODO: replace by actual version field if added
+  ArtifactAssessmentPublicationStatus named publicationStatus 1..1 MS
+  // TODO: Need reference to recommendationCitation
+* date 1..1
 * content 1..* MS
 * content ^slicing.discriminator.type = #value
 * content ^slicing.discriminator.path = "type"
@@ -101,6 +107,9 @@ Usage: #example
 Title: "Example Recommendation Rating"
 Description: "Example of a CPG recommendation rating"
 * artifactReference = Reference(ExampleListOutcomeEvidence)
+* date = "2020-01-03"
+* extension[publicationStatus].valueCode = #active
+* extension[version].valueString = "0.1.0"
 * content[strength]
   * type = $cs-ceosys#strength "Strength of recommendation"
   * classifier = ceosys-cs-recommendation-strength#strong-for
