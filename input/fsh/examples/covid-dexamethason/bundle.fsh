@@ -42,6 +42,3 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
 * entry[recommendationRating][+]
   * resource = DexamethasoneRecommendationRating
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-rating"
-* entry[listOutcomeEvidence][+]
-  * resource = DexamaethasoneRecommendationOutcomes
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/list-outcome-evidence"

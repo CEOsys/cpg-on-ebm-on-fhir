@@ -19,7 +19,7 @@ Description: "Representation of an evidence-based clinical practice guideline."
 //* url 1..1 MS // TODO: uncomment once url field available (see https://jira.hl7.org/browse/FHIR-34159 )
 * extension contains
   CompositionVersion named version 1..1 MS // TODO: replace by actual version field once available
-  and CompositionPublicationStatus named publicationStatus 1..1 MS
+  and CompositionPublicationStatus named status 1..1 MS
 * encounter 0..0
 * subject 0..0
 * relatesTo 0..1
@@ -55,7 +55,7 @@ Description: "Example of a guideline resource."
 * author = Reference(ExampleOrganization)
 * date = "2022-01-28"
 * status = #final
-* extension[publicationStatus].valueCode = #active
+* extension[status].valueCode = #active
 * extension[version].valueString = "0.1.0"
 * relatesTo.resourceReference = Reference(ExampleGuidelineCitation)
 * section

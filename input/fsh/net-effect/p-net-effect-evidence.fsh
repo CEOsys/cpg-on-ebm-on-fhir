@@ -5,21 +5,22 @@ Id: net-effect-evidence
 Title: "Net Effect"
 Description: "" // TODO: add description
 * insert metadata(2022-03-04, #draft, 0.1.0)
+* name 1..1
 * variableDefinition ^slicing.discriminator.type = #value
 * variableDefinition ^slicing.discriminator.path = "variableRole"
 * variableDefinition ^slicing.rules = #closed
 * variableDefinition contains
-  outcome 0..* MS
+  outcome 1..* MS
 * variableDefinition[outcome]
   * variableRole = $cs-variable-role#measuredVariable
   * intended 1..1 MS
   * intended only Reference(OutcomeEvidenceVariable)
 
-* statistic 0..* MS
+* statistic 1..* MS
 * statistic ^slicing.discriminator.type = #value
 * statistic ^slicing.discriminator.path = "statisticType"
 * statistic ^slicing.rules = #open
-* statistic contains netEffect 0..1 MS
+* statistic contains netEffect 1..1 MS
 * statistic[netEffect]
   * description 1..
   * description = "Net Effect"
@@ -60,6 +61,7 @@ InstanceOf: net-effect-evidence
 Usage: #example
 Title: "Example Net Effect"
 Description: "Example of a net effect"
+* name = "NetEffectExample"
 * status = #unknown
 * variableDefinition[outcome].intended = Reference(ExampleOutcome)
 * statistic[netEffect]

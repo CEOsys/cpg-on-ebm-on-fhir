@@ -11,3 +11,5 @@ Description: "Codes for clinical guideline recommendation representation missing
 * #strength "Strength of recommendation"
 * #eligibility-criteria "Study Eligibility Criteria"
 * #net-effect "Net effect"
+* #certainty-of-evidence-rating "Certainty of evidence rating"
+* #recommendation-rating "Recommendation rating"

@@ -21,7 +21,7 @@ Description: "Collection of all resources that represent a single clinical pract
   and populationGroup 1..* MS
   and PICOEvidenceVariable 1..* MS // includes Population, StudyEligibilityCriteria, Outcome
   and recommendationRating 1..* MS
-  and listOutcomeEvidence 0..* MS
+  and certaintyOfEvidenceRating 0..* MS
   and outcomeEvidence 0..* MS
   and studyGroup 0..* MS
   and studyCitation 0..* MS
@@ -56,9 +56,9 @@ Description: "Collection of all resources that represent a single clinical pract
   * resource 1.. MS
   * resource only CPGRecommendationRating
   * fullUrl 1..1 MS
-* entry[listOutcomeEvidence]
+* entry[certaintyOfEvidenceRating]
   * resource 1.. MS
-  * resource only ListOutcomeEvidence
+  * resource only CertaintyOfEvidenceRating
   * fullUrl 1..1 MS
 * entry[outcomeEvidence]
   * resource 1.. MS
@@ -112,9 +112,9 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[recommendationRating][+]
   * resource = ExampleRecommendationRating
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-rating"
-* entry[listOutcomeEvidence][+]
-  * resource = ExampleListOutcomeEvidence
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/list-outcome-evidence"
+* entry[certaintyOfEvidenceRating][+]
+  * resource = ExampleCertaintyOfEvidenceRating
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/certainty-of-evidence-rating"
 * entry[outcomeEvidence][+]
   * resource = ExampleOutcomeEvidence
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence"

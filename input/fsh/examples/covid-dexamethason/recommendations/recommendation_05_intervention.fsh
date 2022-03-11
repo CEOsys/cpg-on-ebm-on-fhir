@@ -15,8 +15,9 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days"
 * subjectReference = Reference(PopulationCriticallyIllCOVID19Patients)
 * action[+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActivity)
-* relatedArtifact[decisionRating].resourceReference = Reference(DexamethasoneRecommendationRating)
+* relatedArtifact[recommendationRating].resourceReference = Reference(DexamethasoneRecommendationRating)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
+* relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
 Instance: DexamethasoneRecommendationCitation
 InstanceOf: recommendation-citation
