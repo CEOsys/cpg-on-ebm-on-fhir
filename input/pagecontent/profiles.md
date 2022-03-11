@@ -1,7 +1,7 @@
 ### Guideline & Recommendation metadata
 {% include profile-reference.md name='Clinical Practice Guideline' %}
 {% include profile-reference.md name='CPG Recommendation Rating' %}
-
+{% include profile-reference.md name='Certainty of evidence rating' %}
 
 ### Population
 #### Recommendation

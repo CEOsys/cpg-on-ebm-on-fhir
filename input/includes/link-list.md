@@ -1,10 +1,10 @@
 [CPG Recommendation Rating]: StructureDefinition-cpg-recommendation-rating.html
+[Certainty of evidence rating]: StructureDefinition-certainty-of-evidence-rating.html
 [Clinical Practice Guideline]: StructureDefinition-guideline.html
 [Guideline Bundle]: StructureDefinition-guideline-bundle.html
 [Guideline Citation]: StructureDefinition-guideline-citation.html
 [Intervention Activity]: StructureDefinition-intervention-activity.html
 [Intervention Plan]: StructureDefinition-intervention-plan.html
-[List Outcome Evidence]: StructureDefinition-list-outcome-evidence.html
 [Net Effect]: StructureDefinition-net-effect-evidence.html
 [Outcome Evidence]: StructureDefinition-outcome-evidence.html
 [Outcome]: StructureDefinition-outcome-evidence-variable.html
@@ -35,6 +35,7 @@
 [VS Cochrane PICO Outcome]: ValueSet-cochrane-pico-outcome.html
 [VS Cochrane PICO Population]: ValueSet-cochrane-pico-population.html
 [VS Guideline Recommendation Status]: ValueSet-guideline-recommendation-status.html
+[VS Mean Difference Type]: ValueSet-vs-mean-difference-type.html
 [VS Rating Acceptability]: ValueSet-vs-rating-acceptability.html
 [VS Rating Benefit And Harms]: ValueSet-vs-rating-benefit-and-harms.html
 [VS Rating Certainty Of Evidence]: ValueSet-vs-rating-certainty-of-evidence.html

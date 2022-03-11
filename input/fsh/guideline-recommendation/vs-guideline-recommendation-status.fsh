@@ -1,5 +1,5 @@
 ValueSet: GuidelineRecommendationStatus
-Id: guideline-recommendation-status
+Id: vs-guideline-recommendation-status
 Title: "Guideline Recommendation Status"
 Description: "Current status of a clinical practice guideline recommendation"
 * $cs-cited-artifact-status-type#withdrawn "Withdrawn"

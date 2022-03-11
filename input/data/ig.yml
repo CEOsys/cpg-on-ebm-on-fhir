@@ -72,6 +72,12 @@ definition:
     name: CPG Recommendation Rating
     reference:
       reference: StructureDefinition/cpg-recommendation-rating
+  - description: Rating of a single outcome (evidence) underlying a clinical practice
+      guideline recommendation
+    exampleBoolean: false
+    name: Certainty of evidence rating
+    reference:
+      reference: StructureDefinition/certainty-of-evidence-rating
   - description: Representation of an evidence-based clinical practice guideline.
     exampleBoolean: false
     name: Clinical Practice Guideline
@@ -100,12 +106,6 @@ definition:
     name: Intervention Plan
     reference:
       reference: StructureDefinition/intervention-plan
-  - description: List of Outcome Evidences that together form the basis of a clinical
-      practice guideline (CPG)
-    exampleBoolean: false
-    name: List Outcome Evidence
-    reference:
-      reference: StructureDefinition/list-outcome-evidence
   - exampleBoolean: false
     name: Net Effect
     reference:
@@ -217,6 +217,11 @@ definition:
     name: Guideline Recommendation Status
     reference:
       reference: ValueSet/guideline-recommendation-status
+  - description: Mean difference types
+    exampleBoolean: false
+    name: Mean Difference Type
+    reference:
+      reference: ValueSet/vs-mean-difference-type
   - description: Are the alternatives acceptable for the target population and its
       implementors?
     exampleBoolean: false
@@ -336,11 +341,6 @@ definition:
     name: Example Guideline Citation
     reference:
       reference: Citation/COVID19IntensiveCareTreatmentGuidelineCitation
-  - description: List of outcomes for Dexamethasone recommendation
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/list-outcome-evidence
-    name: List of outcomes for Dexamethasone recommendation
-    reference:
-      reference: List/DexamaethasoneRecommendationOutcomes
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
     name: Dexamethasone Application
@@ -362,6 +362,10 @@ definition:
     name: Dexamethasone for critically ill COVID-19 patients
     reference:
       reference: ArtifactAssessment/DexamethasoneRecommendationRating
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
+    name: Example Certainty Of Evidence Rating
+    reference:
+      reference: ArtifactAssessment/ExampleCertaintyOfEvidenceRating
   - description: Example of a Citation of a clinical practice guideline
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
     name: Example Guideline Citation
@@ -377,11 +381,6 @@ definition:
     name: Example Intervention plan
     reference:
       reference: PlanDefinition/ExampleInterventionPlan
-  - description: Example of an outcome list
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/list-outcome-evidence
-    name: Example List Outcome Evidence
-    reference:
-      reference: List/ExampleListOutcomeEvidence
   - description: Example of a net effect
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-evidence
     name: Example Net Effect
