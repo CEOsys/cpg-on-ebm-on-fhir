@@ -24,7 +24,7 @@ Description: "Definition of an activity that is part of an intervention in the c
 * relatedArtifact ^slicing.rules = #open
 * relatedArtifact contains
     decisionRating 1..* MS and
-    recommendationCitation 1..* MS
+    recommendationCitation 0..* MS
 * relatedArtifact[decisionRating]
   * type = $cs-related-artifact-type#justification
   * resourceReference 1..1 MS

@@ -33,7 +33,9 @@ do
 
   find $fhir_path -type f -exec sed -i 's/4.6.0[|]4.6.0/'"$fhir_version"'/g' {} ';'
   find $fhir_path -type f -exec sed -i 's/4.6.0/'"$fhir_version"'/g' {} ';'
+  find $fhir_path -type f -exec sed -i 's/5.0.0-snapshot1/'"$fhir_version"'/g' {} ';'
   sed -i 's/"type": "Core"/"type": "fhir.core"/g' $fhir_path/package/package.json
+  sed -i 's|"baseDefinition":"http://hl7.org/fhir/StructureDefinition/MetadataResource"|"baseDefinition":"http://hl7.org/fhir/StructureDefinition/DomainResource"|g' $fhir_path/package/StructureDefinition-ArtifactAssessment.json
 done
 
 ls -al $HOME/.fhir/packages

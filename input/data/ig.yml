@@ -167,6 +167,16 @@ definition:
     name: Study Group
     reference:
       reference: StructureDefinition/study-group
+  - description: Adds publication status attribute to ArtifactAssessment.
+    exampleBoolean: false
+    name: ArtifactAssessment Publication Status
+    reference:
+      reference: StructureDefinition/ceosys-extension-artifact-assessment-publication-status
+  - description: Adds version attribute to Artifact Assessment.
+    exampleBoolean: false
+    name: ArtifactAssessment Version
+    reference:
+      reference: StructureDefinition/ceosys-extension-artifact-assessment-version
   - description: Adds publication status attribute to Composition.
     exampleBoolean: false
     name: Composition Publication Status
@@ -304,6 +314,54 @@ definition:
     name: Recommendation Strength
     reference:
       reference: CodeSystem/ceosys-cs-recommendation-strength
+  - description: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
+      (AWMF) e.V
+    exampleBoolean: true
+    name: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
+      (AWMF) e.V
+    reference:
+      reference: Organization/AWMFOrganization
+  - description: COVID19 Intensive Care Treatment Guideline.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
+    name: COVID19 Intensive Care Treatment Guideline
+    reference:
+      reference: Composition/COVID19IntensiveCareTreatmentGuideline
+  - description: COVID19 Intensive Care Treatment Guideline (Bundle).
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
+    name: COVID19 Intensive Care Treatment Guideline
+    reference:
+      reference: Bundle/COVID19IntensiveCareTreatmentGuidelineBundle
+  - description: Example of a Citation of a clinical practice guideline
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
+    name: Example Guideline Citation
+    reference:
+      reference: Citation/COVID19IntensiveCareTreatmentGuidelineCitation
+  - description: List of outcomes for Dexamethasone recommendation
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/list-outcome-evidence
+    name: List of outcomes for Dexamethasone recommendation
+    reference:
+      reference: List/DexamaethasoneRecommendationOutcomes
+  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: Dexamethasone Application
+    reference:
+      reference: ActivityDefinition/DexamethasoneApplicationActivity
+  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
+    name: Dexamethasone Application
+    reference:
+      reference: PlanDefinition/DexamethasoneApplicationPlan
+  - description: Citation of Dexamethasone Recommenation from COVID-19 intensive care
+      patients treatment guideline
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
+    name: Dexamethasone Recommendation
+    reference:
+      reference: Citation/DexamethasoneRecommendationCitation
+  - description: Dexamethasone in critically ill patients with COVID-19.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-rating
+    name: Dexamethasone for critically ill COVID-19 patients
+    reference:
+      reference: ArtifactAssessment/DexamethasoneRecommendationRating
   - description: Example of a Citation of a clinical practice guideline
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
     name: Example Guideline Citation
@@ -390,6 +448,48 @@ definition:
     name: Guideline Recommendation Example
     reference:
       reference: Bundle/GuidelineRecommendationExample
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, ARDS'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: 'Population: COVID19 / ARDS'
+    reference:
+      reference: EvidenceVariable/PopulationCOVID19ARDS
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Oxygen-Saturation<90'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: 'Population: COVID19 / Oxygen saturation < 90%'
+    reference:
+      reference: EvidenceVariable/PopulationCOVID19OxygenSaturationLt90
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Respiratory Rate > 30/min'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: 'Population: COVID19 / Respiratory Rate > 30 /min'
+    reference:
+      reference: EvidenceVariable/PopulationCOVID19RespiratoryRateGt30
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Sepsis'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: 'Population: COVID19 / Sepsis'
+    reference:
+      reference: EvidenceVariable/PopulationCOVID19Sepsis
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Vasopressor Therapy'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: Population COVID19 Vasopressor Therapy
+    reference:
+      reference: EvidenceVariable/PopulationCOVID19VasopressorTherapy
+  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062 with characteristics: COVID-19, Ventilated'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    name: Population COVID19 Ventilated
+    reference:
+      reference: EvidenceVariable/PopulationCOVID19Ventilated
+  - description: Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5062
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: 'Population: Critically Ill COVID-19 Patients'
+    reference:
+      reference: Group/PopulationCriticallyIllCOVID19Patients
 fhirVersion:
 - 5.0.0-cibuild
 id: cpg.ceosys.de

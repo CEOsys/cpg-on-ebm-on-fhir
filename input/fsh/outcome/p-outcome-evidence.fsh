@@ -23,7 +23,7 @@ Description: "A single evidence for an outcome from a specific, single study."
 * variableDefinition ^slicing.discriminator.path = "variableRole"
 * variableDefinition ^slicing.rules = #open
 * variableDefinition contains
-    population 1..* MS and
+    population 1..1 MS and
     outcome 1..* MS and
     intervention 0..* and
     comparator 0..*
