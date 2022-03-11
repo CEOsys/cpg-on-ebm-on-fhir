@@ -1,6 +1,7 @@
 {% include link-list.md %}
 <img src="fhir-structure-overview.png" usemap="#image-map-fhir-structure-overview" alt="FHIR Structure Overview" style="width:100%;" />
-
+{% comment %}
+// TODO: Update
 <map name="image-map-fhir-structure-overview">
     <area target="_self" alt="Guideline" title="Guideline" href="StructureDefinition-guideline.html" coords="451,15,832,96" shape="rect">
     <area target="_self" alt="Guideline Recommendation" title="Guideline Recommendation" href="StructureDefinition-guideline-recommendation.html" coords="449,131,832,214" shape="rect">
@@ -13,3 +14,4 @@
     <area target="_self" alt="Intervention Activity" title="Intervention Activity" href="StructureDefinition-intervention-activity.html" coords="368,494,642,575" shape="rect">
     <area target="_self" alt="Guideline Bundle" title="Guideline Bundle" href="StructureDefinition-guideline-bundle.html" coords="461,619,842,704" shape="rect">
 </map>
+{% endcomment %}

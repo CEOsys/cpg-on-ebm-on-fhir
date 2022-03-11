@@ -1,4 +1,6 @@
 {% include link-list.md %}
+{% comment %}
+// TODO: Update
 <img src="{{ include.name }}.png" usemap="#image-map-fhir-structure-detailed" alt="{{ include.alt }}" style="width:100%;" />
 
 <map name="image-map-fhir-structure-detailed">
@@ -11,3 +13,4 @@
     <area target="_self" alt="Intervention Plan" title="Intervention Plan" href="StructureDefinition-intervention-plan.html" coords="955,338,1251,463" shape="rect">
     <area target="_self" alt="Intervention Activity" title="Intervention Activity" href="StructureDefinition-intervention-activity.html" coords="953,520,1249,615" shape="rect">
 </map>
+{% endcomment %}

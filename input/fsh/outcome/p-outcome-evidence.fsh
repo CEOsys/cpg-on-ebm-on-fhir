@@ -15,7 +15,7 @@ Description: "A single evidence for an outcome from a specific, single study."
 * relatedArtifact contains
     studyCitation 1..* MS
 * relatedArtifact[studyCitation]
-  * type = $cs-related-artifact-type#derived-from
+  * type = $cs-related-artifact-type#citation
   * resourceReference 1..1 MS
   * resourceReference only Reference(StudyCitation)
 * variableDefinition ^slicing.discriminator.type = #value
