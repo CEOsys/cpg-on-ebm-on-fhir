@@ -44,14 +44,6 @@ Description: "Rating of the evidence underlying a clinical practice guideline re
   * classifier 1..1
   * classifier from vs-rating-consensus (required)
 
-* content[benefitAndHarms]
-  * informationType 1..1
-  * informationType = #rating
-  * type 1..
-  * type = $cs-etd-certainty-type#benefit-and-harms "Benefit and harms"
-  * classifier 1..1
-  * classifier from vs-rating-benefit-and-harms (required)
-
 * content[certaintyOfEvidence]
   * informationType 1..1
   * informationType = #rating
@@ -59,6 +51,14 @@ Description: "Rating of the evidence underlying a clinical practice guideline re
   * type = $cs-certainty-type#Overall "Overall certainty"
   * classifier 1..1
   * classifier from vs-rating-certainty-of-evidence (required)
+
+* content[benefitAndHarms]
+  * informationType 1..1
+  * informationType = #rating
+  * type 1..
+  * type = $cs-etd-certainty-type#benefit-and-harms "Benefit and harms"
+  * classifier 1..1
+  * classifier from vs-rating-benefit-and-harms (required)
 
 * content[preferenceAndValues]
   * informationType 1..1

@@ -57,6 +57,6 @@ table.dict p, table.dict td, table.dict td.structure {
   font-size:15px;
 }
 
-pre .json .language-json {
+pre.json, pre.language-json {
   width:100%;
 }

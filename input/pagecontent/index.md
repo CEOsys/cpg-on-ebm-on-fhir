@@ -11,7 +11,7 @@ The main elements of a clinical practice guideline in the context of this FHIR i
 
 | Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| [Clinical Practice Guideline][Clinical Practice Guideline] | [Composition]({{ fhir_base_url }}composition.html) | Representation of the whole guideline. | [Guideline Recommendations][Guideline Recommendation] |
+| [Clinical Practice Guideline][Clinical Practice Guideline] | [Composition]({{ fhir_base_url }}composition.html) | Composition of several individual guideline recommendations | [Guideline Recommendations][Guideline Recommendation] |
 | [Guideline Recommendation][Guideline Recommendation] | [Evidence]({{ fhir_base_url }}evidence.html) | Representation of a single recommendation from a guideline | [Population][Population], [Intervention][Intervention], [Outcome][Outcome] and [Net Effect][Net Effect] pertinent to the guideline recommendation. |
 | [Population][Population] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Description of the population to which a specific guideline recommendation applies. | [Population Groups][Population Group] making up the population addressed in the recommendation. |
 | [Intervention][Intervention] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Description of recommmended intervention addressed in a specific guideline recommendation. | [Intervention Plans][Intervention Plan] specified in the guideline recommendation. |

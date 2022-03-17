@@ -1,15 +1,23 @@
 // Author: Gregor Lichtner @glichtner
+// International code systems
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
 Alias: $sctIntl2021 = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20210731
 Alias: $ucum = http://unitsofmeasure.org
-
-Alias: $ops = http://fhir.de/CodeSystem/bfarm/ops
-Alias: $atcde = http://fhir.de/CodeSystem/bfarm/atc
-Alias: $icd10-gm = http://fhir.de/CodeSystem/dimdi/icd-10-gm
+Alias: $atc = http://www.whocc.no/atc
+Alias: $icd9 = http://hl7.org/fhir/sid/icd-9-cm
+Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
+Alias: $icd10-cm = http://hl7.org/fhir/sid/icd-10-cm
+Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $cochrane-pico = http://data.cochrane.org/ontologies/pico/
 Alias: $cochrane-core = http://data.cochrane.org/ontologies/core/
 Alias: $cochrane-ld = https://data.cochrane.org/concepts/
+
+// German code systems
+Alias: $ops = http://fhir.de/CodeSystem/bfarm/ops
+Alias: $atcde = http://fhir.de/CodeSystem/bfarm/atc
+Alias: $icd10-gm = http://fhir.de/CodeSystem/dimdi/icd-10-gm
+
 
 Alias: $ceosys = https://www.ceosys.de
 

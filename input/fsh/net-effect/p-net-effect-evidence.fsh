@@ -3,7 +3,7 @@ Profile: NetEffectEvidence
 Parent: Evidence
 Id: net-effect-evidence
 Title: "Net Effect"
-Description: "" // TODO: add description
+Description: "The net effect is the overall expected effect of a recommendation, calculated by an importance-weighted average of the individual outcome effects"
 * insert metadata(2022-03-04, #draft, 0.1.0)
 * name 1..1
 * variableDefinition ^slicing.discriminator.type = #value

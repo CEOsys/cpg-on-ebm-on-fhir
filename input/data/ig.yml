@@ -106,7 +106,9 @@ definition:
     name: Intervention Plan
     reference:
       reference: StructureDefinition/intervention-plan
-  - exampleBoolean: false
+  - description: The net effect is the overall expected effect of a recommendation,
+      calculated by an importance-weighted average of the individual outcome effects
+    exampleBoolean: false
     name: Net Effect
     reference:
       reference: StructureDefinition/net-effect-evidence
@@ -216,7 +218,7 @@ definition:
     exampleBoolean: false
     name: Guideline Recommendation Status
     reference:
-      reference: ValueSet/guideline-recommendation-status
+      reference: ValueSet/vs-guideline-recommendation-status
   - description: Mean difference types
     exampleBoolean: false
     name: Mean Difference Type

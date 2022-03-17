@@ -25,5 +25,3 @@
 {% include valueset-reference.md name='Guideline Recommendation Status' %}
 
 ---
-
-<br />

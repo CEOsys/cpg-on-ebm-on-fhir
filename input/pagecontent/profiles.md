@@ -16,7 +16,7 @@
 {% include profile-reference.md name='Intervention Activity' %}
 
 ### Outcome
-{% include profile-reference.md name='List Outcome Evidence' %}
+
 {% include profile-reference.md name='Outcome Evidence' %}
 {% include profile-reference.md name='Outcome' %}
 
