@@ -19,7 +19,7 @@ Description: "Collection of all resources that represent a single clinical pract
   and interventionPlan 1..* MS
   and interventionActivity 1..* MS
   and populationGroup 1..* MS
-  and PICOEvidenceVariable 1..* MS // includes Population, StudyEligibilityCriteria, Outcome
+  and PICOEvidenceVariable 1..* MS // includes Population, StudyEligibilityCriteria, and Outcome
   and recommendationRating 1..* MS
   and certaintyOfEvidenceRating 0..* MS
   and outcomeEvidence 0..* MS
@@ -27,7 +27,6 @@ Description: "Collection of all resources that represent a single clinical pract
   and studyCitation 0..* MS
   and recommendationCitation 0..* MS
   and netEffect 0..* MS
-
 * entry[guideline]
   * resource 1.. MS
   * resource only Guideline
