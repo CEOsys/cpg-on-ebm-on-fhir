@@ -26,6 +26,15 @@ Description: "Representation of an evidence-based clinical practice guideline."
   * type = #citation
   * resourceReference 1..1
   * resourceReference only Reference(GuidelineCitation)
+* category 0..*
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "coding"
+  * ^slicing.rules = #open
+* category contains stageClassification 0..1
+* category[stageClassification]
+  * coding from vs-guideline-stage-classification (required)
+    * system 1.. MS
+    * code 1.. MS
 * type 1..1 MS
   * coding ^slicing.discriminator.type = #pattern
   * coding ^slicing.discriminator.path = "$this"
@@ -58,6 +67,7 @@ Description: "Example of a guideline resource."
 * extension[status].valueCode = #active
 * extension[version].valueString = "0.1.0"
 * relatesTo.resourceReference = Reference(ExampleGuidelineCitation)
+* category[stageClassification] = $cs-guideline-stage-classification#S3 "Evidence- and consensus-based guideline"
 * section
   * title = "Example Guideline Recommendation"
   * text
