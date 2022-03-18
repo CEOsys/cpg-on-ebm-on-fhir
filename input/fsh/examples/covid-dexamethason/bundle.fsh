@@ -13,8 +13,11 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
   * resource = DexamethasoneApplicationPlan
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-plan"
 * entry[interventionActivity][+]
-  * resource = DexamethasoneApplicationActivity
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-activity"
+  * resource = DexamethasoneApplicationActivityOral
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-activity-oral"
+* entry[interventionActivity][+]
+  * resource = DexamethasoneApplicationActivityIntravenous
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-activity-intravenous"
 * entry[recommendationCitation][+]
   * resource = DexamethasoneRecommendationCitation
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation"
@@ -22,23 +25,26 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
   * resource = PopulationCriticallyIllCOVID19Patients
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/population-group"
 * entry[PICOEvidenceVariable][+]
-  * resource = PopulationCOVID19OxygenSaturationLt90
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-oxygen-saturation-lt-90"
-* entry[PICOEvidenceVariable][+]
-  * resource = PopulationCOVID19RespiratoryRateGt30
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-respiratory-rate-gt-30"
-* entry[PICOEvidenceVariable][+]
-  * resource = PopulationCOVID19ARDS
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ards"
-* entry[PICOEvidenceVariable][+]
-  * resource = PopulationCOVID19Sepsis
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-sepsis"
-* entry[PICOEvidenceVariable][+]
   * resource = PopulationCOVID19Ventilated
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated"
+* entry[certaintyOfEvidenceRating][+]
+  * resource = DexamethasoneRatingOutcomeMortality
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/rating-outcome-mortality"
+* entry[outcomeEvidence][+]
+  * resource = DexamethasoneOutcomeMortality
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality"
+* entry[studyGroup][+]
+  * resource = StudyGroupSystemicCorticosteroidsCOVID19
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-group"
 * entry[PICOEvidenceVariable][+]
-  * resource = PopulationCOVID19VasopressorTherapy
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-vasopressor-therapy"
+  * resource = StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria"
+* entry[PICOEvidenceVariable][+]
+  * resource = OutcomeAllCauseMortality
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/outcome-all-cause-mortality"
 * entry[recommendationRating][+]
   * resource = DexamethasoneRecommendationRating
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-rating"
+* entry[studyCitation][+]
+  * resource = SystemicCorticosteroidsForTheTreatmentOfCOVID19
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-citation"
