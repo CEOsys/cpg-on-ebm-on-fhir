@@ -21,7 +21,7 @@ Description: "Rating of the evidence underlying a clinical practice guideline re
   strength 1..1 MS
   and consensus 0..1 MS
   and benefitAndHarms 0..1 MS
-  and certaintyOfEvidence 1..1 MS
+  and certaintyOfEvidence 0..1 MS
   and preferenceAndValues 0..1 MS
   and resources 0..1 MS
   and equity 0..1 MS
