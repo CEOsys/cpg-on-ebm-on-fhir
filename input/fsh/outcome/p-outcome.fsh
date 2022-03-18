@@ -1,6 +1,6 @@
 // Author: Gregor Lichtner @glichtner
 Profile: OutcomeEvidenceVariable
-Parent: PICOEvidenceVariable
+Parent: EvidenceVariable
 Id: outcome-evidence-variable
 Title: "Outcome"
 Description: "Description of the outcome element of a PICO construct that evidence is about."

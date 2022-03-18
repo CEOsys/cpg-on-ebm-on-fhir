@@ -43,10 +43,11 @@ Description: "A single evidence for an outcome from a specific, single study."
 
 * statistic 0..* MS
 * statistic ^slicing.discriminator.type = #value
-* statistic ^slicing.discriminator.path = "type"
+* statistic ^slicing.discriminator.path = "statisticType"
 * statistic ^slicing.rules = #open
 * statistic contains
   relativeEffect 0..1 MS and
+  baselineRisk 0..1 MS and
   meanDifference 0..1 MS
 * statistic[relativeEffect]
   * description 1..
@@ -54,7 +55,7 @@ Description: "A single evidence for an outcome from a specific, single study."
   * quantity 1..1 MS
     * ^short = "Relative Effect of the presented evidence (intervention vs. comparator) for dichotomous outcomes"
   * statisticType 1..1 MS
-  * statisticType from vs-relative-effect-type (extensible)
+  * statisticType from vs-relative-effect-type (required)
   * attributeEstimate 1..* MS
   * attributeEstimate ^slicing.discriminator.type = #value
   * attributeEstimate ^slicing.discriminator.path = "type"
@@ -72,13 +73,27 @@ Description: "A single evidence for an outcome from a specific, single study."
       * ^definition = "Relative effect 95% confidence interval."
     * level 1.. MS
     * level = 0.95
+  * sampleSize 1..1
+    * numberOfStudies 1..1
+    * numberOfParticipants 1..1
+* statistic[baselineRisk]
+  * description 1..
+  * description = "Baseline risk/result in the comparison group"
+  * quantity 1..1 MS
+    * ^short = "Baseline risk of the presented evidence (intervention vs. comparator) for dichotomous outcomes"
+    * code 1..1
+    * code = #1/1000
+    * system 1..1
+    * system = $ucum
+  * statisticType 1..1 MS
+  * statisticType = $cs-statistic-type#C16726 "Incidence"
 * statistic[meanDifference]
   * description 1..
   * description = "Difference intervention vs. comparator"
   * quantity 1..1 MS
     * ^short = "Difference intervention vs. comparator for continous outcomes"
   * statisticType 1..1 MS
-  * statisticType from vs-mean-difference-type (extensible)
+  * statisticType from vs-mean-difference-type (required)
   * attributeEstimate 1..* MS
   * attributeEstimate ^slicing.discriminator.type = #value
   * attributeEstimate ^slicing.discriminator.path = "type"
