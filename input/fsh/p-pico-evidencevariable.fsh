@@ -27,4 +27,21 @@ Description: "Description of the a PICO element that knowledge is about. This ab
   * valueId 0..1 MS
   * valueCodeableConcept
     * insert default-code-systems
+  * combination MS
+    * characteristic 1..* MS
+      * definition[x] 0..0 MS
+      * type[x] 0..1 MS
+      * type[x] only CodeableConcept
+      * typeCodeableConcept
+        * insert default-code-systems
+      * value[x] 0..1 MS
+      // list all types to prevent validator warning
+      * valueBoolean 0..1 MS
+      * valueQuantity 0..1 MS
+      * valueRange 0..1 MS
+      * valueReference 0..1 MS
+      * valueId 0..1 MS
+      * valueCodeableConcept
+        * insert default-code-systems
+    * characteristic.exclude 1..1 MS
 * characteristic.exclude 1..1 MS
