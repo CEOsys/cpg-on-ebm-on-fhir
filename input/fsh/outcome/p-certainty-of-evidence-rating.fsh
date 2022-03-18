@@ -19,6 +19,7 @@ Description: "Rating of a single outcome (evidence) underlying a clinical practi
 * content ^slicing.rules = #closed
 * content contains
   certaintyOfEvidence 1..1 MS
+  and clinicalImportance 0..1 MS
   and riskOfBias 0..1 MS
   and inconsistency 0..1 MS
   and indirectness 0..1 MS
@@ -32,6 +33,14 @@ Description: "Rating of a single outcome (evidence) underlying a clinical practi
   * type = $cs-certainty-type#Overall "Overall certainty"
   * classifier 1..1
   * classifier from vs-rating-certainty-of-evidence (required)
+
+* content[clinicalImportance]
+  * informationType 1..1
+  * informationType = #rating
+  * type 1..
+  * type = $cs-ceosys#clinical-importance "Clinical Importance"
+  * classifier 1..1
+  * classifier from vs-rating-clinical-importance (required)
 
 * content[riskOfBias]
   * informationType 1..1

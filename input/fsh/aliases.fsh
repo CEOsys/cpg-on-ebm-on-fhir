@@ -49,6 +49,7 @@ Alias: $vs-publication-status = http://hl7.org/fhir/ValueSet/publication-status
 Alias: $cs-etd-certainty-rating = cs-evidence-to-decision-certainty-rating
 Alias: $cs-etd-certainty-type = cs-evidence-to-decision-certainty-type
 Alias: $cs-guideline-stage-classification = cs-guideline-stage-classification
+Alias: $cs-clinical-importance = cs-clinical-importance
 
 Alias: $cs-cited-artifact-classification-type = http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type
 Alias: $cs-cited-artifact-status-type = http://terminology.hl7.org/CodeSystem/cited-artifact-status-type

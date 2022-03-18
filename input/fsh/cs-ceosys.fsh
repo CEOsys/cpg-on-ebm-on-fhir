@@ -13,3 +13,4 @@ Description: "Codes for clinical guideline recommendation representation missing
 * #net-effect "Net effect"
 * #certainty-of-evidence-rating "Certainty of evidence rating"
 * #recommendation-rating "Recommendation rating"
+* #clinical-importance "Clinical Importance"
