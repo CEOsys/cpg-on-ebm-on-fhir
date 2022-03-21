@@ -371,9 +371,9 @@ definition:
     name: COVID19 Intensive Care Treatment Guideline
     reference:
       reference: Bundle/COVID19IntensiveCareTreatmentGuidelineBundle
-  - description: Example of a Citation of a clinical practice guideline
+  - description: Guideline for therapy of hospitalized COVID-19 patients
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
-    name: Example Guideline Citation
+    name: Therapy of hospitalized COVID-19 patients
     reference:
       reference: Citation/COVID19IntensiveCareTreatmentGuidelineCitation
   - description: No application of Dexamethasone for non-ventilated COVID-19 patients
@@ -399,12 +399,16 @@ definition:
     name: Dexamethasone Application (Oral)
     reference:
       reference: ActivityDefinition/DexamethasoneApplicationActivityOral
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence
-    name: DexamethasoneOutcomeMortality
+  - description: Mortality Outcome for Dexamethasone application in hospitalized COVID-19
+      patients
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence
+    name: Mortality Outcome for Dexamethasone application
     reference:
       reference: Evidence/DexamethasoneOutcomeMortality
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
-    name: DexamethasoneRatingOutcomeMortality
+  - description: Certainty of evidence rating for mortality outcome of Dexamethasonse
+      application recommendation
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
+    name: 'Certainty of Evidence for outcome: mortality of Dexamethasone application'
     reference:
       reference: ArtifactAssessment/DexamethasoneRatingOutcomeMortality
   - description: Citation of Dexamethasone Recommenation from COVID-19 intensive care
@@ -418,7 +422,8 @@ definition:
     name: Dexamethasone for critically ill COVID-19 patients
     reference:
       reference: ArtifactAssessment/DexamethasoneRecommendationRating
-  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
+  - description: Example Certainty Of Evidence Rating
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
     name: Example Certainty Of Evidence Rating
     reference:
       reference: ArtifactAssessment/ExampleCertaintyOfEvidenceRating
@@ -508,6 +513,11 @@ definition:
     name: No Dexamethasone Application
     reference:
       reference: ActivityDefinition/NoDexamethasoneApplication
+  - description: No Dexamethasone in moderately ill patients with COVID-19.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-rating
+    name: NO Dexamethasone for moderately ill COVID-19 patients
+    reference:
+      reference: ArtifactAssessment/NoDexamethasoneRecommendationRating
   - description: All-cause mortality.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
     name: All-cause mortality

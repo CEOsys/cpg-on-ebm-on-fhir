@@ -1,8 +1,8 @@
 Instance: DexamethasoneRatingOutcomeMortality
 InstanceOf: certainty-of-evidence-rating
 Usage: #example
-Title: "" // TODO: add
-Description: "" // TODO: add
+Title: "Certainty of Evidence for outcome: mortality of Dexamethasone application"
+Description: "Certainty of evidence rating for mortality outcome of Dexamethasonse application recommendation"
 * date = "2020-01-03"
 * extension[status].valueCode = #active
 * extension[version].valueString = "v4.0"
@@ -18,8 +18,8 @@ Description: "" // TODO: add
 Instance: DexamethasoneOutcomeMortality
 InstanceOf: outcome-evidence
 Usage: #example
-Title: ""
-Description: ""
+Title: "Mortality Outcome for Dexamethasone application"
+Description: "Mortality Outcome for Dexamethasone application in hospitalized COVID-19 patients"
 * name = "ExampleOutcomeEvidence"
 * status = #active
 * studyType = $cs-study-type#RCT

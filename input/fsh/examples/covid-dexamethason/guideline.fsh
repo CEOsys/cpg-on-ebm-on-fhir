@@ -43,8 +43,8 @@ Description: "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesel
 Instance: COVID19IntensiveCareTreatmentGuidelineCitation
 InstanceOf: guideline-citation
 Usage: #example
-Title: "Example Guideline Citation"
-Description: "Example of a Citation of a clinical practice guideline"
+Title: "Therapy of hospitalized COVID-19 patients"
+Description: "Guideline for therapy of hospitalized COVID-19 patients"
 * name = "COVID19_Intensive_Care_Treatment_Guideline"
 * status = #active
 * citedArtifact
