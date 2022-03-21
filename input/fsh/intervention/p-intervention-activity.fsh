@@ -10,6 +10,14 @@ Description: "Definition of an activity that is part of an intervention in the c
 * subject[x] only CodeableConcept
 * subjectCodeableConcept 1..1 MS
 * subjectCodeableConcept = $cs-resource-type#Patient
+* doNotPerform MS
+* kind MS
+* code 1..1 MS
+* timing[x] MS
+* product[x] MS
+* quantity MS
+* dosage MS
+* bodySite MS
 
 Instance: ExampleInterventionActivity
 InstanceOf: intervention-activity
@@ -19,3 +27,4 @@ Description: "An active intervention activity."
 * name = "InterventionActivity"
 * status = #active
 * url = "https://www.ceosys.de/fhir/canonical/intervention-activity/example"
+* code = $sct#182832007 "Procedure related to management of drug administration (procedure)"

@@ -22,9 +22,16 @@ Description: "COVID19 Intensive Care Treatment Guideline."
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
      <strong>Systemische Steroide:</strong>
     Bei Patienten mit COVID-19- und Sauerstoff-Bedarf (Niedrigfluss-Sauerstoff-Insufflation, High-Flow Nasal Cannula, Nichtinvasive Beatmung/CPAP, invasive Beatmung)
-    soll eine Therapie mit systemischen Kortikosteroiden erfolgen. Die Therapie sollte mit 6 mg Dexamethason p.o. oder i.v. über zehn Tage erfolgen.
-    Bei Patienten mit moderater Erkrankung (hospitalisiert ohne Notwendigkeit von Niedrigfluss-Sauerstoff-Insufflation) soll keine Therapie mit systemischen Kortikosteroiden erfolgen.</div>"
-  * focus = Reference(DexamethasoneApplicationPlan)
+    soll eine Therapie mit systemischen Kortikosteroiden erfolgen. Die Therapie sollte mit 6 mg Dexamethason p.o. oder i.v. über zehn Tage erfolgen.</div>"
+  * focus = Reference(COVID19VentilatedPatientsDexamethasoneApplicationPlan)
+* section[+]
+  * title = "Stationäre Therapie von COVID-19 Patienten"
+  * text
+    * status = #generated
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+     <strong>Systemische Steroide:</strong>
+     Bei Patienten mit moderater Erkrankung (hospitalisiert ohne Notwendigkeit von Niedrigfluss-Sauerstoff-Insufflation) soll keine Therapie mit systemischen Kortikosteroiden erfolgen.</div>"
+  * focus = Reference(COVID19NonVentilatedPatientsDexamethasoneApplicationPlan)
 
 Instance: AWMFOrganization
 InstanceOf: Organization

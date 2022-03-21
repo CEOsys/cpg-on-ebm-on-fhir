@@ -219,6 +219,11 @@ definition:
     name: Guideline Recommendation Status
     reference:
       reference: ValueSet/vs-guideline-recommendation-status
+  - description: Stage classification according to systematics
+    exampleBoolean: false
+    name: Guideline Stage Classification
+    reference:
+      reference: ValueSet/vs-guideline-stage-classification
   - description: Mean difference types
     exampleBoolean: false
     name: Mean Difference Type
@@ -240,6 +245,11 @@ definition:
     name: Rating Certainty Of Evidence
     reference:
       reference: ValueSet/vs-rating-certainty-of-evidence
+  - description: Clinical Importance of Outcome
+    exampleBoolean: false
+    name: Clinical Importance of Outcome
+    reference:
+      reference: ValueSet/vs-rating-clinical-importance
   - description: Codes from EvidenceCertaintyRating related to degree of concern
     exampleBoolean: false
     name: Rating Concern Degree
@@ -294,6 +304,11 @@ definition:
     name: Characteristic Relationship Type
     reference:
       reference: CodeSystem/characteristic-relationship-type
+  - description: Clinical Importance of Outcome
+    exampleBoolean: false
+    name: Clinical Importance of Outcome
+    reference:
+      reference: CodeSystem/cs-clinical-importance
   - description: The Cochrane Core ontology describes the entities and concepts that
       exist in the domain of evidence based healthcare.
     exampleBoolean: false
@@ -321,6 +336,24 @@ definition:
     name: Recommendation Strength
     reference:
       reference: CodeSystem/ceosys-cs-recommendation-strength
+  - description: "As part of the project planning for the creation or updating of\
+      \ a guideline,\n    a decision should be made at an early stage about the planned\
+      \ level classification (\"S classification\") according to the AWMF's system\
+      \ of rules (1-3).\n    The S-classification scheme of the AWMF differentiates\
+      \ between the classes S1 treatment recommendation as well as S2e, S2k and S3\
+      \ guideline.\n    The \"S\" stands for the extent of the applied systematic\
+      \ approach in the development process of a guideline.\n    Each class thus stands\
+      \ for a specific methodological concept that must be presented in a way that\
+      \ is comprehensible to the users.\n    The choice of class is based on the question\
+      \ of how much effort is appropriate and feasible.\n    The need for legitimacy\
+      \ for the implementation of the guideline (convincing the target group) must\
+      \ be taken into account.\n    When choosing a higher S-classification in the\
+      \ context of updating a guideline, the adaptation to the corresponding methodology\
+      \ has to be considered."
+    exampleBoolean: false
+    name: Guideline Stage Classification
+    reference:
+      reference: CodeSystem/cs-guideline-stage-classification
   - description: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
       (AWMF) e.V
     exampleBoolean: true
@@ -343,16 +376,37 @@ definition:
     name: Example Guideline Citation
     reference:
       reference: Citation/COVID19IntensiveCareTreatmentGuidelineCitation
-  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
-    name: Dexamethasone Application
+  - description: No application of Dexamethasone for non-ventilated COVID-19 patients
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
+    name: No dexamethasone application for non-ventilated COVID-19 patients
     reference:
-      reference: ActivityDefinition/DexamethasoneApplicationActivity
-  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days'
+      reference: PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
+  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days p.o.
+      or i.v. for ventilated COVID-19 patients'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
     name: Dexamethasone Application
     reference:
-      reference: PlanDefinition/DexamethasoneApplicationPlan
+      reference: PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan
+  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (intravenous
+      route)'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: Dexamethasone Application (Intravenous)
+    reference:
+      reference: ActivityDefinition/DexamethasoneApplicationActivityIntravenous
+  - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (oral
+      route)'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: Dexamethasone Application (Oral)
+    reference:
+      reference: ActivityDefinition/DexamethasoneApplicationActivityOral
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence
+    name: DexamethasoneOutcomeMortality
+    reference:
+      reference: Evidence/DexamethasoneOutcomeMortality
+  - exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
+    name: DexamethasoneRatingOutcomeMortality
+    reference:
+      reference: ArtifactAssessment/DexamethasoneRatingOutcomeMortality
   - description: Citation of Dexamethasone Recommenation from COVID-19 intensive care
       patients treatment guideline
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
@@ -449,48 +503,59 @@ definition:
     name: Guideline Recommendation Example
     reference:
       reference: Bundle/GuidelineRecommendationExample
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, ARDS'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: 'Population: COVID19 / ARDS'
+  - description: No Application of Dexamethasone
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    name: No Dexamethasone Application
     reference:
-      reference: EvidenceVariable/PopulationCOVID19ARDS
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Oxygen-Saturation<90'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: 'Population: COVID19 / Oxygen saturation < 90%'
+      reference: ActivityDefinition/NoDexamethasoneApplication
+  - description: All-cause mortality.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
+    name: All-cause mortality
     reference:
-      reference: EvidenceVariable/PopulationCOVID19OxygenSaturationLt90
+      reference: EvidenceVariable/OutcomeAllCauseMortality
   - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Respiratory Rate > 30/min'
+      / 5691 with characteristics: COVID-19, not ventilated'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: 'Population: COVID19 / Respiratory Rate > 30 /min'
+    name: 'Population: COVID19 Non-Ventilated'
     reference:
-      reference: EvidenceVariable/PopulationCOVID19RespiratoryRateGt30
+      reference: EvidenceVariable/PopulationCOVID19NonVentilated
   - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Sepsis'
+      / 5691 with characteristics: COVID-19, Ventilated'
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: 'Population: COVID19 / Sepsis'
-    reference:
-      reference: EvidenceVariable/PopulationCOVID19Sepsis
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Vasopressor Therapy'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: Population COVID19 Vasopressor Therapy
-    reference:
-      reference: EvidenceVariable/PopulationCOVID19VasopressorTherapy
-  - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062 with characteristics: COVID-19, Ventilated'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: Population COVID19 Ventilated
+    name: 'Population: COVID19 Ventilated'
     reference:
       reference: EvidenceVariable/PopulationCOVID19Ventilated
   - description: Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5062
+      / 5691
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
     name: 'Population: Critically Ill COVID-19 Patients'
     reference:
       reference: Group/PopulationCriticallyIllCOVID19Patients
+  - description: Population for guideline from https://app.magicapp.org/#/guidelines
+      / 5691
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    name: 'Population: Moderately Ill COVID-19 Patients'
+    reference:
+      reference: Group/PopulationModeratelyIllCOVID19Patients
+  - description: Study eligibility criteria for Systemic corticosteroids plus standard
+      care vs. standard care (plus/minus placebo)
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria
+    name: Study eligibility criteria for Systemic corticosteroids plus standard care
+      vs. standard care (plus/minus placebo)
+    reference:
+      reference: EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
+  - description: Study group for Systemic corticosteroids plus standard care vs. standard
+      care (plus/minus placebo).
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-group
+    name: Study group for Systemic corticosteroids plus standard care vs. standard
+      care (plus/minus placebo)
+    reference:
+      reference: Group/StudyGroupSystemicCorticosteroidsCOVID19
+  - description: Systemic corticosteroids for the treatment of COVID-19
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
+    name: Systemic corticosteroids for the treatment of COVID-19
+    reference:
+      reference: Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19
 fhirVersion:
 - 5.0.0-cibuild
 id: cpg.ceosys.de
