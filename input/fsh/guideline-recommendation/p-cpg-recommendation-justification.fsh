@@ -1,9 +1,9 @@
 // Author: Gregor Lichtner @glichtner
-Profile: CPGRecommendationRating
+Profile: CPGRecommendationJustification
 Parent: ArtifactAssessment
-Id: cpg-recommendation-rating
-Title: "CPG Recommendation Rating"
-Description: "Rating of the evidence underlying a clinical practice guideline recommendation"
+Id: cpg-recommendation-justification
+Title: "CPG Recommendation Justification"
+Description: "Justification of a clinical guideline recommendation through the underlying evidence and their ratings"
 * insert metadata(2022-03-04, #draft, 0.1.0)
 * insert profile("This profile is used to define the CPG recommendation rating")
 * artifact[x] only Reference
@@ -27,6 +27,8 @@ Description: "Rating of the evidence underlying a clinical practice guideline re
   and equity 0..1 MS
   and acceptability 0..1 MS
   and feasibility 0..1 MS
+  and evidenceRating 0..* MS
+  and netEffect 0..1
 
 * content[strength]
   * informationType 1..1
@@ -100,11 +102,35 @@ Description: "Rating of the evidence underlying a clinical practice guideline re
   * classifier 1..1
   * classifier from vs-rating-feasibility (required)
 
-Instance: ExampleRecommendationRating
-InstanceOf: cpg-recommendation-rating
+* content[evidenceRating]
+  * informationType 1..1
+  * informationType = #container
+  * type 1..
+  * type = $cs-ceosys#certainty-of-evidence-rating "Certainty of evidence rating"
+  * relatedArtifact 1..1 MS
+    * type = $cs-related-artifact-type#justification
+    * classifier 1..1
+    * classifier = $cs-ceosys#certainty-of-evidence-rating "Certainty of evidence rating"
+    * resourceReference 1..1 MS
+    * resourceReference only Reference(CertaintyOfEvidenceRating)
+
+* content[netEffect]
+  * informationType 1..1
+  * informationType = #container
+  * type 1..
+  * type = $cs-ceosys#net-effect "Net effect"
+  * relatedArtifact 1..1  MS
+    * type = $cs-related-artifact-type#supported-with
+    * classifier 1..1
+    * classifier = $cs-ceosys#net-effect "Net effect"
+    * resourceReference 1..1 MS
+    * resourceReference only Reference(NetEffectEvidence)
+
+Instance: ExampleRecommendationJustification
+InstanceOf: cpg-recommendation-justification
 Usage: #example
-Title: "Example Recommendation Rating"
-Description: "Example of a CPG recommendation rating"
+Title: "Example Recommendation Justification"
+Description: "Example of a CPG recommendation justification"
 * artifactReference = Reference(ExampleInterventionPlan)
 * date = "2020-01-03"
 * extension[status].valueCode = #active
@@ -118,3 +144,5 @@ Description: "Example of a CPG recommendation rating"
 * content[consensus]
   * type = CEOsysCodeSystem#consensus "Consensus"
   * classifier = $cs-recommendation-strength#strong "Strong"
+* content[evidenceRating][+].relatedArtifact.resourceReference = Reference(ExampleCertaintyOfEvidenceRating)
+* content[netEffect].relatedArtifact.resourceReference = Reference(ExampleNetEffect)

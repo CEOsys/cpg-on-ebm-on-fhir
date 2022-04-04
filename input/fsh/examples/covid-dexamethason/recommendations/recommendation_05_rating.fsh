@@ -1,5 +1,5 @@
-Instance: DexamethasoneRecommendationRating
-InstanceOf: cpg-recommendation-rating
+Instance: DexamethasoneRecommendationJustification
+InstanceOf: cpg-recommendation-justification
 Usage: #example
 Title: "Dexamethasone for critically ill COVID-19 patients"
 Description: "Dexamethasone in critically ill patients with COVID-19."
@@ -14,9 +14,10 @@ Description: "Dexamethasone in critically ill patients with COVID-19."
 * content[resources].classifier = $cs-etd-certainty-rating#no-important-issues "No important issues"
 * content[acceptability].classifier = $cs-etd-certainty-rating#factor-not-considered "Factor not considered"
 * content[feasibility].classifier = $cs-etd-certainty-rating#factor-not-considered "Factor not considered"
+* content[evidenceRating].relatedArtifact.resourceReference = Reference(DexamethasoneRatingOutcomeMortality)
 
-Instance: NoDexamethasoneRecommendationRating
-InstanceOf: cpg-recommendation-rating
+Instance: NoDexamethasoneRecommendationJustification
+InstanceOf: cpg-recommendation-justification
 Usage: #example
 Title: "NO Dexamethasone for moderately ill COVID-19 patients"
 Description: "No Dexamethasone in moderately ill patients with COVID-19."
@@ -31,3 +32,4 @@ Description: "No Dexamethasone in moderately ill patients with COVID-19."
 * content[resources].classifier = $cs-etd-certainty-rating#no-important-issues "No important issues"
 * content[acceptability].classifier = $cs-etd-certainty-rating#factor-not-considered "Factor not considered"
 * content[feasibility].classifier = $cs-etd-certainty-rating#factor-not-considered "Factor not considered"
+* content[evidenceRating].relatedArtifact.resourceReference = Reference(DexamethasoneRatingOutcomeMortality)

@@ -67,11 +67,12 @@ definition:
   - code: extension-domain
     value: https://simplifier.net
   resource:
-  - description: Rating of the evidence underlying a clinical practice guideline recommendation
+  - description: Justification of a clinical guideline recommendation through the
+      underlying evidence and their ratings
     exampleBoolean: false
-    name: CPG Recommendation Rating
+    name: CPG Recommendation Justification
     reference:
-      reference: StructureDefinition/cpg-recommendation-rating
+      reference: StructureDefinition/cpg-recommendation-justification
   - description: Rating of a single outcome (evidence) underlying a clinical practice
       guideline recommendation
     exampleBoolean: false
@@ -418,10 +419,10 @@ definition:
     reference:
       reference: Citation/DexamethasoneRecommendationCitation
   - description: Dexamethasone in critically ill patients with COVID-19.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-rating
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-justification
     name: Dexamethasone for critically ill COVID-19 patients
     reference:
-      reference: ArtifactAssessment/DexamethasoneRecommendationRating
+      reference: ArtifactAssessment/DexamethasoneRecommendationJustification
   - description: Example Certainty Of Evidence Rating
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
     name: Example Certainty Of Evidence Rating
@@ -478,11 +479,11 @@ definition:
     name: Example Recommendation Citation
     reference:
       reference: Citation/ExampleRecommendationCitation
-  - description: Example of a CPG recommendation rating
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-rating
-    name: Example Recommendation Rating
+  - description: Example of a CPG recommendation justification
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-justification
+    name: Example Recommendation Justification
     reference:
-      reference: ArtifactAssessment/ExampleRecommendationRating
+      reference: ArtifactAssessment/ExampleRecommendationJustification
   - description: Example Study Citation
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
     name: Example Study Citation
@@ -514,10 +515,10 @@ definition:
     reference:
       reference: ActivityDefinition/NoDexamethasoneApplication
   - description: No Dexamethasone in moderately ill patients with COVID-19.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-rating
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-justification
     name: NO Dexamethasone for moderately ill COVID-19 patients
     reference:
-      reference: ArtifactAssessment/NoDexamethasoneRecommendationRating
+      reference: ArtifactAssessment/NoDexamethasoneRecommendationJustification
   - description: All-cause mortality.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
     name: All-cause mortality

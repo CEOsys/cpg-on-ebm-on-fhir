@@ -23,23 +23,15 @@ Description: "Definition of an activity that is part of an intervention in the c
 * relatedArtifact ^slicing.discriminator.path = "classifier"
 * relatedArtifact ^slicing.rules = #open
 * relatedArtifact contains
-    recommendationRating 0..1 and
-    certaintyOfEvidenceRating 0..* and
+    recommendationJustification 0..1 and
     recommendationCitation 0..1 and
-    guidelineCitation 0..1 and
-    netEffect 0..1
-* relatedArtifact[recommendationRating]
+    guidelineCitation 0..1
+* relatedArtifact[recommendationJustification]
   * type = $cs-related-artifact-type#justification
   * classifier 1..1
   * classifier = $cs-ceosys#recommendation-rating "Recommendation rating"
   * resourceReference 1..1 MS
-  * resourceReference only Reference(CPGRecommendationRating)
-* relatedArtifact[certaintyOfEvidenceRating]
-  * type = $cs-related-artifact-type#justification
-  * classifier 1..1
-  * classifier = $cs-ceosys#certainty-of-evidence-rating "Certainty of evidence rating"
-  * resourceReference 1..1 MS
-  * resourceReference only Reference(CertaintyOfEvidenceRating)
+  * resourceReference only Reference(CPGRecommendationJustification)
 * relatedArtifact[recommendationCitation]
   * type = $cs-related-artifact-type#citation
   * classifier 1..1
@@ -52,12 +44,6 @@ Description: "Definition of an activity that is part of an intervention in the c
   * classifier = $cs-ceosys#clinical-practice-guideline "Clinical practice guideline"
   * resourceReference 1..1 MS
   * resourceReference only Reference(GuidelineCitation)
-* relatedArtifact[netEffect]
-  * type = $cs-related-artifact-type#supported-with
-  * classifier 1..1
-  * classifier = $cs-ceosys#net-effect "Net effect"
-  * resourceReference 1..1 MS
-  * resourceReference only Reference(NetEffectEvidence)
 
 Instance: ExampleInterventionPlan
 InstanceOf: intervention-plan
@@ -73,8 +59,6 @@ Description: "An active intervention plan."
 * subjectReference = Reference(ExamplePopulationGroup)
 * action[+]
   * definitionCanonical = Canonical(ExampleInterventionActivity)
-* relatedArtifact[recommendationRating].resourceReference = Reference(ExampleRecommendationRating)
+* relatedArtifact[recommendationJustification].resourceReference = Reference(ExampleRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(ExampleRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(ExampleGuidelineCitation)
-* relatedArtifact[certaintyOfEvidenceRating][+].resourceReference = Reference(ExampleCertaintyOfEvidenceRating)
-* relatedArtifact[netEffect].resourceReference = Reference(ExampleNetEffect)

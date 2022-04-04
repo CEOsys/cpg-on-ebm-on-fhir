@@ -19,8 +19,7 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. o
 * action[+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActivityIntravenous)
   * selectionBehavior = #exactly-one
-* relatedArtifact[recommendationRating].resourceReference = Reference(DexamethasoneRecommendationRating)
-* relatedArtifact[certaintyOfEvidenceRating].resourceReference = Reference(DexamethasoneRatingOutcomeMortality)
+* relatedArtifact[recommendationJustification].resourceReference = Reference(DexamethasoneRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
@@ -39,8 +38,7 @@ Description: "No application of Dexamethasone for non-ventilated COVID-19 patien
 * action[+]
   * definitionCanonical = Canonical(NoDexamethasoneApplication)
   * selectionBehavior = #exactly-one
-* relatedArtifact[recommendationRating].resourceReference = Reference(DexamethasoneRecommendationRating)
-* relatedArtifact[certaintyOfEvidenceRating].resourceReference = Reference(DexamethasoneRatingOutcomeMortality)
+* relatedArtifact[recommendationJustification].resourceReference = Reference(DexamethasoneRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
