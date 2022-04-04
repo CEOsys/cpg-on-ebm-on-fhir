@@ -1,4 +1,4 @@
-// Author: Gregor Lichtner @glichtner
+// Author: Gregor Lichtner, @glichtner
 Profile: OutcomeEvidenceVariable
 Parent: EvidenceVariable
 Id: outcome-evidence-variable
@@ -22,7 +22,7 @@ Description: "Example of an outcome evidence variable."
   * system = $ceosys
   * value = "outcome-example"
 * name = "Mortality"
-* characteristic
+* characteristic.defByTypeAndValue
   * typeCodeableConcept = $sct#409651001 "Mortality rate (observable entity)"
   * valueQuantity
     * unit = "percent"
