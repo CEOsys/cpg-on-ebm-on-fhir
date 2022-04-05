@@ -25,6 +25,9 @@ Description: "Rating of a single outcome (evidence) underlying a clinical practi
   and indirectness 0..1 MS
   and imprecision 0..1 MS
   and publicationBias 0..1 MS
+  and largeEffect 0..1 MS
+  and doseResponseGradient 0..1 MS
+  and plausibleConfounding 0..1 MS
 
 * content[certaintyOfEvidence]
   * informationType 1..1
@@ -82,6 +85,30 @@ Description: "Rating of a single outcome (evidence) underlying a clinical practi
   * classifier 1..1
   * classifier from vs-rating-concern-degree (required)
 
+* content[largeEffect]
+  * informationType 1..1
+  * informationType = #rating
+  * type 1..
+  * type = $cs-certainty-type#LargeEffect "Large effect"
+  * classifier 1..1
+  * classifier from vs-rating-uprating-two-levels (required)
+
+* content[doseResponseGradient]
+  * informationType 1..1
+  * informationType = #rating
+  * type 1..
+  * type = $cs-certainty-type#DoseResponseGradient "Dose response gradient"
+  * classifier 1..1
+  * classifier from vs-rating-uprating-one-level (required)
+
+* content[plausibleConfounding]
+  * informationType 1..1
+  * informationType = #rating
+  * type 1..
+  * type = $cs-certainty-type#PlausibleConfounding "Plausible confounding"
+  * classifier 1..1
+  * classifier from vs-rating-uprating-one-level (required)
+
 Instance: ExampleCertaintyOfEvidenceRating
 InstanceOf: certainty-of-evidence-rating
 Usage: #example
@@ -94,3 +121,5 @@ Description: "Example Certainty Of Evidence Rating"
 * content[certaintyOfEvidence].classifier = $cs-certainty-rating#moderate "Moderate quality"
 * content[riskOfBias].classifier = $cs-certainty-rating#serious-concern "serious concern"
 * content[imprecision].classifier = $cs-certainty-rating#serious-concern "serious concern"
+* content[largeEffect].classifier = $cs-certainty-rating#upcode2 "increase rating: +2"
+* content[plausibleConfounding].classifier = $cs-certainty-rating#upcode1 "increase rating: +1"
