@@ -14,7 +14,7 @@ Description: "The net effect is the overall expected effect of a recommendation,
 * variableDefinition[outcome]
   * variableRole = $cs-variable-role#measuredVariable
   * intended 1..1 MS
-  * intended only Reference(OutcomeEvidenceVariable)
+  * intended only Reference(OutcomeDefinition)
 
 * statistic 1..* MS
 * statistic ^slicing.discriminator.type = #value
@@ -54,7 +54,7 @@ Description: "The net effect is the overall expected effect of a recommendation,
     * variable 1..1 MS
       * ^short = "Variable for which the relative importance weighting is defined"
       * ^definition = "Variable for which the relative importance weighting is defined"
-      * variableDefinition only Reference(OutcomeEvidenceVariable)
+      * variableDefinition only Reference(OutcomeDefinition)
 
 Instance: ExampleNetEffect
 InstanceOf: net-effect-evidence

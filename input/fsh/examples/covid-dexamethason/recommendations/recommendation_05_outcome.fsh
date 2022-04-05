@@ -60,7 +60,7 @@ Description: "Study eligibility criteria for Systemic corticosteroids plus stand
 * characteristic[=].exclude = false
 
 Instance: OutcomeAllCauseMortality
-InstanceOf: outcome-evidence-variable
+InstanceOf: outcome-definition
 Usage: #example
 Title: "All-cause mortality"
 Description: "All-cause mortality."

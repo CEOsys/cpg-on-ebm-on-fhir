@@ -33,7 +33,7 @@ Description: "A single evidence for an outcome from a specific, single study."
 * variableDefinition[outcome]
   * variableRole = $cs-variable-role#measuredVariable
   * observed 1..1 MS
-  * observed only Reference(OutcomeEvidenceVariable)
+  * observed only Reference(OutcomeDefinition)
 * variableDefinition[intervention]
   * variableRole = $cs-variable-role#exposure
   * observed 1..1 MS

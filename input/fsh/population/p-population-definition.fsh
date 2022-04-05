@@ -7,13 +7,11 @@ Description: "Definition of a population (e.g. for guideline recommendation, cli
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * ^abstract = true
 * characteristic 1..* MS
-  * obeys definition-or-type-value-or-combination // TODO: test this invariant
   * definition[x] 0..0 MS // only type/value or combination allowed
 * characteristic.defByTypeAndValue MS
   * insert evidence-variable-type-value
 * characteristic.defByCombination
   * characteristic 1..* MS
-    * obeys definition-or-type-value-or-combination // TODO: test this invariant
     * definition[x] 0..0 MS // only type/value or combination allowed
   * characteristic.defByTypeAndValue MS
     * insert evidence-variable-type-value

@@ -8,3 +8,8 @@ Description: "Description of the a PICO element that knowledge is about. This ab
 * ^abstract = true
 * name 1..1 MS
 * status 1..1 MS
+* characteristic 1..* MS
+  * obeys definition-or-type-value-or-combination // TODO: test this invariant
+* characteristic.defByCombination
+  * characteristic 1..* MS
+    * obeys definition-or-type-value-or-combination // TODO: test this invariant
