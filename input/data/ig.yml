@@ -113,17 +113,17 @@ definition:
     name: Net Effect
     reference:
       reference: StructureDefinition/net-effect-evidence
+  - description: Description of the outcome element of a PICO construct that evidence
+      is about.
+    exampleBoolean: false
+    name: Outcome Definition
+    reference:
+      reference: StructureDefinition/outcome-definition
   - description: A single evidence for an outcome from a specific, single study.
     exampleBoolean: false
     name: Outcome Evidence
     reference:
       reference: StructureDefinition/outcome-evidence
-  - description: Description of the outcome element of a PICO construct that evidence
-      is about.
-    exampleBoolean: false
-    name: Outcome
-    reference:
-      reference: StructureDefinition/outcome-evidence-variable
   - description: Description of the a PICO element that knowledge is about. This abstract
       resource is used as parent for all PICO (population, intervention, outcome)
       evidence variables.
@@ -284,6 +284,16 @@ definition:
     name: Rating Resources
     reference:
       reference: ValueSet/vs-rating-resources
+  - description: Ratings for factors that might cause rating up the certainty
+    exampleBoolean: false
+    name: Rating Up Rating One Level
+    reference:
+      reference: ValueSet/vs-rating-uprating-one-level
+  - description: Ratings for factors that might cause rating up the certainty
+    exampleBoolean: false
+    name: Rating Up Rating Two Levels
+    reference:
+      reference: ValueSet/vs-rating-uprating-two-levels
   - description: Strength of a clinical guideline recommendation.
     exampleBoolean: false
     name: Recommendation Strength
@@ -454,7 +464,7 @@ definition:
     reference:
       reference: Organization/ExampleOrganization
   - description: Example of an outcome evidence variable.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-definition
     name: Example Outcome
     reference:
       reference: EvidenceVariable/ExampleOutcome
@@ -520,7 +530,7 @@ definition:
     reference:
       reference: ArtifactAssessment/NoDexamethasoneRecommendationJustification
   - description: All-cause mortality.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-variable
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-definition
     name: All-cause mortality
     reference:
       reference: EvidenceVariable/OutcomeAllCauseMortality

@@ -2,7 +2,7 @@
 Profile: OutcomeDefinition
 Parent: PICOEvidenceVariable
 Id: outcome-definition
-Title: "Outcome"
+Title: "Outcome Definition"
 Description: "Description of the outcome element of a PICO construct that evidence is about."
 * insert metadata(2021-12-21, #draft, 0.1.0)
 * insert profile("This profile is used to describe the outcome element of a PICO construct that evidence is about.")

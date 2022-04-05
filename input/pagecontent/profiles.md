@@ -16,9 +16,8 @@
 {% include profile-reference.md name='Intervention Activity' %}
 
 ### Outcome
-
+{% include profile-reference.md name='Outcome Definition' %}
 {% include profile-reference.md name='Outcome Evidence' %}
-{% include profile-reference.md name='Outcome' %}
 
 ### Net Effect
 {% include profile-reference.md name='Net Effect' %}
