@@ -25,7 +25,7 @@ Description: "Mortality Outcome for Dexamethasone application in hospitalized CO
 * studyType = $cs-study-type#RCT
 * synthesisType = $cs-synthesis-type#NotApplicable
 * relatedArtifact[studyCitation].resourceReference = Reference(SystemicCorticosteroidsForTheTreatmentOfCOVID19)
-* variableDefinition[population].observed = Reference(StudyGroupSystemicCorticosteroidsCOVID19)
+* variableDefinition[population].observed = Reference(StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19)
 * variableDefinition[outcome].observed = Reference(OutcomeAllCauseMortality)
 * statistic[relativeEffect]
   * statisticType = $cs-statistic-type#C93152	"Relative Risk"
@@ -37,15 +37,6 @@ Description: "Mortality Outcome for Dexamethasone application in hospitalized CO
     * numberOfStudies = 9
     * numberOfParticipants = 7930
 * statistic[baselineRisk].quantity = 245 '1/1000'
-
-Instance: StudyGroupSystemicCorticosteroidsCOVID19
-InstanceOf: study-group
-Usage: #example
-Title: "Study group for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)"
-Description: "Study group for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)."
-* characteristic
-  * valueReference = Reference(StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19)
-* characteristic[=].exclude = false // no need to exclude outcomes
 
 Instance: StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
 InstanceOf: study-eligibility-criteria

@@ -23,7 +23,6 @@ Description: "Collection of all resources that represent a single clinical pract
   and recommendationJustification 1..* MS
   and certaintyOfEvidenceRating 0..* MS
   and outcomeEvidence 0..* MS
-  and studyGroup 0..* MS
   and studyCitation 0..* MS
   and recommendationCitation 0..* MS
   and netEffect 0..* MS
@@ -62,10 +61,6 @@ Description: "Collection of all resources that represent a single clinical pract
 * entry[outcomeEvidence]
   * resource 1.. MS
   * resource only OutcomeEvidence
-  * fullUrl 1..1 MS
-* entry[studyGroup]
-  * resource 1.. MS
-  * resource only StudyGroup
   * fullUrl 1..1 MS
 * entry[studyCitation]
   * resource 1.. MS
@@ -117,9 +112,6 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[outcomeEvidence][+]
   * resource = ExampleOutcomeEvidence
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence"
-* entry[studyGroup][+]
-  * resource = ExampleStudyGroup
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-group"
 * entry[PICOEvidenceVariable][+] // StudyEligibilityCriteria
   * resource = ExampleStudyEligibilityCriteria
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria"

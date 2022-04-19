@@ -29,7 +29,7 @@ Description: "A single evidence for an outcome from a specific, single study."
 * variableDefinition[population]
   * variableRole = $cs-variable-role#population
   * observed 1..1 MS
-  * observed only Reference(StudyGroup)
+  * observed only Reference(StudyEligibilityCriteria)
 * variableDefinition[outcome]
   * variableRole = $cs-variable-role#measuredVariable
   * observed 1..1 MS
@@ -122,5 +122,5 @@ Description: "Example Outcome Evidence"
 * studyType = $cs-study-type#RCT
 * synthesisType = $cs-synthesis-type#NotApplicable
 * relatedArtifact[studyCitation].resourceReference = Reference(ExampleStudyCitation)
-* variableDefinition[population].observed = Reference(ExampleStudyGroup)
+* variableDefinition[population].observed = Reference(ExampleStudyEligibilityCriteria)
 * variableDefinition[outcome].observed = Reference(ExampleOutcome)

@@ -45,9 +45,6 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
 * entry[outcomeEvidence][+]
   * resource = DexamethasoneOutcomeMortality
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality"
-* entry[studyGroup][+]
-  * resource = StudyGroupSystemicCorticosteroidsCOVID19
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-group"
 * entry[PICOEvidenceVariable][+]
   * resource = StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria"
