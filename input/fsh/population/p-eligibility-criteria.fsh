@@ -1,9 +1,9 @@
 // Author: Gregor Lichtner @glichtner
-Profile: PopulationDefinition
+Profile: EligibilityCriteria
 Parent: PICOEvidenceVariable
-Id: population-definition
-Title: "Population Definition"
-Description: "Definition of a population (e.g. for guideline recommendation, clinical study)."
+Id: eligibility-criteria
+Title: "Eligibility Criteria"
+Description: "Definition of a population (e.g. for guideline recommendation, clinical study) via the eligibility criteria."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * ^abstract = true
 * characteristic 1..* MS

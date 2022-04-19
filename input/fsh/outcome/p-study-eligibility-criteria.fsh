@@ -1,6 +1,6 @@
 // Author: Gregor Lichtner, @glichtner
 Profile: StudyEligibilityCriteria
-Parent: PopulationDefinition
+Parent: EligibilityCriteria
 Id: study-eligibility-criteria
 Title: "Study Eligibility Criteria"
 Description: "Eligibility Criteria for a clinical study"

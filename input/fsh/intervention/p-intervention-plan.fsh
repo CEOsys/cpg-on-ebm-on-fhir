@@ -8,7 +8,7 @@ Description: "Definition of an activity that is part of an intervention in the c
 * insert profile("This profile is used to define the recommended activities for an intervention in the context of a clinical practice guideline recommendation.")
 * subject[x] 1..1 MS
 * subject[x] only Reference
-* subjectReference only Reference(PopulationGroup)
+* subjectReference only Reference(RecommendationPatientGroup)
 * version 1..1 MS
 * name 1..1 MS
 * title 1..1

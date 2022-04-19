@@ -1,16 +1,16 @@
 // Author: Gregor Lichtner @glichtner
-Profile: PopulationEvidenceVariable // TODO: rename?
-Parent: PopulationDefinition
-Id: population-evidence-variable
-Title: "Population"
-Description: "Description of the population element of a PICO construct that evidence is about."
+Profile: RecommendationEligibilityCriteria
+Parent: EligibilityCriteria
+Id: recommendation-eligibility-criteria
+Title: "Recommendation Eligibiligy Criteria"
+Description: "Eligibility Criteria for a Clinical Guideline Recommendation"
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * insert profile("This profile describes a population defined in clinical practice guideline recommendation.")
 
-Instance: ExamplePopulation
-InstanceOf: population-evidence-variable
+Instance: ExampleRecommendationEligibilityCriteria
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
-Title: "Example Population"
+Title: "Example Recommendation Eligibiligy Criteria"
 Description: "Example of a population element of a PICO construct that evidence is about."
 * status = #active
 * name = "PopulationExample"

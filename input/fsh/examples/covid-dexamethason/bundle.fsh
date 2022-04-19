@@ -27,13 +27,13 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
 * entry[recommendationCitation][+]
   * resource = DexamethasoneRecommendationCitation
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation"
-* entry[populationGroup][+]
+* entry[recommendationPatientGroup][+]
   * resource = PopulationCriticallyIllCOVID19Patients
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/population-group-ventilated"
 * entry[PICOEvidenceVariable][+]
   * resource = PopulationCOVID19Ventilated
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated"
-* entry[populationGroup][+]
+* entry[recommendationPatientGroup][+]
   * resource = PopulationModeratelyIllCOVID19Patients
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/population-group-non-ventilated"
 * entry[PICOEvidenceVariable][+]

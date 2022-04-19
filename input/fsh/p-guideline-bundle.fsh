@@ -18,8 +18,8 @@ Description: "Collection of all resources that represent a single clinical pract
   and guidelineCitation 0..1 MS
   and interventionPlan 1..* MS
   and interventionActivity 1..* MS
-  and populationGroup 1..* MS
-  and PICOEvidenceVariable 1..* MS // includes Population, StudyEligibilityCriteria, and Outcome
+  and recommendationPatientGroup 1..* MS
+  and PICOEvidenceVariable 1..* MS // includes RecommendationEligibilityCriteria, StudyEligibilityCriteria, and Outcome
   and recommendationJustification 1..* MS
   and certaintyOfEvidenceRating 0..* MS
   and outcomeEvidence 0..* MS
@@ -42,9 +42,9 @@ Description: "Collection of all resources that represent a single clinical pract
   * resource 1.. MS
   * resource only InterventionActivity
   * fullUrl 1..1 MS
-* entry[populationGroup]
+* entry[recommendationPatientGroup]
   * resource 1.. MS
-  * resource only PopulationGroup
+  * resource only RecommendationPatientGroup
   * fullUrl 1..1 MS
 * entry[PICOEvidenceVariable]
   * resource 1.. MS
@@ -97,11 +97,11 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[interventionActivity][+]
   * resource = ExampleInterventionActivity
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-activity"
-* entry[populationGroup][+]
-  * resource = ExamplePopulationGroup
+* entry[recommendationPatientGroup][+]
+  * resource = ExampleRecommendationPatientGroup
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"
 * entry[PICOEvidenceVariable][+]
-  * resource = ExamplePopulation
+  * resource = ExampleRecommendationEligibilityCriteria
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population"
 * entry[recommendationJustification][+]
   * resource = ExampleRecommendationJustification
