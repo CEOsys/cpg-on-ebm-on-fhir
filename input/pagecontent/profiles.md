@@ -1,11 +1,11 @@
 ### Guideline & Recommendation metadata
 {% include profile-reference.md name='Clinical Practice Guideline' %}
-{% include profile-reference.md name='CPG Recommendation Justification' %}
-{% include profile-reference.md name='Certainty of evidence rating' %}
+{% include profile-reference.md name='Recommendation Justification' %}
+{% include profile-reference.md name='Certainty of Evidence Rating' %}
 
 ### Population
 #### Recommendation
-{% include profile-reference.md name='Recommendation Eligibiligy Criteria' %}
+{% include profile-reference.md name='Recommendation Eligibility Criteria' %}
 {% include profile-reference.md name='Recommendation Patient Group' %}
 
 #### Studies
@@ -16,7 +16,7 @@
 {% include profile-reference.md name='Intervention Plan' %}
 {% include profile-reference.md name='Intervention Activity' %}
 
-##### Studies
+#### Studies
 {% include profile-reference.md name='Intervention Definition' %}
 
 ### Outcome

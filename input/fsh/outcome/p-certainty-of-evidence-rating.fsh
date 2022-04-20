@@ -2,7 +2,7 @@
 Profile: CertaintyOfEvidenceRating
 Parent: ArtifactAssessment
 Id: certainty-of-evidence-rating
-Title: "Certainty of evidence rating"
+Title: "Certainty of Evidence Rating"
 Description: "Rating of a single outcome (evidence) underlying a clinical practice guideline recommendation"
 * insert metadata(2022-03-11, #draft, 0.1.0)
 * insert profile("This profile is used to define the certainty of evidence rating")
