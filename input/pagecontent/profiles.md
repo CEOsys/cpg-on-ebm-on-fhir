@@ -5,15 +5,19 @@
 
 ### Population
 #### Recommendation
-{% include profile-reference.md name='Population Group' %}
-{% include profile-reference.md name='Population' %}
+{% include profile-reference.md name='Recommendation Eligibiligy Criteria' %}
+{% include profile-reference.md name='Recommendation Patient Group' %}
+
 #### Studies
-{% include profile-reference.md name='Study Group' %}
 {% include profile-reference.md name='Study Eligibility Criteria' %}
 
-### Intervention/Exposure
+### Intervention
+#### Recommendation
 {% include profile-reference.md name='Intervention Plan' %}
 {% include profile-reference.md name='Intervention Activity' %}
+
+##### Studies
+{% include profile-reference.md name='Intervention Definition' %}
 
 ### Outcome
 {% include profile-reference.md name='Outcome Definition' %}
@@ -28,4 +32,4 @@
 {% include profile-reference.md name='Recommendation Citation' %}
 {% include profile-reference.md name='Study Citation' %}
 {% include profile-reference.md name='PICO Evidence Variable' %}
-{% include profile-reference.md name='Population Definition' %}
+{% include profile-reference.md name='Eligibility Criteria' %}

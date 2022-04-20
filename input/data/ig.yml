@@ -79,6 +79,12 @@ definition:
     name: Certainty of evidence rating
     reference:
       reference: StructureDefinition/certainty-of-evidence-rating
+  - description: Definition of a population (e.g. for guideline recommendation, clinical
+      study) via the eligibility criteria.
+    exampleBoolean: false
+    name: Eligibility Criteria
+    reference:
+      reference: StructureDefinition/eligibility-criteria
   - description: Representation of an evidence-based clinical practice guideline.
     exampleBoolean: false
     name: Clinical Practice Guideline
@@ -101,6 +107,12 @@ definition:
     name: Intervention Activity
     reference:
       reference: StructureDefinition/intervention-activity
+  - description: Description of the intervention element of a PICO construct that
+      evidence is about.
+    exampleBoolean: false
+    name: Intervention Definition
+    reference:
+      reference: StructureDefinition/intervention-definition
   - description: Definition of an activity that is part of an intervention in the
       context of a clinical practice guideline recommendation.
     exampleBoolean: false
@@ -119,41 +131,35 @@ definition:
     name: Outcome Definition
     reference:
       reference: StructureDefinition/outcome-definition
-  - description: A single evidence for an outcome from a specific, single study.
+  - description: A single evidence for an outcome from a specific study, meta analysis
+      or systematic review.
     exampleBoolean: false
     name: Outcome Evidence
     reference:
       reference: StructureDefinition/outcome-evidence
   - description: Description of the a PICO element that knowledge is about. This abstract
-      resource is used as parent for all PICO (population, intervention, outcome)
-      evidence variables.
+      resource is used as parent for all PICO (population, intervention, comparison,
+      outcome) evidence variables.
     exampleBoolean: false
     name: PICO Evidence Variable
     reference:
       reference: StructureDefinition/pico-evidence-variable
-  - description: Definition of a population (e.g. for guideline recommendation, clinical
-      study).
-    exampleBoolean: false
-    name: Population Definition
-    reference:
-      reference: StructureDefinition/population-definition
-  - description: Description of the population element of a PICO construct that evidence
-      is about.
-    exampleBoolean: false
-    name: Population
-    reference:
-      reference: StructureDefinition/population-evidence-variable
-  - description: Characterization of a group of patients or subjects for which a clinical
-      guideline recommends a treatment or intervention.
-    exampleBoolean: false
-    name: Population Group
-    reference:
-      reference: StructureDefinition/population-group
   - description: Citation of a clinical practice guideline recommendation
     exampleBoolean: false
     name: Recommendation Citation
     reference:
       reference: StructureDefinition/recommendation-citation
+  - description: Eligibility Criteria for a Clinical Guideline Recommendation
+    exampleBoolean: false
+    name: Recommendation Eligibiligy Criteria
+    reference:
+      reference: StructureDefinition/recommendation-eligibility-criteria
+  - description: Characterization of a group of patients or subjects for which a clinical
+      guideline recommends a treatment or intervention.
+    exampleBoolean: false
+    name: Recommendation Patient Group
+    reference:
+      reference: StructureDefinition/recommendation-patient-group
   - description: Citation of a study from which evidence is determined.
     exampleBoolean: false
     name: Study Citation
@@ -164,12 +170,6 @@ definition:
     name: Study Eligibility Criteria
     reference:
       reference: StructureDefinition/study-eligibility-criteria
-  - description: Characterization of a group of patients or subjects that were observed
-      in a clinical study.
-    exampleBoolean: false
-    name: Study Group
-    reference:
-      reference: StructureDefinition/study-group
   - description: Adds publication status attribute to ArtifactAssessment.
     exampleBoolean: false
     name: ArtifactAssessment Publication Status
@@ -443,6 +443,11 @@ definition:
     name: Example Guideline Citation
     reference:
       reference: Citation/ExampleGuidelineCitation
+  - description: Example of an intervention definition.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-definition
+    name: Example Intervention
+    reference:
+      reference: EvidenceVariable/ExampleIntervention
   - description: An active intervention activity.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
     name: Example Intervention Activity
@@ -473,27 +478,27 @@ definition:
     name: Example Outcome Evidence
     reference:
       reference: Evidence/ExampleOutcomeEvidence
-  - description: Example of a population element of a PICO construct that evidence
-      is about.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
-    name: Example Population
-    reference:
-      reference: EvidenceVariable/ExamplePopulation
-  - description: 'Example of a population group: COVID-19 patients.'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
-    name: Example Population Group
-    reference:
-      reference: Group/ExamplePopulationGroup
   - description: Example of a Citation of a clinical practice guideline recommendation
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
     name: Example Recommendation Citation
     reference:
       reference: Citation/ExampleRecommendationCitation
+  - description: Example of a population element of a PICO construct that evidence
+      is about.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria
+    name: Example Recommendation Eligibiligy Criteria
+    reference:
+      reference: EvidenceVariable/ExampleRecommendationEligibilityCriteria
   - description: Example of a CPG recommendation justification
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-justification
     name: Example Recommendation Justification
     reference:
       reference: ArtifactAssessment/ExampleRecommendationJustification
+  - description: 'Example of a population group: COVID-19 patients.'
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-patient-group
+    name: Example Population Group
+    reference:
+      reference: Group/ExampleRecommendationPatientGroup
   - description: Example Study Citation
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
     name: Example Study Citation
@@ -504,11 +509,6 @@ definition:
     name: Example Study Eligibility Criteria
     reference:
       reference: EvidenceVariable/ExampleStudyEligibilityCriteria
-  - description: 'Example of a population group: COVID-19 patients.'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-group
-    name: Example Population Group
-    reference:
-      reference: Group/ExampleStudyGroup
   - description: Example of a guideline resource.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: Example Guideline
@@ -536,25 +536,25 @@ definition:
       reference: EvidenceVariable/OutcomeAllCauseMortality
   - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
       / 5691 with characteristics: COVID-19, not ventilated'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria
     name: 'Population: COVID19 Non-Ventilated'
     reference:
       reference: EvidenceVariable/PopulationCOVID19NonVentilated
   - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
       / 5691 with characteristics: COVID-19, Ventilated'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria
     name: 'Population: COVID19 Ventilated'
     reference:
       reference: EvidenceVariable/PopulationCOVID19Ventilated
   - description: Population for guideline from https://app.magicapp.org/#/guidelines
       / 5691
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-patient-group
     name: 'Population: Critically Ill COVID-19 Patients'
     reference:
       reference: Group/PopulationCriticallyIllCOVID19Patients
   - description: Population for guideline from https://app.magicapp.org/#/guidelines
       / 5691
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/population-group
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-patient-group
     name: 'Population: Moderately Ill COVID-19 Patients'
     reference:
       reference: Group/PopulationModeratelyIllCOVID19Patients
@@ -565,13 +565,6 @@ definition:
       vs. standard care (plus/minus placebo)
     reference:
       reference: EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
-  - description: Study group for Systemic corticosteroids plus standard care vs. standard
-      care (plus/minus placebo).
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-group
-    name: Study group for Systemic corticosteroids plus standard care vs. standard
-      care (plus/minus placebo)
-    reference:
-      reference: Group/StudyGroupSystemicCorticosteroidsCOVID19
   - description: Systemic corticosteroids for the treatment of COVID-19
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
     name: Systemic corticosteroids for the treatment of COVID-19
