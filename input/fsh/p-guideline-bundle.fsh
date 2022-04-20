@@ -52,7 +52,7 @@ Description: "Collection of all resources that represent a single clinical pract
   * fullUrl 1..1 MS
 * entry[recommendationJustification]
   * resource 1.. MS
-  * resource only CPGRecommendationJustification
+  * resource only RecommendationJustification
   * fullUrl 1..1 MS
 * entry[certaintyOfEvidenceRating]
   * resource 1.. MS

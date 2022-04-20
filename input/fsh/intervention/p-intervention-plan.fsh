@@ -31,7 +31,7 @@ Description: "Definition of an activity that is part of an intervention in the c
   * classifier 1..1
   * classifier = $cs-ceosys#recommendation-rating "Recommendation rating"
   * resourceReference 1..1 MS
-  * resourceReference only Reference(CPGRecommendationJustification)
+  * resourceReference only Reference(RecommendationJustification)
 * relatedArtifact[recommendationCitation]
   * type = $cs-related-artifact-type#citation
   * classifier 1..1

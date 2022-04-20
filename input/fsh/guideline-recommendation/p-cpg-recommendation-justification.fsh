@@ -1,11 +1,11 @@
 // Author: Gregor Lichtner @glichtner
-Profile: CPGRecommendationJustification
+Profile: RecommendationJustification
 Parent: ArtifactAssessment
-Id: cpg-recommendation-justification
-Title: "CPG Recommendation Justification"
+Id: recommendation-justification
+Title: "Recommendation Justification"
 Description: "Justification of a clinical guideline recommendation through the underlying evidence and their ratings"
 * insert metadata(2022-03-04, #draft, 0.1.0)
-* insert profile("This profile is used to define the CPG recommendation rating")
+* insert profile("This profile is used to define the recommendation rating")
 * artifact[x] only Reference
 * artifactReference only Reference(InterventionPlan)
 //* version 1..1 MS // TODO: uncomment if version is available
@@ -127,10 +127,10 @@ Description: "Justification of a clinical guideline recommendation through the u
     * resourceReference only Reference(NetEffectEvidence)
 
 Instance: ExampleRecommendationJustification
-InstanceOf: cpg-recommendation-justification
+InstanceOf: recommendation-justification
 Usage: #example
 Title: "Example Recommendation Justification"
-Description: "Example of a CPG recommendation justification"
+Description: "Example of a recommendation justification"
 * artifactReference = Reference(ExampleInterventionPlan)
 * date = "2020-01-03"
 * extension[status].valueCode = #active

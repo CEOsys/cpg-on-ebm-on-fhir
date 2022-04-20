@@ -1,5 +1,5 @@
 Instance: DexamethasoneRecommendationJustification
-InstanceOf: cpg-recommendation-justification
+InstanceOf: recommendation-justification
 Usage: #example
 Title: "Dexamethasone for critically ill COVID-19 patients"
 Description: "Dexamethasone in critically ill patients with COVID-19."
@@ -17,7 +17,7 @@ Description: "Dexamethasone in critically ill patients with COVID-19."
 * content[evidenceRating].relatedArtifact.resourceReference = Reference(DexamethasoneRatingOutcomeMortality)
 
 Instance: NoDexamethasoneRecommendationJustification
-InstanceOf: cpg-recommendation-justification
+InstanceOf: recommendation-justification
 Usage: #example
 Title: "NO Dexamethasone for moderately ill COVID-19 patients"
 Description: "No Dexamethasone in moderately ill patients with COVID-19."

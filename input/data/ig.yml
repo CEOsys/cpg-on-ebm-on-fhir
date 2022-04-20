@@ -67,16 +67,10 @@ definition:
   - code: extension-domain
     value: https://simplifier.net
   resource:
-  - description: Justification of a clinical guideline recommendation through the
-      underlying evidence and their ratings
-    exampleBoolean: false
-    name: CPG Recommendation Justification
-    reference:
-      reference: StructureDefinition/cpg-recommendation-justification
   - description: Rating of a single outcome (evidence) underlying a clinical practice
       guideline recommendation
     exampleBoolean: false
-    name: Certainty of evidence rating
+    name: Certainty of Evidence Rating
     reference:
       reference: StructureDefinition/certainty-of-evidence-rating
   - description: Definition of a population (e.g. for guideline recommendation, clinical
@@ -151,9 +145,15 @@ definition:
       reference: StructureDefinition/recommendation-citation
   - description: Eligibility Criteria for a Clinical Guideline Recommendation
     exampleBoolean: false
-    name: Recommendation Eligibiligy Criteria
+    name: Recommendation Eligibility Criteria
     reference:
       reference: StructureDefinition/recommendation-eligibility-criteria
+  - description: Justification of a clinical guideline recommendation through the
+      underlying evidence and their ratings
+    exampleBoolean: false
+    name: Recommendation Justification
+    reference:
+      reference: StructureDefinition/recommendation-justification
   - description: Characterization of a group of patients or subjects for which a clinical
       guideline recommends a treatment or intervention.
     exampleBoolean: false
@@ -429,7 +429,7 @@ definition:
     reference:
       reference: Citation/DexamethasoneRecommendationCitation
   - description: Dexamethasone in critically ill patients with COVID-19.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-justification
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification
     name: Dexamethasone for critically ill COVID-19 patients
     reference:
       reference: ArtifactAssessment/DexamethasoneRecommendationJustification
@@ -486,11 +486,11 @@ definition:
   - description: Example of a population element of a PICO construct that evidence
       is about.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria
-    name: Example Recommendation Eligibiligy Criteria
+    name: Example Recommendation Eligibility Criteria
     reference:
       reference: EvidenceVariable/ExampleRecommendationEligibilityCriteria
-  - description: Example of a CPG recommendation justification
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-justification
+  - description: Example of a recommendation justification
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification
     name: Example Recommendation Justification
     reference:
       reference: ArtifactAssessment/ExampleRecommendationJustification
@@ -525,7 +525,7 @@ definition:
     reference:
       reference: ActivityDefinition/NoDexamethasoneApplication
   - description: No Dexamethasone in moderately ill patients with COVID-19.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/cpg-recommendation-justification
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification
     name: NO Dexamethasone for moderately ill COVID-19 patients
     reference:
       reference: ArtifactAssessment/NoDexamethasoneRecommendationJustification
