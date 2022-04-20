@@ -3,7 +3,7 @@ Profile: OutcomeEvidence
 Parent: Evidence
 Id: outcome-evidence
 Title: "Outcome Evidence"
-Description: "A single evidence for an outcome from a specific, single study."
+Description: "A single evidence for an outcome from a specific study, meta analysis or systematic review."
 * insert metadata(2022-03-04, #draft, 0.1.0)
 * name 1..1
 * studyType 1..1 MS
@@ -28,18 +28,24 @@ Description: "A single evidence for an outcome from a specific, single study."
     comparator 0..*
 * variableDefinition[population]
   * variableRole = $cs-variable-role#population
+  * intended only Reference(StudyEligibilityCriteria)
   * observed 1..1 MS
   * observed only Reference(StudyEligibilityCriteria)
 * variableDefinition[outcome]
   * variableRole = $cs-variable-role#measuredVariable
+  * intended only Reference(OutcomeDefinition)
   * observed 1..1 MS
   * observed only Reference(OutcomeDefinition)
 * variableDefinition[intervention]
   * variableRole = $cs-variable-role#exposure
+  * intended only Reference(InterventionDefinition)
   * observed 1..1 MS
+  * observed only Reference(InterventionDefinition)
 * variableDefinition[comparator]
   * variableRole = $cs-variable-role#referenceExposure
+  * intended only Reference(InterventionDefinition)
   * observed 1..1 MS
+  * observed only Reference(InterventionDefinition)
 
 * statistic 0..* MS
 * statistic ^slicing.discriminator.type = #value
