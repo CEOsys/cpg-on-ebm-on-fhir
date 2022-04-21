@@ -56,7 +56,7 @@ Description: "An active intervention plan."
 * date = "2022-02-14"
 * status = #active
 * description = "Example Intervention Plan"
-* subjectReference = Reference(ExamplePopulationGroup)
+* subjectReference = Reference(ExampleRecommendationPatientGroup)
 * action[+]
   * definitionCanonical = Canonical(ExampleInterventionActivity)
 * relatedArtifact[recommendationJustification].resourceReference = Reference(ExampleRecommendationJustification)

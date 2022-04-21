@@ -46,7 +46,7 @@ Description: "Study eligibility criteria for Systemic corticosteroids plus stand
 * name = "StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"
 * status = #active
 * characteristic[+].defByTypeAndValue
-  * typeCodeableConcept.coding[sct] = $sctIntl2021#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+  * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
   * valueBoolean = true
 * characteristic[=].exclude = false
 
