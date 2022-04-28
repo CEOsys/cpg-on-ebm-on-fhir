@@ -4,7 +4,7 @@ Usage: #example
 Title: "Certainty of Evidence for outcome: mortality of Dexamethasone application"
 Description: "Certainty of evidence rating for mortality outcome of Dexamethasonse application recommendation"
 * date = "2020-01-03"
-* extension[status].valueCode = #active
+* extension[publicationStatus].valueCode = #active
 * extension[version].valueString = "v4.0"
 * artifactReference = Reference(DexamethasoneOutcomeMortality)
 * content[certaintyOfEvidence].classifier = $cs-certainty-rating#moderate "Moderate quality"

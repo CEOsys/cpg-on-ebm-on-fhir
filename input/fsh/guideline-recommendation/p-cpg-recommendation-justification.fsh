@@ -11,7 +11,7 @@ Description: "Justification of a clinical guideline recommendation through the u
 //* version 1..1 MS // TODO: uncomment if version is available
 * extension contains
   ArtifactAssessmentVersion named version 1..1 MS and // TODO: replace by actual version field if added
-  ArtifactAssessmentPublicationStatus named status 1..1 MS
+  ArtifactAssessmentPublicationStatus named publicationStatus 1..1 MS
 * date 1..1
 * content 2..* MS
 * content ^slicing.discriminator.type = #value
@@ -133,7 +133,7 @@ Title: "Example Recommendation Justification"
 Description: "Example of a recommendation justification"
 * artifactReference = Reference(ExampleInterventionPlan)
 * date = "2020-01-03"
-* extension[status].valueCode = #active
+* extension[publicationStatus].valueCode = #active
 * extension[version].valueString = "0.1.0"
 * content[strength]
   * type = $cs-ceosys#strength "Strength of recommendation"
