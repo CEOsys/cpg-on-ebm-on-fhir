@@ -72,7 +72,7 @@ Description: "Collection of all resources that represent a single clinical pract
   * fullUrl 1..1 MS
 * entry[netEffect]
   * resource 1.. MS
-  * resource only NetEffectEvidence
+  * resource only NetEffectEstimate
   * fullUrl 1..1 MS
 
 Invariant: bdl-1
@@ -125,5 +125,5 @@ Description: "Example of a clinical practice guideline representation bundle."
   * resource = ExampleRecommendationCitation
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-citation"
 * entry[netEffect][+]
-  * resource = ExampleNetEffect
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/net-effect"
+  * resource = ExampleNetEffectEstimate
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/net-effect-estimate"

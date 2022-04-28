@@ -124,7 +124,7 @@ Description: "Justification of a clinical guideline recommendation through the u
     * classifier 1..1
     * classifier = $cs-ceosys#net-effect "Net effect"
     * resourceReference 1..1 MS
-    * resourceReference only Reference(NetEffectEvidence)
+    * resourceReference only Reference(NetEffectEstimate)
 
 Instance: ExampleRecommendationJustification
 InstanceOf: recommendation-justification
@@ -145,4 +145,4 @@ Description: "Example of a recommendation justification"
   * type = CEOsysCodeSystem#consensus "Consensus"
   * classifier = $cs-recommendation-strength#strong "Strong"
 * content[evidenceRating][+].relatedArtifact.resourceReference = Reference(ExampleCertaintyOfEvidenceRating)
-* content[netEffect].relatedArtifact.resourceReference = Reference(ExampleNetEffect)
+* content[netEffect].relatedArtifact.resourceReference = Reference(ExampleNetEffectEstimate)
