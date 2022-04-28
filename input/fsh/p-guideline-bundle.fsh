@@ -16,8 +16,8 @@ Description: "Collection of all resources that represent a single clinical pract
 * entry contains
   guideline 1..1 MS
   and guidelineCitation 0..1 MS
-  and interventionPlan 1..* MS
-  and interventionActivity 1..* MS
+  and recommendationPlan 1..* MS
+  and recommendationAction 1..* MS
   and recommendationPatientGroup 1..* MS
   and PICOEvidenceVariable 1..* MS // includes RecommendationEligibilityCriteria, StudyEligibilityCriteria, and Outcome
   and recommendationJustification 1..* MS
@@ -34,13 +34,13 @@ Description: "Collection of all resources that represent a single clinical pract
   * resource 1.. MS
   * resource only GuidelineCitation
   * fullUrl 1..1 MS
-* entry[interventionPlan]
+* entry[recommendationPlan]
   * resource 1.. MS
-  * resource only InterventionPlan
+  * resource only RecommendationPlan
   * fullUrl 1..1 MS
-* entry[interventionActivity]
+* entry[recommendationAction]
   * resource 1.. MS
-  * resource only InterventionActivity
+  * resource only RecommendationAction
   * fullUrl 1..1 MS
 * entry[recommendationPatientGroup]
   * resource 1.. MS
@@ -91,12 +91,12 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[guidelineCitation][+]
   * resource = ExampleGuidelineCitation
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/citation"
-* entry[interventionPlan][+]
-  * resource = ExampleInterventionPlan
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-plan"
-* entry[interventionActivity][+]
-  * resource = ExampleInterventionActivity
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/intervention-activity"
+* entry[recommendationPlan][+]
+  * resource = ExampleRecommendationPlan
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-plan"
+* entry[recommendationAction][+]
+  * resource = ExampleRecommendationAction
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-action"
 * entry[recommendationPatientGroup][+]
   * resource = ExampleRecommendationPatientGroup
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population-group"

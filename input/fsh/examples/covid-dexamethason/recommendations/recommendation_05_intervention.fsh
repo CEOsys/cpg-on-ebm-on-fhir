@@ -2,7 +2,7 @@
 /* Intervention Plan */
 /*********************/
 Instance: COVID19VentilatedPatientsDexamethasoneApplicationPlan
-InstanceOf: intervention-plan
+InstanceOf: recommendation-plan
 Usage: #example
 Title: "Dexamethasone Application"
 Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"
@@ -14,17 +14,17 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. o
 * description = "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"
 * subjectReference = Reference(PopulationCriticallyIllCOVID19Patients)
 * action[+]
-  * definitionCanonical = Canonical(DexamethasoneApplicationActivityOral)
+  * definitionCanonical = Canonical(DexamethasoneApplicationActionOral)
   * selectionBehavior = #exactly-one
 * action[+]
-  * definitionCanonical = Canonical(DexamethasoneApplicationActivityIntravenous)
+  * definitionCanonical = Canonical(DexamethasoneApplicationActionIntravenous)
   * selectionBehavior = #exactly-one
 * relatedArtifact[recommendationJustification].resourceReference = Reference(DexamethasoneRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
 Instance: COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
-InstanceOf: intervention-plan
+InstanceOf: recommendation-plan
 Usage: #example
 Title: "No dexamethasone application for non-ventilated COVID-19 patients"
 Description: "No application of Dexamethasone for non-ventilated COVID-19 patients"
@@ -58,15 +58,15 @@ Description: "Citation of Dexamethasone Recommenation from COVID-19 intensive ca
   * currentState = $cs-cited-artifact-status-type#active "Active"
 
 /*************************/
-/* Intervention Activity */
+/* Intervention Actions  */
 /*************************/
-Instance: DexamethasoneApplicationActivityOral
-InstanceOf: intervention-activity
+Instance: DexamethasoneApplicationActionOral
+InstanceOf: recommendation-action
 Usage: #example
 Title: "Dexamethasone Application (Oral)"
 Description: "Application of Dexamethasone: 6 mg once per day for 10 days (oral route)"
-* name = "DexamethasoneApplicationActivity"
-* url = "https://www.ceosys.de/fhir/canonical/intervention-activity/dexamethasone-application-oral"
+* name = "DexamethasoneApplicationActionOral"
+* url = "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-oral"
 * status = #active
 * code = $sct#182832007 "Procedure related to management of drug administration (procedure)"
 * productCodeableConcept = $sct#372584003 "Dexamethasone (substance)"
@@ -84,13 +84,13 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days (oral 
     * doseQuantity = 6 'mg' "mg"
     * rateQuantity = 1 '/d' "/d"
 
-Instance: DexamethasoneApplicationActivityIntravenous
-InstanceOf: intervention-activity
+Instance: DexamethasoneApplicationActionIntravenous
+InstanceOf: recommendation-action
 Usage: #example
 Title: "Dexamethasone Application (Intravenous)"
 Description: "Application of Dexamethasone: 6 mg once per day for 10 days (intravenous route)"
-* name = "DexamethasoneApplicationActivity"
-* url = "https://www.ceosys.de/fhir/canonical/intervention-activity/dexamethasone-application-intravenous"
+* name = "DexamethasoneApplicationActionIntravenous"
+* url = "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous"
 * status = #active
 * code = $sct#182832007 "Procedure related to management of drug administration (procedure)"
 * productCodeableConcept = $sct#372584003 "Dexamethasone (substance)"
@@ -109,12 +109,12 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days (intra
     * rateQuantity = 1 '/d' "/d"
 
 Instance: NoDexamethasoneApplication
-InstanceOf: intervention-activity
+InstanceOf: recommendation-action
 Usage: #example
 Title: "No Dexamethasone Application"
 Description: "No Application of Dexamethasone"
 * name = "NoDexamethasoneApplicationActivity"
-* url = "https://www.ceosys.de/fhir/canonical/intervention-activity/no-dexamethasone-application"
+* url = "https://www.ceosys.de/fhir/canonical/recommendation-action/no-dexamethasone-application"
 * status = #active
 * code = $sct#182832007 "Procedure related to management of drug administration (procedure)"
 * productCodeableConcept = $sct#372584003 "Dexamethasone (substance)"

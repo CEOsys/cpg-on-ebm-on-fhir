@@ -7,7 +7,7 @@ Description: "Justification of a clinical guideline recommendation through the u
 * insert metadata(2022-03-04, #draft, 0.1.0)
 * insert profile("This profile is used to define the recommendation rating")
 * artifact[x] only Reference
-* artifactReference only Reference(InterventionPlan)
+* artifactReference only Reference(RecommendationPlan)
 //* version 1..1 MS // TODO: uncomment if version is available
 * extension contains
   ArtifactAssessmentVersion named version 1..1 MS and // TODO: replace by actual version field if added
@@ -131,7 +131,7 @@ InstanceOf: recommendation-justification
 Usage: #example
 Title: "Example Recommendation Justification"
 Description: "Example of a recommendation justification"
-* artifactReference = Reference(ExampleInterventionPlan)
+* artifactReference = Reference(ExampleRecommendationPlan)
 * date = "2020-01-03"
 * extension[publicationStatus].valueCode = #active
 * extension[version].valueString = "0.1.0"
