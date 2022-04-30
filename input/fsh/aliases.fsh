@@ -2,7 +2,6 @@
 // International code systems
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
-Alias: $sctIntl2021 = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20210731
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $atc = http://www.whocc.no/atc
 Alias: $icd9 = http://hl7.org/fhir/sid/icd-9-cm
@@ -57,3 +56,5 @@ Alias: $cs-related-artifact-type = http://hl7.org/fhir/related-artifact-type
 Alias: $cs-ceosys = CEOsysCodeSystem
 
 Alias: $cs-citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier
+
+Alias: $vs-snomed-procedures = http://hl7.org/fhir/ValueSet/procedure-code

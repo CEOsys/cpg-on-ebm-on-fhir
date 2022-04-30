@@ -2,7 +2,7 @@
 Profile: CertaintyOfEvidenceRating
 Parent: ArtifactAssessment
 Id: certainty-of-evidence-rating
-Title: "Certainty of evidence rating"
+Title: "Certainty of Evidence Rating"
 Description: "Rating of a single outcome (evidence) underlying a clinical practice guideline recommendation"
 * insert metadata(2022-03-11, #draft, 0.1.0)
 * insert profile("This profile is used to define the certainty of evidence rating")
@@ -11,7 +11,7 @@ Description: "Rating of a single outcome (evidence) underlying a clinical practi
 //* version 1..1 MS // TODO: uncomment if version
 * extension contains
   ArtifactAssessmentVersion named version 1..1 MS and // TODO: replace by actual version field if added
-  ArtifactAssessmentPublicationStatus named status 1..1 MS
+  ArtifactAssessmentPublicationStatus named publicationStatus 1..1 MS
 * date 1..1
 * content 1..* MS
 * content ^slicing.discriminator.type = #value
@@ -116,7 +116,7 @@ Title: "Example Certainty Of Evidence Rating"
 Description: "Example Certainty Of Evidence Rating"
 * artifactReference = Reference(ExampleOutcomeEvidence)
 * extension[version].valueString = "0.1.1"
-* extension[status].valueCode = #active
+* extension[publicationStatus].valueCode = #active
 * date = "2022-03-11"
 * content[certaintyOfEvidence].classifier = $cs-certainty-rating#moderate "Moderate quality"
 * content[riskOfBias].classifier = $cs-certainty-rating#serious-concern "serious concern"

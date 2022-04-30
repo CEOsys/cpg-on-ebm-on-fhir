@@ -1,6 +1,6 @@
 // Author: Gregor Lichtner, @glichtner
 Profile: StudyEligibilityCriteria
-Parent: PopulationDefinition
+Parent: EligibilityCriteria
 Id: study-eligibility-criteria
 Title: "Study Eligibility Criteria"
 Description: "Eligibility Criteria for a clinical study"
@@ -15,6 +15,6 @@ Description: "Example of Study Eligbility Criteria"
 * name = "ExampleStudyEligibilityCriteria"
 * status = #active
 * characteristic[+].defByTypeAndValue
-  * typeCodeableConcept.coding[sct] = $sctIntl2021#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+  * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
   * valueBoolean = true
 * characteristic[=].exclude = false

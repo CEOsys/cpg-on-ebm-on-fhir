@@ -1,8 +1,8 @@
 // Author: Gregor Lichtner @glichtner
-Profile: NetEffectEvidence
+Profile: NetEffectEstimate
 Parent: Evidence
-Id: net-effect-evidence
-Title: "Net Effect"
+Id: net-effect-estimate
+Title: "Net Effect Estimate"
 Description: "The net effect is the overall expected effect of a recommendation, calculated by an importance-weighted average of the individual outcome effects"
 * insert metadata(2022-03-04, #draft, 0.1.0)
 * name 1..1
@@ -56,11 +56,11 @@ Description: "The net effect is the overall expected effect of a recommendation,
       * ^definition = "Variable for which the relative importance weighting is defined"
       * variableDefinition only Reference(OutcomeDefinition)
 
-Instance: ExampleNetEffect
-InstanceOf: net-effect-evidence
+Instance: ExampleNetEffectEstimate
+InstanceOf: net-effect-estimate
 Usage: #example
-Title: "Example Net Effect"
-Description: "Example of a net effect"
+Title: "Example Net Effect Estimate"
+Description: "Example of a net effect estimate"
 * name = "NetEffectExample"
 * status = #unknown
 * variableDefinition[outcome].intended = Reference(ExampleOutcome)

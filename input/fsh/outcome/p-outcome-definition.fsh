@@ -9,8 +9,7 @@ Description: "Description of the outcome element of a PICO construct that eviden
 * name 1..1 MS
 * handling 1..1 MS // continuous | dichotomous | ordinal | polychotomous
 * characteristic
-  * definition[x] only Reference or CodeableConcept
-  * definitionReference only Reference(ObservationDefinition)
+  * definition[x] only CodeableConcept
 * characteristic.exclude 1..1
 
 Instance: ExampleOutcome

@@ -9,31 +9,31 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
 * entry[guidelineCitation][+]
   * resource = COVID19IntensiveCareTreatmentGuidelineCitation
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline-citation"
-* entry[interventionPlan][+]
+* entry[recommendationPlan][+]
   * resource = COVID19VentilatedPatientsDexamethasoneApplicationPlan
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-plan-ventilated-patients"
-* entry[interventionPlan][+]
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-ventilated-patients"
+* entry[recommendationPlan][+]
   * resource = COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-plan-non-ventilated-patients"
-* entry[interventionActivity][+]
-  * resource = DexamethasoneApplicationActivityOral
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-activity-oral"
-* entry[interventionActivity][+]
-  * resource = DexamethasoneApplicationActivityIntravenous
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-activity-intravenous"
-* entry[interventionActivity][+]
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-non-ventilated-patients"
+* entry[recommendationAction][+]
+  * resource = DexamethasoneApplicationActionOral
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-oral"
+* entry[recommendationAction][+]
+  * resource = DexamethasoneApplicationActionIntravenous
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-intravenous"
+* entry[recommendationAction][+]
   * resource = NoDexamethasoneApplication
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/intervention-activity-no-application"
+  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-no-application"
 * entry[recommendationCitation][+]
   * resource = DexamethasoneRecommendationCitation
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation"
-* entry[populationGroup][+]
+* entry[recommendationPatientGroup][+]
   * resource = PopulationCriticallyIllCOVID19Patients
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/population-group-ventilated"
 * entry[PICOEvidenceVariable][+]
   * resource = PopulationCOVID19Ventilated
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated"
-* entry[populationGroup][+]
+* entry[recommendationPatientGroup][+]
   * resource = PopulationModeratelyIllCOVID19Patients
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/population-group-non-ventilated"
 * entry[PICOEvidenceVariable][+]
@@ -45,9 +45,6 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
 * entry[outcomeEvidence][+]
   * resource = DexamethasoneOutcomeMortality
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality"
-* entry[studyGroup][+]
-  * resource = StudyGroupSystemicCorticosteroidsCOVID19
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-group"
 * entry[PICOEvidenceVariable][+]
   * resource = StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
   * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria"

@@ -1,26 +1,26 @@
-[CPG Recommendation Justification]: StructureDefinition-cpg-recommendation-justification.html
+[Recommendation Justification]: StructureDefinition-recommendation-justification.html
 [Certainty of evidence rating]: StructureDefinition-certainty-of-evidence-rating.html
+[Eligibility Criteria]: StructureDefinition-eligibility-criteria.html
 [Clinical Practice Guideline]: StructureDefinition-guideline.html
 [Guideline Bundle]: StructureDefinition-guideline-bundle.html
 [Guideline Citation]: StructureDefinition-guideline-citation.html
 [Intervention Activity]: StructureDefinition-intervention-activity.html
+[Intervention Definition]: StructureDefinition-intervention-definition.html
 [Intervention Plan]: StructureDefinition-intervention-plan.html
 [Net Effect]: StructureDefinition-net-effect-evidence.html
+[Outcome Definition]: StructureDefinition-outcome-definition.html
 [Outcome Evidence]: StructureDefinition-outcome-evidence.html
-[Outcome]: StructureDefinition-outcome-evidence-variable.html
 [PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
-[Population Definition]: StructureDefinition-population-definition.html
-[Population]: StructureDefinition-population-evidence-variable.html
-[Population Group]: StructureDefinition-population-group.html
 [Recommendation Citation]: StructureDefinition-recommendation-citation.html
+[Recommendation Eligibility Criteria]: StructureDefinition-recommendation-eligibility-criteria.html
+[Recommendation Patient Group]: StructureDefinition-recommendation-patient-group.html
 [Study Citation]: StructureDefinition-study-citation.html
 [Study Eligibility Criteria]: StructureDefinition-study-eligibility-criteria.html
-[Study Group]: StructureDefinition-study-group.html
+
 [ArtifactAssessment Publication Status]: StructureDefinition-ceosys-extension-artifact-assessment-publication-status.html
 [ArtifactAssessment Version]: StructureDefinition-ceosys-extension-artifact-assessment-version.html
 [Composition Publication Status]: StructureDefinition-ceosys-extension-composition-publication-status.html
 [Composition Version]: StructureDefinition-ceosys-extension-composition-version.html
-
 [CEOsys Code System]: CodeSystem-ceosys-code-system.html
 [Characteristic Relationship Type]: CodeSystem-characteristic-relationship-type.html
 [Clinical Importance of Outcome]: CodeSystem-cs-clinical-importance.html
@@ -49,6 +49,8 @@
 [VS Rating Feasibility]: ValueSet-vs-rating-feasibility.html
 [VS Rating Preference And Values]: ValueSet-vs-rating-preference-and-values.html
 [VS Rating Resources]: ValueSet-vs-rating-resources.html
+[VS Rating Up Rating One Level]: ValueSet-vs-rating-uprating-one-level.html
+[VS Rating Up Rating Two Levels]: ValueSet-vs-rating-uprating-two-levels.html
 [VS Recommendation Strength]: ValueSet-ceosys-vs-recommendation-strength.html
 [VS Relative Effect Type]: ValueSet-vs-relative-effect-type.html
 

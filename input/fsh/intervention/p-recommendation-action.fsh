@@ -1,8 +1,8 @@
 // Author: Gregor Lichtner @glichtner
-Profile: InterventionActivity
+Profile: RecommendationAction
 Parent: ActivityDefinition
-Id: intervention-activity
-Title: "Intervention Activity"
+Id: recommendation-action
+Title: "Recommendation Action"
 Description: "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * insert profile("This profile is used to define the recommended activity for an intervention in the context of a clinical practice guideline recommendation.")
@@ -19,12 +19,12 @@ Description: "Definition of an activity that is part of an intervention in the c
 * dosage MS
 * bodySite MS
 
-Instance: ExampleInterventionActivity
-InstanceOf: intervention-activity
+Instance: ExampleRecommendationAction
+InstanceOf: recommendation-action
 Usage: #example
-Title: "Example Intervention Activity"
-Description: "An active intervention activity."
-* name = "InterventionActivity"
+Title: "Example Recommendation Action"
+Description: "An active recommendation action."
+* name = "RecommendationAction"
 * status = #active
-* url = "https://www.ceosys.de/fhir/canonical/intervention-activity/example"
+* url = "https://www.ceosys.de/fhir/canonical/recommendation-action/example"
 * code = $sct#182832007 "Procedure related to management of drug administration (procedure)"

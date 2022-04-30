@@ -1,14 +1,14 @@
 // Author: Gregor Lichtner @glichtner
-Profile: InterventionPlan
+Profile: RecommendationPlan
 Parent: PlanDefinition
-Id: intervention-plan
-Title: "Intervention Plan"
+Id: recommendation-plan
+Title: "Recommendation Plan"
 Description: "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation."
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * insert profile("This profile is used to define the recommended activities for an intervention in the context of a clinical practice guideline recommendation.")
 * subject[x] 1..1 MS
 * subject[x] only Reference
-* subjectReference only Reference(PopulationGroup)
+* subjectReference only Reference(RecommendationPatientGroup)
 * version 1..1 MS
 * name 1..1 MS
 * title 1..1
@@ -17,7 +17,7 @@ Description: "Definition of an activity that is part of an intervention in the c
 * action 1..*
   * definition[x] 1..1 MS
   * definition[x] only canonical
-  * definitionCanonical only Canonical(InterventionActivity or ObservationDefinition) // TODO: Profile ObservationDefinition?
+  * definitionCanonical only Canonical(RecommendationAction)
 * relatedArtifact 0..*
 * relatedArtifact ^slicing.discriminator.type = #value
 * relatedArtifact ^slicing.discriminator.path = "classifier"
@@ -31,7 +31,7 @@ Description: "Definition of an activity that is part of an intervention in the c
   * classifier 1..1
   * classifier = $cs-ceosys#recommendation-rating "Recommendation rating"
   * resourceReference 1..1 MS
-  * resourceReference only Reference(CPGRecommendationJustification)
+  * resourceReference only Reference(RecommendationJustification)
 * relatedArtifact[recommendationCitation]
   * type = $cs-related-artifact-type#citation
   * classifier 1..1
@@ -45,20 +45,20 @@ Description: "Definition of an activity that is part of an intervention in the c
   * resourceReference 1..1 MS
   * resourceReference only Reference(GuidelineCitation)
 
-Instance: ExampleInterventionPlan
-InstanceOf: intervention-plan
+Instance: ExampleRecommendationPlan
+InstanceOf: recommendation-plan
 Usage: #example
-Title: "Example Intervention plan"
-Description: "An active intervention plan."
-* name = "InterventionPlan"
-* title = "Intervention Plan"
+Title: "Example Recommendation plan"
+Description: "An active recommendation plan."
+* name = "RecommendationPlan"
+* title = "Recommendation Plan"
 * version = "1.0"
 * date = "2022-02-14"
 * status = #active
-* description = "Example Intervention Plan"
-* subjectReference = Reference(ExamplePopulationGroup)
+* description = "Example Recommendation Plan"
+* subjectReference = Reference(ExampleRecommendationPatientGroup)
 * action[+]
-  * definitionCanonical = Canonical(ExampleInterventionActivity)
+  * definitionCanonical = Canonical(ExampleRecommendationAction)
 * relatedArtifact[recommendationJustification].resourceReference = Reference(ExampleRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(ExampleRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(ExampleGuidelineCitation)

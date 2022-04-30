@@ -2,7 +2,7 @@
 /* Population */
 /**************/
 Instance: PopulationCriticallyIllCOVID19Patients
-InstanceOf: population-group
+InstanceOf: recommendation-patient-group
 Usage: #example
 Title: "Population: Critically Ill COVID-19 Patients"
 Description: "Population for guideline from https://app.magicapp.org/#/guidelines / 5691"
@@ -14,7 +14,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * characteristic[=].exclude = false
 
 Instance: PopulationModeratelyIllCOVID19Patients
-InstanceOf: population-group
+InstanceOf: recommendation-patient-group
 Usage: #example
 Title: "Population: Moderately Ill COVID-19 Patients"
 Description: "Population for guideline from https://app.magicapp.org/#/guidelines / 5691"
@@ -29,7 +29,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 /* Population Groups */
 /*********************/
 Instance: PopulationCOVID19Ventilated
-InstanceOf: population-evidence-variable
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
 Title: "Population: COVID19 Ventilated"
 Description: "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, Ventilated"
@@ -77,7 +77,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * characteristic[=].exclude = false
 
 Instance: PopulationCOVID19NonVentilated
-InstanceOf: population-evidence-variable
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
 Title: "Population: COVID19 Non-Ventilated"
 Description: "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated"

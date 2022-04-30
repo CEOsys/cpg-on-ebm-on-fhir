@@ -4,7 +4,7 @@ Usage: #example
 Title: "Certainty of Evidence for outcome: mortality of Dexamethasone application"
 Description: "Certainty of evidence rating for mortality outcome of Dexamethasonse application recommendation"
 * date = "2020-01-03"
-* extension[status].valueCode = #active
+* extension[publicationStatus].valueCode = #active
 * extension[version].valueString = "v4.0"
 * artifactReference = Reference(DexamethasoneOutcomeMortality)
 * content[certaintyOfEvidence].classifier = $cs-certainty-rating#moderate "Moderate quality"
@@ -25,7 +25,7 @@ Description: "Mortality Outcome for Dexamethasone application in hospitalized CO
 * studyType = $cs-study-type#RCT
 * synthesisType = $cs-synthesis-type#NotApplicable
 * relatedArtifact[studyCitation].resourceReference = Reference(SystemicCorticosteroidsForTheTreatmentOfCOVID19)
-* variableDefinition[population].observed = Reference(StudyGroupSystemicCorticosteroidsCOVID19)
+* variableDefinition[population].observed = Reference(StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19)
 * variableDefinition[outcome].observed = Reference(OutcomeAllCauseMortality)
 * statistic[relativeEffect]
   * statisticType = $cs-statistic-type#C93152	"Relative Risk"
@@ -38,15 +38,6 @@ Description: "Mortality Outcome for Dexamethasone application in hospitalized CO
     * numberOfParticipants = 7930
 * statistic[baselineRisk].quantity = 245 '1/1000'
 
-Instance: StudyGroupSystemicCorticosteroidsCOVID19
-InstanceOf: study-group
-Usage: #example
-Title: "Study group for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)"
-Description: "Study group for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)."
-* characteristic
-  * valueReference = Reference(StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19)
-* characteristic[=].exclude = false // no need to exclude outcomes
-
 Instance: StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
 InstanceOf: study-eligibility-criteria
 Usage: #example
@@ -55,7 +46,7 @@ Description: "Study eligibility criteria for Systemic corticosteroids plus stand
 * name = "StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"
 * status = #active
 * characteristic[+].defByTypeAndValue
-  * typeCodeableConcept.coding[sct] = $sctIntl2021#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+  * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
   * valueBoolean = true
 * characteristic[=].exclude = false
 
