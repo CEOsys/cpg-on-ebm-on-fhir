@@ -116,51 +116,52 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
 // characteristic-KLAMMER BEGINN all-of
 * characteristic[+].defByCombination
 * code = #all-of
-  * characteristic[+]
-    * linkId = "covid19"
-    * defByTypeAndValue
-      * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
-      * valueBoolean = true
-  * characteristic[=].exclude = false
-  * characteristic[+]
-    * linkId = "venous thrombosis"
-    * defByTypeAndValue
-      * typeCodeableConcept.coding[cochrane] = $cochrane-ld#r4hp38hngwwj "Venous Thrombosis"
-      * valueBoolean = true
-  * characteristic[=].exclude = true
-* characteristic[=].exclude = false
-
-// include patients with any of the following contraindications (same as above)
-
-* characteristic[+].defByCombination
-  * code = #any-of
-  * characteristic[+]
-      * linkId = "hit2"
+  * characteristic[+].defByCombination
+  * code = #all-of
+    * characteristic[+]
+      * linkId = "covid19"
       * defByTypeAndValue
-        * typeCodeableConcept.coding[cochrane] = $sct#111588002 "Heparin-induced thrombocytopenia with thrombosis (disorder)"
+        * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
         * valueBoolean = true
     * characteristic[=].exclude = false
-  * characteristic[+]
-    * linkId = "heparin_allergy"
-    * defByTypeAndValue
-      * typeCodeableConcept.coding[cochrane] = $sct#294872001 "Allergy to heparin (finding)"
-      * valueBoolean = true
-    * characteristic[=].exclude = false
-  * characteristic[+]
-    * linkId = "heparinoid_allergy"
-    * defByTypeAndValue
-      * typeCodeableConcept.coding[cochrane] = $sct#294876003 "Allergy to heparinoid (finding)"
-      * valueBoolean = true
-    * characteristic[=].exclude = false
-  * characteristic[+]
-    * linkId = "thrombocytopenia"
-    * defByTypeAndValue
-      * typeCodeableConcept.coding[cochrane] = $sct#302215000 " Thrombocytopenic disorder (disorder)"
-      * valueBoolean = true
-    * characteristic[=].exclude = false
+    * characteristic[+]
+      * linkId = "venous thrombosis"
+      * defByTypeAndValue
+        * typeCodeableConcept.coding[cochrane] = $cochrane-ld#r4hp38hngwwj "Venous Thrombosis"
+        * valueBoolean = true
+    * characteristic[=].exclude = true
+  * characteristic[=].exclude = false
+
+  // include patients with any of the following contraindications (same as above)
+
+  * characteristic[+].defByCombination
+    * code = #any-of
+    * characteristic[+]
+        * linkId = "hit2"
+        * defByTypeAndValue
+          * typeCodeableConcept.coding[cochrane] = $sct#111588002 "Heparin-induced thrombocytopenia with thrombosis (disorder)"
+          * valueBoolean = true
+      * characteristic[=].exclude = false
+    * characteristic[+]
+      * linkId = "heparin_allergy"
+      * defByTypeAndValue
+        * typeCodeableConcept.coding[cochrane] = $sct#294872001 "Allergy to heparin (finding)"
+        * valueBoolean = true
+      * characteristic[=].exclude = false
+    * characteristic[+]
+      * linkId = "heparinoid_allergy"
+      * defByTypeAndValue
+        * typeCodeableConcept.coding[cochrane] = $sct#294876003 "Allergy to heparinoid (finding)"
+        * valueBoolean = true
+      * characteristic[=].exclude = false
+    * characteristic[+]
+      * linkId = "thrombocytopenia"
+      * defByTypeAndValue
+        * typeCodeableConcept.coding[cochrane] = $sct#302215000 " Thrombocytopenic disorder (disorder)"
+        * valueBoolean = true
+      * characteristic[=].exclude = false
+  * characteristic[=].exclude = false
 * characteristic[=].exclude = false
-// characteristic-KLAMMER ENDE!
-  // tabbed 
 
 Instance: PopGroupHospitalisedCOVID19PatientsWITHThrombosis
 InstanceOf: population-evidence-variable
