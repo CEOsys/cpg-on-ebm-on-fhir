@@ -1,8 +1,8 @@
-/**********************/
-/* Intervention Plans */
-/**********************/
-Instance: AntithromboticLWMHProphylaxisInHospitalisedCOVID19PatientsInterventionPlan
-InstanceOf: intervention-plan
+/************************/
+/* Recommendation Plans */
+/************************/
+Instance: AntithromboticLWMHProphylaxisInHospitalisedCOVID19PatientsRecommendationPlan
+InstanceOf: recommendation-plan
 Usage: #example
 Title: "Antithrombotic prophylaxis with LWMH"
 Description: "Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 patients"
@@ -23,8 +23,8 @@ Description: "Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 pati
 * relatedArtifact[recommendationCitation].resourceReference = Reference(AntithromboticProphylaxisRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
-Instance: AntithromboticFondaparinuxProphylaxisInHospitalisedCOVID19PatientsInterventionPlan
-InstanceOf: intervention-plan
+Instance: AntithromboticFondaparinuxProphylaxisInHospitalisedCOVID19PatientsRecommendationPlan
+InstanceOf: recommendation-plan
 Usage: #example
 Title: "Antithrombotic prophylaxis with Fondaparinux"
 Description: "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients"
@@ -43,8 +43,8 @@ Description: "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID
 * relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
 
-Instance: NoAntithromboticProphylaxisInHospitalisedCOVID19PatientsInterventionPlan
-InstanceOf: intervention-plan
+Instance: NoAntithromboticProphylaxisInHospitalisedCOVID19PatientsRecommendationPlan
+InstanceOf: recommendation-plan
 Usage: #example
 Title: "No antithrombotic prophylaxis in patients with thrombosis"
 Description: "No antithrombotic prophylaxis in patients with thrombosis"
@@ -79,16 +79,16 @@ Description: "Citation of Recommendation for antithrombotic prophylaxis in COVID
   * version.value = "v7.0"
   * currentState = $cs-cited-artifact-status-type#active "Active"
 
-/*************************/
-/* Intervention Activity */
-/*************************/
+/**********************/
+/* Recommended Action */
+/**********************/
 Instance: AntithromboticProphylaxisLWMHSubcutaneous
-InstanceOf: intervention-activity
+InstanceOf: recommendation-action
 Usage: #example
 Title: "Antithrombotic prophylaxis with LWMH"
 Description: "Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 patients (in absence of contraindications for LWMH)"
 * name = "ProphylacticLWMHApplicationActivity"
-* url = "https://www.ceosys.de/fhir/canonical/intervention-activity/TODO_activity_01"
+* url = "https://www.ceosys.de/fhir/canonical/recommendation-action/TODO_activity_01"
 // URL is needed (!!!) because canonical Reference!
 * status = #active
 // * code = $sct#182832007 "Procedure related to management of drug administration (procedure)"
@@ -103,12 +103,12 @@ Description: "Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 pati
 // low dose heparins, i.e., also UFH (unfractioned heparine, intravenously)
 
 Instance: AntithromboticProphylaxisFondaparinuxSubcutaneous
-InstanceOf: intervention-activity
+InstanceOf: recommendation-action
 Usage: #example
 Title: "Antithrombotic prophylaxis with Fondaparinux"
 Description: "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients (when contraindications for LWMH exist)"
 * name = "ProphylacticFondaparinuxApplicationActivity"
-// * url = "https://www.ceosys.de/fhir/canonical/intervention-activity/dexamethasone-application-intravenous"
+// * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous"
 * status = #active
 * code = $sct#182832007 "Procedure related to management of drug administration (procedure)"
 * productCodeableConcept = $sct#779321003 "parenteral Fondaparinux (substance)"
@@ -124,12 +124,12 @@ Description: "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID
 
 
 Instance: NoAntithromboticProphylaxis
-InstanceOf: intervention-activity
+InstanceOf: recommendation-action
 Usage: #example
 Title: "No Antithrombotic prophylaxis in patients with thrombosis"
 Description: "No antithrombotic prophylaxis in patients with thrombosis"
 * name = "NoAntithromboticProphylaxisApplicationActivity"
-// * url = "https://www.ceosys.de/fhir/canonical/intervention-activity/dexamethasone-application-intravenous"
+// * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous"
 * status = #active
 * code = $sct#421728001 "Administration of prophylactic anticoagulant (procedure)"
 * doNotPerform = true
