@@ -1,22 +1,20 @@
-[Recommendation Justification]: StructureDefinition-recommendation-justification.html
-[Certainty of evidence rating]: StructureDefinition-certainty-of-evidence-rating.html
+[Certainty of Evidence Rating]: StructureDefinition-certainty-of-evidence-rating.html
 [Eligibility Criteria]: StructureDefinition-eligibility-criteria.html
 [Clinical Practice Guideline]: StructureDefinition-guideline.html
 [Guideline Bundle]: StructureDefinition-guideline-bundle.html
 [Guideline Citation]: StructureDefinition-guideline-citation.html
-[Intervention Activity]: StructureDefinition-intervention-activity.html
 [Intervention Definition]: StructureDefinition-intervention-definition.html
-[Intervention Plan]: StructureDefinition-intervention-plan.html
-[Net Effect]: StructureDefinition-net-effect-evidence.html
+[Net Effect Estimate]: StructureDefinition-net-effect-estimate.html
 [Outcome Definition]: StructureDefinition-outcome-definition.html
 [Outcome Evidence]: StructureDefinition-outcome-evidence.html
 [PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
+[Recommendation Action]: StructureDefinition-recommendation-action.html
 [Recommendation Citation]: StructureDefinition-recommendation-citation.html
 [Recommendation Eligibility Criteria]: StructureDefinition-recommendation-eligibility-criteria.html
-[Recommendation Patient Group]: StructureDefinition-recommendation-patient-group.html
+[Recommendation Justification]: StructureDefinition-recommendation-justification.html
+[Recommendation Plan]: StructureDefinition-recommendation-plan.html
 [Study Citation]: StructureDefinition-study-citation.html
 [Study Eligibility Criteria]: StructureDefinition-study-eligibility-criteria.html
-
 [ArtifactAssessment Publication Status]: StructureDefinition-ceosys-extension-artifact-assessment-publication-status.html
 [ArtifactAssessment Version]: StructureDefinition-ceosys-extension-artifact-assessment-version.html
 [Composition Publication Status]: StructureDefinition-ceosys-extension-composition-publication-status.html
@@ -28,8 +26,8 @@
 [Cochrane PICO Ontology]: CodeSystem-cochrane-pico-ontology.html
 [Evidence To Decision Certainty Rating]: CodeSystem-cs-evidence-to-decision-certainty-rating.html
 [Evidence To Decision Certainty type]: CodeSystem-cs-evidence-to-decision-certainty-type.html
-[Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
 [Guideline Stage Classification]: CodeSystem-cs-guideline-stage-classification.html
+[Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
 
 [VS Characteristic Relationship Type]: ValueSet-characteristic-relationship-type.html
 [VS Cochrane PICO]: ValueSet-cochrane-pico.html

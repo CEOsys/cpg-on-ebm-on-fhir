@@ -6,15 +6,14 @@
 ### Population
 #### Recommendation
 {% include profile-reference.md name='Recommendation Eligibility Criteria' %}
-{% include profile-reference.md name='Recommendation Patient Group' %}
 
 #### Studies
 {% include profile-reference.md name='Study Eligibility Criteria' %}
 
 ### Intervention
 #### Recommendation
-{% include profile-reference.md name='Intervention Plan' %}
-{% include profile-reference.md name='Intervention Activity' %}
+{% include profile-reference.md name='Recommendation Plan' %}
+{% include profile-reference.md name='Recommendation Action' %}
 
 #### Studies
 {% include profile-reference.md name='Intervention Definition' %}
@@ -24,7 +23,7 @@
 {% include profile-reference.md name='Outcome Evidence' %}
 
 ### Net Effect
-{% include profile-reference.md name='Net Effect' %}
+{% include profile-reference.md name='Net Effect Estimate' %}
 
 ### Other
 {% include profile-reference.md name='Guideline Bundle' %}
