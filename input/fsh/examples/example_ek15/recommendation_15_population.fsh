@@ -58,7 +58,7 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
 * characteristic[+]
   * linkId = "covid19"
   * defByTypeAndValue
-    * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
+    * typeCodeableConcept.coding[snomed] = $sct#840539006 "COVID-19"
     * valueBoolean = true
 * characteristic[=].exclude = false
 
@@ -66,7 +66,7 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
 * characteristic[+]
   * linkId = "venous thrombosis"
   * defByTypeAndValue
-    * typeCodeableConcept.coding[cochrane] = $cochrane-ld#r4hp38hngwwj "Venous Thrombosis"
+    * typeCodeableConcept.coding[snomed] = $sct#111293003 "Venous Thrombosis"
     * valueBoolean = true
 * characteristic[=].exclude = true
 
@@ -121,13 +121,13 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
     * characteristic[+]
       * linkId = "covid19"
       * defByTypeAndValue
-        * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
+        * typeCodeableConcept.coding[snomed] = $sct#840539006 "COVID-19"
         * valueBoolean = true
     * characteristic[=].exclude = false
     * characteristic[+]
       * linkId = "venous thrombosis"
       * defByTypeAndValue
-        * typeCodeableConcept.coding[cochrane] = $cochrane-ld#r4hp38hngwwj "Venous Thrombosis"
+        * typeCodeableConcept.coding[snomed] = $sct#111293003 "Venous Thrombosis"
         * valueBoolean = true
     * characteristic[=].exclude = true
   * characteristic[=].exclude = false
@@ -139,25 +139,25 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
     * characteristic[+]
         * linkId = "hit2"
         * defByTypeAndValue
-          * typeCodeableConcept.coding[cochrane] = $sct#111588002 "Heparin-induced thrombocytopenia with thrombosis (disorder)"
+          * typeCodeableConcept.coding[snomed] = $sct#111588002 "Heparin-induced thrombocytopenia with thrombosis (disorder)"
           * valueBoolean = true
       * characteristic[=].exclude = false
     * characteristic[+]
       * linkId = "heparin_allergy"
       * defByTypeAndValue
-        * typeCodeableConcept.coding[cochrane] = $sct#294872001 "Allergy to heparin (finding)"
+        * typeCodeableConcept.coding[snomed] = $sct#294872001 "Allergy to heparin (finding)"
         * valueBoolean = true
       * characteristic[=].exclude = false
     * characteristic[+]
       * linkId = "heparinoid_allergy"
       * defByTypeAndValue
-        * typeCodeableConcept.coding[cochrane] = $sct#294876003 "Allergy to heparinoid (finding)"
+        * typeCodeableConcept.coding[snomed] = $sct#294876003 "Allergy to heparinoid (finding)"
         * valueBoolean = true
       * characteristic[=].exclude = false
     * characteristic[+]
       * linkId = "thrombocytopenia"
       * defByTypeAndValue
-        * typeCodeableConcept.coding[cochrane] = $sct#302215000 " Thrombocytopenic disorder (disorder)"
+        * typeCodeableConcept.coding[snomed] = $sct#302215000 " Thrombocytopenic disorder (disorder)"
         * valueBoolean = true
       * characteristic[=].exclude = false
   * characteristic[=].exclude = false
@@ -180,13 +180,13 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
   * characteristic[+]
     * linkId = "covid19"
     * defByTypeAndValue
-      * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
+      * typeCodeableConcept.coding[snomed] = $sct#840539006 "COVID-19"
       * valueBoolean = true
   * characteristic[=].exclude = false
   * characteristic[+]
     * linkId = "venous thrombosis"
     * defByTypeAndValue
-      * typeCodeableConcept.coding[cochrane] = $cochrane-ld#r4hp38hngwwj "Venous Thrombosis"
+      * typeCodeableConcept.coding[snomed] = $sct#111293003 "Venous Thrombosis"
       * valueBoolean = true
   * characteristic[=].exclude = false
 * characteristic[=].exclude = false
