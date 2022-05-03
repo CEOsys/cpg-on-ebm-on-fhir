@@ -7,8 +7,8 @@ Description: "Definition of an activity that is part of an intervention in the c
 * insert metadata(2021-12-03, #draft, 0.1.0)
 * insert profile("This profile is used to define the recommended activities for an intervention in the context of a clinical practice guideline recommendation.")
 * subject[x] 1..1 MS
-* subject[x] only Reference
-* subjectReference only Reference(RecommendationPatientGroup)
+* subject[x] only canonical
+* subjectCanonical only Canonical(RecommendationEligibilityCriteria)
 * version 1..1 MS
 * name 1..1 MS
 * title 1..1
@@ -56,7 +56,7 @@ Description: "An active recommendation plan."
 * date = "2022-02-14"
 * status = #active
 * description = "Example Recommendation Plan"
-* subjectReference = Reference(ExampleRecommendationPatientGroup)
+* subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
 * action[+]
   * definitionCanonical = Canonical(ExampleRecommendationAction)
 * relatedArtifact[recommendationJustification].resourceReference = Reference(ExampleRecommendationJustification)

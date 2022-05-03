@@ -12,7 +12,7 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. o
 * date = "2021-12-12"
 * status = #active
 * description = "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"
-* subjectReference = Reference(PopulationCriticallyIllCOVID19Patients)
+* subjectCanonical = Canonical(PopulationCOVID19Ventilated)
 * action[+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActionOral)
   * selectionBehavior = #exactly-one
@@ -34,7 +34,7 @@ Description: "No application of Dexamethasone for non-ventilated COVID-19 patien
 * date = "2021-12-12"
 * status = #active
 * description = "No Dexamaethasone Application for non-ventilated COVID19 patients"
-* subjectReference = Reference(PopulationModeratelyIllCOVID19Patients)
+* subjectCanonical = Canonical(PopulationCOVID19NonVentilated)
 * action[+]
   * definitionCanonical = Canonical(NoDexamethasoneApplication)
   * selectionBehavior = #exactly-one

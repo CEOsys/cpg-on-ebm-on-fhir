@@ -1,33 +1,6 @@
 /**************/
 /* Population */
 /**************/
-Instance: PopulationCriticallyIllCOVID19Patients
-InstanceOf: recommendation-patient-group
-Usage: #example
-Title: "Population: Critically Ill COVID-19 Patients"
-Description: "Population for guideline from https://app.magicapp.org/#/guidelines / 5691"
-* name = "Population_CriticallyIll_COVID19_Patients"
-* actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopulationCOVID19Ventilated)
-* characteristic[=].exclude = false
-
-Instance: PopulationModeratelyIllCOVID19Patients
-InstanceOf: recommendation-patient-group
-Usage: #example
-Title: "Population: Moderately Ill COVID-19 Patients"
-Description: "Population for guideline from https://app.magicapp.org/#/guidelines / 5691"
-* name = "Population_ModeratlyIll_COVID19_Patients"
-* actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopulationCOVID19NonVentilated)
-* characteristic[=].exclude = false
-
-/*********************/
-/* Population Groups */
-/*********************/
 Instance: PopulationCOVID19Ventilated
 InstanceOf: recommendation-eligibility-criteria
 Usage: #example
@@ -37,6 +10,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * identifier.system = $ceosys
 * status = #active
 * name = "Population_COVID19_Ventilated"
+* url = "https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated"
 * description = "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, Ventilated"
 * characteristic[+]
   * linkId = "covid19"
@@ -85,6 +59,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * identifier.system = $ceosys
 * status = #active
 * name = "Population_COVID19_NonVentilated"
+* url = "https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated"
 * description = "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated"
 * characteristic[+]
   * linkId = "covid19"
