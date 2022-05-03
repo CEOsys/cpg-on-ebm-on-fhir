@@ -95,30 +95,18 @@ definition:
     name: Guideline Citation
     reference:
       reference: StructureDefinition/guideline-citation
-  - description: Definition of an activity that is part of an intervention in the
-      context of a clinical practice guideline recommendation.
-    exampleBoolean: false
-    name: Intervention Activity
-    reference:
-      reference: StructureDefinition/intervention-activity
   - description: Description of the intervention element of a PICO construct that
       evidence is about.
     exampleBoolean: false
     name: Intervention Definition
     reference:
       reference: StructureDefinition/intervention-definition
-  - description: Definition of an activity that is part of an intervention in the
-      context of a clinical practice guideline recommendation.
-    exampleBoolean: false
-    name: Intervention Plan
-    reference:
-      reference: StructureDefinition/intervention-plan
   - description: The net effect is the overall expected effect of a recommendation,
       calculated by an importance-weighted average of the individual outcome effects
     exampleBoolean: false
-    name: Net Effect
+    name: Net Effect Estimate
     reference:
-      reference: StructureDefinition/net-effect-evidence
+      reference: StructureDefinition/net-effect-estimate
   - description: Description of the outcome element of a PICO construct that evidence
       is about.
     exampleBoolean: false
@@ -138,6 +126,12 @@ definition:
     name: PICO Evidence Variable
     reference:
       reference: StructureDefinition/pico-evidence-variable
+  - description: Definition of an activity that is part of an intervention in the
+      context of a clinical practice guideline recommendation.
+    exampleBoolean: false
+    name: Recommendation Action
+    reference:
+      reference: StructureDefinition/recommendation-action
   - description: Citation of a clinical practice guideline recommendation
     exampleBoolean: false
     name: Recommendation Citation
@@ -154,12 +148,12 @@ definition:
     name: Recommendation Justification
     reference:
       reference: StructureDefinition/recommendation-justification
-  - description: Characterization of a group of patients or subjects for which a clinical
-      guideline recommends a treatment or intervention.
+  - description: Definition of an activity that is part of an intervention in the
+      context of a clinical practice guideline recommendation.
     exampleBoolean: false
-    name: Recommendation Patient Group
+    name: Recommendation Plan
     reference:
-      reference: StructureDefinition/recommendation-patient-group
+      reference: StructureDefinition/recommendation-plan
   - description: Citation of a study from which evidence is determined.
     exampleBoolean: false
     name: Study Citation
@@ -342,11 +336,6 @@ definition:
     name: Evidence To Decision Certainty type
     reference:
       reference: CodeSystem/cs-evidence-to-decision-certainty-type
-  - description: Strength of a clinical guideline recommendation.
-    exampleBoolean: false
-    name: Recommendation Strength
-    reference:
-      reference: CodeSystem/ceosys-cs-recommendation-strength
   - description: "As part of the project planning for the creation or updating of\
       \ a guideline,\n    a decision should be made at an early stage about the planned\
       \ level classification (\"S classification\") according to the AWMF's system\
@@ -365,6 +354,11 @@ definition:
     name: Guideline Stage Classification
     reference:
       reference: CodeSystem/cs-guideline-stage-classification
+  - description: Strength of a clinical guideline recommendation.
+    exampleBoolean: false
+    name: Recommendation Strength
+    reference:
+      reference: CodeSystem/ceosys-cs-recommendation-strength
   - description: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
       (AWMF) e.V
     exampleBoolean: true
@@ -388,28 +382,28 @@ definition:
     reference:
       reference: Citation/COVID19IntensiveCareTreatmentGuidelineCitation
   - description: No application of Dexamethasone for non-ventilated COVID-19 patients
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan
     name: No dexamethasone application for non-ventilated COVID-19 patients
     reference:
       reference: PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days p.o.
       or i.v. for ventilated COVID-19 patients'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan
     name: Dexamethasone Application
     reference:
       reference: PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (intravenous
       route)'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
     name: Dexamethasone Application (Intravenous)
     reference:
-      reference: ActivityDefinition/DexamethasoneApplicationActivityIntravenous
+      reference: ActivityDefinition/DexamethasoneApplicationActionIntravenous
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (oral
       route)'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
     name: Dexamethasone Application (Oral)
     reference:
-      reference: ActivityDefinition/DexamethasoneApplicationActivityOral
+      reference: ActivityDefinition/DexamethasoneApplicationActionOral
   - description: Mortality Outcome for Dexamethasone application in hospitalized COVID-19
       patients
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence
@@ -448,21 +442,11 @@ definition:
     name: Example Intervention
     reference:
       reference: EvidenceVariable/ExampleIntervention
-  - description: An active intervention activity.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
-    name: Example Intervention Activity
+  - description: Example of a net effect estimate
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate
+    name: Example Net Effect Estimate
     reference:
-      reference: ActivityDefinition/ExampleInterventionActivity
-  - description: An active intervention plan.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-plan
-    name: Example Intervention plan
-    reference:
-      reference: PlanDefinition/ExampleInterventionPlan
-  - description: Example of a net effect
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-evidence
-    name: Example Net Effect
-    reference:
-      reference: Evidence/ExampleNetEffect
+      reference: Evidence/ExampleNetEffectEstimate
   - description: Example of a organization resource.
     exampleBoolean: true
     name: Example Organization
@@ -478,6 +462,11 @@ definition:
     name: Example Outcome Evidence
     reference:
       reference: Evidence/ExampleOutcomeEvidence
+  - description: An active recommendation action.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
+    name: Example Recommendation Action
+    reference:
+      reference: ActivityDefinition/ExampleRecommendationAction
   - description: Example of a Citation of a clinical practice guideline recommendation
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
     name: Example Recommendation Citation
@@ -494,11 +483,11 @@ definition:
     name: Example Recommendation Justification
     reference:
       reference: ArtifactAssessment/ExampleRecommendationJustification
-  - description: 'Example of a population group: COVID-19 patients.'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-patient-group
-    name: Example Population Group
+  - description: An active recommendation plan.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan
+    name: Example Recommendation plan
     reference:
-      reference: Group/ExampleRecommendationPatientGroup
+      reference: PlanDefinition/ExampleRecommendationPlan
   - description: Example Study Citation
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
     name: Example Study Citation
@@ -520,7 +509,7 @@ definition:
     reference:
       reference: Bundle/GuidelineRecommendationExample
   - description: No Application of Dexamethasone
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-activity
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
     name: No Dexamethasone Application
     reference:
       reference: ActivityDefinition/NoDexamethasoneApplication
@@ -546,18 +535,6 @@ definition:
     name: 'Population: COVID19 Ventilated'
     reference:
       reference: EvidenceVariable/PopulationCOVID19Ventilated
-  - description: Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5691
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-patient-group
-    name: 'Population: Critically Ill COVID-19 Patients'
-    reference:
-      reference: Group/PopulationCriticallyIllCOVID19Patients
-  - description: Population for guideline from https://app.magicapp.org/#/guidelines
-      / 5691
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-patient-group
-    name: 'Population: Moderately Ill COVID-19 Patients'
-    reference:
-      reference: Group/PopulationModeratelyIllCOVID19Patients
   - description: Study eligibility criteria for Systemic corticosteroids plus standard
       care vs. standard care (plus/minus placebo)
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria
