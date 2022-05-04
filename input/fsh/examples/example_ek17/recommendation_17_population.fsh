@@ -2,53 +2,17 @@
 /* Population */
 /**************/
 Instance: PopHospitalisedNonICUCOVID19PatientsWOThrombosisWITHHighRisk
-InstanceOf: population-group
-Usage: #example
-Title: "Population: Rec17EK, Hospitalised COVID-19 patients without the need for intensive care therapy, without venous thrombosis, considered high-risk for developing venous thrombosis"
-Description: "Hospitalised COVID-19 patients without the need for intensive care therapy, without venous thrombosis, considered high-risk for developing venous thrombosis"
-* name = "HospitalisedNonICUCOVID19PatientsWOThrombosisWITHHighRisk"
-* actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopGroupHospitalisedNonICUCOVID19PatientsWOThrombosisWITHHighRisk)
-* characteristic[=].exclude = false
-// extremely difficult to model, as "high-risk" is not very specific...
-
-Instance: PopHospitalisedNonICUCOVID19PatientsWOThrombosisWOHighRisk
-InstanceOf: population-group
-Usage: #example
-Title: "Population: Rec17EK, Hospitalised COVID-19 patients without the need for intensive care therapy, without venous thrombosis, NOT considered high-risk for developing venous thrombosis"
-Description: "Hospitalised COVID-19 patients without the need for intensive care therapy, without venous thrombosis, NOT considered high-risk for developing venous thrombosis"
-* name = "HospitalisedNonICUCOVID19PatientsWOThrombosisWOHighRisk"
-* actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopGroupHospitalisedNonICUCOVID19PatientsWOThrombosisWOHighRisk)
-* characteristic[=].exclude = false
-
-Instance: PopHospitalisedCOVID19PatientsWITHThrombosis
-InstanceOf: population-group
-Usage: #example
-Title: "Population: Hospitalised COVID-19 Patients with (venous) thrombosis"
-Description: "Hospitalised COVID-19 Patients with (venous) thrombosis"
-* name = "HospitalisedCOVID19PatientsWITHThrombosis"
-* actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopGroupHospitalisedCOVID19PatientsWITHThrombosis)
-* characteristic[=].exclude = false
-// possible duplicate with other recommendations
-// I've included this population here, as of now, we don't really know if we'll have one big "population definition" file in the end, right?
-
-
-/*********************/
-/* Population Groups */
-/*********************/
-Instance: PopGroupHospitalisedNonICUCOVID19PatientsWOThrombosisWITHHighRisk
-InstanceOf: population-evidence-variable
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
 Title: "Population: Rec17EK, Hospitalised COVID-19 patients without the need for intensive care therapy, without venous thrombosis, considered high-risk for developing venous thrombosis"
 Description: "Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: without the need for intensive care therapy, without venous thrombosis, considered high-risk for developing venous thrombosis"
+* name = "HospitalisedNonICUCOVID19PatientsWOThrombosisWITHHighRisk"
+* actual = false
+// * characteristic[+]
+//   * code = $cochrane-pico#Population
+// * characteristic[=].exclude = false
+// removed, as in ek15...
+// extremely difficult to model, as "high-risk" is not very specific...
 * identifier.value = "WOThrombosisWITHHighRisk"
 // difficult decision, this is a suggestion
 * identifier.system = $ceosys
@@ -99,21 +63,29 @@ Description: "Population for recommendation 17 from guideline from https://www.a
 * characteristic[=].exclude = false
 
 
-Instance: PopGroupHospitalisedCOVID19PatientsWOVenousThrombosisWITHCI
-InstanceOf: population-evidence-variable
+
+
+
+
+Instance: PopHospitalisedNonICUCOVID19PatientsWOThrombosisWOHighRisk
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
-Title: "Population: Hospitalised COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
-Description: "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
+Title: "Population: Rec17EK, Hospitalised COVID-19 patients without the need for intensive care therapy, without venous thrombosis, NOT considered high-risk for developing venous thrombosis"
+Description: "Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
+* name = "HospitalisedNonICUCOVID19PatientsWOThrombosisWOHighRisk"
+* actual = false
+// * characteristic[+]
+//   * code = $cochrane-pico#Population
+// * characteristic[=].exclude = false
+// removed, as in ek15...
+
 * identifier.value = "WOThrombosisWITHCI"
 * identifier.system = $ceosys
 // which values are actually allowed?
 * status = #active
 * name = "COVID19_patients_without_venous_thrombosis_with_contraindications"
-* description = "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
-
+* description = "Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
 // Include COVID-19 patients without thrombosis
-
-// characteristic-KLAMMER BEGINN all-of
 * characteristic[+].defByCombination
 * code = #all-of
   * characteristic[+].defByCombination
@@ -163,18 +135,27 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
   * characteristic[=].exclude = false
 * characteristic[=].exclude = false
 
-Instance: PopGroupHospitalisedCOVID19PatientsWITHThrombosis
-InstanceOf: population-evidence-variable
+
+Instance: PopHospitalisedCOVID19PatientsWITHThrombosis
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
-Title: "Population: Hospitalised COVID-19 patients with (venous) thrombosis"
-Description: "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients with (venous) thrombosis"
+Title: "Population: Hospitalised COVID-19 Patients with (venous) thrombosis"
+Description: "Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients with (venous) thrombosis"
+// possibly redundant, will we have one very large population definition file in the end? If yes, then better: "COVID-19 patients with thrombosis"
+* name = "HospitalisedCOVID19PatientsWITHThrombosis"
+* actual = false
+// * characteristic[+]
+//   * code = $cochrane-pico#Population
+// * characteristic[=].exclude = false
+// removed, as in ek15...
+
 * identifier.value = "WITHThrombosis"
 * identifier.system = $ceosys
 * status = #active
 * name = "COVID19_patients_with_venous_thrombosis"
 * description = "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients with (venous) thrombosis"
 
-// Include COVID-19 patients without thrombosis
+// Include COVID-19 patients with thrombosis
 * characteristic[+].defByCombination
 * code = #all-of
   * characteristic[+]
