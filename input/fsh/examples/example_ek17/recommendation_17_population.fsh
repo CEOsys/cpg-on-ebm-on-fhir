@@ -19,6 +19,7 @@ Description: "Population for recommendation 17 from guideline from https://www.a
 // which values are actually allowed?
 * status = #active
 * name = "COVID19_patients_NOT_ICU_without_venous_thrombosis_with_high_risk"
+* url = "https://www.ceosys.de/fhir/population/Population_Hospitalised_COVID19_WO_Thrombosis_WITH_Highrisk"
 * description = "Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: without the need for intensive care therapy, without venous thrombosis, considered high-risk for developing venous thrombosis"
 
 // Include patients with COVID-19 that are considered high-risk (here: ONLY high D-Dimer is counted as such!!!) and that are not treated on ICU currently
@@ -61,10 +62,6 @@ Description: "Population for recommendation 17 from guideline from https://www.a
     * typeCodeableConcept.coding[snomed] = $sct#111293003 "Venous thrombosis (disorder)"
     * valueBoolean = true
 * characteristic[=].exclude = false
-
-
-
-
 
 
 Instance: PopHospitalisedNonICUCOVID19PatientsWOThrombosisWOHighRisk
