@@ -2,52 +2,17 @@
 /* Population */
 /**************/
 Instance: PopHospitalisedCOVID19PatientsWOVenousThrombosisWOCI
-InstanceOf: population-group
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
 Title: "Population: Hospitalised COVID-19 patients without (venous) thrombosis and without contraindications to LWMH"
-Description: "Hospitalised COVID-19 patients without (venous) thrombosis and without contraindications to LWMH"
+Description: "Population for recommendation 15: Hospitalised COVID-19 patients without (venous) thrombosis and without contraindications to LWMH"
 * name = "HospitalisedCOVID19PatientsWOVenousThrombosisWOCI"
 * actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopGroupHospitalisedCOVID19PatientsWOVenousThrombosisWOCI)
-* characteristic[=].exclude = false
-
-Instance: PopHospitalisedCOVID19PatientsWOVenousThrombosisWITHCI
-InstanceOf: population-group
-Usage: #example
-Title: "Population: Hospitalised COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
-Description: "Hospitalised COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
-* name = "HospitalisedCOVID19PatientsWOVenousThrombosisWITHCI"
-* actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopGroupHospitalisedCOVID19PatientsWOVenousThrombosisWITHCI)
-* characteristic[=].exclude = false
-
-Instance: PopHospitalisedCOVID19PatientsWITHThrombosis
-InstanceOf: population-group
-Usage: #example
-Title: "Population: Hospitalised COVID-19 Patients with (venous) thrombosis"
-Description: "Hospitalised COVID-19 Patients with (venous) thrombosis"
-* name = "HospitalisedCOVID19PatientsWITHThrombosis"
-* actual = false
-* characteristic[+]
-  * code = $cochrane-pico#Population
-  * valueReference = Reference(PopGroupHospitalisedCOVID19PatientsWITHThrombosis)
-* characteristic[=].exclude = false
-
-
-/*********************/
-/* Population Groups */
-/*********************/
-Instance: PopGroupHospitalisedCOVID19PatientsWOVenousThrombosisWOCI
-InstanceOf: population-evidence-variable
-Usage: #example
-Title: "Population: Hospitalised COVID-19 patients without (venous) thrombosis and without contraindications to LWMH"
-Description: "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without (venous) thrombosis and without contraindications to LWMH"
+// * characteristic[+]
+//   * code = $cochrane-pico#Population
+// * characteristic[=].exclude = false
+//  do we need this characteristic anymore: $ochrane-pico#Population
 * identifier.value = "WOThrombosisWOCI"
-// difficult decision, this is a suggestion
 * identifier.system = $ceosys
 // which values are actually allowed?
 * status = #active
@@ -99,11 +64,18 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
     * characteristic[=].exclude = false
 * characteristic[=].exclude = true
 
-Instance: PopGroupHospitalisedCOVID19PatientsWOVenousThrombosisWITHCI
-InstanceOf: population-evidence-variable
+
+Instance: PopHospitalisedCOVID19PatientsWOVenousThrombosisWITHCI
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
 Title: "Population: Hospitalised COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
-Description: "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
+Description: "Population for recommendation 15: Hospitalised COVID-19 patients without (venous) thrombosis, existing contraindications to LWMH"
+* name = "HospitalisedCOVID19PatientsWOVenousThrombosisWITHCI"
+* actual = false
+// * characteristic[+]
+//   * code = $cochrane-pico#Population
+// * characteristic[=].exclude = false
+//  see above, still needed?
 * identifier.value = "WOThrombosisWITHCI"
 * identifier.system = $ceosys
 // which values are actually allowed?
@@ -163,11 +135,18 @@ Description: "Population for guideline from https://www.awmf.org/leitlinien/deta
   * characteristic[=].exclude = false
 * characteristic[=].exclude = false
 
-Instance: PopGroupHospitalisedCOVID19PatientsWITHThrombosis
-InstanceOf: population-evidence-variable
+
+Instance: PopHospitalisedCOVID19PatientsWITHThrombosis
+InstanceOf: recommendation-eligibility-criteria
 Usage: #example
-Title: "Population: Hospitalised COVID-19 patients with (venous) thrombosis"
-Description: "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients with (venous) thrombosis"
+Title: "Population: Hospitalised COVID-19 Patients with (venous) thrombosis"
+Description: "Population for recommendation 15: Hospitalised COVID-19 Patients with (venous) thrombosis"
+* name = "HospitalisedCOVID19PatientsWITHThrombosis"
+* actual = false
+// * characteristic[+]
+//   * code = $cochrane-pico#Population
+// * characteristic[=].exclude = false
+// see above, still needed?
 * identifier.value = "WITHThrombosis"
 * identifier.system = $ceosys
 * status = #active
