@@ -13,6 +13,7 @@ Description: "Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 pati
 * status = #active
 * description = "Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 patients"
 * subjectReference = Reference(PopHospitalisedCOVID19PatientsWOVenousThrombosisWOCI)
+// should this be subjectCanonical?
 * action[+]
   * definitionCanonical = Canonical(AntithromboticProphylaxisLWMHSubcutaneous)
   * selectionBehavior = #exactly-one
@@ -35,6 +36,7 @@ Description: "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID
 * status = #active
 * description = "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients"
 * subjectReference = Reference(PopHospitalisedCOVID19PatientsWOVenousThrombosisWITHCI)
+// should this be subjectCanonical?
 * action[+]
   * definitionCanonical = Canonical(AntithromboticProphylaxisFondaparinuxSubcutaneous)
   * selectionBehavior = #exactly-one
@@ -55,6 +57,7 @@ Description: "No antithrombotic prophylaxis in patients with thrombosis"
 * status = #active
 * description = "No antithrombotic prophylaxis in patients with thrombosis"
 * subjectReference = Reference(PopHospitalisedCOVID19PatientsWITHThrombosis)
+// should this be subjectCanonical?
 * action[+]
   * definitionCanonical = Canonical(NoAntithromboticProphylaxis)
   * selectionBehavior = #exactly-one
