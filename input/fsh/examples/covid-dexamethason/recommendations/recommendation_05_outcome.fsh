@@ -16,7 +16,7 @@ Description: "Certainty of evidence rating for mortality outcome of Dexamethason
 * content[publicationBias].classifier = $cs-certainty-rating#no-concern "no serious concern"
 
 Instance: DexamethasoneOutcomeMortality
-InstanceOf: outcome-evidence
+InstanceOf: outcome-evidence-synthesis
 Usage: #example
 Title: "Mortality Outcome for Dexamethasone application"
 Description: "Mortality Outcome for Dexamethasone application in hospitalized COVID-19 patients"
@@ -25,7 +25,8 @@ Description: "Mortality Outcome for Dexamethasone application in hospitalized CO
 * studyType = $cs-study-type#RCT
 * synthesisType = $cs-synthesis-type#NotApplicable
 * relatedArtifact[studyCitation].resourceReference = Reference(SystemicCorticosteroidsForTheTreatmentOfCOVID19)
-* variableDefinition[population].observed = Reference(StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19)
+* variableDefinition[population].intended = Reference(StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19)
+* variableDefinition[population].observed = Reference(StudyCohortCorticosteroidsCOVID19)
 * variableDefinition[outcome].observed = Reference(OutcomeAllCauseMortality)
 * statistic[relativeEffect]
   * statisticType = $cs-statistic-type#C93152	"Relative Risk"
@@ -37,6 +38,14 @@ Description: "Mortality Outcome for Dexamethasone application in hospitalized CO
     * numberOfStudies = 9
     * numberOfParticipants = 7930
 * statistic[baselineRisk].quantity = 245 '1/1000'
+
+Instance: StudyCohortCorticosteroidsCOVID19
+InstanceOf: evidence-synthesis-cohorts
+Usage: #example
+Title: "Study cohort for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)"
+Description: "Study cohort for for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)"
+* name = "StudyCohortCriteriaSystemicCorticosteroidsCOVID19"
+* quantity = 7898
 
 Instance: StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
 InstanceOf: study-eligibility-criteria

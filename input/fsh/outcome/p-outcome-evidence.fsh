@@ -4,7 +4,8 @@ Parent: Evidence
 Id: outcome-evidence
 Title: "Outcome Evidence"
 Description: "A single evidence for an outcome from a specific study, meta analysis or systematic review."
-* insert metadata(2022-03-04, #draft, 0.1.0)
+* insert metadata(2022-05-10, #draft, 0.2.0)
+* ^abstract = true
 * name 1..1
 * studyType 1..1 MS
 * synthesisType 1..1 MS
@@ -30,20 +31,19 @@ Description: "A single evidence for an outcome from a specific study, meta analy
   * variableRole = $cs-variable-role#population
   * intended only Reference(StudyEligibilityCriteria)
   * observed 1..1 MS
-  * observed only Reference(StudyEligibilityCriteria)
+  * observed only Reference(Cohorts)
 * variableDefinition[outcome]
   * variableRole = $cs-variable-role#measuredVariable
-  * intended only Reference(OutcomeDefinition)
+  * intended 0..0
   * observed 1..1 MS
-  * observed only Reference(OutcomeDefinition)
 * variableDefinition[intervention]
   * variableRole = $cs-variable-role#exposure
-  * intended only Reference(InterventionDefinition)
+  * intended 0..0
   * observed 1..1 MS
   * observed only Reference(InterventionDefinition)
 * variableDefinition[comparator]
   * variableRole = $cs-variable-role#referenceExposure
-  * intended only Reference(InterventionDefinition)
+  * intended 0..0
   * observed 1..1 MS
   * observed only Reference(InterventionDefinition)
 
@@ -117,16 +117,3 @@ Description: "A single evidence for an outcome from a specific study, meta analy
       * ^definition = "Relative effect 95% confidence interval."
     * level 1.. MS
     * level = 0.95
-
-Instance: ExampleOutcomeEvidence
-InstanceOf: outcome-evidence
-Usage: #example
-Title: "Example Outcome Evidence"
-Description: "Example Outcome Evidence"
-* name = "ExampleOutcomeEvidence"
-* status = #active
-* studyType = $cs-study-type#RCT
-* synthesisType = $cs-synthesis-type#NotApplicable
-* relatedArtifact[studyCitation].resourceReference = Reference(ExampleStudyCitation)
-* variableDefinition[population].observed = Reference(ExampleStudyEligibilityCriteria)
-* variableDefinition[outcome].observed = Reference(ExampleOutcome)

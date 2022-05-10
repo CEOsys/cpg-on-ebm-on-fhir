@@ -114,7 +114,7 @@ InstanceOf: certainty-of-evidence-rating
 Usage: #example
 Title: "Example Certainty Of Evidence Rating"
 Description: "Example Certainty Of Evidence Rating"
-* artifactReference = Reference(ExampleOutcomeEvidence)
+* artifactReference = Reference(ExampleStudyOutcomeEvidence)
 * extension[version].valueString = "0.1.1"
 * extension[publicationStatus].valueCode = #active
 * date = "2022-03-11"

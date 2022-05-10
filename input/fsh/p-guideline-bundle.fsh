@@ -102,8 +102,11 @@ Description: "Example of a clinical practice guideline representation bundle."
   * resource = ExampleCertaintyOfEvidenceRating
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/certainty-of-evidence-rating"
 * entry[outcomeEvidence][+]
-  * resource = ExampleOutcomeEvidence
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence"
+  * resource = ExampleStudyOutcomeEvidence
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-outcome-evidence"
+* entry[outcomeEvidence][+]
+  * resource = ExampleOutcomeEvidenceSynthesis
+  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence-synthesis"
 * entry[PICOEvidenceVariable][+] // StudyEligibilityCriteria
   * resource = ExampleStudyEligibilityCriteria
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria"
