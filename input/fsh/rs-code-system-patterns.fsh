@@ -4,7 +4,7 @@ RuleSet: default-code-systems
 * coding ^slicing.discriminator.path = "$this"
 * coding ^slicing.rules = #open
 * coding contains
-    sct 1..* and
+    sct 0..* and
     cochrane 0..* and
     loinc 0..* and
     atc 0..* and
