@@ -39,15 +39,23 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           force_orphan: true
-          
+      
+      - name: Get Version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with: 
+          path: './output/package.manifest.json'
+          prop_path: 'version'
+      - run: echo ${{steps.version.outputs.prop}} 
+      
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: Release ${{ github.sha }}
+          tag_name: v${{ steps.version.outputs.prop }} 
+          release_name: Release ${{ steps.version.outputs.prop }} 
           draft: false
           prerelease: false
           
@@ -59,5 +67,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./output/package.tgz
-          asset_name: "cpg.ceosys.de#dev.tgz"
+          asset_name: "cpg.ceosys.de#${{ steps.version.outputs.prop }}.tgz"
           asset_content_type: application/gzip
