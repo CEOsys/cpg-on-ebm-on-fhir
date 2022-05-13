@@ -39,3 +39,20 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           force_orphan: true
+      
+      - name: Get Version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with: 
+          path: './output/package.manifest.json'
+          prop_path: 'version'
+      
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./output/package.tgz
+          asset_name: cpg.ceosys.de-${{ steps.version.outputs.prop }}.tgz
+          tag: v${{ steps.version.outputs.prop }}
+          release_name: Release v${{ steps.version.outputs.prop }}
+          overwrite: true
