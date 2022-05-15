@@ -4,12 +4,12 @@ Parent: PICOEvidenceVariable
 Id: outcome-definition
 Title: "Outcome Definition"
 Description: "Description of the outcome element of a PICO construct that evidence is about."
-* insert metadata(2021-12-21, #draft, 0.1.0)
+* insert metadata(2022-05-15, #draft, 0.1.1)
 * insert profile("This profile is used to describe the outcome element of a PICO construct that evidence is about.")
 * name 1..1 MS
 * handling 1..1 MS // continuous | dichotomous | ordinal | polychotomous
 * characteristic
-  * definition[x] only CodeableConcept
+  * insert evidence-variable-only-type-value-or-combination-or-codeable-concept
 * characteristic.exclude 1..1
 
 Instance: ExampleOutcome
@@ -23,7 +23,7 @@ Description: "Example of an outcome evidence variable."
   * system = $ceosys
   * value = "outcome-example"
 * name = "Mortality"
-* characteristic.defByTypeAndValue
+* characteristic.definitionByTypeAndValue
   * typeCodeableConcept = $sct#409651001 "Mortality rate (observable entity)"
   * valueQuantity
     * unit = "percent"

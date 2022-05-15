@@ -14,16 +14,16 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * description = "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, Ventilated"
 * characteristic[+]
   * linkId = "covid19"
-  * defByTypeAndValue
+  * definitionByTypeAndValue
     * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
     * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
     * valueBoolean = true
 * characteristic[=].exclude = false
-* characteristic[+].defByCombination
+* characteristic[+].definitionByCombination
   * code = #any-of
   * characteristic[+]
     * linkId = "oxy-administration-nasal-cannula"
-    * defByTypeAndValue
+    * definitionByTypeAndValue
       * typeCodeableConcept.coding[sct] = $sct#371907003 "Oxygen administration by nasal cannula (procedure)"
       * valueBoolean = true
     * timeFromEvent
@@ -32,7 +32,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
   * characteristic[=].exclude = false
   * characteristic[+]
     * linkId = "noninvasive-ventilation"
-    * defByTypeAndValue
+    * definitionByTypeAndValue
       * typeCodeableConcept.coding[sct] = $sct#428311008 "Noninvasive ventilation (procedure)"
       * valueBoolean = true
     * timeFromEvent
@@ -41,7 +41,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
   * characteristic[=].exclude = false
   * characteristic[+]
     * linkId = "artificial-respiration"
-    * defByTypeAndValue
+    * definitionByTypeAndValue
       * typeCodeableConcept.coding[sct] = $sct#40617009 "Artificial respiration (procedure)"
       * valueBoolean = true
     * timeFromEvent
@@ -63,16 +63,16 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * description = "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated"
 * characteristic[+]
   * linkId = "covid19"
-  * defByTypeAndValue
+  * definitionByTypeAndValue
     * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "COVID-19"
     * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
     * valueBoolean = true
 * characteristic[=].exclude = false
-* characteristic[+].defByCombination
+* characteristic[+].definitionByCombination
   * code = #any-of
   * characteristic[+]
     * linkId = "oxy-administration-nasal-cannula"
-    * defByTypeAndValue
+    * definitionByTypeAndValue
       * typeCodeableConcept.coding[sct] = $sct#371907003 "Oxygen administration by nasal cannula (procedure)"
       * valueBoolean = true
     * timeFromEvent
@@ -81,7 +81,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
   * characteristic[=].exclude = false
   * characteristic[+]
     * linkId = "noninvasive-ventilation"
-    * defByTypeAndValue
+    * definitionByTypeAndValue
       * typeCodeableConcept.coding[sct] = $sct#428311008 "Noninvasive ventilation (procedure)"
       * valueBoolean = true
     * timeFromEvent
@@ -90,7 +90,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
   * characteristic[=].exclude = false
   * characteristic[+]
     * linkId = "artificial-respiration"
-    * defByTypeAndValue
+    * definitionByTypeAndValue
       * typeCodeableConcept.coding[sct] = $sct#40617009 "Artificial respiration (procedure)"
       * valueBoolean = true
     * timeFromEvent

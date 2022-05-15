@@ -54,7 +54,7 @@ Title: "Study eligibility criteria for Systemic corticosteroids plus standard ca
 Description: "Study eligibility criteria for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)"
 * name = "StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"
 * status = #active
-* characteristic[+].defByTypeAndValue
+* characteristic[+].definitionByTypeAndValue
   * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
   * valueBoolean = true
 * characteristic[=].exclude = false
