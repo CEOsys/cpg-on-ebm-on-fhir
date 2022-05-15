@@ -73,12 +73,29 @@ definition:
     name: Certainty of Evidence Rating
     reference:
       reference: StructureDefinition/certainty-of-evidence-rating
+  - description: The actual group observed in a study or groups of groups in an evidence
+      synthesis.
+    exampleBoolean: false
+    name: Cohorts
+    reference:
+      reference: StructureDefinition/cohorts
   - description: Definition of a population (e.g. for guideline recommendation, clinical
       study) via the eligibility criteria.
     exampleBoolean: false
     name: Eligibility Criteria
     reference:
       reference: StructureDefinition/eligibility-criteria
+  - description: Definition of the outcome used as the observed measured variable
+      for an evidence synthesis.
+    exampleBoolean: false
+    name: Evidence Data Set
+    reference:
+      reference: StructureDefinition/evidence-data-set
+  - description: The actual group of Groups observed in an evidence synthesis.
+    exampleBoolean: false
+    name: Evidence Synthesis Cohorts
+    reference:
+      reference: StructureDefinition/evidence-synthesis-cohorts
   - description: Representation of an evidence-based clinical practice guideline.
     exampleBoolean: false
     name: Clinical Practice Guideline
@@ -119,6 +136,11 @@ definition:
     name: Outcome Evidence
     reference:
       reference: StructureDefinition/outcome-evidence
+  - description: A single evidence for an outcome from an evidence synthesis.
+    exampleBoolean: false
+    name: Outcome Evidence Synthesis
+    reference:
+      reference: StructureDefinition/outcome-evidence-synthesis
   - description: Description of the a PICO element that knowledge is about. This abstract
       resource is used as parent for all PICO (population, intervention, comparison,
       outcome) evidence variables.
@@ -159,11 +181,21 @@ definition:
     name: Study Citation
     reference:
       reference: StructureDefinition/study-citation
+  - description: The actual group observed in a study.
+    exampleBoolean: false
+    name: Study Cohort
+    reference:
+      reference: StructureDefinition/study-cohort
   - description: Eligibility Criteria for a clinical study
     exampleBoolean: false
     name: Study Eligibility Criteria
     reference:
       reference: StructureDefinition/study-eligibility-criteria
+  - description: A single evidence for an outcome from a primary study.
+    exampleBoolean: false
+    name: Study Outcome Evidence
+    reference:
+      reference: StructureDefinition/study-outcome-evidence
   - description: Adds publication status attribute to ArtifactAssessment.
     exampleBoolean: false
     name: ArtifactAssessment Publication Status
@@ -184,11 +216,6 @@ definition:
     name: Composition Version
     reference:
       reference: StructureDefinition/ceosys-extension-composition-version
-  - description: Types of relationships between characteristics
-    exampleBoolean: false
-    name: Characteristic Relationship Type
-    reference:
-      reference: ValueSet/characteristic-relationship-type
   - description: All codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO
@@ -304,11 +331,6 @@ definition:
     name: CEOsys Code System
     reference:
       reference: CodeSystem/ceosys-code-system
-  - description: Types of relationships between characteristics
-    exampleBoolean: false
-    name: Characteristic Relationship Type
-    reference:
-      reference: CodeSystem/characteristic-relationship-type
   - description: Clinical Importance of Outcome
     exampleBoolean: false
     name: Clinical Importance of Outcome
@@ -406,7 +428,7 @@ definition:
       reference: ActivityDefinition/DexamethasoneApplicationActionOral
   - description: Mortality Outcome for Dexamethasone application in hospitalized COVID-19
       patients
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis
     name: Mortality Outcome for Dexamethasone application
     reference:
       reference: Evidence/DexamethasoneOutcomeMortality
@@ -432,6 +454,16 @@ definition:
     name: Example Certainty Of Evidence Rating
     reference:
       reference: ArtifactAssessment/ExampleCertaintyOfEvidenceRating
+  - description: Example of an evidence data set
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set
+    name: Example Evidence Data Set
+    reference:
+      reference: EvidenceVariable/ExampleEvidenceDataSet
+  - description: Example of a cohort in an evidence synthesis
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts
+    name: Example Evidence Synthesis Cohorts
+    reference:
+      reference: Group/ExampleEvidenceSynthesisCohorts
   - description: Example of a Citation of a clinical practice guideline
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
     name: Example Guideline Citation
@@ -457,11 +489,11 @@ definition:
     name: Example Outcome
     reference:
       reference: EvidenceVariable/ExampleOutcome
-  - description: Example Outcome Evidence
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence
-    name: Example Outcome Evidence
+  - description: Example Outcome Evidence Synthesis
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis
+    name: Example Outcome Evidence Synthesis
     reference:
-      reference: Evidence/ExampleOutcomeEvidence
+      reference: Evidence/ExampleOutcomeEvidenceSynthesis
   - description: An active recommendation action.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
     name: Example Recommendation Action
@@ -493,11 +525,21 @@ definition:
     name: Example Study Citation
     reference:
       reference: Citation/ExampleStudyCitation
+  - description: Example study cohort of 20 patients
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-cohort
+    name: Example Study Cohort
+    reference:
+      reference: Group/ExampleStudyCohort
   - description: Example of Study Eligbility Criteria
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria
     name: Example Study Eligibility Criteria
     reference:
       reference: EvidenceVariable/ExampleStudyEligibilityCriteria
+  - description: Example Study Outcome Evidence
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence
+    name: Example Study Outcome Evidence
+    reference:
+      reference: Evidence/ExampleStudyOutcomeEvidence
   - description: Example of a guideline resource.
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
     name: Example Guideline
@@ -535,6 +577,13 @@ definition:
     name: 'Population: COVID19 Ventilated'
     reference:
       reference: EvidenceVariable/PopulationCOVID19Ventilated
+  - description: Study cohort for for Systemic corticosteroids plus standard care
+      vs. standard care (plus/minus placebo)
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts
+    name: Study cohort for Systemic corticosteroids plus standard care vs. standard
+      care (plus/minus placebo)
+    reference:
+      reference: Group/StudyCohortCorticosteroidsCOVID19
   - description: Study eligibility criteria for Systemic corticosteroids plus standard
       care vs. standard care (plus/minus placebo)
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria
