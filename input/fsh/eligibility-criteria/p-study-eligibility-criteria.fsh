@@ -14,7 +14,5 @@ Title: "Example Study Eligibility Criteria"
 Description: "Example of Study Eligbility Criteria"
 * name = "ExampleStudyEligibilityCriteria"
 * status = #active
-* characteristic[+].definitionByTypeAndValue
-  * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
-  * valueBoolean = true
-* characteristic[=].exclude = false
+* characteristic[condition].definitionByTypeAndValue
+  * valueCodeableConcept = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"

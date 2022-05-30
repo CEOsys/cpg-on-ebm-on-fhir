@@ -16,8 +16,5 @@ Description: "Example of a population element of a PICO construct that evidence 
 * status = #active
 * url = "https://www.example.com/recommendation-eligibility-criteria"
 * name = "PopulationExample"
-* characteristic[+].definitionByTypeAndValue
-  * typeCodeableConcept.coding[cochrane] = $cochrane-ld#NrO30O5ZnYIkjE "Condition - COVID-19"
-  * typeCodeableConcept.coding[sct] = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
-  * valueBoolean = true
-* characteristic[=].exclude = false
+* characteristic[condition].definitionByTypeAndValue
+  * valueCodeableConcept = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"

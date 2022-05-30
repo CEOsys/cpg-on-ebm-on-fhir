@@ -4,31 +4,60 @@ Parent: PICOEvidenceVariable
 Id: eligibility-criteria
 Title: "Eligibility Criteria"
 Description: "Definition of a population (e.g. for guideline recommendation, clinical study) via the eligibility criteria."
-* insert metadata(2022-05-15, #draft, 0.1.1)
+* insert metadata(2022-05-15, #draft, 0.2.0)
 * ^abstract = true
-* characteristic 1..* MS
-  * insert evidence-variable-only-type-value-or-combination // only type/value or combination allowed
-* characteristic.definitionByTypeAndValue MS
-  * insert evidence-variable-type-value
+* insert characteristic-definition
 * characteristic.definitionByCombination
-  * characteristic 1..* MS
-    * insert evidence-variable-only-type-value-or-combination // only type/value or combination allowed
-  * characteristic.definitionByTypeAndValue MS
-    * insert evidence-variable-type-value
-  * characteristic.exclude 1..1 MS
-* characteristic.exclude 1..1 MS
+  * insert characteristic-definition
 
-RuleSet: evidence-variable-type-value
-* type[x] 1..1 MS
-* type[x] only CodeableConcept
-* typeCodeableConcept
-  * insert default-code-systems
-* value[x] 1..1 MS
-// list all types to prevent validator warning ("Information @ EvidenceVariable.characteristic[0].definitionByTypeAndValue.value.ofType(boolean) (line 28, col8): This element does not match any known slice defined in the profile https://www.ceosys.de/fhir/StructureDefinition/population-evidence-variable)")
-* valueBoolean 0..1 MS
-* valueQuantity 0..1 MS
-* valueRange 0..1 MS
-* valueReference 0..1 MS
-* valueId 0..1 MS
-* valueCodeableConcept
-  * insert default-code-systems
+RuleSet: characteristic-definition
+* characteristic 1..* MS
+* characteristic ^slicing.discriminator.type = #pattern
+* characteristic ^slicing.discriminator.path = "definitionByTypeAndValue.type"
+* characteristic ^slicing.rules = #open
+* characteristic contains
+  condition 0..* and
+  allergy 0..* and
+  radiologyFinding 0..* and
+  typeOfCare 0..* and
+  laboratory 0..* and
+  ventilationObservableSCT 0..* and
+  ventilationObservableLOINC 0..* and
+  procedure 0..*
+* characteristic[condition].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept = $sct#404684003 "Clinical finding (finding)"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from $vs-clinical-findings-sct (required)
+* characteristic[allergy].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept = $sct#609328004 "Allergic disposition (finding)"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from $vs-allergic-disposition-sct (required)
+* characteristic[radiologyFinding].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept = $sct#118247008 "Radiologic finding (finding)"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from $vs-radiologic-finding-sct (required)
+* characteristic[typeOfCare].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept = $loinc#78030-4 "Episode of care Type"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from $vs-episode-of-care-type (required)
+* characteristic[laboratory].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept from $vs-laboratory-observation-loinc (required)
+  * value[x] only Range or Quantity
+* characteristic[ventilationObservableSCT].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept from vs-ventilation-observable-sct (required)
+  * value[x] only Range or Quantity
+* characteristic[ventilationObservableLOINC].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept from vs-ventilation-observable-loinc (required)
+  * value[x] only Range or Quantity
+* characteristic[procedure].definitionByTypeAndValue
+  * type[x] only CodeableConcept
+  * typeCodeableConcept = $sct#71388002 "Procedure (procedure)"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from $vs-procedures-sct (required)
