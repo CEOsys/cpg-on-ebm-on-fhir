@@ -67,6 +67,12 @@ definition:
   - code: extension-domain
     value: https://simplifier.net
   resource:
+  - description: Definition of a body positioning action as part of a recommended
+      intervention.
+    exampleBoolean: false
+    name: Body Positioning Action
+    reference:
+      reference: StructureDefinition/body-positioning-action
   - description: Rating of a single outcome (evidence) underlying a clinical practice
       guideline recommendation
     exampleBoolean: false
@@ -79,6 +85,12 @@ definition:
     name: Cohorts
     reference:
       reference: StructureDefinition/cohorts
+  - description: Definition of a drug administration action as part of a recommended
+      intervention.
+    exampleBoolean: false
+    name: Drug Administration Action
+    reference:
+      reference: StructureDefinition/drug-administration-action
   - description: Definition of a population (e.g. for guideline recommendation, clinical
       study) via the eligibility criteria.
     exampleBoolean: false
@@ -216,6 +228,16 @@ definition:
     name: Composition Version
     reference:
       reference: StructureDefinition/ceosys-extension-composition-version
+  - description: Allergic Dispositions from SNOMED CT
+    exampleBoolean: false
+    name: Allergic Disposition SCT
+    reference:
+      reference: ValueSet/vs-allergic-disposition-sct
+  - description: Body positioning procedure codes from SNOMED CT
+    exampleBoolean: false
+    name: Body Positioning SNOMED CT
+    reference:
+      reference: ValueSet/vs-body-positioning-snomed
   - description: All codes from the Cochrane PICO ontology.
     exampleBoolean: false
     name: Cochrane PICO
@@ -236,6 +258,11 @@ definition:
     name: Cochrane PICO Population
     reference:
       reference: ValueSet/cochrane-pico-population
+  - description: Episdoe Of Care Type
+    exampleBoolean: false
+    name: Episode Of Care Type
+    reference:
+      reference: ValueSet/vs-episode-of-care-type
   - description: Current status of a clinical practice guideline recommendation
     exampleBoolean: false
     name: Guideline Recommendation Status
@@ -251,6 +278,11 @@ definition:
     name: Mean Difference Type
     reference:
       reference: ValueSet/vs-mean-difference-type
+  - description: Radiologic findings from SNOMED CT
+    exampleBoolean: false
+    name: Radiologic Finding SCT
+    reference:
+      reference: ValueSet/vs-radiologic-finding-sct
   - description: Are the alternatives acceptable for the target population and its
       implementors?
     exampleBoolean: false
@@ -325,6 +357,21 @@ definition:
     name: Relative Effect Type
     reference:
       reference: ValueSet/vs-relative-effect-type
+  - description: All substance codes from SNOMED CT
+    exampleBoolean: false
+    name: Substances SNOMED CT
+    reference:
+      reference: ValueSet/vs-substances-snomed
+  - description: Ventilation Observables from LOINC
+    exampleBoolean: false
+    name: Ventilation Observable LOINC
+    reference:
+      reference: ValueSet/vs-ventilation-observable-loinc
+  - description: Ventilation Observables from SNOMED CT
+    exampleBoolean: false
+    name: Ventilation Observable SCT
+    reference:
+      reference: ValueSet/vs-ventilation-observable-sct
   - description: Codes for clinical guideline recommendation representation missing
       from other code systems.
     exampleBoolean: false
@@ -416,13 +463,13 @@ definition:
       reference: PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (intravenous
       route)'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
     name: Dexamethasone Application (Intravenous)
     reference:
       reference: ActivityDefinition/DexamethasoneApplicationActionIntravenous
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (oral
       route)'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
     name: Dexamethasone Application (Oral)
     reference:
       reference: ActivityDefinition/DexamethasoneApplicationActionOral
@@ -449,11 +496,21 @@ definition:
     name: Dexamethasone for critically ill COVID-19 patients
     reference:
       reference: ArtifactAssessment/DexamethasoneRecommendationJustification
+  - description: Example of a body positioning action.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/body-positioning-action
+    name: Example Body Positioning Action
+    reference:
+      reference: ActivityDefinition/ExampleBodyPositioningAction
   - description: Example Certainty Of Evidence Rating
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
     name: Example Certainty Of Evidence Rating
     reference:
       reference: ArtifactAssessment/ExampleCertaintyOfEvidenceRating
+  - description: A drug administration that should be performed.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
+    name: Example DrugAdministration Action
+    reference:
+      reference: ActivityDefinition/ExampleDrugAdministrationAction
   - description: Example of an evidence data set
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set
     name: Example Evidence Data Set
@@ -479,6 +536,11 @@ definition:
     name: Example Net Effect Estimate
     reference:
       reference: Evidence/ExampleNetEffectEstimate
+  - description: A drug administration that should not be performed.
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
+    name: Example No DrugAdministration Action
+    reference:
+      reference: ActivityDefinition/ExampleNoDrugAdministrationAction
   - description: Example of a organization resource.
     exampleBoolean: true
     name: Example Organization
@@ -494,11 +556,6 @@ definition:
     name: Example Outcome Evidence Synthesis
     reference:
       reference: Evidence/ExampleOutcomeEvidenceSynthesis
-  - description: An active recommendation action.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
-    name: Example Recommendation Action
-    reference:
-      reference: ActivityDefinition/ExampleRecommendationAction
   - description: Example of a Citation of a clinical practice guideline recommendation
     exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
     name: Example Recommendation Citation
@@ -551,7 +608,7 @@ definition:
     reference:
       reference: Bundle/GuidelineRecommendationExample
   - description: No Application of Dexamethasone
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-action
+    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
     name: No Dexamethasone Application
     reference:
       reference: ActivityDefinition/NoDexamethasoneApplication
@@ -606,4 +663,4 @@ resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de
-version: 0.1.0
+version: 0.2.0-snapshot

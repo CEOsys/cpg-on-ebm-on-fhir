@@ -29,7 +29,6 @@ This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | 
 {{ resource_inheritance | strip_newlines }}
 
 {% include link-list.md %}
-
 """
 
 linklist_general = {

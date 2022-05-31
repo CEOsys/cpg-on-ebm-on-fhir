@@ -90,7 +90,7 @@ Description: "Example of a clinical practice guideline representation bundle."
   * resource = ExampleRecommendationPlan
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-plan"
 * entry[recommendationAction][+]
-  * resource = ExampleRecommendationAction
+  * resource = ExampleDrugAdministrationAction
   * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-action"
 * entry[PICOEvidenceVariable][+]
   * resource = ExampleRecommendationEligibilityCriteria

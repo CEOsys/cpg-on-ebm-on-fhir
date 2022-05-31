@@ -13,6 +13,17 @@
 {% include valueset-reference.md name='Rating Up Rating Two Levels' %}
 {% include valueset-reference.md name='Clinical Importance of Outcome' %}
 
+### Eligibility criteria
+{% include valueset-reference.md name='Allergic Disposition SCT' %}
+{% include valueset-reference.md name='Episode Of Care Type' %}
+{% include valueset-reference.md name='Radiologic Finding SCT' %}
+{% include valueset-reference.md name='Ventilation Observable LOINC' %}
+{% include valueset-reference.md name='Ventilation Observable SCT' %}
+
+### Recommended actions
+{% include valueset-reference.md name='Body Positioning SNOMED CT' %}
+{% include valueset-reference.md name='Substances SNOMED CT' %}
+
 ### Cochrane PICO ontology
 {% include valueset-reference.md name='Cochrane PICO' %}
 {% include valueset-reference.md name='Cochrane PICO Population' %}
@@ -25,7 +36,6 @@
 
 ### Other
 {% include valueset-reference.md name='Guideline Stage Classification' %}
-{% include valueset-reference.md name='Characteristic Relationship Type' %}
 {% include valueset-reference.md name='Guideline Recommendation Status' %}
 
 ---
