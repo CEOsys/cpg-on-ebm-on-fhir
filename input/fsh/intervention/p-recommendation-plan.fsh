@@ -23,6 +23,9 @@ Description: "Definition of an activity that is part of an intervention in the c
     ventilatorManagement 0..* and
     bodyPositioning 0..*
   * code 1..1 MS
+    * coding 1..*
+      * system 1..
+      * code 1..
   * definition[x] 0..1 MS
   * definition[x] only canonical
   * definitionCanonical only Canonical(RecommendationAction)
@@ -38,6 +41,9 @@ Description: "Definition of an activity that is part of an intervention in the c
   * definitionCanonical only Canonical(BodyPositioningAction)
 * goal 0..* MS
   * category 1..1 MS
+    * coding 1..*
+      * system 1..
+      * code 1..
   * id 1..1 MS
 * goal ^slicing.discriminator.type = #pattern
 * goal ^slicing.discriminator.path = "category"
