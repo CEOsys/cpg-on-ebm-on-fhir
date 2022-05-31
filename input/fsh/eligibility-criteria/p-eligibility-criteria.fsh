@@ -19,7 +19,7 @@ RuleSet: characteristic-definition
   condition 0..* and
   allergy 0..* and
   radiologyFinding 0..* and
-  typeOfCare 0..* and
+  episodeOfCare 0..* and
   laboratory 0..* and
   ventilationObservableSCT 0..* and
   ventilationObservableLOINC 0..* and
@@ -39,7 +39,7 @@ RuleSet: characteristic-definition
   * typeCodeableConcept = $sct#118247008 "Radiologic finding (finding)"
   * value[x] only CodeableConcept
   * valueCodeableConcept from $vs-radiologic-finding-sct (required)
-* characteristic[typeOfCare].definitionByTypeAndValue
+* characteristic[episodeOfCare].definitionByTypeAndValue
   * type[x] only CodeableConcept
   * typeCodeableConcept = $loinc#78030-4 "Episode of care Type"
   * value[x] only CodeableConcept
@@ -50,11 +50,11 @@ RuleSet: characteristic-definition
   * value[x] only Range or Quantity
 * characteristic[ventilationObservableSCT].definitionByTypeAndValue
   * type[x] only CodeableConcept
-  * typeCodeableConcept from vs-ventilation-observable-sct (required)
+  * typeCodeableConcept from $vs-ventilation-observable-sct (required)
   * value[x] only Range or Quantity
 * characteristic[ventilationObservableLOINC].definitionByTypeAndValue
   * type[x] only CodeableConcept
-  * typeCodeableConcept from vs-ventilation-observable-loinc (required)
+  * typeCodeableConcept from $vs-ventilation-observable-loinc (required)
   * value[x] only Range or Quantity
 * characteristic[procedure].definitionByTypeAndValue
   * type[x] only CodeableConcept
