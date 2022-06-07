@@ -19,6 +19,7 @@ Description: "Definition of a drug administration action as part of a recommende
   * coding[sct] from vs-substances-snomed (required)
   * insert code-system-pattern(atcde, $atcde)
 * dosage 0..1
+  * extension contains DosageCondition named condition 0..1 MS
   * route MS
   * timing 1..1
   * doseAndRate 1..*
@@ -41,7 +42,10 @@ Description: "A drug administration that should be performed."
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
-* dosage
+* dosage[+]
+  * extension[condition]
+    * extension[type].valueCodeableConcept = $loinc#29463-7 "Body weight"
+    * extension[value].valueRange.high = 70 'kg' "kg"
   * route = $sct#26643006 "Oral route"
   * timing
     * repeat

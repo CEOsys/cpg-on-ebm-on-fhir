@@ -228,6 +228,12 @@ definition:
     name: Composition Version
     reference:
       reference: StructureDefinition/ceosys-extension-composition-version
+  - description: Adds type/value pair to elements of datatype Dosage to express a
+      condition on the dosage.
+    exampleBoolean: false
+    name: Dosage Condition
+    reference:
+      reference: StructureDefinition/ext-dosage-condition
   - description: Allergic Dispositions from SNOMED CT
     exampleBoolean: false
     name: Allergic Disposition SCT
@@ -362,11 +368,6 @@ definition:
     name: Substances SNOMED CT
     reference:
       reference: ValueSet/vs-substances-snomed
-  - description: Ventilation Observables from LOINC
-    exampleBoolean: false
-    name: Ventilation Observable LOINC
-    reference:
-      reference: ValueSet/vs-ventilation-observable-loinc
   - description: Ventilation Observables from SNOMED CT
     exampleBoolean: false
     name: Ventilation Observable SCT
