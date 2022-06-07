@@ -26,6 +26,8 @@ Description: "Definition of an activity that is part of an intervention in the c
     * coding 1..*
       * system 1..
       * code 1..
+  * goalId
+    * obeys goal-must-be-linked
   * definition[x] 0..1 MS
   * definition[x] only canonical
   * definitionCanonical only Canonical(RecommendationAction)
@@ -35,7 +37,6 @@ Description: "Definition of an activity that is part of an intervention in the c
 * action[ventilatorManagement]
   * code = $sct#410210009 "Ventilator care management (procedure)"
   * goalId 1..* MS
-    * obeys goal-must-be-defined-and-linked
 * action[bodyPositioning]
   * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical only Canonical(BodyPositioningAction)
@@ -93,8 +94,8 @@ Description: "Definition of an activity that is part of an intervention in the c
   * resourceReference 1..1 MS
   * resourceReference only Reference(GuidelineCitation)
 
-Invariant: goal-must-be-defined-and-linked
-Description: "For each action of this type, a goal must be defined and linked"
+Invariant: goal-must-be-linked
+Description: "The goal linked by goalId is not defined"
 Expression: "$this in %resource.goal.id"
 Severity: #error
 
@@ -111,12 +112,17 @@ Description: "An active recommendation plan."
 * description = "Example Recommendation Plan"
 * subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
 * action[drugAdministration][+]
+  * code = $sct#432102000 "Administration of substance (procedure)"
   * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
 * action[bodyPositioning][+]
+  * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical = Canonical(ExampleBodyPositioningAction)
+  * goalId[+] = "ventilator-management-goal"
 * action[ventilatorManagement][+]
+  * code = $sct#410210009 "Ventilator care management (procedure)"
   * goalId[+] = "ventilator-management-goal"
 * goal[ventilatorManagement][+]
+  * category = $sct#385857005 "Ventilator care and adjustment (regime/therapy)"
   * id = "ventilator-management-goal"
   * description.text = "The ventilator should be set up to provide a breath reate of at least 20 and at most per minute."
   * target
@@ -125,6 +131,7 @@ Description: "An active recommendation plan."
       * low = 20 '/min'
       * high = 24 '/min'
 * goal[laboratoryValue][+]
+  * category = $sct#410394004 "Lab findings surveillance (regime/therapy)"
   * id = "lab-ddimer-concentration-goal"
   * description.text = "D-Dimer concentration shall be below 250 ng/mL"
   * target
