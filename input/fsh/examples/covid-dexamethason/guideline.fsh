@@ -10,7 +10,7 @@ Description: "COVID19 Intensive Care Treatment Guideline."
 * status = #final
 * date = "2022-03-01"
 * version = "7.0"
-* extension[publicationStatus].valueCode = #active
+* status = #final
 * title = "Empfehlungen zur stationären Therapie von Patienten mit COVID-19 - Living Guideline"
 * author[+] = Reference(AWMFOrganization)
 * relatesTo.resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
