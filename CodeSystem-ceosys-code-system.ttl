@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ceosys-code-system"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">relative-importance-weighting<a name=\"ceosys-code-system-relative-importance-weighting\"> </a></td><td>Relative importance weighting for use in weighted linear combinations</td></tr><tr><td style=\"white-space:nowrap\">clinical-practice-guideline<a name=\"ceosys-code-system-clinical-practice-guideline\"> </a></td><td>Clinical practice guideline</td></tr><tr><td style=\"white-space:nowrap\">guideline-recommendation<a name=\"ceosys-code-system-guideline-recommendation\"> </a></td><td>Clinical practice guideline recommendation</td></tr><tr><td style=\"white-space:nowrap\">consensus<a name=\"ceosys-code-system-consensus\"> </a></td><td>Consensus</td></tr><tr><td style=\"white-space:nowrap\">strength<a name=\"ceosys-code-system-strength\"> </a></td><td>Strength of recommendation</td></tr><tr><td style=\"white-space:nowrap\">eligibility-criteria<a name=\"ceosys-code-system-eligibility-criteria\"> </a></td><td>Study Eligibility Criteria</td></tr><tr><td style=\"white-space:nowrap\">net-effect<a name=\"ceosys-code-system-net-effect\"> </a></td><td>Net effect</td></tr><tr><td style=\"white-space:nowrap\">certainty-of-evidence-rating<a name=\"ceosys-code-system-certainty-of-evidence-rating\"> </a></td><td>Certainty of evidence rating</td></tr><tr><td style=\"white-space:nowrap\">recommendation-rating<a name=\"ceosys-code-system-recommendation-rating\"> </a></td><td>Recommendation rating</td></tr><tr><td style=\"white-space:nowrap\">clinical-importance<a name=\"ceosys-code-system-clinical-importance\"> </a></td><td>Clinical Importance</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
+  fhir:CodeSystem.name [ fhir:value "CEOsysCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "CEOsys Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2022-01-31"^^xsd:date];
+  fhir:CodeSystem.publisher [ fhir:value "CEOsys"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.ceosys.de" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Codes for clinical guideline recommendation representation missing from other code systems."];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "10"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "relative-importance-weighting" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Relative importance weighting for use in weighted linear combinations" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "clinical-practice-guideline" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Clinical practice guideline" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "guideline-recommendation" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Clinical practice guideline recommendation" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "consensus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Consensus" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "strength" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Strength of recommendation" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "eligibility-criteria" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Study Eligibility Criteria" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "net-effect" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Net effect" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "certainty-of-evidence-rating" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Certainty of evidence rating" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "recommendation-rating" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Recommendation rating" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "clinical-importance" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Clinical Importance" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

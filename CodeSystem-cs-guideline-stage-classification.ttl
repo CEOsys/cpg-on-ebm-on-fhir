@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-guideline-stage-classification"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">S3<a name=\"cs-guideline-stage-classification-S3\"> </a></td><td>Evidence- and consensus-based guideline</td><td>Representative panel, Systematic search, selection, evaluation of literature, Structured consensus building.</td></tr><tr><td style=\"white-space:nowrap\">S2e<a name=\"cs-guideline-stage-classification-S2e\"> </a></td><td>Evidence-based Guideline</td><td>Systematic search, selection, evaluation of literature</td></tr><tr><td style=\"white-space:nowrap\">S2k<a name=\"cs-guideline-stage-classification-S2k\"> </a></td><td>Consensus-based Guideline</td><td>Representative body, structured consensus building</td></tr><tr><td style=\"white-space:nowrap\">S1<a name=\"cs-guideline-stage-classification-S1\"> </a></td><td>Action recommendations from expert groups</td><td>Consensus building in an informal process</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification"];
+  fhir:CodeSystem.version [ fhir:value "0.2.0-snapshot"];
+  fhir:CodeSystem.name [ fhir:value "GuidelineStageClassification"];
+  fhir:CodeSystem.title [ fhir:value "Guideline Stage Classification"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V"];
+  fhir:CodeSystem.description [ fhir:value "As part of the project planning for the creation or updating of a guideline,\n    a decision should be made at an early stage about the planned level classification (\"S classification\") according to the AWMF's system of rules (1-3).\n    The S-classification scheme of the AWMF differentiates between the classes S1 treatment recommendation as well as S2e, S2k and S3 guideline.\n    The \"S\" stands for the extent of the applied systematic approach in the development process of a guideline.\n    Each class thus stands for a specific methodological concept that must be presented in a way that is comprehensible to the users.\n    The choice of class is based on the question of how much effort is appropriate and feasible.\n    The need for legitimacy for the implementation of the guideline (convincing the target group) must be taken into account.\n    When choosing a higher S-classification in the context of updating a guideline, the adaptation to the corresponding methodology has to be considered."];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "S3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Evidence- and consensus-based guideline" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Representative panel, Systematic search, selection, evaluation of literature, Structured consensus building." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "S2e" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Evidence-based Guideline" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Systematic search, selection, evaluation of literature" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "S2k" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Consensus-based Guideline" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Representative body, structured consensus building" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "S1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Action recommendations from expert groups" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Consensus building in an informal process" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

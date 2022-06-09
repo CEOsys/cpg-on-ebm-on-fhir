@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-guideline-stage-classification"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-guideline-stage-classification.html"><code>https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification</code></a></li></ul></div>
+  </text>
+  <url value="https://www.ceosys.de/fhir/ValueSet/vs-guideline-stage-classification"/>
+  <version value="0.2.0-snapshot"/>
+  <name value="GuidelineStageClassification"/>
+  <title value="Guideline Stage Classification"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <description value="Stage classification according to systematics"/>
+  <compose>
+    <include>
+      <system value="https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Evidence/ExampleNetEffectEstimate> a fhir:Evidence;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleNetEffectEstimate"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate>
+     ]
+  ];
+  fhir:Evidence.url [ fhir:value "https://www.ceosys.de/fhir/Evidence/ExampleNetEffectEstimate"];
+  fhir:Evidence.name [ fhir:value "NetEffectExample"];
+  fhir:Evidence.status [ fhir:value "unknown"];
+  fhir:Evidence.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:Evidence.variableDefinition [
+     fhir:index 0;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "measuredVariable" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.intended [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+     ]
+  ];
+  fhir:Evidence.statistic [
+     fhir:index 0;
+     fhir:Evidence.statistic.description [ fhir:value "Net Effect" ];
+     fhir:Evidence.statistic.statisticType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "net-effect" ];
+         fhir:Coding.display [ fhir:value "Net Effect" ]
+       ]
+     ];
+     fhir:Evidence.statistic.quantity [
+       fhir:Quantity.value [ fhir:value "1.7"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "%" ]
+     ];
+     fhir:Evidence.statistic.attributeEstimate [
+       fhir:index 0;
+       fhir:Evidence.statistic.attributeEstimate.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/attribute-estimate-type" ];
+           fhir:Coding.code [ fhir:value "C53324" ];
+           fhir:Coding.display [ fhir:value "Confidence interval" ]
+         ]
+       ];
+       fhir:Evidence.statistic.attributeEstimate.level [ fhir:value "0.95"^^xsd:decimal ];
+       fhir:Evidence.statistic.attributeEstimate.range [
+         fhir:Range.low [
+           fhir:Quantity.value [ fhir:value "1.5"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "%" ]
+         ];
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "1.9"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "%" ]
+         ]
+       ]
+     ];
+     fhir:Evidence.statistic.modelCharacteristic [
+       fhir:index 0;
+       fhir:Evidence.statistic.modelCharacteristic.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "relative-importance-weighting" ]
+         ]
+       ];
+       fhir:Evidence.statistic.modelCharacteristic.value [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+       ];
+       fhir:Evidence.statistic.modelCharacteristic.variable [
+         fhir:index 0;
+         fhir:Evidence.statistic.modelCharacteristic.variable.variableDefinition [
+           fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+           fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Evidence/ExampleNetEffectEstimate.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

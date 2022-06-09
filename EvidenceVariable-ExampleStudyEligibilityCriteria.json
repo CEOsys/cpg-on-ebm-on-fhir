@@ -1,0 +1,37 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "ExampleStudyEligibilityCriteria",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/EvidenceVariable/ExampleStudyEligibilityCriteria",
+  "name": "ExampleStudyEligibilityCriteria",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "characteristic": [
+    {
+      "definitionByTypeAndValue": {
+        "typeCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "404684003",
+              "display": "Clinical finding (finding)"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "840539006",
+              "display": "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

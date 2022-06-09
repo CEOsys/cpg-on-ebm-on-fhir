@@ -1,0 +1,159 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ArtifactAssessment/ExampleRecommendationJustification> a fhir:ArtifactAssessment;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleRecommendationJustification"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"ExampleRecommendationJustification\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-recommendation-justification.html\">Recommendation Justification</a></p></div><p><b>ArtifactAssessment Version</b>: 0.1.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"PlanDefinition-ExampleRecommendationPlan.html\">PlanDefinition/ExampleRecommendationPlan</a> \"RecommendationPlan\"</p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Strength of recommendation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#strength)</span></p><p><b>classifier</b>: Strong for an intervention <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-cs-recommendation-strength.html\">Recommendation Strength</a>#strong-for)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Very low quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#very-low)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Consensus <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#consensus)</span></p><p><b>classifier</b>: Strong <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-recommendation-strength.html\">StrengthOfRecommendationRating</a>#strong)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Certainty of evidence rating <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#certainty-of-evidence-rating)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Net effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#net-effect)</span></p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version" ];
+     fhir:Extension.valueString [ fhir:value "0.1.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ];
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ];
+  fhir:ArtifactAssessment.date [ fhir:value "2020-01-03"^^xsd:date];
+  fhir:ArtifactAssessment.artifactReference [
+     fhir:link <https://www.ceosys.de/fhir/PlanDefinition/ExampleRecommendationPlan>;
+     fhir:Reference.reference [ fhir:value "PlanDefinition/ExampleRecommendationPlan" ]
+  ];
+  fhir:ArtifactAssessment.content [
+     fhir:index 0;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "strength" ];
+         fhir:Coding.display [ fhir:value "Strength of recommendation" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong-for" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Overall" ];
+         fhir:Coding.display [ fhir:value "Overall certainty" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "very-low" ];
+         fhir:Coding.display [ fhir:value "Very low quality" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "consensus" ];
+         fhir:Coding.display [ fhir:value "Consensus" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong" ];
+         fhir:Coding.display [ fhir:value "Strong" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "container" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+         fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.relatedArtifact [
+       fhir:index 0;
+       fhir:RelatedArtifact.type [ fhir:value "justification" ];
+       fhir:RelatedArtifact.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+           fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+         ]
+       ];
+       fhir:RelatedArtifact.resourceReference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/ExampleCertaintyOfEvidenceRating>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/ExampleCertaintyOfEvidenceRating" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "container" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "net-effect" ];
+         fhir:Coding.display [ fhir:value "Net effect" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.relatedArtifact [
+       fhir:index 0;
+       fhir:RelatedArtifact.type [ fhir:value "supported-with" ];
+       fhir:RelatedArtifact.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "net-effect" ];
+           fhir:Coding.display [ fhir:value "Net effect" ]
+         ]
+       ];
+       fhir:RelatedArtifact.resourceReference [
+         fhir:link <https://www.ceosys.de/fhir/Evidence/ExampleNetEffectEstimate>;
+         fhir:Reference.reference [ fhir:value "Evidence/ExampleNetEffectEstimate" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ArtifactAssessment/ExampleRecommendationJustification.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

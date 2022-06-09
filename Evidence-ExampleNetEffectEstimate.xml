@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Evidence xmlns="http://hl7.org/fhir">
+  <id value="ExampleNetEffectEstimate"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/Evidence/ExampleNetEffectEstimate"/>
+  <name value="NetEffectExample"/>
+  <status value="unknown"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <variableDefinition>
+    <variableRole>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+        <code value="measuredVariable"/>
+      </coding>
+    </variableRole>
+    <intended>
+      <reference value="EvidenceVariable/ExampleOutcome"/>
+    </intended>
+  </variableDefinition>
+  <statistic>
+    <description value="Net Effect"/>
+    <statisticType>
+      <coding>
+        <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+        <code value="net-effect"/>
+        <display value="Net Effect"/>
+      </coding>
+    </statisticType>
+    <quantity>
+      <value value="1.7"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="%"/>
+    </quantity>
+    <attributeEstimate>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+          <code value="C53324"/>
+          <display value="Confidence interval"/>
+        </coding>
+      </type>
+      <level value="0.95"/>
+      <range>
+        <low>
+          <value value="1.5"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </low>
+        <high>
+          <value value="1.9"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </high>
+      </range>
+    </attributeEstimate>
+    <modelCharacteristic>
+      <code>
+        <coding>
+          <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+          <code value="relative-importance-weighting"/>
+        </coding>
+      </code>
+      <value>
+        <value value="1"/>
+      </value>
+      <variable>
+        <variableDefinition>
+          <reference value="EvidenceVariable/ExampleOutcome"/>
+        </variableDefinition>
+      </variable>
+    </modelCharacteristic>
+  </statistic>
+</Evidence>

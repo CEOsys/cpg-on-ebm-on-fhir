@@ -1,0 +1,1882 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cpg.ceosys.de"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CPGonEBMonFHIR</h2><p>The official URL for this implementation guide is: </p><pre>https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de</pre></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de"];
+  fhir:ImplementationGuide.version [ fhir:value "0.2.0-snapshot"];
+  fhir:ImplementationGuide.name [ fhir:value "CPGonEBMonFHIR"];
+  fhir:ImplementationGuide.title [ fhir:value "Clinical Practice Guidelines (CPG) on EBMonFHIR"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.publisher [ fhir:value "Charité - Universitätsmedizin Berlin"];
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Charité - Universitätsmedizin Berlin" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.charite.de/" ]
+     ]
+  ];
+  fhir:ImplementationGuide.packageId [ fhir:value "cpg.ceosys.de"];
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "5.0.0-cibuild";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "hl7tx" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://terminology.hl7.org/ImplementationGuide/hl7.terminology";
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r5" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.0.0" ]
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/body-positioning-action>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/body-positioning-action" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Body Positioning Action" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition of a body positioning action as part of a recommended intervention." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/certainty-of-evidence-rating" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Certainty of Evidence Rating" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Rating of a single outcome (evidence) underlying a clinical practice guideline recommendation" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource:abstract" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/cohorts>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cohorts" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cohorts" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The actual group observed in a study or groups of groups in an evidence synthesis." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/drug-administration-action" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Drug Administration Action" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition of a drug administration action as part of a recommended intervention." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource:abstract" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/eligibility-criteria>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/eligibility-criteria" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Eligibility Criteria" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition of a population (e.g. for guideline recommendation, clinical study) via the eligibility criteria." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/evidence-data-set" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Evidence Data Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition of the outcome used as the observed measured variable for an evidence synthesis." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/evidence-synthesis-cohorts" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Evidence Synthesis Cohorts" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The actual group of Groups observed in an evidence synthesis." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/guideline" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Clinical Practice Guideline" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Representation of an evidence-based clinical practice guideline." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/guideline-bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Guideline Bundle" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Collection of all resources that represent a single clinical practice guideline." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-citation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/guideline-citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Guideline Citation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Citation of a clinical practice guideline" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/intervention-definition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/intervention-definition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Intervention Definition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Description of the intervention element of a PICO construct that evidence is about." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/net-effect-estimate" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Net Effect Estimate" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The net effect is the overall expected effect of a recommendation, calculated by an importance-weighted average of the individual outcome effects" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-definition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/outcome-definition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Outcome Definition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Description of the outcome element of a PICO construct that evidence is about." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource:abstract" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/outcome-evidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Outcome Evidence" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A single evidence for an outcome from a specific study, meta analysis or systematic review." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/outcome-evidence-synthesis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Outcome Evidence Synthesis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A single evidence for an outcome from an evidence synthesis." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource:abstract" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/pico-evidence-variable>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/pico-evidence-variable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PICO Evidence Variable" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Description of the a PICO element that knowledge is about. This abstract resource is used as parent for all PICO (population, intervention, comparison, outcome) evidence variables." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource:abstract" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-action>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/recommendation-action" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation Action" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/recommendation-citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation Citation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Citation of a clinical practice guideline recommendation" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/recommendation-eligibility-criteria" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation Eligibility Criteria" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Eligibility Criteria for a Clinical Guideline Recommendation" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/recommendation-justification" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation Justification" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Justification of a clinical guideline recommendation through the underlying evidence and their ratings" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/recommendation-plan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation Plan" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-citation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/study-citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Study Citation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Citation of a study from which evidence is determined." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-cohort>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/study-cohort" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Study Cohort" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The actual group observed in a study." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/study-eligibility-criteria" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Study Eligibility Criteria" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Eligibility Criteria for a clinical study" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/study-outcome-evidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Study Outcome Evidence" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A single evidence for an outcome from a primary study." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ArtifactAssessment Publication Status" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Adds publication status attribute to ArtifactAssessment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ceosys-extension-artifact-assessment-version" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ArtifactAssessment Version" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Adds version attribute to Artifact Assessment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/ext-dosage-condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ext-dosage-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dosage Condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Adds type/value pair to elements of datatype Dosage to express a condition on the dosage." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-allergic-disposition-sct>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-allergic-disposition-sct" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Allergic Disposition SCT" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Allergic Dispositions from SNOMED CT" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-body-positioning-snomed>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-body-positioning-snomed" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Body Positioning SNOMED CT" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Body positioning procedure codes from SNOMED CT" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/cochrane-pico>;
+         fhir:Reference.reference [ fhir:value "ValueSet/cochrane-pico" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cochrane PICO" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All codes from the Cochrane PICO ontology." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/cochrane-pico-intervention>;
+         fhir:Reference.reference [ fhir:value "ValueSet/cochrane-pico-intervention" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cochrane PICO Intervention" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All intervention codes from the Cochrane PICO ontology." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/cochrane-pico-outcome>;
+         fhir:Reference.reference [ fhir:value "ValueSet/cochrane-pico-outcome" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cochrane PICO Outcome" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All outcome codes from the Cochrane PICO ontology." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/cochrane-pico-population>;
+         fhir:Reference.reference [ fhir:value "ValueSet/cochrane-pico-population" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cochrane PICO Population" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All population codes from the Cochrane PICO ontology." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-episode-of-care-type>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-episode-of-care-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Episode Of Care Type" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Episdoe Of Care Type" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-guideline-recommendation-status>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-guideline-recommendation-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Guideline Recommendation Status" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Current status of a clinical practice guideline recommendation" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-guideline-stage-classification>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-guideline-stage-classification" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Guideline Stage Classification" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Stage classification according to systematics" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-mean-difference-type>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-mean-difference-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mean Difference Type" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Mean difference types" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-radiologic-finding-sct>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-radiologic-finding-sct" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Radiologic Finding SCT" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Radiologic findings from SNOMED CT" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-acceptability>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-acceptability" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Acceptability" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Are the alternatives acceptable for the target population and its implementors?" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-benefit-and-harms>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-benefit-and-harms" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Benefit And Harms" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Summary of most important benefits and harms" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-certainty-of-evidence>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-certainty-of-evidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Certainty Of Evidence" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes from EvidenceCertaintyRating related to certainty of evidence" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-clinical-importance>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-clinical-importance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Clinical Importance of Outcome" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Clinical Importance of Outcome" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-concern-degree>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-concern-degree" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Concern Degree" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes from EvidenceCertaintyRating related to degree of concern" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-consensus>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-consensus" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Consensus" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Degree of consensus reached" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-equity>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-equity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Equity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "How do the different alternatives affect equity?" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-feasibility>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-feasibility" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Feasibility" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "How feasible will it be to implement the different alternatives? Any issues?" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-preference-and-values>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-preference-and-values" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Preference And Values" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Typical patient preferences and values? Common issues or expected variability?" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-resources>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-resources" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Resources" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Issues with costs or resource use? For whom? Cost-benefit analysis? Implementation or other issues?" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-uprating-one-level>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-uprating-one-level" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Up Rating One Level" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ratings for factors that might cause rating up the certainty" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-rating-uprating-two-levels>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-rating-uprating-two-levels" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Rating Up Rating Two Levels" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ratings for factors that might cause rating up the certainty" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/ceosys-vs-recommendation-strength>;
+         fhir:Reference.reference [ fhir:value "ValueSet/ceosys-vs-recommendation-strength" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation Strength" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Strength of a clinical guideline recommendation." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-relative-effect-type>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-relative-effect-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Relative Effect Type" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Relative effect types" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-substances-snomed>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-substances-snomed" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Substances SNOMED CT" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All substance codes from SNOMED CT" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ValueSet/vs-ventilation-observable-sct>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vs-ventilation-observable-sct" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Ventilation Observable SCT" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ventilation Observables from SNOMED CT" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/ceosys-code-system" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CEOsys Code System" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes for clinical guideline recommendation representation missing from other code systems." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/cs-clinical-importance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Clinical Importance of Outcome" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Clinical Importance of Outcome" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/cochrane-core-ontology>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/cochrane-core-ontology" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cochrane Core Ontology" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Cochrane Core ontology describes the entities and concepts that exist in the domain of evidence based healthcare." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/cochrane-pico-ontology>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/cochrane-pico-ontology" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cochrane PICO Ontology" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The PICO ontology describes questions in evidence based healthcare with the intention of supporting the publishing of evidence as linked data." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/cs-evidence-to-decision-certainty-rating" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Evidence To Decision Certainty Rating" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "GRADE Evidence to Decision (EtD) Framework Certainty Ratings" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/cs-evidence-to-decision-certainty-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Evidence To Decision Certainty type" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "GRADE Evidence to Decision (EtD) Framework Certainty Type" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/cs-guideline-stage-classification" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Guideline Stage Classification" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "As part of the project planning for the creation or updating of a guideline,\n    a decision should be made at an early stage about the planned level classification (\"S classification\") according to the AWMF's system of rules (1-3).\n    The S-classification scheme of the AWMF differentiates between the classes S1 treatment recommendation as well as S2e, S2k and S3 guideline.\n    The \"S\" stands for the extent of the applied systematic approach in the development process of a guideline.\n    Each class thus stands for a specific methodological concept that must be presented in a way that is comprehensible to the users.\n    The choice of class is based on the question of how much effort is appropriate and feasible.\n    The need for legitimacy for the implementation of the guideline (convincing the target group) must be taken into account.\n    When choosing a higher S-classification in the context of updating a guideline, the adaptation to the corresponding methodology has to be considered." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/ceosys-cs-recommendation-strength" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation Strength" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Strength of a clinical guideline recommendation." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Organization/AWMFOrganization>;
+         fhir:Reference.reference [ fhir:value "Organization/AWMFOrganization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Composition/COVID19IntensiveCareTreatmentGuideline>;
+         fhir:Reference.reference [ fhir:value "Composition/COVID19IntensiveCareTreatmentGuideline" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "COVID19 Intensive Care Treatment Guideline" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "COVID19 Intensive Care Treatment Guideline." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline>
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Bundle/COVID19IntensiveCareTreatmentGuidelineBundle>;
+         fhir:Reference.reference [ fhir:value "Bundle/COVID19IntensiveCareTreatmentGuidelineBundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "COVID19 Intensive Care Treatment Guideline" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "COVID19 Intensive Care Treatment Guideline (Bundle)." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle>
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Citation/COVID19IntensiveCareTreatmentGuidelineCitation>;
+         fhir:Reference.reference [ fhir:value "Citation/COVID19IntensiveCareTreatmentGuidelineCitation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Therapy of hospitalized COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Guideline for therapy of hospitalized COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-citation";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-citation>
+       ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "No dexamethasone application for non-ventilated COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "No application of Dexamethasone for non-ventilated COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dexamethasone Application" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ActivityDefinition/DexamethasoneApplicationActionIntravenous>;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/DexamethasoneApplicationActionIntravenous" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dexamethasone Application (Intravenous)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Application of Dexamethasone: 6 mg once per day for 10 days (intravenous route)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+       ]
+     ], [
+       fhir:index 70;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ActivityDefinition/DexamethasoneApplicationActionOral>;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/DexamethasoneApplicationActionOral" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dexamethasone Application (Oral)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Application of Dexamethasone: 6 mg once per day for 10 days (oral route)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+       ]
+     ], [
+       fhir:index 71;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Evidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Evidence/DexamethasoneOutcomeMortality>;
+         fhir:Reference.reference [ fhir:value "Evidence/DexamethasoneOutcomeMortality" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mortality Outcome for Dexamethasone application" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Mortality Outcome for Dexamethasone application in hospitalized COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis>
+       ]
+     ], [
+       fhir:index 72;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ArtifactAssessment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRatingOutcomeMortality>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/DexamethasoneRatingOutcomeMortality" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Certainty of Evidence for outcome: mortality of Dexamethasone application" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Certainty of evidence rating for mortality outcome of Dexamethasonse application recommendation" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating>
+       ]
+     ], [
+       fhir:index 73;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Citation/DexamethasoneRecommendationCitation>;
+         fhir:Reference.reference [ fhir:value "Citation/DexamethasoneRecommendationCitation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dexamethasone Recommendation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Citation of Dexamethasone Recommenation from COVID-19 intensive care patients treatment guideline" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation>
+       ]
+     ], [
+       fhir:index 74;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ArtifactAssessment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRecommendationJustification>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/DexamethasoneRecommendationJustification" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dexamethasone for critically ill COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dexamethasone in critically ill patients with COVID-19." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>
+       ]
+     ], [
+       fhir:index 75;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ActivityDefinition/ExampleBodyPositioningAction>;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/ExampleBodyPositioningAction" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Body Positioning Action" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a body positioning action." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/body-positioning-action";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/body-positioning-action>
+       ]
+     ], [
+       fhir:index 76;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ArtifactAssessment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/ExampleCertaintyOfEvidenceRating>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/ExampleCertaintyOfEvidenceRating" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Certainty Of Evidence Rating" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Certainty Of Evidence Rating" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating>
+       ]
+     ], [
+       fhir:index 77;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ActivityDefinition/ExampleDrugAdministrationAction>;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/ExampleDrugAdministrationAction" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example DrugAdministration Action" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A drug administration that should be performed." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+       ]
+     ], [
+       fhir:index 78;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleEvidenceDataSet>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleEvidenceDataSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Evidence Data Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of an evidence data set" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set>
+       ]
+     ], [
+       fhir:index 79;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Group" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Group/ExampleEvidenceSynthesisCohorts>;
+         fhir:Reference.reference [ fhir:value "Group/ExampleEvidenceSynthesisCohorts" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Evidence Synthesis Cohorts" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a cohort in an evidence synthesis" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts>
+       ]
+     ], [
+       fhir:index 80;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation>;
+         fhir:Reference.reference [ fhir:value "Citation/ExampleGuidelineCitation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Guideline Citation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a Citation of a clinical practice guideline" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-citation";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-citation>
+       ]
+     ], [
+       fhir:index 81;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleIntervention>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleIntervention" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Intervention" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of an intervention definition." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/intervention-definition";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/intervention-definition>
+       ]
+     ], [
+       fhir:index 82;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Evidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Evidence/ExampleNetEffectEstimate>;
+         fhir:Reference.reference [ fhir:value "Evidence/ExampleNetEffectEstimate" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Net Effect Estimate" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a net effect estimate" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate>
+       ]
+     ], [
+       fhir:index 83;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ActivityDefinition/ExampleNoDrugAdministrationAction>;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/ExampleNoDrugAdministrationAction" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example No DrugAdministration Action" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A drug administration that should not be performed." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+       ]
+     ], [
+       fhir:index 84;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Organization/ExampleOrganization>;
+         fhir:Reference.reference [ fhir:value "Organization/ExampleOrganization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Organization" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a organization resource." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 85;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Outcome" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of an outcome evidence variable." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-definition>
+       ]
+     ], [
+       fhir:index 86;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Evidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Evidence/ExampleOutcomeEvidenceSynthesis>;
+         fhir:Reference.reference [ fhir:value "Evidence/ExampleOutcomeEvidenceSynthesis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Outcome Evidence Synthesis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Outcome Evidence Synthesis" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis>
+       ]
+     ], [
+       fhir:index 87;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Citation/ExampleRecommendationCitation>;
+         fhir:Reference.reference [ fhir:value "Citation/ExampleRecommendationCitation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Recommendation Citation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a Citation of a clinical practice guideline recommendation" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation>
+       ]
+     ], [
+       fhir:index 88;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleRecommendationEligibilityCriteria>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleRecommendationEligibilityCriteria" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Recommendation Eligibility Criteria" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a population element of a PICO construct that evidence is about." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+       ]
+     ], [
+       fhir:index 89;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ArtifactAssessment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/ExampleRecommendationJustification>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/ExampleRecommendationJustification" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Recommendation Justification" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a recommendation justification" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>
+       ]
+     ], [
+       fhir:index 90;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/PlanDefinition/ExampleRecommendationPlan>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/ExampleRecommendationPlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Recommendation plan" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An active recommendation plan." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+       ]
+     ], [
+       fhir:index 91;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Citation/ExampleStudyCitation>;
+         fhir:Reference.reference [ fhir:value "Citation/ExampleStudyCitation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Study Citation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Study Citation" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-citation";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-citation>
+       ]
+     ], [
+       fhir:index 92;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Group" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Group/ExampleStudyCohort>;
+         fhir:Reference.reference [ fhir:value "Group/ExampleStudyCohort" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Study Cohort" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example study cohort of 20 patients" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-cohort";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-cohort>
+       ]
+     ], [
+       fhir:index 93;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleStudyEligibilityCriteria>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleStudyEligibilityCriteria" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Study Eligibility Criteria" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of Study Eligbility Criteria" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria>
+       ]
+     ], [
+       fhir:index 94;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Evidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Evidence/ExampleStudyOutcomeEvidence>;
+         fhir:Reference.reference [ fhir:value "Evidence/ExampleStudyOutcomeEvidence" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Study Outcome Evidence" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Study Outcome Evidence" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence>
+       ]
+     ], [
+       fhir:index 95;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Composition/GuidelineExample>;
+         fhir:Reference.reference [ fhir:value "Composition/GuidelineExample" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Guideline" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a guideline resource." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline>
+       ]
+     ], [
+       fhir:index 96;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Bundle/GuidelineRecommendationExample>;
+         fhir:Reference.reference [ fhir:value "Bundle/GuidelineRecommendationExample" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Guideline Recommendation Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a clinical practice guideline representation bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle>
+       ]
+     ], [
+       fhir:index 97;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ActivityDefinition/NoDexamethasoneApplication>;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/NoDexamethasoneApplication" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "No Dexamethasone Application" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "No Application of Dexamethasone" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+       ]
+     ], [
+       fhir:index 98;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ArtifactAssessment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/NoDexamethasoneRecommendationJustification>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/NoDexamethasoneRecommendationJustification" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NO Dexamethasone for moderately ill COVID-19 patients" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "No Dexamethasone in moderately ill patients with COVID-19." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>
+       ]
+     ], [
+       fhir:index 99;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/OutcomeAllCauseMortality>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/OutcomeAllCauseMortality" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "All-cause mortality" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All-cause mortality." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-definition>
+       ]
+     ], [
+       fhir:index 100;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/PopulationCOVID19NonVentilated>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/PopulationCOVID19NonVentilated" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Population: COVID19 Non-Ventilated" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+       ]
+     ], [
+       fhir:index 101;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/PopulationCOVID19Ventilated>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/PopulationCOVID19Ventilated" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Population: COVID19 Ventilated" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, Ventilated" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+       ]
+     ], [
+       fhir:index 102;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Group" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Group/StudyCohortCorticosteroidsCOVID19>;
+         fhir:Reference.reference [ fhir:value "Group/StudyCohortCorticosteroidsCOVID19" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Study cohort for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Study cohort for for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts>
+       ]
+     ], [
+       fhir:index 103;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "EvidenceVariable" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19>;
+         fhir:Reference.reference [ fhir:value "EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Study eligibility criteria for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Study eligibility criteria for Systemic corticosteroids plus standard care vs. standard care (plus/minus placebo)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria>
+       ]
+     ], [
+       fhir:index 104;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Citation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://www.ceosys.de/fhir/Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19>;
+         fhir:Reference.reference [ fhir:value "Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Systemic corticosteroids for the treatment of COVID-19" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Systemic corticosteroids for the treatment of COVID-19" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-citation";
+         fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-citation>
+       ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Clinical Practice Guidelines (CPG) on EBMonFHIR" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "profiles.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Profiles" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "codesystems.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Code Systems" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "valuesets.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Value Sets" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "extensions.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Extensions" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "examples.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Examples" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 6;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 7;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "changelog.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Change Log" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "copyrightyear" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "2021+" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "releaselabel" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "ci-build" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "active-tables" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "apply-contact" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "false" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "apply-jurisdiction" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "false" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "apply-publisher" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "false" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "apply-version" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "false" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "show-inherited-invariants" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "false" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "usage-stats-opt-out" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "excludexml" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "false" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "excludejsn" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "false" ]
+     ], [
+       fhir:index 11;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "excludettl" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "excludemap" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 13;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "excludeexample" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "extension-domain" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "https://www.netzwerk-universitaetsmedizin.de" ]
+     ], [
+       fhir:index 15;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "extension-domain" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "https://simplifier.net" ]
+     ], [
+       fhir:index 16;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "autoload-resources" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 17;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 18;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 19;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 20;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 21;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 22;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 23;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 24;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 25;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
+     ], [
+       fhir:index 26;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 27;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 28;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 29;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 30;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 31;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-liquid" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/liquid" ]
+     ], [
+       fhir:index 32;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-liquid" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/liquid" ]
+     ], [
+       fhir:index 33;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-qa" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "temp/qa" ]
+     ], [
+       fhir:index 34;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-temp" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "temp/pages" ]
+     ], [
+       fhir:index 35;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-output" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "output" ]
+     ], [
+       fhir:index 36;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ], [
+       fhir:index 37;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-suppressed-warnings" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/ignoreWarnings.txt" ]
+     ], [
+       fhir:index 38;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-history" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "https://www.ceosys.de/fhir/history.html" ]
+     ], [
+       fhir:index 39;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "template-html" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template-page.html" ]
+     ], [
+       fhir:index 40;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "template-md" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template-page-md.html" ]
+     ], [
+       fhir:index 41;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "apply-context" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 42;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "apply-copyright" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 43;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "apply-license" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 44;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "fmm-definition" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+     ], [
+       fhir:index 45;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "propagate-status" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ], [
+       fhir:index 46;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "excludelogbinaryformat" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "true" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ActivityDefinition/ExampleNoDrugAdministrationAction> a fhir:ActivityDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleNoDrugAdministrationAction"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+     ]
+  ];
+  fhir:ActivityDefinition.url [ fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/no-drug-administration-example"];
+  fhir:ActivityDefinition.name [ fhir:value "DrugAdministrationAction"];
+  fhir:ActivityDefinition.status [ fhir:value "active"];
+  fhir:ActivityDefinition.subjectCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+       fhir:Coding.code [ fhir:value "Patient" ]
+     ]
+  ];
+  fhir:ActivityDefinition.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:ActivityDefinition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:432102000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "432102000" ];
+       fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.doNotPerform [ fhir:value "true"^^xsd:boolean];
+  fhir:ActivityDefinition.productCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ];
+       fhir:Coding.code [ fhir:value "C05AA09" ];
+       fhir:Coding.display [ fhir:value "Dexamethason" ]
+     ], [
+       fhir:index 1;
+       a sct:372584003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "372584003" ];
+       fhir:Coding.display [ fhir:value "Dexamethasone (substance)" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ActivityDefinition/ExampleNoDrugAdministrationAction.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

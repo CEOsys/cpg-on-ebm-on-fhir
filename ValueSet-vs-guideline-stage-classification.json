@@ -1,0 +1,22 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-guideline-stage-classification",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-guideline-stage-classification.html\"><code>https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification</code></a></li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/vs-guideline-stage-classification",
+  "version": "0.2.0-snapshot",
+  "name": "GuidelineStageClassification",
+  "title": "Guideline Stage Classification",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "description": "Stage classification according to systematics",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification"
+      }
+    ]
+  }
+}

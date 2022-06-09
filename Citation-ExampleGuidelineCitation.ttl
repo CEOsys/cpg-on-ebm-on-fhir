@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation> a fhir:Citation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleGuidelineCitation"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-citation";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-citation>
+     ]
+  ];
+  fhir:Citation.url [ fhir:value "https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation"];
+  fhir:Citation.name [ fhir:value "ExampleGuidelineCitation"];
+  fhir:Citation.status [ fhir:value "active"];
+  fhir:Citation.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:Citation.citedArtifact [
+     fhir:Citation.citedArtifact.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value "ceoysy/exampleIdentifier" ]
+     ];
+     fhir:Citation.citedArtifact.version [
+       fhir:Citation.citedArtifact.version.value [ fhir:value "1.0-alpha1" ]
+     ];
+     fhir:Citation.citedArtifact.currentState [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-status-type" ];
+         fhir:Coding.code [ fhir:value "archived" ];
+         fhir:Coding.display [ fhir:value "Archived" ]
+       ]
+     ];
+     fhir:Citation.citedArtifact.title [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.title.text [ fhir:value "Example Citation" ]
+     ];
+     fhir:Citation.citedArtifact.webLocation [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.webLocation.url [ fhir:value "https://example.com/guideline/exampleIdentifier" ]
+     ];
+     fhir:Citation.citedArtifact.classification [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.classification.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type" ];
+           fhir:Coding.code [ fhir:value "publication-type" ];
+           fhir:Coding.display [ fhir:value "Publication Type" ]
+         ]
+       ];
+       fhir:Citation.citedArtifact.classification.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+           fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

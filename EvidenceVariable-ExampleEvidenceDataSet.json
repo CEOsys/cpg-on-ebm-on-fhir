@@ -1,0 +1,27 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "ExampleEvidenceDataSet",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/EvidenceVariable/ExampleEvidenceDataSet",
+  "name": "ExampleEvidenceDataSet",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "characteristic": [
+    {
+      "definitionByCombination": {
+        "code": "dataset",
+        "characteristic": [
+          {
+            "definitionReference": {
+              "reference": "ExampleOutcomeEvidence"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

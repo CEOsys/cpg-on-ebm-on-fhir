@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0-snapshot",
+  "fhirVersion": [
+    "5.0.0-cibuild"
+  ],
+  "date": "20220609145946",
+  "name": "cpg.ceosys.de"
+}

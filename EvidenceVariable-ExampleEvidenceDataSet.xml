@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="ExampleEvidenceDataSet"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/EvidenceVariable/ExampleEvidenceDataSet"/>
+  <name value="ExampleEvidenceDataSet"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <characteristic>
+    <definitionByCombination>
+      <code value="dataset"/>
+      <characteristic>
+        <definitionReference>
+          <reference value="ExampleOutcomeEvidence"/>
+        </definitionReference>
+      </characteristic>
+    </definitionByCombination>
+  </characteristic>
+</EvidenceVariable>

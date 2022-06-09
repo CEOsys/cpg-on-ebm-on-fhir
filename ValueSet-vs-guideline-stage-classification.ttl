@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ValueSet/vs-guideline-stage-classification> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "vs-guideline-stage-classification"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-guideline-stage-classification.html\"><code>https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification</code></a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://www.ceosys.de/fhir/ValueSet/vs-guideline-stage-classification"];
+  fhir:ValueSet.version [ fhir:value "0.2.0-snapshot"];
+  fhir:ValueSet.name [ fhir:value "GuidelineStageClassification"];
+  fhir:ValueSet.title [ fhir:value "Guideline Stage Classification"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "Stage classification according to systematics"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ValueSet/vs-guideline-stage-classification.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

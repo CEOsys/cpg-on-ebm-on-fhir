@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cochrane-pico",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cochrane-pico-ontology.html\"><code>http://data.cochrane.org/ontologies/pico/</code></a></li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/cochrane-pico",
+  "version": "0.1.0",
+  "name": "CochranePICO",
+  "title": "Cochrane PICO",
+  "status": "draft",
+  "date": "2021-12-03",
+  "publisher": "CEOsys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.ceosys.de"
+        }
+      ]
+    }
+  ],
+  "description": "All codes from the Cochrane PICO ontology.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://data.cochrane.org/ontologies/pico/"
+      }
+    ]
+  }
+}

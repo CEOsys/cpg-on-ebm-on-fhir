@@ -1,0 +1,167 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/PopulationCOVID19NonVentilated> a fhir:EvidenceVariable;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "PopulationCOVID19NonVentilated"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+     ]
+  ];
+  fhir:EvidenceVariable.url [ fhir:value "https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated"];
+  fhir:EvidenceVariable.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://www.ceosys.de" ];
+     fhir:Identifier.value [ fhir:value "NonVentilated" ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "Population_COVID19_NonVentilated"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:EvidenceVariable.description [ fhir:value "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.linkId [ fhir:value "covid19" ];
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:404684003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "404684003" ];
+           fhir:Coding.display [ fhir:value "Clinical finding (finding)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:840539006;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "840539006" ];
+           fhir:Coding.display [ fhir:value "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "true"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionByCombination [
+       fhir:EvidenceVariable.characteristic.definitionByCombination.code [ fhir:value "any-of" ];
+       fhir:EvidenceVariable.characteristic.definitionByCombination.characteristic [
+         fhir:index 0;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "oxy-administration-nasal-cannula" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:371907003;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "371907003" ];
+               fhir:Coding.display [ fhir:value "Oxygen administration by nasal cannula (procedure)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "noninvasive-ventilation" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:428311008;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "428311008" ];
+               fhir:Coding.display [ fhir:value "Non-invasive ventilation (regime/therapy)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "artificial-respiration" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:40617009;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "40617009" ];
+               fhir:Coding.display [ fhir:value "Artificial respiration (procedure)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/PopulationCOVID19NonVentilated.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

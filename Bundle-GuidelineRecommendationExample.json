@@ -1,0 +1,1255 @@
+{
+  "resourceType": "Bundle",
+  "id": "GuidelineRecommendationExample",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle"
+    ]
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "GuidelineExample",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/guideline"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"GuidelineExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-guideline.html\">Clinical Practice Guideline</a></p></div><p><b>identifier</b>: Resource identifier: guideline example</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: final</p><p><b>type</b>: Guidelines <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-practice-guideline; #e07eN1w1Rwswg4)</span></p><p><b>category</b>: Evidence- and consensus-based guideline <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-guideline-stage-classification.html\">Guideline Stage Classification</a>#S3)</span></p><p><b>date</b>: 2022-01-28</p><p><b>author</b>: <a href=\"Organization-ExampleOrganization.html\">Organization/ExampleOrganization</a> \"Example Organization\"</p><p><b>title</b>: Example Guideline</p></div>"
+        },
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "RI",
+                "display": "Resource identifier"
+              }
+            ]
+          },
+          "system": "https://www.ceosys.de",
+          "value": "guideline example"
+        },
+        "version": "0.1.0",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+              "code": "clinical-practice-guideline"
+            },
+            {
+              "system": "https://data.cochrane.org/concepts/",
+              "code": "e07eN1w1Rwswg4",
+              "display": "Guidelines"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification",
+                "code": "S3",
+                "display": "Evidence- and consensus-based guideline"
+              }
+            ]
+          }
+        ],
+        "date": "2022-01-28",
+        "author": [
+          {
+            "reference": "Organization/ExampleOrganization"
+          }
+        ],
+        "title": "Example Guideline",
+        "relatesTo": [
+          {
+            "type": "citation",
+            "resourceReference": {
+              "reference": "Citation/ExampleGuidelineCitation"
+            }
+          }
+        ],
+        "section": [
+          {
+            "title": "Example Guideline Recommendation",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                  "code": "guideline-recommendation",
+                  "display": "Clinical practice guideline recommendation"
+                }
+              ]
+            },
+            "focus": {
+              "reference": "PlanDefinition/ExampleRecommendationPlan"
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an example guideline recommendation.</div>"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/citation",
+      "resource": {
+        "resourceType": "Citation",
+        "id": "ExampleGuidelineCitation",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/guideline-citation"
+          ]
+        },
+        "name": "ExampleGuidelineCitation",
+        "status": "active",
+        "citedArtifact": {
+          "identifier": [
+            {
+              "value": "ceoysy/exampleIdentifier"
+            }
+          ],
+          "version": {
+            "value": "1.0-alpha1"
+          },
+          "currentState": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/cited-artifact-status-type",
+                  "code": "archived",
+                  "display": "Archived"
+                }
+              ]
+            }
+          ],
+          "title": [
+            {
+              "text": "Example Citation"
+            }
+          ],
+          "webLocation": [
+            {
+              "url": "https://example.com/guideline/exampleIdentifier"
+            }
+          ],
+          "classification": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type",
+                    "code": "publication-type",
+                    "display": "Publication Type"
+                  }
+                ]
+              },
+              "classifier": [
+                {
+                  "coding": [
+                    {
+                      "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                      "code": "clinical-practice-guideline",
+                      "display": "Clinical practice guideline"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/recommendation-plan",
+      "resource": {
+        "resourceType": "PlanDefinition",
+        "id": "ExampleRecommendationPlan",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan"
+          ]
+        },
+        "version": "1.0",
+        "name": "RecommendationPlan",
+        "title": "Recommendation Plan",
+        "status": "active",
+        "subjectCanonical": "https://www.example.com/recommendation-eligibility-criteria",
+        "date": "2022-02-14",
+        "description": "Example Recommendation Plan",
+        "relatedArtifact": [
+          {
+            "type": "justification",
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                    "code": "recommendation-rating",
+                    "display": "Recommendation rating"
+                  }
+                ]
+              }
+            ],
+            "resourceReference": {
+              "reference": "ArtifactAssessment/ExampleRecommendationJustification"
+            }
+          },
+          {
+            "type": "citation",
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                    "code": "guideline-recommendation",
+                    "display": "Clinical practice guideline recommendation"
+                  }
+                ]
+              }
+            ],
+            "resourceReference": {
+              "reference": "Citation/ExampleRecommendationCitation"
+            }
+          },
+          {
+            "type": "citation",
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                    "code": "clinical-practice-guideline",
+                    "display": "Clinical practice guideline"
+                  }
+                ]
+              }
+            ],
+            "resourceReference": {
+              "reference": "Citation/ExampleGuidelineCitation"
+            }
+          }
+        ],
+        "goal": [
+          {
+            "id": "ventilator-management-goal",
+            "category": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "385857005",
+                  "display": "Ventilator care and adjustment (regime/therapy)"
+                }
+              ]
+            },
+            "description": {
+              "text": "The ventilator should be set up to provide a breath reate of at least 20 and at most per minute."
+            },
+            "target": [
+              {
+                "measure": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "33438-3",
+                      "display": "Breath rate mechanical --on ventilator"
+                    }
+                  ]
+                },
+                "detailRange": {
+                  "low": {
+                    "value": 20,
+                    "system": "http://unitsofmeasure.org",
+                    "code": "/min"
+                  },
+                  "high": {
+                    "value": 24,
+                    "system": "http://unitsofmeasure.org",
+                    "code": "/min"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "lab-ddimer-concentration-goal",
+            "category": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "410394004",
+                  "display": "Lab findings surveillance (regime/therapy)"
+                }
+              ]
+            },
+            "description": {
+              "text": "D-Dimer concentration shall be below 250 ng/mL"
+            },
+            "target": [
+              {
+                "measure": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "48066-5",
+                      "display": "Fibrin D-dimer DDU [Mass/volume] in Platelet poor plasma"
+                    }
+                  ]
+                },
+                "detailRange": {
+                  "high": {
+                    "value": 250,
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ng/mL"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "action": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "432102000",
+                  "display": "Administration of substance (procedure)"
+                }
+              ]
+            },
+            "definitionCanonical": "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example"
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "229824005",
+                  "display": "Positioning patient (procedure)"
+                }
+              ]
+            },
+            "goalId": [
+              "ventilator-management-goal"
+            ],
+            "definitionCanonical": "https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example"
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "410210009",
+                  "display": "Ventilator care management (procedure)"
+                }
+              ]
+            },
+            "goalId": [
+              "ventilator-management-goal"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/recommendation-action",
+      "resource": {
+        "resourceType": "ActivityDefinition",
+        "id": "ExampleDrugAdministrationAction",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action"
+          ]
+        },
+        "url": "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example",
+        "name": "DrugAdministrationAction",
+        "status": "active",
+        "subjectCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/resource-types",
+              "code": "Patient"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "432102000",
+              "display": "Administration of substance (procedure)"
+            }
+          ]
+        },
+        "productCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/atc",
+              "code": "C05AA09",
+              "display": "Dexamethason"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "372584003",
+              "display": "Dexamethasone (substance)"
+            }
+          ]
+        },
+        "dosage": [
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "type",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "29463-7",
+                          "display": "Body weight"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "url": "value",
+                    "valueRange": {
+                      "high": {
+                        "value": 70,
+                        "unit": "kg",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "kg"
+                      }
+                    }
+                  }
+                ],
+                "url": "https://www.ceosys.de/fhir/StructureDefinition/ext-dosage-condition"
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "count": 10,
+                "duration": 10,
+                "durationUnit": "d",
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 6,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                },
+                "rateQuantity": {
+                  "value": 1,
+                  "unit": "/d",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "/d"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/population",
+      "resource": {
+        "resourceType": "EvidenceVariable",
+        "id": "ExampleRecommendationEligibilityCriteria",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria"
+          ]
+        },
+        "url": "https://www.example.com/recommendation-eligibility-criteria",
+        "name": "PopulationExample",
+        "status": "active",
+        "characteristic": [
+          {
+            "definitionByTypeAndValue": {
+              "typeCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "404684003",
+                    "display": "Clinical finding (finding)"
+                  }
+                ]
+              },
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "840539006",
+                    "display": "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/recommendation-justification",
+      "resource": {
+        "resourceType": "ArtifactAssessment",
+        "id": "ExampleRecommendationJustification",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"ExampleRecommendationJustification\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-recommendation-justification.html\">Recommendation Justification</a></p></div><p><b>ArtifactAssessment Version</b>: 0.1.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"#PlanDefinition_ExampleRecommendationPlan\">See above (PlanDefinition/ExampleRecommendationPlan)</a></p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Strength of recommendation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#strength)</span></p><p><b>classifier</b>: Strong for an intervention <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-cs-recommendation-strength.html\">Recommendation Strength</a>#strong-for)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Very low quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#very-low)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Consensus <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#consensus)</span></p><p><b>classifier</b>: Strong <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-recommendation-strength.html\">StrengthOfRecommendationRating</a>#strong)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Certainty of evidence rating <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#certainty-of-evidence-rating)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Net effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#net-effect)</span></p></blockquote></div>"
+        },
+        "extension": [
+          {
+            "url": "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version",
+            "valueString": "0.1.0"
+          },
+          {
+            "url": "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status",
+            "valueCode": "active"
+          }
+        ],
+        "date": "2020-01-03",
+        "artifactReference": {
+          "reference": "PlanDefinition/ExampleRecommendationPlan"
+        },
+        "content": [
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                  "code": "strength",
+                  "display": "Strength of recommendation"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength",
+                    "code": "strong-for"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                  "code": "Overall",
+                  "display": "Overall certainty"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+                    "code": "very-low",
+                    "display": "Very low quality"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                  "code": "consensus",
+                  "display": "Consensus"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/recommendation-strength",
+                    "code": "strong",
+                    "display": "Strong"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "informationType": "container",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                  "code": "certainty-of-evidence-rating",
+                  "display": "Certainty of evidence rating"
+                }
+              ]
+            },
+            "relatedArtifact": [
+              {
+                "type": "justification",
+                "classifier": [
+                  {
+                    "coding": [
+                      {
+                        "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                        "code": "certainty-of-evidence-rating",
+                        "display": "Certainty of evidence rating"
+                      }
+                    ]
+                  }
+                ],
+                "resourceReference": {
+                  "reference": "ArtifactAssessment/ExampleCertaintyOfEvidenceRating"
+                }
+              }
+            ]
+          },
+          {
+            "informationType": "container",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                  "code": "net-effect",
+                  "display": "Net effect"
+                }
+              ]
+            },
+            "relatedArtifact": [
+              {
+                "type": "supported-with",
+                "classifier": [
+                  {
+                    "coding": [
+                      {
+                        "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                        "code": "net-effect",
+                        "display": "Net effect"
+                      }
+                    ]
+                  }
+                ],
+                "resourceReference": {
+                  "reference": "Evidence/ExampleNetEffectEstimate"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/certainty-of-evidence-rating",
+      "resource": {
+        "resourceType": "ArtifactAssessment",
+        "id": "ExampleCertaintyOfEvidenceRating",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"ExampleCertaintyOfEvidenceRating\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-certainty-of-evidence-rating.html\">Certainty of Evidence Rating</a></p></div><p><b>ArtifactAssessment Version</b>: 0.1.1</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2022-03-11</p><p><b>artifact</b>: <a href=\"#Evidence_ExampleStudyOutcomeEvidence\">See above (Evidence/ExampleStudyOutcomeEvidence)</a></p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Moderate quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#moderate)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Risk of bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#RiskOfBias)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Imprecision <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Imprecision)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Large effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#LargeEffect)</span></p><p><b>classifier</b>: increase rating: +2 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#upcode2)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Plausible confounding <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#PlausibleConfounding)</span></p><p><b>classifier</b>: increase rating: +1 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#upcode1)</span></p></blockquote></div>"
+        },
+        "extension": [
+          {
+            "url": "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version",
+            "valueString": "0.1.1"
+          },
+          {
+            "url": "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status",
+            "valueCode": "active"
+          }
+        ],
+        "date": "2022-03-11",
+        "artifactReference": {
+          "reference": "Evidence/ExampleStudyOutcomeEvidence"
+        },
+        "content": [
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                  "code": "Overall",
+                  "display": "Overall certainty"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+                    "code": "moderate",
+                    "display": "Moderate quality"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                  "code": "RiskOfBias",
+                  "display": "Risk of bias"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+                    "code": "serious-concern",
+                    "display": "serious concern"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                  "code": "Imprecision",
+                  "display": "Imprecision"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+                    "code": "serious-concern",
+                    "display": "serious concern"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                  "code": "LargeEffect",
+                  "display": "Large effect"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+                    "code": "upcode2",
+                    "display": "increase rating: +2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "informationType": "rating",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                  "code": "PlausibleConfounding",
+                  "display": "Plausible confounding"
+                }
+              ]
+            },
+            "classifier": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+                    "code": "upcode1",
+                    "display": "increase rating: +1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/study-outcome-evidence",
+      "resource": {
+        "resourceType": "Evidence",
+        "id": "ExampleStudyOutcomeEvidence",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence"
+          ]
+        },
+        "name": "ExampleStudyOutcomeEvidence",
+        "status": "active",
+        "relatedArtifact": [
+          {
+            "type": "citation",
+            "resourceReference": {
+              "reference": "Citation/ExampleStudyCitation"
+            }
+          }
+        ],
+        "variableDefinition": [
+          {
+            "variableRole": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/variable-role",
+                  "code": "population"
+                }
+              ]
+            },
+            "observed": {
+              "reference": "Group/ExampleStudyCohort"
+            },
+            "intended": {
+              "reference": "EvidenceVariable/ExampleStudyEligibilityCriteria"
+            }
+          },
+          {
+            "variableRole": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/variable-role",
+                  "code": "measuredVariable"
+                }
+              ]
+            },
+            "observed": {
+              "reference": "EvidenceVariable/ExampleOutcome"
+            }
+          }
+        ],
+        "synthesisType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/synthesis-type",
+              "code": "NotApplicable"
+            }
+          ]
+        },
+        "studyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/study-type",
+              "code": "RCT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence-synthesis",
+      "resource": {
+        "resourceType": "Evidence",
+        "id": "ExampleOutcomeEvidenceSynthesis",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis"
+          ]
+        },
+        "name": "ExampleOutcomeEvidenceSynthesis",
+        "status": "active",
+        "relatedArtifact": [
+          {
+            "type": "citation",
+            "resourceReference": {
+              "reference": "Citation/ExampleStudyCitation"
+            }
+          }
+        ],
+        "variableDefinition": [
+          {
+            "variableRole": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/variable-role",
+                  "code": "population"
+                }
+              ]
+            },
+            "observed": {
+              "reference": "Group/ExampleEvidenceSynthesisCohorts"
+            },
+            "intended": {
+              "reference": "EvidenceVariable/ExampleStudyEligibilityCriteria"
+            }
+          },
+          {
+            "variableRole": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/variable-role",
+                  "code": "measuredVariable"
+                }
+              ]
+            },
+            "observed": {
+              "reference": "EvidenceVariable/ExampleOutcome"
+            }
+          }
+        ],
+        "synthesisType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/synthesis-type",
+              "code": "NotApplicable"
+            }
+          ]
+        },
+        "studyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/study-type",
+              "code": "RCT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria",
+      "resource": {
+        "resourceType": "EvidenceVariable",
+        "id": "ExampleStudyEligibilityCriteria",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria"
+          ]
+        },
+        "name": "ExampleStudyEligibilityCriteria",
+        "status": "active",
+        "characteristic": [
+          {
+            "definitionByTypeAndValue": {
+              "typeCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "404684003",
+                    "display": "Clinical finding (finding)"
+                  }
+                ]
+              },
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "840539006",
+                    "display": "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/study-citation",
+      "resource": {
+        "resourceType": "Citation",
+        "id": "ExampleStudyCitation",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/study-citation"
+          ]
+        },
+        "name": "ExampleCitation",
+        "status": "active",
+        "citedArtifact": {
+          "identifier": [
+            {
+              "value": "ceoysy/exampleIdentifier"
+            }
+          ],
+          "title": [
+            {
+              "text": "Example Citation"
+            }
+          ],
+          "classification": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type",
+                    "code": "publication-type",
+                    "display": "Publication Type"
+                  }
+                ]
+              },
+              "classifier": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier",
+                      "code": "D016428",
+                      "display": "Journal Article"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/outcome",
+      "resource": {
+        "resourceType": "EvidenceVariable",
+        "id": "ExampleOutcome",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.ceosys.de",
+            "value": "outcome-example"
+          }
+        ],
+        "name": "Mortality",
+        "status": "active",
+        "characteristic": [
+          {
+            "exclude": false,
+            "definitionByTypeAndValue": {
+              "typeCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "409651001",
+                    "display": "Mortality rate (observable entity)"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "unit": "percent",
+                "system": "http://unitsofmeasure.org",
+                "code": "%"
+              }
+            }
+          }
+        ],
+        "handling": "dichotomous"
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/recommendation-citation",
+      "resource": {
+        "resourceType": "Citation",
+        "id": "ExampleRecommendationCitation",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation"
+          ]
+        },
+        "name": "ExampleRecommendationCitation",
+        "status": "active",
+        "citedArtifact": {
+          "identifier": [
+            {
+              "value": "ceoysy/exampleIdentifier"
+            }
+          ],
+          "version": {
+            "value": "1.0-alpha1"
+          },
+          "currentState": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/cited-artifact-status-type",
+                  "code": "archived",
+                  "display": "Archived"
+                }
+              ]
+            }
+          ],
+          "title": [
+            {
+              "text": "Example Citation"
+            }
+          ],
+          "classification": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type",
+                    "code": "publication-type",
+                    "display": "Publication Type"
+                  }
+                ]
+              },
+              "classifier": [
+                {
+                  "coding": [
+                    {
+                      "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                      "code": "guideline-recommendation",
+                      "display": "Clinical practice guideline recommendation"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://www.ceosys.de/guidelines/guideline-example/net-effect-estimate",
+      "resource": {
+        "resourceType": "Evidence",
+        "id": "ExampleNetEffectEstimate",
+        "meta": {
+          "profile": [
+            "https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate"
+          ]
+        },
+        "name": "NetEffectExample",
+        "status": "unknown",
+        "variableDefinition": [
+          {
+            "variableRole": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/variable-role",
+                  "code": "measuredVariable"
+                }
+              ]
+            },
+            "intended": {
+              "reference": "EvidenceVariable/ExampleOutcome"
+            }
+          }
+        ],
+        "statistic": [
+          {
+            "description": "Net Effect",
+            "statisticType": {
+              "coding": [
+                {
+                  "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                  "code": "net-effect",
+                  "display": "Net Effect"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 1.7,
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            },
+            "attributeEstimate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/attribute-estimate-type",
+                      "code": "C53324",
+                      "display": "Confidence interval"
+                    }
+                  ]
+                },
+                "level": 0.95,
+                "range": {
+                  "low": {
+                    "value": 1.5,
+                    "system": "http://unitsofmeasure.org",
+                    "code": "%"
+                  },
+                  "high": {
+                    "value": 1.9,
+                    "system": "http://unitsofmeasure.org",
+                    "code": "%"
+                  }
+                }
+              }
+            ],
+            "modelCharacteristic": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+                      "code": "relative-importance-weighting"
+                    }
+                  ]
+                },
+                "value": {
+                  "value": 1
+                },
+                "variable": [
+                  {
+                    "variableDefinition": {
+                      "reference": "EvidenceVariable/ExampleOutcome"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

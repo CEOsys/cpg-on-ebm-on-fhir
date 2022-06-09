@@ -1,0 +1,1223 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Bundle/GuidelineRecommendationExample> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "GuidelineRecommendationExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle>
+     ]
+  ];
+  fhir:Bundle.type [ fhir:value "collection"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/citation" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/citation>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/recommendation-plan" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/recommendation-plan>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/recommendation-action" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/recommendation-action>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/population" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/population>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/recommendation-justification" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/recommendation-justification>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/certainty-of-evidence-rating" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/certainty-of-evidence-rating>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/study-outcome-evidence" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/study-outcome-evidence>
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence-synthesis" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/outcome-evidence-synthesis>
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria>
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/study-citation" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/study-citation>
+  ], [
+     fhir:index 11;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/outcome" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/outcome>
+  ], [
+     fhir:index 12;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/recommendation-citation" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/recommendation-citation>
+  ], [
+     fhir:index 13;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/guideline-example/net-effect-estimate" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/guideline-example/net-effect-estimate>
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example> a fhir:Composition;
+  fhir:Resource.id [ fhir:value "GuidelineExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"GuidelineExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-guideline.html\">Clinical Practice Guideline</a></p></div><p><b>identifier</b>: Resource identifier: guideline example</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: final</p><p><b>type</b>: Guidelines <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-practice-guideline; #e07eN1w1Rwswg4)</span></p><p><b>category</b>: Evidence- and consensus-based guideline <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-guideline-stage-classification.html\">Guideline Stage Classification</a>#S3)</span></p><p><b>date</b>: 2022-01-28</p><p><b>author</b>: <a href=\"Organization-ExampleOrganization.html\">Organization/ExampleOrganization</a> \"Example Organization\"</p><p><b>title</b>: Example Guideline</p></div>"
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "RI" ];
+         fhir:Coding.display [ fhir:value "Resource identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "https://www.ceosys.de" ];
+     fhir:Identifier.value [ fhir:value "guideline example" ]
+  ];
+  fhir:Composition.version [ fhir:value "0.1.0"];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+       fhir:Coding.code [ fhir:value "clinical-practice-guideline" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "https://data.cochrane.org/concepts/" ];
+       fhir:Coding.code [ fhir:value "e07eN1w1Rwswg4" ];
+       fhir:Coding.display [ fhir:value "Guidelines" ]
+     ]
+  ];
+  fhir:Composition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification" ];
+       fhir:Coding.code [ fhir:value "S3" ];
+       fhir:Coding.display [ fhir:value "Evidence- and consensus-based guideline" ]
+     ]
+  ];
+  fhir:Composition.date [ fhir:value "2022-01-28"^^xsd:date];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <https://www.ceosys.de/fhir/Organization/ExampleOrganization>;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleOrganization" ]
+  ];
+  fhir:Composition.title [ fhir:value "Example Guideline"];
+  fhir:Composition.relatesTo [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleGuidelineCitation" ]
+     ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Example Guideline Recommendation" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:Composition.section.focus [
+       fhir:link <https://www.ceosys.de/fhir/PlanDefinition/ExampleRecommendationPlan>;
+       fhir:Reference.reference [ fhir:value "PlanDefinition/ExampleRecommendationPlan" ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an example guideline recommendation.</div>"
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/citation> a fhir:Citation;
+  fhir:Resource.id [ fhir:value "ExampleGuidelineCitation"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-citation";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-citation>
+     ]
+  ];
+  fhir:Citation.name [ fhir:value "ExampleGuidelineCitation"];
+  fhir:Citation.status [ fhir:value "active"];
+  fhir:Citation.citedArtifact [
+     fhir:Citation.citedArtifact.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value "ceoysy/exampleIdentifier" ]
+     ];
+     fhir:Citation.citedArtifact.version [
+       fhir:Citation.citedArtifact.version.value [ fhir:value "1.0-alpha1" ]
+     ];
+     fhir:Citation.citedArtifact.currentState [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-status-type" ];
+         fhir:Coding.code [ fhir:value "archived" ];
+         fhir:Coding.display [ fhir:value "Archived" ]
+       ]
+     ];
+     fhir:Citation.citedArtifact.title [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.title.text [ fhir:value "Example Citation" ]
+     ];
+     fhir:Citation.citedArtifact.webLocation [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.webLocation.url [ fhir:value "https://example.com/guideline/exampleIdentifier" ]
+     ];
+     fhir:Citation.citedArtifact.classification [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.classification.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type" ];
+           fhir:Coding.code [ fhir:value "publication-type" ];
+           fhir:Coding.display [ fhir:value "Publication Type" ]
+         ]
+       ];
+       fhir:Citation.citedArtifact.classification.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+           fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/recommendation-plan> a fhir:PlanDefinition;
+  fhir:Resource.id [ fhir:value "ExampleRecommendationPlan"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+     ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "1.0"];
+  fhir:PlanDefinition.name [ fhir:value "RecommendationPlan"];
+  fhir:PlanDefinition.title [ fhir:value "Recommendation Plan"];
+  fhir:PlanDefinition.status [ fhir:value "active"];
+  fhir:PlanDefinition.subjectCanonical [
+     fhir:value "https://www.example.com/recommendation-eligibility-criteria";
+     fhir:link <https://www.example.com/recommendation-eligibility-criteria>
+  ];
+  fhir:PlanDefinition.date [ fhir:value "2022-02-14"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "Example Recommendation Plan"];
+  fhir:PlanDefinition.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "justification" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "recommendation-rating" ];
+         fhir:Coding.display [ fhir:value "Recommendation rating" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/ExampleRecommendationJustification>;
+       fhir:Reference.reference [ fhir:value "ArtifactAssessment/ExampleRecommendationJustification" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleRecommendationCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleRecommendationCitation" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleGuidelineCitation" ]
+     ]
+  ];
+  fhir:PlanDefinition.goal [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "ventilator-management-goal" ];
+     fhir:PlanDefinition.goal.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:385857005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "385857005" ];
+         fhir:Coding.display [ fhir:value "Ventilator care and adjustment (regime/therapy)" ]
+       ]
+     ];
+     fhir:PlanDefinition.goal.description [
+       fhir:CodeableConcept.text [ fhir:value "The ventilator should be set up to provide a breath reate of at least 20 and at most per minute." ]
+     ];
+     fhir:PlanDefinition.goal.target [
+       fhir:index 0;
+       fhir:PlanDefinition.goal.target.measure [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a loinc:33438-3;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "33438-3" ];
+           fhir:Coding.display [ fhir:value "Breath rate mechanical --on ventilator" ]
+         ]
+       ];
+       fhir:PlanDefinition.goal.target.detailRange [
+         fhir:Range.low [
+           fhir:Quantity.value [ fhir:value "20"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "/min" ]
+         ];
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "24"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "/min" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "lab-ddimer-concentration-goal" ];
+     fhir:PlanDefinition.goal.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:410394004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "410394004" ];
+         fhir:Coding.display [ fhir:value "Lab findings surveillance (regime/therapy)" ]
+       ]
+     ];
+     fhir:PlanDefinition.goal.description [
+       fhir:CodeableConcept.text [ fhir:value "D-Dimer concentration shall be below 250 ng/mL" ]
+     ];
+     fhir:PlanDefinition.goal.target [
+       fhir:index 0;
+       fhir:PlanDefinition.goal.target.measure [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a loinc:48066-5;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "48066-5" ];
+           fhir:Coding.display [ fhir:value "Fibrin D-dimer DDU [Mass/volume] in Platelet poor plasma" ]
+         ]
+       ];
+       fhir:PlanDefinition.goal.target.detailRange [
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "250"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "ng/mL" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:PlanDefinition.action [
+     fhir:index 0;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:432102000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "432102000" ];
+         fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example>
+     ]
+  ], [
+     fhir:index 1;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:229824005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "229824005" ];
+         fhir:Coding.display [ fhir:value "Positioning patient (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.goalId [
+       fhir:value "ventilator-management-goal";
+       fhir:index 0
+     ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example>
+     ]
+  ], [
+     fhir:index 2;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:410210009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "410210009" ];
+         fhir:Coding.display [ fhir:value "Ventilator care management (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.goalId [
+       fhir:value "ventilator-management-goal";
+       fhir:index 0
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/recommendation-action> a fhir:ActivityDefinition;
+  fhir:Resource.id [ fhir:value "ExampleDrugAdministrationAction"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+     ]
+  ];
+  fhir:ActivityDefinition.url [ fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example"];
+  fhir:ActivityDefinition.name [ fhir:value "DrugAdministrationAction"];
+  fhir:ActivityDefinition.status [ fhir:value "active"];
+  fhir:ActivityDefinition.subjectCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+       fhir:Coding.code [ fhir:value "Patient" ]
+     ]
+  ];
+  fhir:ActivityDefinition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:432102000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "432102000" ];
+       fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.productCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ];
+       fhir:Coding.code [ fhir:value "C05AA09" ];
+       fhir:Coding.display [ fhir:value "Dexamethason" ]
+     ], [
+       fhir:index 1;
+       a sct:372584003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "372584003" ];
+       fhir:Coding.display [ fhir:value "Dexamethasone (substance)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.dosage [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "type" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             a loinc:29463-7;
+             fhir:Coding.system [ fhir:value "http://loinc.org" ];
+             fhir:Coding.code [ fhir:value "29463-7" ];
+             fhir:Coding.display [ fhir:value "Body weight" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueRange [
+           fhir:Range.high [
+             fhir:Quantity.value [ fhir:value "70"^^xsd:decimal ];
+             fhir:Quantity.unit [ fhir:value "kg" ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "kg" ]
+           ]
+         ]
+       ];
+       fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ext-dosage-condition" ]
+     ];
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.count [ fhir:value "10"^^xsd:positiveInteger ];
+         fhir:Timing.repeat.duration [ fhir:value "10"^^xsd:decimal ];
+         fhir:Timing.repeat.durationUnit [ fhir:value "d" ];
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:positiveInteger ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:Dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral route" ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "6"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "mg" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "mg" ]
+       ];
+       fhir:Dosage.doseAndRate.rateQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "/d" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "/d" ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/population> a fhir:EvidenceVariable;
+  fhir:Resource.id [ fhir:value "ExampleRecommendationEligibilityCriteria"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+     ]
+  ];
+  fhir:EvidenceVariable.url [ fhir:value "https://www.example.com/recommendation-eligibility-criteria"];
+  fhir:EvidenceVariable.name [ fhir:value "PopulationExample"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:404684003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "404684003" ];
+           fhir:Coding.display [ fhir:value "Clinical finding (finding)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:840539006;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "840539006" ];
+           fhir:Coding.display [ fhir:value "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/recommendation-justification> a fhir:ArtifactAssessment;
+  fhir:Resource.id [ fhir:value "ExampleRecommendationJustification"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"ExampleRecommendationJustification\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-recommendation-justification.html\">Recommendation Justification</a></p></div><p><b>ArtifactAssessment Version</b>: 0.1.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"#PlanDefinition_ExampleRecommendationPlan\">See above (PlanDefinition/ExampleRecommendationPlan)</a></p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Strength of recommendation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#strength)</span></p><p><b>classifier</b>: Strong for an intervention <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-cs-recommendation-strength.html\">Recommendation Strength</a>#strong-for)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Very low quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#very-low)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Consensus <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#consensus)</span></p><p><b>classifier</b>: Strong <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-recommendation-strength.html\">StrengthOfRecommendationRating</a>#strong)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Certainty of evidence rating <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#certainty-of-evidence-rating)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Net effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#net-effect)</span></p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version" ];
+     fhir:Extension.valueString [ fhir:value "0.1.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ];
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ];
+  fhir:ArtifactAssessment.date [ fhir:value "2020-01-03"^^xsd:date];
+  fhir:ArtifactAssessment.artifactReference [
+     fhir:link <https://www.ceosys.de/fhir/PlanDefinition/ExampleRecommendationPlan>;
+     fhir:Reference.reference [ fhir:value "PlanDefinition/ExampleRecommendationPlan" ]
+  ];
+  fhir:ArtifactAssessment.content [
+     fhir:index 0;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "strength" ];
+         fhir:Coding.display [ fhir:value "Strength of recommendation" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong-for" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Overall" ];
+         fhir:Coding.display [ fhir:value "Overall certainty" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "very-low" ];
+         fhir:Coding.display [ fhir:value "Very low quality" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "consensus" ];
+         fhir:Coding.display [ fhir:value "Consensus" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong" ];
+         fhir:Coding.display [ fhir:value "Strong" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "container" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+         fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.relatedArtifact [
+       fhir:index 0;
+       fhir:RelatedArtifact.type [ fhir:value "justification" ];
+       fhir:RelatedArtifact.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+           fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+         ]
+       ];
+       fhir:RelatedArtifact.resourceReference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/ExampleCertaintyOfEvidenceRating>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/ExampleCertaintyOfEvidenceRating" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "container" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "net-effect" ];
+         fhir:Coding.display [ fhir:value "Net effect" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.relatedArtifact [
+       fhir:index 0;
+       fhir:RelatedArtifact.type [ fhir:value "supported-with" ];
+       fhir:RelatedArtifact.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "net-effect" ];
+           fhir:Coding.display [ fhir:value "Net effect" ]
+         ]
+       ];
+       fhir:RelatedArtifact.resourceReference [
+         fhir:link <https://www.ceosys.de/fhir/Evidence/ExampleNetEffectEstimate>;
+         fhir:Reference.reference [ fhir:value "Evidence/ExampleNetEffectEstimate" ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/certainty-of-evidence-rating> a fhir:ArtifactAssessment;
+  fhir:Resource.id [ fhir:value "ExampleCertaintyOfEvidenceRating"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"ExampleCertaintyOfEvidenceRating\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-certainty-of-evidence-rating.html\">Certainty of Evidence Rating</a></p></div><p><b>ArtifactAssessment Version</b>: 0.1.1</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2022-03-11</p><p><b>artifact</b>: <a href=\"#Evidence_ExampleStudyOutcomeEvidence\">See above (Evidence/ExampleStudyOutcomeEvidence)</a></p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Moderate quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#moderate)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Risk of bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#RiskOfBias)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Imprecision <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Imprecision)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Large effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#LargeEffect)</span></p><p><b>classifier</b>: increase rating: +2 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#upcode2)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Plausible confounding <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#PlausibleConfounding)</span></p><p><b>classifier</b>: increase rating: +1 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#upcode1)</span></p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version" ];
+     fhir:Extension.valueString [ fhir:value "0.1.1" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ];
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ];
+  fhir:ArtifactAssessment.date [ fhir:value "2022-03-11"^^xsd:date];
+  fhir:ArtifactAssessment.artifactReference [
+     fhir:link <https://www.ceosys.de/fhir/Evidence/ExampleStudyOutcomeEvidence>;
+     fhir:Reference.reference [ fhir:value "Evidence/ExampleStudyOutcomeEvidence" ]
+  ];
+  fhir:ArtifactAssessment.content [
+     fhir:index 0;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Overall" ];
+         fhir:Coding.display [ fhir:value "Overall certainty" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "moderate" ];
+         fhir:Coding.display [ fhir:value "Moderate quality" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "RiskOfBias" ];
+         fhir:Coding.display [ fhir:value "Risk of bias" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "serious-concern" ];
+         fhir:Coding.display [ fhir:value "serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Imprecision" ];
+         fhir:Coding.display [ fhir:value "Imprecision" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "serious-concern" ];
+         fhir:Coding.display [ fhir:value "serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "LargeEffect" ];
+         fhir:Coding.display [ fhir:value "Large effect" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "upcode2" ];
+         fhir:Coding.display [ fhir:value "increase rating: +2" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "PlausibleConfounding" ];
+         fhir:Coding.display [ fhir:value "Plausible confounding" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "upcode1" ];
+         fhir:Coding.display [ fhir:value "increase rating: +1" ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/study-outcome-evidence> a fhir:Evidence;
+  fhir:Resource.id [ fhir:value "ExampleStudyOutcomeEvidence"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence>
+     ]
+  ];
+  fhir:Evidence.name [ fhir:value "ExampleStudyOutcomeEvidence"];
+  fhir:Evidence.status [ fhir:value "active"];
+  fhir:Evidence.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleStudyCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleStudyCitation" ]
+     ]
+  ];
+  fhir:Evidence.variableDefinition [
+     fhir:index 0;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "population" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/Group/ExampleStudyCohort>;
+       fhir:Reference.reference [ fhir:value "Group/ExampleStudyCohort" ]
+     ];
+     fhir:Evidence.variableDefinition.intended [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleStudyEligibilityCriteria>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleStudyEligibilityCriteria" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "measuredVariable" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+     ]
+  ];
+  fhir:Evidence.synthesisType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/synthesis-type" ];
+       fhir:Coding.code [ fhir:value "NotApplicable" ]
+     ]
+  ];
+  fhir:Evidence.studyType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/study-type" ];
+       fhir:Coding.code [ fhir:value "RCT" ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/outcome-evidence-synthesis> a fhir:Evidence;
+  fhir:Resource.id [ fhir:value "ExampleOutcomeEvidenceSynthesis"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis>
+     ]
+  ];
+  fhir:Evidence.name [ fhir:value "ExampleOutcomeEvidenceSynthesis"];
+  fhir:Evidence.status [ fhir:value "active"];
+  fhir:Evidence.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleStudyCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleStudyCitation" ]
+     ]
+  ];
+  fhir:Evidence.variableDefinition [
+     fhir:index 0;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "population" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/Group/ExampleEvidenceSynthesisCohorts>;
+       fhir:Reference.reference [ fhir:value "Group/ExampleEvidenceSynthesisCohorts" ]
+     ];
+     fhir:Evidence.variableDefinition.intended [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleStudyEligibilityCriteria>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleStudyEligibilityCriteria" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "measuredVariable" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+     ]
+  ];
+  fhir:Evidence.synthesisType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/synthesis-type" ];
+       fhir:Coding.code [ fhir:value "NotApplicable" ]
+     ]
+  ];
+  fhir:Evidence.studyType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/study-type" ];
+       fhir:Coding.code [ fhir:value "RCT" ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria> a fhir:EvidenceVariable;
+  fhir:Resource.id [ fhir:value "ExampleStudyEligibilityCriteria"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria>
+     ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "ExampleStudyEligibilityCriteria"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:404684003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "404684003" ];
+           fhir:Coding.display [ fhir:value "Clinical finding (finding)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:840539006;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "840539006" ];
+           fhir:Coding.display [ fhir:value "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/study-citation> a fhir:Citation;
+  fhir:Resource.id [ fhir:value "ExampleStudyCitation"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-citation";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-citation>
+     ]
+  ];
+  fhir:Citation.name [ fhir:value "ExampleCitation"];
+  fhir:Citation.status [ fhir:value "active"];
+  fhir:Citation.citedArtifact [
+     fhir:Citation.citedArtifact.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value "ceoysy/exampleIdentifier" ]
+     ];
+     fhir:Citation.citedArtifact.title [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.title.text [ fhir:value "Example Citation" ]
+     ];
+     fhir:Citation.citedArtifact.classification [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.classification.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type" ];
+           fhir:Coding.code [ fhir:value "publication-type" ];
+           fhir:Coding.display [ fhir:value "Publication Type" ]
+         ]
+       ];
+       fhir:Citation.citedArtifact.classification.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier" ];
+           fhir:Coding.code [ fhir:value "D016428" ];
+           fhir:Coding.display [ fhir:value "Journal Article" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/outcome> a fhir:EvidenceVariable;
+  fhir:Resource.id [ fhir:value "ExampleOutcome"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-definition>
+     ]
+  ];
+  fhir:EvidenceVariable.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://www.ceosys.de" ];
+     fhir:Identifier.value [ fhir:value "outcome-example" ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "Mortality"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:409651001;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "409651001" ];
+           fhir:Coding.display [ fhir:value "Mortality rate (observable entity)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueQuantity [
+         fhir:Quantity.unit [ fhir:value "percent" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "%" ]
+       ]
+     ]
+  ];
+  fhir:EvidenceVariable.handling [ fhir:value "dichotomous"] .
+
+<https://www.ceosys.de/guidelines/guideline-example/recommendation-citation> a fhir:Citation;
+  fhir:Resource.id [ fhir:value "ExampleRecommendationCitation"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation>
+     ]
+  ];
+  fhir:Citation.name [ fhir:value "ExampleRecommendationCitation"];
+  fhir:Citation.status [ fhir:value "active"];
+  fhir:Citation.citedArtifact [
+     fhir:Citation.citedArtifact.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value "ceoysy/exampleIdentifier" ]
+     ];
+     fhir:Citation.citedArtifact.version [
+       fhir:Citation.citedArtifact.version.value [ fhir:value "1.0-alpha1" ]
+     ];
+     fhir:Citation.citedArtifact.currentState [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-status-type" ];
+         fhir:Coding.code [ fhir:value "archived" ];
+         fhir:Coding.display [ fhir:value "Archived" ]
+       ]
+     ];
+     fhir:Citation.citedArtifact.title [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.title.text [ fhir:value "Example Citation" ]
+     ];
+     fhir:Citation.citedArtifact.classification [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.classification.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type" ];
+           fhir:Coding.code [ fhir:value "publication-type" ];
+           fhir:Coding.display [ fhir:value "Publication Type" ]
+         ]
+       ];
+       fhir:Citation.citedArtifact.classification.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+           fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/guideline-example/net-effect-estimate> a fhir:Evidence;
+  fhir:Resource.id [ fhir:value "ExampleNetEffectEstimate"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate>
+     ]
+  ];
+  fhir:Evidence.name [ fhir:value "NetEffectExample"];
+  fhir:Evidence.status [ fhir:value "unknown"];
+  fhir:Evidence.variableDefinition [
+     fhir:index 0;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "measuredVariable" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.intended [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+     ]
+  ];
+  fhir:Evidence.statistic [
+     fhir:index 0;
+     fhir:Evidence.statistic.description [ fhir:value "Net Effect" ];
+     fhir:Evidence.statistic.statisticType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "net-effect" ];
+         fhir:Coding.display [ fhir:value "Net Effect" ]
+       ]
+     ];
+     fhir:Evidence.statistic.quantity [
+       fhir:Quantity.value [ fhir:value "1.7"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "%" ]
+     ];
+     fhir:Evidence.statistic.attributeEstimate [
+       fhir:index 0;
+       fhir:Evidence.statistic.attributeEstimate.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/attribute-estimate-type" ];
+           fhir:Coding.code [ fhir:value "C53324" ];
+           fhir:Coding.display [ fhir:value "Confidence interval" ]
+         ]
+       ];
+       fhir:Evidence.statistic.attributeEstimate.level [ fhir:value "0.95"^^xsd:decimal ];
+       fhir:Evidence.statistic.attributeEstimate.range [
+         fhir:Range.low [
+           fhir:Quantity.value [ fhir:value "1.5"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "%" ]
+         ];
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "1.9"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "%" ]
+         ]
+       ]
+     ];
+     fhir:Evidence.statistic.modelCharacteristic [
+       fhir:index 0;
+       fhir:Evidence.statistic.modelCharacteristic.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "relative-importance-weighting" ]
+         ]
+       ];
+       fhir:Evidence.statistic.modelCharacteristic.value [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+       ];
+       fhir:Evidence.statistic.modelCharacteristic.variable [
+         fhir:index 0;
+         fhir:Evidence.statistic.modelCharacteristic.variable.variableDefinition [
+           fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+           fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Bundle/GuidelineRecommendationExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

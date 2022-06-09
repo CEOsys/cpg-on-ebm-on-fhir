@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Citation xmlns="http://hl7.org/fhir">
+  <id value="ExampleGuidelineCitation"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/guideline-citation"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation"/>
+  <name value="ExampleGuidelineCitation"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <citedArtifact>
+    <identifier>
+      <value value="ceoysy/exampleIdentifier"/>
+    </identifier>
+    <version>
+      <value value="1.0-alpha1"/>
+    </version>
+    <currentState>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/cited-artifact-status-type"/>
+        <code value="archived"/>
+        <display value="Archived"/>
+      </coding>
+    </currentState>
+    <title>
+      <text value="Example Citation"/>
+    </title>
+    <webLocation>
+      <url value="https://example.com/guideline/exampleIdentifier"/>
+    </webLocation>
+    <classification>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"/>
+          <code value="publication-type"/>
+          <display value="Publication Type"/>
+        </coding>
+      </type>
+      <classifier>
+        <coding>
+          <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+          <code value="clinical-practice-guideline"/>
+          <display value="Clinical practice guideline"/>
+        </coding>
+      </classifier>
+    </classification>
+  </citedArtifact>
+</Citation>

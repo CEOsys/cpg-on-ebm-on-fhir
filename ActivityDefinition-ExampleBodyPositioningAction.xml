@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActivityDefinition xmlns="http://hl7.org/fhir">
+  <id value="ExampleBodyPositioningAction"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/body-positioning-action"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example"/>
+  <name value="DrugAdministrationAction"/>
+  <status value="active"/>
+  <subjectCodeableConcept>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Patient"/>
+    </coding>
+  </subjectCodeableConcept>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="431182000"/>
+      <display value="Placing subject in prone position (procedure)"/>
+    </coding>
+  </code>
+</ActivityDefinition>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-substances-snomed"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  105590001 (Substance)</li></ul></div>
+  </text>
+  <url value="https://www.ceosys.de/fhir/ValueSet/vs-substances-snomed"/>
+  <version value="0.2.0-snapshot"/>
+  <name value="SubstancesSNOMED"/>
+  <title value="Substances SNOMED CT"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <description value="All substance codes from SNOMED CT"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="105590001"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

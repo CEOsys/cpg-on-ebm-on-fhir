@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-ventilation-observable-sct",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  364698001 (Ventilator observable)</li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/vs-ventilation-observable-sct",
+  "version": "0.2.0-snapshot",
+  "name": "VentilationObservableSCT",
+  "title": "Ventilation Observable SCT",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "description": "Ventilation Observables from SNOMED CT",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "364698001"
+          }
+        ]
+      }
+    ]
+  }
+}

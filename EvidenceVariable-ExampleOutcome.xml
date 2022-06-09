@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="ExampleOutcome"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/outcome-definition"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome"/>
+  <identifier>
+    <system value="https://www.ceosys.de"/>
+    <value value="outcome-example"/>
+  </identifier>
+  <name value="Mortality"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <characteristic>
+    <exclude value="false"/>
+    <definitionByTypeAndValue>
+      <typeCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="409651001"/>
+          <display value="Mortality rate (observable entity)"/>
+        </coding>
+      </typeCodeableConcept>
+      <valueQuantity>
+        <unit value="percent"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="%"/>
+      </valueQuantity>
+    </definitionByTypeAndValue>
+  </characteristic>
+  <handling value="dichotomous"/>
+</EvidenceVariable>

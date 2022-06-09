@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-rating-consensus",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://build.fhir.org/codesystem-recommendation-strength.html\"><code>http://terminology.hl7.org/CodeSystem/recommendation-strength</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-recommendation-strength.html#recommendation-strength-strong\">strong</a></td><td>Strong</td><td>Strong recommendation.</td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-recommendation-strength.html#recommendation-strength-weak\">weak</a></td><td>Weak</td><td>Weak recommendation.</td></tr></table></li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/vs-rating-consensus",
+  "version": "0.1.0",
+  "name": "RatingConsensus",
+  "title": "Rating Consensus",
+  "status": "draft",
+  "date": "2022-01-31",
+  "publisher": "CEOsys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.ceosys.de"
+        }
+      ]
+    }
+  ],
+  "description": "Degree of consensus reached",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/recommendation-strength",
+        "concept": [
+          {
+            "code": "strong",
+            "display": "Strong"
+          },
+          {
+            "code": "weak",
+            "display": "Weak"
+          }
+        ]
+      }
+    ]
+  }
+}

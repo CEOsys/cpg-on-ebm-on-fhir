@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Evidence/ExampleStudyOutcomeEvidence> a fhir:Evidence;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleStudyOutcomeEvidence"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence>
+     ]
+  ];
+  fhir:Evidence.url [ fhir:value "https://www.ceosys.de/fhir/Evidence/ExampleStudyOutcomeEvidence"];
+  fhir:Evidence.name [ fhir:value "ExampleStudyOutcomeEvidence"];
+  fhir:Evidence.status [ fhir:value "active"];
+  fhir:Evidence.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:Evidence.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleStudyCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleStudyCitation" ]
+     ]
+  ];
+  fhir:Evidence.variableDefinition [
+     fhir:index 0;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "population" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/Group/ExampleStudyCohort>;
+       fhir:Reference.reference [ fhir:value "Group/ExampleStudyCohort" ]
+     ];
+     fhir:Evidence.variableDefinition.intended [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleStudyEligibilityCriteria>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleStudyEligibilityCriteria" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "measuredVariable" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/ExampleOutcome" ]
+     ]
+  ];
+  fhir:Evidence.synthesisType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/synthesis-type" ];
+       fhir:Coding.code [ fhir:value "NotApplicable" ]
+     ]
+  ];
+  fhir:Evidence.studyType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/study-type" ];
+       fhir:Coding.code [ fhir:value "RCT" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Evidence/ExampleStudyOutcomeEvidence.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Citation xmlns="http://hl7.org/fhir">
+  <id value="COVID19IntensiveCareTreatmentGuidelineCitation"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/guideline-citation"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/Citation/COVID19IntensiveCareTreatmentGuidelineCitation"/>
+  <name value="COVID19_Intensive_Care_Treatment_Guideline"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <citedArtifact>
+    <identifier>
+      <system value="https://www.awmf.org/"/>
+      <value value="113-001"/>
+    </identifier>
+    <version>
+      <value value="7.0"/>
+    </version>
+    <currentState>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/cited-artifact-status-type"/>
+        <code value="active"/>
+        <display value="Active"/>
+      </coding>
+    </currentState>
+    <title>
+      <text value="S3-Leitlinie Stationäre Therapie von COVID-19 Patienten"/>
+    </title>
+    <webLocation>
+      <url value="https://www.awmf.org/leitlinien/detail/ll/113-001.html"/>
+    </webLocation>
+    <classification>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"/>
+          <code value="publication-type"/>
+          <display value="Publication Type"/>
+        </coding>
+      </type>
+      <classifier>
+        <coding>
+          <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+          <code value="clinical-practice-guideline"/>
+          <display value="Clinical practice guideline"/>
+        </coding>
+      </classifier>
+    </classification>
+  </citedArtifact>
+</Citation>

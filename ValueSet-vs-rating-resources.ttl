@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ValueSet/vs-rating-resources> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "vs-rating-resources"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\"><code>https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-factor-not-considered\">factor-not-considered</a></td><td>Factor not considered</td><td>Factor not considered</td></tr><tr><td><a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-important-issues-or-not-investigated\">important-issues-or-not-investigated</a></td><td>Important issues</td><td>Important issues, or potential issues not investigated</td></tr><tr><td><a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-no-important-issues\">no-important-issues</a></td><td>No important issues</td><td>No important issues with the recommended alternative</td></tr><tr><td><a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-important-negative-issues\">important-negative-issues</a></td><td>Important negative issues</td><td>Important negative issues</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://www.ceosys.de/fhir/ValueSet/vs-rating-resources"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "RatingResources"];
+  fhir:ValueSet.title [ fhir:value "Rating Resources"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2022-03-03"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "CEOsys"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.ceosys.de" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Issues with costs or resource use? For whom? Cost-benefit analysis? Implementation or other issues?"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "factor-not-considered" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Factor not considered" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "important-issues-or-not-investigated" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Important issues" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "no-important-issues" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "No important issues" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "important-negative-issues" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Important negative issues" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ValueSet/vs-rating-resources.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

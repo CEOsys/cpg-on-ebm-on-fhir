@@ -1,0 +1,118 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Composition/COVID19IntensiveCareTreatmentGuideline> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "COVID19IntensiveCareTreatmentGuideline"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"COVID19IntensiveCareTreatmentGuideline\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-guideline.html\">Clinical Practice Guideline</a></p></div><p><b>identifier</b>: Resource identifier: 113-001</p><p><b>version</b>: 7.0</p><p><b>status</b>: final</p><p><b>type</b>: Guidelines <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-practice-guideline; #e07eN1w1Rwswg4)</span></p><p><b>category</b>: Evidence- and consensus-based guideline <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-guideline-stage-classification.html\">Guideline Stage Classification</a>#S3)</span></p><p><b>date</b>: 2022-03-01</p><p><b>author</b>: <a href=\"Organization-AWMFOrganization.html\">Organization/AWMFOrganization</a> \"Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V.\"</p><p><b>title</b>: Empfehlungen zur stationären Therapie von Patienten mit COVID-19 - Living Guideline</p></div>"
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "RI" ];
+         fhir:Coding.display [ fhir:value "Resource identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "https://www.awmf.org/" ];
+     fhir:Identifier.value [ fhir:value "113-001" ]
+  ];
+  fhir:Composition.version [ fhir:value "7.0"];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+       fhir:Coding.code [ fhir:value "clinical-practice-guideline" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "https://data.cochrane.org/concepts/" ];
+       fhir:Coding.code [ fhir:value "e07eN1w1Rwswg4" ];
+       fhir:Coding.display [ fhir:value "Guidelines" ]
+     ]
+  ];
+  fhir:Composition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification" ];
+       fhir:Coding.code [ fhir:value "S3" ];
+       fhir:Coding.display [ fhir:value "Evidence- and consensus-based guideline" ]
+     ]
+  ];
+  fhir:Composition.date [ fhir:value "2022-03-01"^^xsd:date];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <https://www.ceosys.de/fhir/Organization/AWMFOrganization>;
+     fhir:Reference.reference [ fhir:value "Organization/AWMFOrganization" ]
+  ];
+  fhir:Composition.title [ fhir:value "Empfehlungen zur stationären Therapie von Patienten mit COVID-19 - Living Guideline"];
+  fhir:Composition.relatesTo [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/COVID19IntensiveCareTreatmentGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/COVID19IntensiveCareTreatmentGuidelineCitation" ]
+     ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Stationäre Therapie von COVID-19 Patienten" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:Composition.section.focus [
+       fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan>;
+       fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan" ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Systemische Steroide:</strong> Bei Patienten mit COVID-19- und Sauerstoff-Bedarf (Niedrigfluss-Sauerstoff-Insufflation, High-Flow Nasal Cannula, Nichtinvasive Beatmung/CPAP, invasive Beatmung) soll eine Therapie mit systemischen Kortikosteroiden erfolgen. Die Therapie sollte mit 6 mg Dexamethason p.o. oder i.v. über zehn Tage erfolgen.</div>"
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Stationäre Therapie von COVID-19 Patienten" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:Composition.section.focus [
+       fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan>;
+       fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan" ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Systemische Steroide:</strong> Bei Patienten mit moderater Erkrankung (hospitalisiert ohne Notwendigkeit von Niedrigfluss-Sauerstoff-Insufflation) soll keine Therapie mit systemischen Kortikosteroiden erfolgen.</div>"
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Composition/COVID19IntensiveCareTreatmentGuideline.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

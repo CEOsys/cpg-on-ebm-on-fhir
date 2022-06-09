@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Evidence xmlns="http://hl7.org/fhir">
+  <id value="ExampleOutcomeEvidenceSynthesis"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/Evidence/ExampleOutcomeEvidenceSynthesis"/>
+  <name value="ExampleOutcomeEvidenceSynthesis"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <resourceReference>
+      <reference value="Citation/ExampleStudyCitation"/>
+    </resourceReference>
+  </relatedArtifact>
+  <variableDefinition>
+    <variableRole>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+        <code value="population"/>
+      </coding>
+    </variableRole>
+    <observed>
+      <reference value="Group/ExampleEvidenceSynthesisCohorts"/>
+    </observed>
+    <intended>
+      <reference value="EvidenceVariable/ExampleStudyEligibilityCriteria"/>
+    </intended>
+  </variableDefinition>
+  <variableDefinition>
+    <variableRole>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+        <code value="measuredVariable"/>
+      </coding>
+    </variableRole>
+    <observed>
+      <reference value="EvidenceVariable/ExampleOutcome"/>
+    </observed>
+  </variableDefinition>
+  <synthesisType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/synthesis-type"/>
+      <code value="NotApplicable"/>
+    </coding>
+  </synthesisType>
+  <studyType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/study-type"/>
+      <code value="RCT"/>
+    </coding>
+  </studyType>
+</Evidence>

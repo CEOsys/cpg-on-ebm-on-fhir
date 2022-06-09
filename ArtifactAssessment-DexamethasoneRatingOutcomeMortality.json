@@ -1,0 +1,190 @@
+{
+  "resourceType": "ArtifactAssessment",
+  "id": "DexamethasoneRatingOutcomeMortality",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"DexamethasoneRatingOutcomeMortality\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-certainty-of-evidence-rating.html\">Certainty of Evidence Rating</a></p></div><p><b>ArtifactAssessment Version</b>: v4.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"Evidence-DexamethasoneOutcomeMortality.html\">Evidence/DexamethasoneOutcomeMortality</a> \"ExampleOutcomeEvidence\"</p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Moderate quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#moderate)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Clinical Importance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-importance)</span></p><p><b>classifier</b>: Critical <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-clinical-importance.html\">Clinical Importance of Outcome</a>#9)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Risk of bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#RiskOfBias)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Inconsistency <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Inconsistency)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Indirectness <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Indirectness)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Imprecision <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Imprecision)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Publication bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#PublicationBias)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote></div>"
+  },
+  "extension": [
+    {
+      "url": "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version",
+      "valueString": "v4.0"
+    },
+    {
+      "url": "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status",
+      "valueCode": "active"
+    }
+  ],
+  "date": "2020-01-03",
+  "artifactReference": {
+    "reference": "Evidence/DexamethasoneOutcomeMortality"
+  },
+  "content": [
+    {
+      "informationType": "rating",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+            "code": "Overall",
+            "display": "Overall certainty"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+              "code": "moderate",
+              "display": "Moderate quality"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "informationType": "rating",
+      "type": {
+        "coding": [
+          {
+            "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+            "code": "clinical-importance",
+            "display": "Clinical Importance"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance",
+              "code": "9",
+              "display": "Critical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "informationType": "rating",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+            "code": "RiskOfBias",
+            "display": "Risk of bias"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+              "code": "serious-concern",
+              "display": "serious concern"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "informationType": "rating",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+            "code": "Inconsistency",
+            "display": "Inconsistency"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+              "code": "no-concern",
+              "display": "no serious concern"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "informationType": "rating",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+            "code": "Indirectness",
+            "display": "Indirectness"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+              "code": "no-concern",
+              "display": "no serious concern"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "informationType": "rating",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+            "code": "Imprecision",
+            "display": "Imprecision"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+              "code": "no-concern",
+              "display": "no serious concern"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "informationType": "rating",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+            "code": "PublicationBias",
+            "display": "Publication bias"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+              "code": "no-concern",
+              "display": "no serious concern"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

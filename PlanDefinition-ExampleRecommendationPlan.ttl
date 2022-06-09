@@ -1,0 +1,210 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/PlanDefinition/ExampleRecommendationPlan> a fhir:PlanDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleRecommendationPlan"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+     ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "1.0"];
+  fhir:PlanDefinition.name [ fhir:value "RecommendationPlan"];
+  fhir:PlanDefinition.title [ fhir:value "Recommendation Plan"];
+  fhir:PlanDefinition.status [ fhir:value "active"];
+  fhir:PlanDefinition.subjectCanonical [
+     fhir:value "https://www.example.com/recommendation-eligibility-criteria";
+     fhir:link <https://www.example.com/recommendation-eligibility-criteria>
+  ];
+  fhir:PlanDefinition.date [ fhir:value "2022-02-14"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "Example Recommendation Plan"];
+  fhir:PlanDefinition.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "justification" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "recommendation-rating" ];
+         fhir:Coding.display [ fhir:value "Recommendation rating" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/ExampleRecommendationJustification>;
+       fhir:Reference.reference [ fhir:value "ArtifactAssessment/ExampleRecommendationJustification" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleRecommendationCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleRecommendationCitation" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleGuidelineCitation" ]
+     ]
+  ];
+  fhir:PlanDefinition.goal [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "ventilator-management-goal" ];
+     fhir:PlanDefinition.goal.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:385857005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "385857005" ];
+         fhir:Coding.display [ fhir:value "Ventilator care and adjustment (regime/therapy)" ]
+       ]
+     ];
+     fhir:PlanDefinition.goal.description [
+       fhir:CodeableConcept.text [ fhir:value "The ventilator should be set up to provide a breath reate of at least 20 and at most per minute." ]
+     ];
+     fhir:PlanDefinition.goal.target [
+       fhir:index 0;
+       fhir:PlanDefinition.goal.target.measure [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a loinc:33438-3;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "33438-3" ];
+           fhir:Coding.display [ fhir:value "Breath rate mechanical --on ventilator" ]
+         ]
+       ];
+       fhir:PlanDefinition.goal.target.detailRange [
+         fhir:Range.low [
+           fhir:Quantity.value [ fhir:value "20"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "/min" ]
+         ];
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "24"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "/min" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "lab-ddimer-concentration-goal" ];
+     fhir:PlanDefinition.goal.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:410394004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "410394004" ];
+         fhir:Coding.display [ fhir:value "Lab findings surveillance (regime/therapy)" ]
+       ]
+     ];
+     fhir:PlanDefinition.goal.description [
+       fhir:CodeableConcept.text [ fhir:value "D-Dimer concentration shall be below 250 ng/mL" ]
+     ];
+     fhir:PlanDefinition.goal.target [
+       fhir:index 0;
+       fhir:PlanDefinition.goal.target.measure [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a loinc:48066-5;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "48066-5" ];
+           fhir:Coding.display [ fhir:value "Fibrin D-dimer DDU [Mass/volume] in Platelet poor plasma" ]
+         ]
+       ];
+       fhir:PlanDefinition.goal.target.detailRange [
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "250"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "ng/mL" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:PlanDefinition.action [
+     fhir:index 0;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:432102000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "432102000" ];
+         fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example>
+     ]
+  ], [
+     fhir:index 1;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:229824005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "229824005" ];
+         fhir:Coding.display [ fhir:value "Positioning patient (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.goalId [
+       fhir:value "ventilator-management-goal";
+       fhir:index 0
+     ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example>
+     ]
+  ], [
+     fhir:index 2;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:410210009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "410210009" ];
+         fhir:Coding.display [ fhir:value "Ventilator care management (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.goalId [
+       fhir:value "ventilator-management-goal";
+       fhir:index 0
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/PlanDefinition/ExampleRecommendationPlan.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

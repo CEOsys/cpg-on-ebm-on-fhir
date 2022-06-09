@@ -1,0 +1,28 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "OutcomeAllCauseMortality",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/EvidenceVariable/OutcomeAllCauseMortality",
+  "name": "AllCauseMortality",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "characteristic": [
+    {
+      "exclude": false,
+      "definitionCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "409651001",
+            "display": "Mortality rate (observable entity)"
+          }
+        ]
+      }
+    }
+  ],
+  "handling": "dichotomous"
+}

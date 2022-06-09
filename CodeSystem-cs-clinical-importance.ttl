@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-clinical-importance"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance defines the following codes:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">not-important<a name=\"cs-clinical-importance-not-important\"> </a></td><td>Low importance for decision making</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1<a name=\"cs-clinical-importance-1\"> </a></td><td>Not important</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  2<a name=\"cs-clinical-importance-2\"> </a></td><td>Not important</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  3<a name=\"cs-clinical-importance-3\"> </a></td><td>Not important</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">important<a name=\"cs-clinical-importance-important\"> </a></td><td>Important, but not critical for decision making</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  4<a name=\"cs-clinical-importance-4\"> </a></td><td>Important</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  5<a name=\"cs-clinical-importance-5\"> </a></td><td>Important</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  6<a name=\"cs-clinical-importance-6\"> </a></td><td>Important</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">critical<a name=\"cs-clinical-importance-critical\"> </a></td><td>Critical for decision making</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  7<a name=\"cs-clinical-importance-7\"> </a></td><td>Critical</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  8<a name=\"cs-clinical-importance-8\"> </a></td><td>Critical</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  9<a name=\"cs-clinical-importance-9\"> </a></td><td>Critical</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance"];
+  fhir:CodeSystem.version [ fhir:value "0.2.0-snapshot"];
+  fhir:CodeSystem.name [ fhir:value "ClinicalImportance"];
+  fhir:CodeSystem.title [ fhir:value "Clinical Importance of Outcome"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "Clinical Importance of Outcome"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "12"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "not-important" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Low importance for decision making" ];
+     fhir:CodeSystem.concept.concept [
+       fhir:index 0;
+       fhir:CodeSystem.concept.code [ fhir:value "1" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Not important" ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.code [ fhir:value "2" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Not important" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.code [ fhir:value "3" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Not important" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "important" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Important, but not critical for decision making" ];
+     fhir:CodeSystem.concept.concept [
+       fhir:index 0;
+       fhir:CodeSystem.concept.code [ fhir:value "4" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Important" ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.code [ fhir:value "5" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Important" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.code [ fhir:value "6" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Important" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "critical" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Critical for decision making" ];
+     fhir:CodeSystem.concept.concept [
+       fhir:index 0;
+       fhir:CodeSystem.concept.code [ fhir:value "7" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Critical" ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.code [ fhir:value "8" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Critical" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.code [ fhir:value "9" ];
+       fhir:CodeSystem.concept.display [ fhir:value "Critical" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome> a fhir:EvidenceVariable;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleOutcome"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-definition>
+     ]
+  ];
+  fhir:EvidenceVariable.url [ fhir:value "https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome"];
+  fhir:EvidenceVariable.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://www.ceosys.de" ];
+     fhir:Identifier.value [ fhir:value "outcome-example" ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "Mortality"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:409651001;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "409651001" ];
+           fhir:Coding.display [ fhir:value "Mortality rate (observable entity)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueQuantity [
+         fhir:Quantity.unit [ fhir:value "percent" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "%" ]
+       ]
+     ]
+  ];
+  fhir:EvidenceVariable.handling [ fhir:value "dichotomous"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

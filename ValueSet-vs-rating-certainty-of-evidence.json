@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-rating-certainty-of-evidence",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://build.fhir.org/codesystem-certainty-rating.html\"><code>http://terminology.hl7.org/CodeSystem/certainty-rating</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-high\">high</a></td><td>High quality</td><td>High quality evidence.</td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-moderate\">moderate</a></td><td>Moderate quality</td><td>Moderate quality evidence.</td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-low\">low</a></td><td>Low quality</td><td>Low quality evidence.</td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-very-low\">very-low</a></td><td>Very low quality</td><td>Very low quality evidence.</td></tr></table></li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/vs-rating-certainty-of-evidence",
+  "version": "0.1.0",
+  "name": "RatingCertaintyofEvidence",
+  "title": "Rating Certainty Of Evidence",
+  "status": "draft",
+  "date": "2022-01-31",
+  "publisher": "CEOsys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.ceosys.de"
+        }
+      ]
+    }
+  ],
+  "description": "Codes from EvidenceCertaintyRating related to certainty of evidence",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+        "concept": [
+          {
+            "code": "high",
+            "display": "High quality"
+          },
+          {
+            "code": "moderate",
+            "display": "Moderate quality"
+          },
+          {
+            "code": "low",
+            "display": "Low quality"
+          },
+          {
+            "code": "very-low",
+            "display": "Very low quality"
+          }
+        ]
+      }
+    ]
+  }
+}

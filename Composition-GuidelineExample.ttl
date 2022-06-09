@@ -1,0 +1,99 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Composition/GuidelineExample> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "GuidelineExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"GuidelineExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-guideline.html\">Clinical Practice Guideline</a></p></div><p><b>identifier</b>: Resource identifier: guideline example</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: final</p><p><b>type</b>: Guidelines <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-practice-guideline; #e07eN1w1Rwswg4)</span></p><p><b>category</b>: Evidence- and consensus-based guideline <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-guideline-stage-classification.html\">Guideline Stage Classification</a>#S3)</span></p><p><b>date</b>: 2022-01-28</p><p><b>author</b>: <a href=\"Organization-ExampleOrganization.html\">Organization/ExampleOrganization</a> \"Example Organization\"</p><p><b>title</b>: Example Guideline</p></div>"
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "RI" ];
+         fhir:Coding.display [ fhir:value "Resource identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "https://www.ceosys.de" ];
+     fhir:Identifier.value [ fhir:value "guideline example" ]
+  ];
+  fhir:Composition.version [ fhir:value "0.1.0"];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+       fhir:Coding.code [ fhir:value "clinical-practice-guideline" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "https://data.cochrane.org/concepts/" ];
+       fhir:Coding.code [ fhir:value "e07eN1w1Rwswg4" ];
+       fhir:Coding.display [ fhir:value "Guidelines" ]
+     ]
+  ];
+  fhir:Composition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification" ];
+       fhir:Coding.code [ fhir:value "S3" ];
+       fhir:Coding.display [ fhir:value "Evidence- and consensus-based guideline" ]
+     ]
+  ];
+  fhir:Composition.date [ fhir:value "2022-01-28"^^xsd:date];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <https://www.ceosys.de/fhir/Organization/ExampleOrganization>;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleOrganization" ]
+  ];
+  fhir:Composition.title [ fhir:value "Example Guideline"];
+  fhir:Composition.relatesTo [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/ExampleGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/ExampleGuidelineCitation" ]
+     ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Example Guideline Recommendation" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:Composition.section.focus [
+       fhir:link <https://www.ceosys.de/fhir/PlanDefinition/ExampleRecommendationPlan>;
+       fhir:Reference.reference [ fhir:value "PlanDefinition/ExampleRecommendationPlan" ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an example guideline recommendation.</div>"
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Composition/GuidelineExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

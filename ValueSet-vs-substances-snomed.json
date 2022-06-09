@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-substances-snomed",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  105590001 (Substance)</li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/vs-substances-snomed",
+  "version": "0.2.0-snapshot",
+  "name": "SubstancesSNOMED",
+  "title": "Substances SNOMED CT",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "description": "All substance codes from SNOMED CT",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "105590001"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "COVID19VentilatedPatientsDexamethasoneApplicationPlan",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan"
+    ]
+  },
+  "version": "4.0",
+  "name": "Dexamethasone_Application",
+  "title": "Dexamethasone Application in ventilated COVID-19 patients",
+  "status": "active",
+  "subjectCanonical": "https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated",
+  "date": "2021-12-12",
+  "description": "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients",
+  "relatedArtifact": [
+    {
+      "type": "justification",
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+              "code": "recommendation-rating",
+              "display": "Recommendation rating"
+            }
+          ]
+        }
+      ],
+      "resourceReference": {
+        "reference": "ArtifactAssessment/DexamethasoneRecommendationJustification"
+      }
+    },
+    {
+      "type": "citation",
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+              "code": "guideline-recommendation",
+              "display": "Clinical practice guideline recommendation"
+            }
+          ]
+        }
+      ],
+      "resourceReference": {
+        "reference": "Citation/DexamethasoneRecommendationCitation"
+      }
+    },
+    {
+      "type": "citation",
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system",
+              "code": "clinical-practice-guideline",
+              "display": "Clinical practice guideline"
+            }
+          ]
+        }
+      ],
+      "resourceReference": {
+        "reference": "Citation/COVID19IntensiveCareTreatmentGuidelineCitation"
+      }
+    }
+  ],
+  "action": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "432102000",
+            "display": "Administration of substance (procedure)"
+          }
+        ]
+      },
+      "selectionBehavior": "exactly-one",
+      "definitionCanonical": "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-oral"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "432102000",
+            "display": "Administration of substance (procedure)"
+          }
+        ]
+      },
+      "selectionBehavior": "exactly-one",
+      "definitionCanonical": "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de",
+  "name": "CPGonEBMonFHIR",
+  "package-id": "cpg.ceosys.de",
+  "ig-ver": "0.2.0-snapshot",
+  "date": "Thu, 09 Jun, 2022 15:00:21 +0000",
+  "errs": 90,
+  "warnings": 9,
+  "hints": 38,
+  "version": "5.0.0-cibuild",
+  "tool": "5.0.0-cibuild (3)"
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Evidence xmlns="http://hl7.org/fhir">
+  <id value="DexamethasoneOutcomeMortality"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/Evidence/DexamethasoneOutcomeMortality"/>
+  <name value="ExampleOutcomeEvidence"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <resourceReference>
+      <reference value="Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19"/>
+    </resourceReference>
+  </relatedArtifact>
+  <variableDefinition>
+    <variableRole>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+        <code value="population"/>
+      </coding>
+    </variableRole>
+    <observed>
+      <reference value="Group/StudyCohortCorticosteroidsCOVID19"/>
+    </observed>
+    <intended>
+      <reference value="EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"/>
+    </intended>
+  </variableDefinition>
+  <variableDefinition>
+    <variableRole>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+        <code value="measuredVariable"/>
+      </coding>
+    </variableRole>
+    <observed>
+      <reference value="EvidenceVariable/OutcomeAllCauseMortality"/>
+    </observed>
+  </variableDefinition>
+  <synthesisType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/synthesis-type"/>
+      <code value="NotApplicable"/>
+    </coding>
+  </synthesisType>
+  <studyType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/study-type"/>
+      <code value="RCT"/>
+    </coding>
+  </studyType>
+  <statistic>
+    <description value="Relative effect of intervention vs. comparator"/>
+    <statisticType>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/statistic-type"/>
+        <code value="C93152"/>
+        <display value="Relative Risk"/>
+      </coding>
+    </statisticType>
+    <quantity>
+      <value value="0.89"/>
+    </quantity>
+    <sampleSize>
+      <numberOfStudies value="9"/>
+      <numberOfParticipants value="7930"/>
+    </sampleSize>
+    <attributeEstimate>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+          <code value="C53324"/>
+          <display value="Confidence interval"/>
+        </coding>
+      </type>
+      <level value="0.95"/>
+      <range>
+        <low>
+          <value value="0.8"/>
+        </low>
+        <high>
+          <value value="1"/>
+        </high>
+      </range>
+    </attributeEstimate>
+  </statistic>
+  <statistic>
+    <description value="Baseline risk/result in the comparison group"/>
+    <statisticType>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/statistic-type"/>
+        <code value="C16726"/>
+        <display value="Incidence"/>
+      </coding>
+    </statisticType>
+    <quantity>
+      <value value="245"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="1/1000"/>
+    </quantity>
+  </statistic>
+</Evidence>

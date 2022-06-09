@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-rating-preference-and-values"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-cs-evidence-to-decision-certainty-rating.html"><code>https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-factor-not-considered">factor-not-considered</a></td><td>Factor not considered</td><td>Factor not considered</td></tr><tr><td><a href="CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-substantial-variability">substantial-variability</a></td><td>Substantial variability</td><td>Substantial variability is expected or uncertain</td></tr><tr><td><a href="CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-no-substantial-variability">no-substantial-variability</a></td><td>No substantial variability</td><td>No substantial variability expected</td></tr><tr><td><a href="CodeSystem-cs-evidence-to-decision-certainty-rating.html#cs-evidence-to-decision-certainty-rating-few-want-intervention">few-want-intervention</a></td><td>Few want intervention</td><td>We expect few to want the intervention</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.ceosys.de/fhir/ValueSet/vs-rating-preference-and-values"/>
+  <version value="0.1.0"/>
+  <name value="RatingPreferenceAndValues"/>
+  <title value="Rating Preference And Values"/>
+  <status value="draft"/>
+  <date value="2022-03-03"/>
+  <publisher value="CEOsys"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ceosys.de"/>
+    </telecom>
+  </contact>
+  <description value="Typical patient preferences and values? Common issues or expected variability?"/>
+  <compose>
+    <include>
+      <system value="https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating"/>
+      <concept>
+        <code value="factor-not-considered"/>
+        <display value="Factor not considered"/>
+      </concept>
+      <concept>
+        <code value="substantial-variability"/>
+        <display value="Substantial variability"/>
+      </concept>
+      <concept>
+        <code value="no-substantial-variability"/>
+        <display value="No substantial variability"/>
+      </concept>
+      <concept>
+        <code value="few-want-intervention"/>
+        <display value="Few want intervention"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

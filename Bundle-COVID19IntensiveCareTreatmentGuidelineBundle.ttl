@@ -1,0 +1,1577 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Bundle/COVID19IntensiveCareTreatmentGuidelineBundle> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "COVID19IntensiveCareTreatmentGuidelineBundle"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle>
+     ]
+  ];
+  fhir:Bundle.type [ fhir:value "collection"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline-citation" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline-citation>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-ventilated-patients" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-ventilated-patients>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-non-ventilated-patients" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-non-ventilated-patients>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-oral" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-oral>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-intravenous" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-intravenous>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-no-application" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-no-application>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation>
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated>
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-non-ventilated" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-non-ventilated>
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/rating-outcome-mortality" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/rating-outcome-mortality>
+  ], [
+     fhir:index 11;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality>
+  ], [
+     fhir:index 12;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria>
+  ], [
+     fhir:index 13;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/outcome-all-cause-mortality" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/outcome-all-cause-mortality>
+  ], [
+     fhir:index 14;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-justification" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-justification>
+  ], [
+     fhir:index 15;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-citation" ];
+     fhir:Bundle.entry.resource <https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-citation>
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline> a fhir:Composition;
+  fhir:Resource.id [ fhir:value "COVID19IntensiveCareTreatmentGuideline"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"COVID19IntensiveCareTreatmentGuideline\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-guideline.html\">Clinical Practice Guideline</a></p></div><p><b>identifier</b>: Resource identifier: 113-001</p><p><b>version</b>: 7.0</p><p><b>status</b>: final</p><p><b>type</b>: Guidelines <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-practice-guideline; #e07eN1w1Rwswg4)</span></p><p><b>category</b>: Evidence- and consensus-based guideline <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-guideline-stage-classification.html\">Guideline Stage Classification</a>#S3)</span></p><p><b>date</b>: 2022-03-01</p><p><b>author</b>: <a href=\"Organization-AWMFOrganization.html\">Organization/AWMFOrganization</a> \"Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V.\"</p><p><b>title</b>: Empfehlungen zur stationären Therapie von Patienten mit COVID-19 - Living Guideline</p></div>"
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "RI" ];
+         fhir:Coding.display [ fhir:value "Resource identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "https://www.awmf.org/" ];
+     fhir:Identifier.value [ fhir:value "113-001" ]
+  ];
+  fhir:Composition.version [ fhir:value "7.0"];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+       fhir:Coding.code [ fhir:value "clinical-practice-guideline" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "https://data.cochrane.org/concepts/" ];
+       fhir:Coding.code [ fhir:value "e07eN1w1Rwswg4" ];
+       fhir:Coding.display [ fhir:value "Guidelines" ]
+     ]
+  ];
+  fhir:Composition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-guideline-stage-classification" ];
+       fhir:Coding.code [ fhir:value "S3" ];
+       fhir:Coding.display [ fhir:value "Evidence- and consensus-based guideline" ]
+     ]
+  ];
+  fhir:Composition.date [ fhir:value "2022-03-01"^^xsd:date];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <https://www.ceosys.de/fhir/Organization/AWMFOrganization>;
+     fhir:Reference.reference [ fhir:value "Organization/AWMFOrganization" ]
+  ];
+  fhir:Composition.title [ fhir:value "Empfehlungen zur stationären Therapie von Patienten mit COVID-19 - Living Guideline"];
+  fhir:Composition.relatesTo [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/COVID19IntensiveCareTreatmentGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/COVID19IntensiveCareTreatmentGuidelineCitation" ]
+     ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Stationäre Therapie von COVID-19 Patienten" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:Composition.section.focus [
+       fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan>;
+       fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan" ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Systemische Steroide:</strong> Bei Patienten mit COVID-19- und Sauerstoff-Bedarf (Niedrigfluss-Sauerstoff-Insufflation, High-Flow Nasal Cannula, Nichtinvasive Beatmung/CPAP, invasive Beatmung) soll eine Therapie mit systemischen Kortikosteroiden erfolgen. Die Therapie sollte mit 6 mg Dexamethason p.o. oder i.v. über zehn Tage erfolgen.</div>"
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Stationäre Therapie von COVID-19 Patienten" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:Composition.section.focus [
+       fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan>;
+       fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan" ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Systemische Steroide:</strong> Bei Patienten mit moderater Erkrankung (hospitalisiert ohne Notwendigkeit von Niedrigfluss-Sauerstoff-Insufflation) soll keine Therapie mit systemischen Kortikosteroiden erfolgen.</div>"
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline-citation> a fhir:Citation;
+  fhir:Resource.id [ fhir:value "COVID19IntensiveCareTreatmentGuidelineCitation"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/guideline-citation";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/guideline-citation>
+     ]
+  ];
+  fhir:Citation.name [ fhir:value "COVID19_Intensive_Care_Treatment_Guideline"];
+  fhir:Citation.status [ fhir:value "active"];
+  fhir:Citation.citedArtifact [
+     fhir:Citation.citedArtifact.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "https://www.awmf.org/" ];
+       fhir:Identifier.value [ fhir:value "113-001" ]
+     ];
+     fhir:Citation.citedArtifact.version [
+       fhir:Citation.citedArtifact.version.value [ fhir:value "7.0" ]
+     ];
+     fhir:Citation.citedArtifact.currentState [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-status-type" ];
+         fhir:Coding.code [ fhir:value "active" ];
+         fhir:Coding.display [ fhir:value "Active" ]
+       ]
+     ];
+     fhir:Citation.citedArtifact.title [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.title.text [ fhir:value "S3-Leitlinie Stationäre Therapie von COVID-19 Patienten" ]
+     ];
+     fhir:Citation.citedArtifact.webLocation [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.webLocation.url [ fhir:value "https://www.awmf.org/leitlinien/detail/ll/113-001.html" ]
+     ];
+     fhir:Citation.citedArtifact.classification [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.classification.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type" ];
+           fhir:Coding.code [ fhir:value "publication-type" ];
+           fhir:Coding.display [ fhir:value "Publication Type" ]
+         ]
+       ];
+       fhir:Citation.citedArtifact.classification.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+           fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-ventilated-patients> a fhir:PlanDefinition;
+  fhir:Resource.id [ fhir:value "COVID19VentilatedPatientsDexamethasoneApplicationPlan"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+     ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "4.0"];
+  fhir:PlanDefinition.name [ fhir:value "Dexamethasone_Application"];
+  fhir:PlanDefinition.title [ fhir:value "Dexamethasone Application in ventilated COVID-19 patients"];
+  fhir:PlanDefinition.status [ fhir:value "active"];
+  fhir:PlanDefinition.subjectCanonical [
+     fhir:value "https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated";
+     fhir:link <https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated>
+  ];
+  fhir:PlanDefinition.date [ fhir:value "2021-12-12"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"];
+  fhir:PlanDefinition.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "justification" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "recommendation-rating" ];
+         fhir:Coding.display [ fhir:value "Recommendation rating" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRecommendationJustification>;
+       fhir:Reference.reference [ fhir:value "ArtifactAssessment/DexamethasoneRecommendationJustification" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/DexamethasoneRecommendationCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/DexamethasoneRecommendationCitation" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/COVID19IntensiveCareTreatmentGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/COVID19IntensiveCareTreatmentGuidelineCitation" ]
+     ]
+  ];
+  fhir:PlanDefinition.action [
+     fhir:index 0;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:432102000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "432102000" ];
+         fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.selectionBehavior [ fhir:value "exactly-one" ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-oral";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-oral>
+     ]
+  ], [
+     fhir:index 1;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:432102000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "432102000" ];
+         fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.selectionBehavior [ fhir:value "exactly-one" ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous>
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-non-ventilated-patients> a fhir:PlanDefinition;
+  fhir:Resource.id [ fhir:value "COVID19NonVentilatedPatientsDexamethasoneApplicationPlan"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+     ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "4.0"];
+  fhir:PlanDefinition.name [ fhir:value "No_Dexamethasone_Application"];
+  fhir:PlanDefinition.title [ fhir:value "No Dexamethasone Application for non-ventilated COVID-19 patients"];
+  fhir:PlanDefinition.status [ fhir:value "active"];
+  fhir:PlanDefinition.subjectCanonical [
+     fhir:value "https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated";
+     fhir:link <https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated>
+  ];
+  fhir:PlanDefinition.date [ fhir:value "2021-12-12"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "No Dexamethasone Application for non-ventilated COVID19 patients"];
+  fhir:PlanDefinition.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "justification" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "recommendation-rating" ];
+         fhir:Coding.display [ fhir:value "Recommendation rating" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRecommendationJustification>;
+       fhir:Reference.reference [ fhir:value "ArtifactAssessment/DexamethasoneRecommendationJustification" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/DexamethasoneRecommendationCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/DexamethasoneRecommendationCitation" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/COVID19IntensiveCareTreatmentGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/COVID19IntensiveCareTreatmentGuidelineCitation" ]
+     ]
+  ];
+  fhir:PlanDefinition.action [
+     fhir:index 0;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:432102000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "432102000" ];
+         fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.selectionBehavior [ fhir:value "exactly-one" ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/no-dexamethasone-application";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/no-dexamethasone-application>
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-oral> a fhir:ActivityDefinition;
+  fhir:Resource.id [ fhir:value "DexamethasoneApplicationActionOral"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+     ]
+  ];
+  fhir:ActivityDefinition.url [ fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-oral"];
+  fhir:ActivityDefinition.name [ fhir:value "DexamethasoneApplicationActionOral"];
+  fhir:ActivityDefinition.status [ fhir:value "active"];
+  fhir:ActivityDefinition.subjectCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+       fhir:Coding.code [ fhir:value "Patient" ]
+     ]
+  ];
+  fhir:ActivityDefinition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:432102000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "432102000" ];
+       fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.productCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ];
+       fhir:Coding.code [ fhir:value "C05AA09" ];
+       fhir:Coding.display [ fhir:value "Dexamethason" ]
+     ], [
+       fhir:index 1;
+       a sct:372584003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "372584003" ];
+       fhir:Coding.display [ fhir:value "Dexamethasone (substance)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.dosage [
+     fhir:index 0;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.count [ fhir:value "10"^^xsd:positiveInteger ];
+         fhir:Timing.repeat.duration [ fhir:value "10"^^xsd:decimal ];
+         fhir:Timing.repeat.durationUnit [ fhir:value "d" ];
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:positiveInteger ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:Dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral route" ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "6"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "mg" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "mg" ]
+       ];
+       fhir:Dosage.doseAndRate.rateQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "/d" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "/d" ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-intravenous> a fhir:ActivityDefinition;
+  fhir:Resource.id [ fhir:value "DexamethasoneApplicationActionIntravenous"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+     ]
+  ];
+  fhir:ActivityDefinition.url [ fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous"];
+  fhir:ActivityDefinition.name [ fhir:value "DexamethasoneApplicationActionIntravenous"];
+  fhir:ActivityDefinition.status [ fhir:value "active"];
+  fhir:ActivityDefinition.subjectCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+       fhir:Coding.code [ fhir:value "Patient" ]
+     ]
+  ];
+  fhir:ActivityDefinition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:432102000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "432102000" ];
+       fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.productCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ];
+       fhir:Coding.code [ fhir:value "C05AA09" ];
+       fhir:Coding.display [ fhir:value "Dexamethason" ]
+     ], [
+       fhir:index 1;
+       a sct:372584003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "372584003" ];
+       fhir:Coding.display [ fhir:value "Dexamethasone (substance)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.dosage [
+     fhir:index 0;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.count [ fhir:value "10"^^xsd:positiveInteger ];
+         fhir:Timing.repeat.duration [ fhir:value "10"^^xsd:decimal ];
+         fhir:Timing.repeat.durationUnit [ fhir:value "d" ];
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:positiveInteger ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:Dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:47625008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "47625008" ];
+         fhir:Coding.display [ fhir:value "Intravenous route" ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "6"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "mg" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "mg" ]
+       ];
+       fhir:Dosage.doseAndRate.rateQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "/d" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "/d" ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-no-application> a fhir:ActivityDefinition;
+  fhir:Resource.id [ fhir:value "NoDexamethasoneApplication"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action>
+     ]
+  ];
+  fhir:ActivityDefinition.url [ fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/no-dexamethasone-application"];
+  fhir:ActivityDefinition.name [ fhir:value "NoDexamethasoneApplicationActivity"];
+  fhir:ActivityDefinition.status [ fhir:value "active"];
+  fhir:ActivityDefinition.subjectCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+       fhir:Coding.code [ fhir:value "Patient" ]
+     ]
+  ];
+  fhir:ActivityDefinition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:432102000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "432102000" ];
+       fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+     ]
+  ];
+  fhir:ActivityDefinition.doNotPerform [ fhir:value "true"^^xsd:boolean];
+  fhir:ActivityDefinition.productCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ];
+       fhir:Coding.code [ fhir:value "C05AA09" ];
+       fhir:Coding.display [ fhir:value "Dexamethason" ]
+     ], [
+       fhir:index 1;
+       a sct:372584003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "372584003" ];
+       fhir:Coding.display [ fhir:value "Dexamethasone (substance)" ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation> a fhir:Citation;
+  fhir:Resource.id [ fhir:value "DexamethasoneRecommendationCitation"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation>
+     ]
+  ];
+  fhir:Citation.name [ fhir:value "DexamethasoneRecommendationCitation"];
+  fhir:Citation.status [ fhir:value "active"];
+  fhir:Citation.citedArtifact [
+     fhir:Citation.citedArtifact.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "https://api.magicapp.org/api/v1/recommendations" ];
+       fhir:Identifier.value [ fhir:value "98398" ]
+     ];
+     fhir:Citation.citedArtifact.version [
+       fhir:Citation.citedArtifact.version.value [ fhir:value "v4.0" ]
+     ];
+     fhir:Citation.citedArtifact.currentState [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-status-type" ];
+         fhir:Coding.code [ fhir:value "active" ];
+         fhir:Coding.display [ fhir:value "Active" ]
+       ]
+     ];
+     fhir:Citation.citedArtifact.title [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.title.text [ fhir:value "Steroide" ]
+     ];
+     fhir:Citation.citedArtifact.classification [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.classification.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type" ];
+           fhir:Coding.code [ fhir:value "publication-type" ];
+           fhir:Coding.display [ fhir:value "Publication Type" ]
+         ]
+       ];
+       fhir:Citation.citedArtifact.classification.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+           fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated> a fhir:EvidenceVariable;
+  fhir:Resource.id [ fhir:value "PopulationCOVID19Ventilated"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+     ]
+  ];
+  fhir:EvidenceVariable.url [ fhir:value "https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated"];
+  fhir:EvidenceVariable.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://www.ceosys.de" ];
+     fhir:Identifier.value [ fhir:value "Ventilated" ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "Population_COVID19_Ventilated"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.description [ fhir:value "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, Ventilated"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.linkId [ fhir:value "covid19" ];
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:404684003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "404684003" ];
+           fhir:Coding.display [ fhir:value "Clinical finding (finding)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:840539006;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "840539006" ];
+           fhir:Coding.display [ fhir:value "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionByCombination [
+       fhir:EvidenceVariable.characteristic.definitionByCombination.code [ fhir:value "any-of" ];
+       fhir:EvidenceVariable.characteristic.definitionByCombination.characteristic [
+         fhir:index 0;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "oxy-administration-nasal-cannula" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:371907003;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "371907003" ];
+               fhir:Coding.display [ fhir:value "Oxygen administration by nasal cannula (procedure)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "noninvasive-ventilation" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:428311008;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "428311008" ];
+               fhir:Coding.display [ fhir:value "Non-invasive ventilation (regime/therapy)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "artificial-respiration" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:40617009;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "40617009" ];
+               fhir:Coding.display [ fhir:value "Artificial respiration (procedure)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-non-ventilated> a fhir:EvidenceVariable;
+  fhir:Resource.id [ fhir:value "PopulationCOVID19NonVentilated"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+     ]
+  ];
+  fhir:EvidenceVariable.url [ fhir:value "https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated"];
+  fhir:EvidenceVariable.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://www.ceosys.de" ];
+     fhir:Identifier.value [ fhir:value "NonVentilated" ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "Population_COVID19_NonVentilated"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.description [ fhir:value "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.linkId [ fhir:value "covid19" ];
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:404684003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "404684003" ];
+           fhir:Coding.display [ fhir:value "Clinical finding (finding)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:840539006;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "840539006" ];
+           fhir:Coding.display [ fhir:value "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "true"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionByCombination [
+       fhir:EvidenceVariable.characteristic.definitionByCombination.code [ fhir:value "any-of" ];
+       fhir:EvidenceVariable.characteristic.definitionByCombination.characteristic [
+         fhir:index 0;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "oxy-administration-nasal-cannula" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:371907003;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "371907003" ];
+               fhir:Coding.display [ fhir:value "Oxygen administration by nasal cannula (procedure)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "noninvasive-ventilation" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:428311008;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "428311008" ];
+               fhir:Coding.display [ fhir:value "Non-invasive ventilation (regime/therapy)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:EvidenceVariable.characteristic.linkId [ fhir:value "artificial-respiration" ];
+         fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+         fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:71388002;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "71388002" ];
+               fhir:Coding.display [ fhir:value "Procedure (procedure)" ]
+             ]
+           ];
+           fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               a sct:40617009;
+               fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+               fhir:Coding.code [ fhir:value "40617009" ];
+               fhir:Coding.display [ fhir:value "Artificial respiration (procedure)" ]
+             ]
+           ]
+         ];
+         fhir:EvidenceVariable.characteristic.timeFromEvent [
+           fhir:index 0;
+           fhir:EvidenceVariable.characteristic.timeFromEvent.eventId [ fhir:value "covid19" ];
+           fhir:EvidenceVariable.characteristic.timeFromEvent.quantity [
+             fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "d" ]
+           ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/rating-outcome-mortality> a fhir:ArtifactAssessment;
+  fhir:Resource.id [ fhir:value "DexamethasoneRatingOutcomeMortality"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"DexamethasoneRatingOutcomeMortality\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-certainty-of-evidence-rating.html\">Certainty of Evidence Rating</a></p></div><p><b>ArtifactAssessment Version</b>: v4.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"#Evidence_DexamethasoneOutcomeMortality\">See above (Evidence/DexamethasoneOutcomeMortality)</a></p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Moderate quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#moderate)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Clinical Importance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-importance)</span></p><p><b>classifier</b>: Critical <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-clinical-importance.html\">Clinical Importance of Outcome</a>#9)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Risk of bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#RiskOfBias)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Inconsistency <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Inconsistency)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Indirectness <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Indirectness)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Imprecision <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Imprecision)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Publication bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#PublicationBias)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version" ];
+     fhir:Extension.valueString [ fhir:value "v4.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ];
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ];
+  fhir:ArtifactAssessment.date [ fhir:value "2020-01-03"^^xsd:date];
+  fhir:ArtifactAssessment.artifactReference [
+     fhir:link <https://www.ceosys.de/fhir/Evidence/DexamethasoneOutcomeMortality>;
+     fhir:Reference.reference [ fhir:value "Evidence/DexamethasoneOutcomeMortality" ]
+  ];
+  fhir:ArtifactAssessment.content [
+     fhir:index 0;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Overall" ];
+         fhir:Coding.display [ fhir:value "Overall certainty" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "moderate" ];
+         fhir:Coding.display [ fhir:value "Moderate quality" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "clinical-importance" ];
+         fhir:Coding.display [ fhir:value "Clinical Importance" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance" ];
+         fhir:Coding.code [ fhir:value "9" ];
+         fhir:Coding.display [ fhir:value "Critical" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "RiskOfBias" ];
+         fhir:Coding.display [ fhir:value "Risk of bias" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "serious-concern" ];
+         fhir:Coding.display [ fhir:value "serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Inconsistency" ];
+         fhir:Coding.display [ fhir:value "Inconsistency" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Indirectness" ];
+         fhir:Coding.display [ fhir:value "Indirectness" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Imprecision" ];
+         fhir:Coding.display [ fhir:value "Imprecision" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "PublicationBias" ];
+         fhir:Coding.display [ fhir:value "Publication bias" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality> a fhir:Evidence;
+  fhir:Resource.id [ fhir:value "DexamethasoneOutcomeMortality"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis>
+     ]
+  ];
+  fhir:Evidence.name [ fhir:value "ExampleOutcomeEvidence"];
+  fhir:Evidence.status [ fhir:value "active"];
+  fhir:Evidence.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19>;
+       fhir:Reference.reference [ fhir:value "Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19" ]
+     ]
+  ];
+  fhir:Evidence.variableDefinition [
+     fhir:index 0;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "population" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/Group/StudyCohortCorticosteroidsCOVID19>;
+       fhir:Reference.reference [ fhir:value "Group/StudyCohortCorticosteroidsCOVID19" ]
+     ];
+     fhir:Evidence.variableDefinition.intended [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "measuredVariable" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/OutcomeAllCauseMortality>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/OutcomeAllCauseMortality" ]
+     ]
+  ];
+  fhir:Evidence.synthesisType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/synthesis-type" ];
+       fhir:Coding.code [ fhir:value "NotApplicable" ]
+     ]
+  ];
+  fhir:Evidence.studyType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/study-type" ];
+       fhir:Coding.code [ fhir:value "RCT" ]
+     ]
+  ];
+  fhir:Evidence.statistic [
+     fhir:index 0;
+     fhir:Evidence.statistic.description [ fhir:value "Relative effect of intervention vs. comparator" ];
+     fhir:Evidence.statistic.statisticType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/statistic-type" ];
+         fhir:Coding.code [ fhir:value "C93152" ];
+         fhir:Coding.display [ fhir:value "Relative Risk" ]
+       ]
+     ];
+     fhir:Evidence.statistic.quantity [
+       fhir:Quantity.value [ fhir:value "0.89"^^xsd:decimal ]
+     ];
+     fhir:Evidence.statistic.sampleSize [
+       fhir:Evidence.statistic.sampleSize.numberOfStudies [ fhir:value "9"^^xsd:nonNegativeInteger ];
+       fhir:Evidence.statistic.sampleSize.numberOfParticipants [ fhir:value "7930"^^xsd:nonNegativeInteger ]
+     ];
+     fhir:Evidence.statistic.attributeEstimate [
+       fhir:index 0;
+       fhir:Evidence.statistic.attributeEstimate.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/attribute-estimate-type" ];
+           fhir:Coding.code [ fhir:value "C53324" ];
+           fhir:Coding.display [ fhir:value "Confidence interval" ]
+         ]
+       ];
+       fhir:Evidence.statistic.attributeEstimate.level [ fhir:value "0.95"^^xsd:decimal ];
+       fhir:Evidence.statistic.attributeEstimate.range [
+         fhir:Range.low [
+           fhir:Quantity.value [ fhir:value "0.8"^^xsd:decimal ]
+         ];
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Evidence.statistic.description [ fhir:value "Baseline risk/result in the comparison group" ];
+     fhir:Evidence.statistic.statisticType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/statistic-type" ];
+         fhir:Coding.code [ fhir:value "C16726" ];
+         fhir:Coding.display [ fhir:value "Incidence" ]
+       ]
+     ];
+     fhir:Evidence.statistic.quantity [
+       fhir:Quantity.value [ fhir:value "245"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "1/1000" ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria> a fhir:EvidenceVariable;
+  fhir:Resource.id [ fhir:value "StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria>
+     ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:404684003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "404684003" ];
+           fhir:Coding.display [ fhir:value "Clinical finding (finding)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:840539006;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "840539006" ];
+           fhir:Coding.display [ fhir:value "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/outcome-all-cause-mortality> a fhir:EvidenceVariable;
+  fhir:Resource.id [ fhir:value "OutcomeAllCauseMortality"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-definition>
+     ]
+  ];
+  fhir:EvidenceVariable.name [ fhir:value "AllCauseMortality"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.exclude [ fhir:value "false"^^xsd:boolean ];
+     fhir:EvidenceVariable.characteristic.definitionCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:409651001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "409651001" ];
+         fhir:Coding.display [ fhir:value "Mortality rate (observable entity)" ]
+       ]
+     ]
+  ];
+  fhir:EvidenceVariable.handling [ fhir:value "dichotomous"] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-justification> a fhir:ArtifactAssessment;
+  fhir:Resource.id [ fhir:value "DexamethasoneRecommendationJustification"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"DexamethasoneRecommendationJustification\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-recommendation-justification.html\">Recommendation Justification</a></p></div><p><b>ArtifactAssessment Version</b>: v4.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"#PlanDefinition_COVID19VentilatedPatientsDexamethasoneApplicationPlan\">See above (PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan)</a></p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Strength of recommendation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#strength)</span></p><p><b>classifier</b>: Strong for an intervention <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-cs-recommendation-strength.html\">Recommendation Strength</a>#strong-for)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Consensus <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#consensus)</span></p><p><b>classifier</b>: Strong <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-recommendation-strength.html\">StrengthOfRecommendationRating</a>#strong)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Preference and values <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#preference-and-values)</span></p><p><b>classifier</b>: Factor not considered <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#factor-not-considered)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Resources <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#resources)</span></p><p><b>classifier</b>: No important issues <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#no-important-issues)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Acceptability <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#acceptability)</span></p><p><b>classifier</b>: Factor not considered <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#factor-not-considered)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Feasibility <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#feasibility)</span></p><p><b>classifier</b>: Factor not considered <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#factor-not-considered)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Certainty of evidence rating <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#certainty-of-evidence-rating)</span></p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version" ];
+     fhir:Extension.valueString [ fhir:value "v4.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ];
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ];
+  fhir:ArtifactAssessment.date [ fhir:value "2020-01-03"^^xsd:date];
+  fhir:ArtifactAssessment.artifactReference [
+     fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan>;
+     fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan" ]
+  ];
+  fhir:ArtifactAssessment.content [
+     fhir:index 0;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "strength" ];
+         fhir:Coding.display [ fhir:value "Strength of recommendation" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong-for" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "consensus" ];
+         fhir:Coding.display [ fhir:value "Consensus" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong" ];
+         fhir:Coding.display [ fhir:value "Strong" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "preference-and-values" ];
+         fhir:Coding.display [ fhir:value "Preference and values" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "factor-not-considered" ];
+         fhir:Coding.display [ fhir:value "Factor not considered" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "resources" ];
+         fhir:Coding.display [ fhir:value "Resources" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-important-issues" ];
+         fhir:Coding.display [ fhir:value "No important issues" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "acceptability" ];
+         fhir:Coding.display [ fhir:value "Acceptability" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "factor-not-considered" ];
+         fhir:Coding.display [ fhir:value "Factor not considered" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "feasibility" ];
+         fhir:Coding.display [ fhir:value "Feasibility" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "factor-not-considered" ];
+         fhir:Coding.display [ fhir:value "Factor not considered" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "container" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+         fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.relatedArtifact [
+       fhir:index 0;
+       fhir:RelatedArtifact.type [ fhir:value "justification" ];
+       fhir:RelatedArtifact.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+           fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+         ]
+       ];
+       fhir:RelatedArtifact.resourceReference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRatingOutcomeMortality>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/DexamethasoneRatingOutcomeMortality" ]
+       ]
+     ]
+  ] .
+
+<https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-citation> a fhir:Citation;
+  fhir:Resource.id [ fhir:value "SystemicCorticosteroidsForTheTreatmentOfCOVID19"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/study-citation";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/study-citation>
+     ]
+  ];
+  fhir:Citation.name [ fhir:value "SystemicCorticosteroidsForTheTreatmentOfCOVID19"];
+  fhir:Citation.status [ fhir:value "active"];
+  fhir:Citation.citedArtifact [
+     fhir:Citation.citedArtifact.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "https://pubmed.ncbi.nlm.nih.gov" ];
+       fhir:Identifier.value [ fhir:value "34396514" ]
+     ], [
+       fhir:index 1;
+       fhir:Identifier.system [ fhir:value "https://doi.org" ];
+       fhir:Identifier.value [ fhir:value "10.1002/14651858.CD014963" ]
+     ], [
+       fhir:index 2;
+       fhir:Identifier.system [ fhir:value "https://www.ncbi.nlm.nih.gov/pmc/" ];
+       fhir:Identifier.value [ fhir:value "PMC8406706" ]
+     ];
+     fhir:Citation.citedArtifact.title [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.title.text [ fhir:value "Systemic corticosteroids for the treatment of COVID-19" ]
+     ];
+     fhir:Citation.citedArtifact.classification [
+       fhir:index 0;
+       fhir:Citation.citedArtifact.classification.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type" ];
+           fhir:Coding.code [ fhir:value "publication-type" ];
+           fhir:Coding.display [ fhir:value "Publication Type" ]
+         ]
+       ];
+       fhir:Citation.citedArtifact.classification.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier" ];
+           fhir:Coding.code [ fhir:value "D016428" ];
+           fhir:Coding.display [ fhir:value "Journal Article" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Bundle/COVID19IntensiveCareTreatmentGuidelineBundle.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

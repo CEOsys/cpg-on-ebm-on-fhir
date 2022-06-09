@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Citation xmlns="http://hl7.org/fhir">
+  <id value="DexamethasoneRecommendationCitation"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/Citation/DexamethasoneRecommendationCitation"/>
+  <name value="DexamethasoneRecommendationCitation"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <citedArtifact>
+    <identifier>
+      <system value="https://api.magicapp.org/api/v1/recommendations"/>
+      <value value="98398"/>
+    </identifier>
+    <version>
+      <value value="v4.0"/>
+    </version>
+    <currentState>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/cited-artifact-status-type"/>
+        <code value="active"/>
+        <display value="Active"/>
+      </coding>
+    </currentState>
+    <title>
+      <text value="Steroide"/>
+    </title>
+    <classification>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"/>
+          <code value="publication-type"/>
+          <display value="Publication Type"/>
+        </coding>
+      </type>
+      <classifier>
+        <coding>
+          <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+          <code value="guideline-recommendation"/>
+          <display value="Clinical practice guideline recommendation"/>
+        </coding>
+      </classifier>
+    </classification>
+  </citedArtifact>
+</Citation>

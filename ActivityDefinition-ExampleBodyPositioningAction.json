@@ -1,0 +1,30 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ExampleBodyPositioningAction",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/body-positioning-action"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example",
+  "name": "DrugAdministrationAction",
+  "status": "active",
+  "subjectCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/resource-types",
+        "code": "Patient"
+      }
+    ]
+  },
+  "date": "2022-06-09T15:00:21+00:00",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "431182000",
+        "display": "Placing subject in prone position (procedure)"
+      }
+    ]
+  }
+}

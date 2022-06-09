@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan> a fhir:PlanDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "COVID19NonVentilatedPatientsDexamethasoneApplicationPlan"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan>
+     ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "4.0"];
+  fhir:PlanDefinition.name [ fhir:value "No_Dexamethasone_Application"];
+  fhir:PlanDefinition.title [ fhir:value "No Dexamethasone Application for non-ventilated COVID-19 patients"];
+  fhir:PlanDefinition.status [ fhir:value "active"];
+  fhir:PlanDefinition.subjectCanonical [
+     fhir:value "https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated";
+     fhir:link <https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated>
+  ];
+  fhir:PlanDefinition.date [ fhir:value "2021-12-12"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "No Dexamethasone Application for non-ventilated COVID19 patients"];
+  fhir:PlanDefinition.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "justification" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "recommendation-rating" ];
+         fhir:Coding.display [ fhir:value "Recommendation rating" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRecommendationJustification>;
+       fhir:Reference.reference [ fhir:value "ArtifactAssessment/DexamethasoneRecommendationJustification" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "guideline-recommendation" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline recommendation" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/DexamethasoneRecommendationCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/DexamethasoneRecommendationCitation" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "clinical-practice-guideline" ];
+         fhir:Coding.display [ fhir:value "Clinical practice guideline" ]
+       ]
+     ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/COVID19IntensiveCareTreatmentGuidelineCitation>;
+       fhir:Reference.reference [ fhir:value "Citation/COVID19IntensiveCareTreatmentGuidelineCitation" ]
+     ]
+  ];
+  fhir:PlanDefinition.action [
+     fhir:index 0;
+     fhir:PlanDefinition.action.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:432102000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "432102000" ];
+         fhir:Coding.display [ fhir:value "Administration of substance (procedure)" ]
+       ]
+     ];
+     fhir:PlanDefinition.action.selectionBehavior [ fhir:value "exactly-one" ];
+     fhir:PlanDefinition.action.definitionCanonical [
+       fhir:value "https://www.ceosys.de/fhir/canonical/recommendation-action/no-dexamethasone-application";
+       fhir:link <https://www.ceosys.de/fhir/canonical/recommendation-action/no-dexamethasone-application>
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

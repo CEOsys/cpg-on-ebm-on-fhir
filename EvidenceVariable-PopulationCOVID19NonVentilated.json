@@ -1,0 +1,156 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "PopulationCOVID19NonVentilated",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated",
+  "identifier": [
+    {
+      "system": "https://www.ceosys.de",
+      "value": "NonVentilated"
+    }
+  ],
+  "name": "Population_COVID19_NonVentilated",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "description": "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated",
+  "characteristic": [
+    {
+      "linkId": "covid19",
+      "exclude": false,
+      "definitionByTypeAndValue": {
+        "typeCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "404684003",
+              "display": "Clinical finding (finding)"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "840539006",
+              "display": "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "exclude": true,
+      "definitionByCombination": {
+        "code": "any-of",
+        "characteristic": [
+          {
+            "linkId": "oxy-administration-nasal-cannula",
+            "exclude": false,
+            "definitionByTypeAndValue": {
+              "typeCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "71388002",
+                    "display": "Procedure (procedure)"
+                  }
+                ]
+              },
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "371907003",
+                    "display": "Oxygen administration by nasal cannula (procedure)"
+                  }
+                ]
+              }
+            },
+            "timeFromEvent": [
+              {
+                "eventId": "covid19",
+                "quantity": {
+                  "value": 0,
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "noninvasive-ventilation",
+            "exclude": false,
+            "definitionByTypeAndValue": {
+              "typeCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "71388002",
+                    "display": "Procedure (procedure)"
+                  }
+                ]
+              },
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "428311008",
+                    "display": "Non-invasive ventilation (regime/therapy)"
+                  }
+                ]
+              }
+            },
+            "timeFromEvent": [
+              {
+                "eventId": "covid19",
+                "quantity": {
+                  "value": 0,
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "artificial-respiration",
+            "exclude": false,
+            "definitionByTypeAndValue": {
+              "typeCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "71388002",
+                    "display": "Procedure (procedure)"
+                  }
+                ]
+              },
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "40617009",
+                    "display": "Artificial respiration (procedure)"
+                  }
+                ]
+              }
+            },
+            "timeFromEvent": [
+              {
+                "eventId": "covid19",
+                "quantity": {
+                  "value": 0,
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

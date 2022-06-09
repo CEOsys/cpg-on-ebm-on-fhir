@@ -1,0 +1,191 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRecommendationJustification> a fhir:ArtifactAssessment;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "DexamethasoneRecommendationJustification"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"DexamethasoneRecommendationJustification\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-recommendation-justification.html\">Recommendation Justification</a></p></div><p><b>ArtifactAssessment Version</b>: v4.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"PlanDefinition-COVID19VentilatedPatientsDexamethasoneApplicationPlan.html\">PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan</a> \"Dexamethasone_Application\"</p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Strength of recommendation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#strength)</span></p><p><b>classifier</b>: Strong for an intervention <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-cs-recommendation-strength.html\">Recommendation Strength</a>#strong-for)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Consensus <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#consensus)</span></p><p><b>classifier</b>: Strong <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-recommendation-strength.html\">StrengthOfRecommendationRating</a>#strong)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Preference and values <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#preference-and-values)</span></p><p><b>classifier</b>: Factor not considered <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#factor-not-considered)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Resources <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#resources)</span></p><p><b>classifier</b>: No important issues <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#no-important-issues)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Acceptability <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#acceptability)</span></p><p><b>classifier</b>: Factor not considered <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#factor-not-considered)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Feasibility <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-type.html\">Evidence To Decision Certainty type</a>#feasibility)</span></p><p><b>classifier</b>: Factor not considered <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-evidence-to-decision-certainty-rating.html\">Evidence To Decision Certainty Rating</a>#factor-not-considered)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Certainty of evidence rating <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#certainty-of-evidence-rating)</span></p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version" ];
+     fhir:Extension.valueString [ fhir:value "v4.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ];
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ];
+  fhir:ArtifactAssessment.date [ fhir:value "2020-01-03"^^xsd:date];
+  fhir:ArtifactAssessment.artifactReference [
+     fhir:link <https://www.ceosys.de/fhir/PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan>;
+     fhir:Reference.reference [ fhir:value "PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan" ]
+  ];
+  fhir:ArtifactAssessment.content [
+     fhir:index 0;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "strength" ];
+         fhir:Coding.display [ fhir:value "Strength of recommendation" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong-for" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "consensus" ];
+         fhir:Coding.display [ fhir:value "Consensus" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/recommendation-strength" ];
+         fhir:Coding.code [ fhir:value "strong" ];
+         fhir:Coding.display [ fhir:value "Strong" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "preference-and-values" ];
+         fhir:Coding.display [ fhir:value "Preference and values" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "factor-not-considered" ];
+         fhir:Coding.display [ fhir:value "Factor not considered" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "resources" ];
+         fhir:Coding.display [ fhir:value "Resources" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-important-issues" ];
+         fhir:Coding.display [ fhir:value "No important issues" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "acceptability" ];
+         fhir:Coding.display [ fhir:value "Acceptability" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "factor-not-considered" ];
+         fhir:Coding.display [ fhir:value "Factor not considered" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-type" ];
+         fhir:Coding.code [ fhir:value "feasibility" ];
+         fhir:Coding.display [ fhir:value "Feasibility" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-evidence-to-decision-certainty-rating" ];
+         fhir:Coding.code [ fhir:value "factor-not-considered" ];
+         fhir:Coding.display [ fhir:value "Factor not considered" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "container" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+         fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.relatedArtifact [
+       fhir:index 0;
+       fhir:RelatedArtifact.type [ fhir:value "justification" ];
+       fhir:RelatedArtifact.classifier [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+           fhir:Coding.code [ fhir:value "certainty-of-evidence-rating" ];
+           fhir:Coding.display [ fhir:value "Certainty of evidence rating" ]
+         ]
+       ];
+       fhir:RelatedArtifact.resourceReference [
+         fhir:link <https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRatingOutcomeMortality>;
+         fhir:Reference.reference [ fhir:value "ArtifactAssessment/DexamethasoneRatingOutcomeMortality" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRecommendationJustification.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

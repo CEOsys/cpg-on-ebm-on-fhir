@@ -1,0 +1,113 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ExampleDrugAdministrationAction",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example",
+  "name": "DrugAdministrationAction",
+  "status": "active",
+  "subjectCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/resource-types",
+        "code": "Patient"
+      }
+    ]
+  },
+  "date": "2022-06-09T15:00:21+00:00",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "432102000",
+        "display": "Administration of substance (procedure)"
+      }
+    ]
+  },
+  "productCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "C05AA09",
+        "display": "Dexamethason"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "372584003",
+        "display": "Dexamethasone (substance)"
+      }
+    ]
+  },
+  "dosage": [
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "29463-7",
+                    "display": "Body weight"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "value",
+              "valueRange": {
+                "high": {
+                  "value": 70,
+                  "unit": "kg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "kg"
+                }
+              }
+            }
+          ],
+          "url": "https://www.ceosys.de/fhir/StructureDefinition/ext-dosage-condition"
+        }
+      ],
+      "timing": {
+        "repeat": {
+          "count": 10,
+          "duration": 10,
+          "durationUnit": "d",
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "26643006",
+            "display": "Oral route"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 6,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          },
+          "rateQuantity": {
+            "value": 1,
+            "unit": "/d",
+            "system": "http://unitsofmeasure.org",
+            "code": "/d"
+          }
+        }
+      ]
+    }
+  ]
+}

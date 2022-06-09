@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ceosys-cs-recommendation-strength"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">strong-for<a name=\"ceosys-cs-recommendation-strength-strong-for\"> </a></td><td>Strong for an intervention</td></tr><tr><td style=\"white-space:nowrap\">weak-for<a name=\"ceosys-cs-recommendation-strength-weak-for\"> </a></td><td>Weak for an intervention</td></tr><tr><td style=\"white-space:nowrap\">strong-against<a name=\"ceosys-cs-recommendation-strength-strong-against\"> </a></td><td>Strong against an intervention</td></tr><tr><td style=\"white-space:nowrap\">weak-against<a name=\"ceosys-cs-recommendation-strength-weak-against\"> </a></td><td>Weak against an intervention</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
+  fhir:CodeSystem.name [ fhir:value "RecommendationStrength"];
+  fhir:CodeSystem.title [ fhir:value "Recommendation Strength"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2022-01-31"^^xsd:date];
+  fhir:CodeSystem.publisher [ fhir:value "CEOsys"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.ceosys.de" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Strength of a clinical guideline recommendation."];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "strong-for" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Strong for an intervention" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "weak-for" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Weak for an intervention" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "strong-against" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Strong against an intervention" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "weak-against" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Weak against an intervention" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

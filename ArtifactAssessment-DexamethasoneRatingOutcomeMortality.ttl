@@ -1,0 +1,184 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRatingOutcomeMortality> a fhir:ArtifactAssessment;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "DexamethasoneRatingOutcomeMortality"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"DexamethasoneRatingOutcomeMortality\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-certainty-of-evidence-rating.html\">Certainty of Evidence Rating</a></p></div><p><b>ArtifactAssessment Version</b>: v4.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"Evidence-DexamethasoneOutcomeMortality.html\">Evidence/DexamethasoneOutcomeMortality</a> \"ExampleOutcomeEvidence\"</p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Overall)</span></p><p><b>classifier</b>: Moderate quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#moderate)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Clinical Importance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#clinical-importance)</span></p><p><b>classifier</b>: Critical <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-clinical-importance.html\">Clinical Importance of Outcome</a>#9)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Risk of bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#RiskOfBias)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Inconsistency <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Inconsistency)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Indirectness <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Indirectness)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Imprecision <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#Imprecision)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Publication bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-type.html\">EvidenceCertaintyType</a>#PublicationBias)</span></p><p><b>classifier</b>: no serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://build.fhir.org/codesystem-certainty-rating.html\">EvidenceCertaintyRating</a>#no-concern)</span></p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-version" ];
+     fhir:Extension.valueString [ fhir:value "v4.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://www.ceosys.de/fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status" ];
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ];
+  fhir:ArtifactAssessment.date [ fhir:value "2020-01-03"^^xsd:date];
+  fhir:ArtifactAssessment.artifactReference [
+     fhir:link <https://www.ceosys.de/fhir/Evidence/DexamethasoneOutcomeMortality>;
+     fhir:Reference.reference [ fhir:value "Evidence/DexamethasoneOutcomeMortality" ]
+  ];
+  fhir:ArtifactAssessment.content [
+     fhir:index 0;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Overall" ];
+         fhir:Coding.display [ fhir:value "Overall certainty" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "moderate" ];
+         fhir:Coding.display [ fhir:value "Moderate quality" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system" ];
+         fhir:Coding.code [ fhir:value "clinical-importance" ];
+         fhir:Coding.display [ fhir:value "Clinical Importance" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ceosys.de/fhir/CodeSystem/cs-clinical-importance" ];
+         fhir:Coding.code [ fhir:value "9" ];
+         fhir:Coding.display [ fhir:value "Critical" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "RiskOfBias" ];
+         fhir:Coding.display [ fhir:value "Risk of bias" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "serious-concern" ];
+         fhir:Coding.display [ fhir:value "serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Inconsistency" ];
+         fhir:Coding.display [ fhir:value "Inconsistency" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Indirectness" ];
+         fhir:Coding.display [ fhir:value "Indirectness" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "Imprecision" ];
+         fhir:Coding.display [ fhir:value "Imprecision" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:ArtifactAssessment.content.informationType [ fhir:value "rating" ];
+     fhir:ArtifactAssessment.content.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-type" ];
+         fhir:Coding.code [ fhir:value "PublicationBias" ];
+         fhir:Coding.display [ fhir:value "Publication bias" ]
+       ]
+     ];
+     fhir:ArtifactAssessment.content.classifier [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+         fhir:Coding.code [ fhir:value "no-concern" ];
+         fhir:Coding.display [ fhir:value "no serious concern" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ArtifactAssessment/DexamethasoneRatingOutcomeMortality.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

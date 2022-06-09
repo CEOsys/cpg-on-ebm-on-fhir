@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cochrane-pico-intervention",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <a href=\"CodeSystem-cochrane-pico-ontology.html\"><code>http://data.cochrane.org/ontologies/pico/</code></a> where concept  is-a  <a href=\"CodeSystem-cochrane-pico-ontology.html#cochrane-pico-ontology-Intervention\">Intervention</a></li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/cochrane-pico-intervention",
+  "version": "0.1.0",
+  "name": "CochranePICOIntervention",
+  "title": "Cochrane PICO Intervention",
+  "status": "draft",
+  "date": "2021-12-03",
+  "publisher": "CEOsys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.ceosys.de"
+        }
+      ]
+    }
+  ],
+  "description": "All intervention codes from the Cochrane PICO ontology.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://data.cochrane.org/ontologies/pico/",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "Intervention"
+          }
+        ]
+      }
+    ]
+  }
+}

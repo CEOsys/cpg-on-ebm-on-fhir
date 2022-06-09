@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ceosys-vs-recommendation-strength",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-ceosys-cs-recommendation-strength.html\"><code>https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength</code></a></li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/ceosys-vs-recommendation-strength",
+  "version": "0.1.0",
+  "name": "RecommendationStrength",
+  "title": "Recommendation Strength",
+  "status": "draft",
+  "date": "2022-01-31",
+  "publisher": "CEOsys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.ceosys.de"
+        }
+      ]
+    }
+  ],
+  "description": "Strength of a clinical guideline recommendation.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength"
+      }
+    ]
+  }
+}

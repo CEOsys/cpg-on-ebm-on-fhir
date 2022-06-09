@@ -1,0 +1,41 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "ExampleOutcome",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/outcome-definition"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/EvidenceVariable/ExampleOutcome",
+  "identifier": [
+    {
+      "system": "https://www.ceosys.de",
+      "value": "outcome-example"
+    }
+  ],
+  "name": "Mortality",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "characteristic": [
+    {
+      "exclude": false,
+      "definitionByTypeAndValue": {
+        "typeCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "409651001",
+              "display": "Mortality rate (observable entity)"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "unit": "percent",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    }
+  ],
+  "handling": "dichotomous"
+}

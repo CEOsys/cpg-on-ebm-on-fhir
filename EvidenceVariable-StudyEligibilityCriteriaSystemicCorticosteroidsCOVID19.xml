@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"/>
+  <name value="StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <characteristic>
+    <definitionByTypeAndValue>
+      <typeCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="404684003"/>
+          <display value="Clinical finding (finding)"/>
+        </coding>
+      </typeCodeableConcept>
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="840539006"/>
+          <display value="Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"/>
+        </coding>
+      </valueCodeableConcept>
+    </definitionByTypeAndValue>
+  </characteristic>
+</EvidenceVariable>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="COVID19VentilatedPatientsDexamethasoneApplicationPlan"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan"/>
+  </meta>
+  <version value="4.0"/>
+  <name value="Dexamethasone_Application"/>
+  <title value="Dexamethasone Application in ventilated COVID-19 patients"/>
+  <status value="active"/>
+  <subjectCanonical value="https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated"/>
+  <date value="2021-12-12"/>
+  <description value="Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"/>
+  <relatedArtifact>
+    <type value="justification"/>
+    <classifier>
+      <coding>
+        <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+        <code value="recommendation-rating"/>
+        <display value="Recommendation rating"/>
+      </coding>
+    </classifier>
+    <resourceReference>
+      <reference value="ArtifactAssessment/DexamethasoneRecommendationJustification"/>
+    </resourceReference>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="citation"/>
+    <classifier>
+      <coding>
+        <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+        <code value="guideline-recommendation"/>
+        <display value="Clinical practice guideline recommendation"/>
+      </coding>
+    </classifier>
+    <resourceReference>
+      <reference value="Citation/DexamethasoneRecommendationCitation"/>
+    </resourceReference>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="citation"/>
+    <classifier>
+      <coding>
+        <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+        <code value="clinical-practice-guideline"/>
+        <display value="Clinical practice guideline"/>
+      </coding>
+    </classifier>
+    <resourceReference>
+      <reference value="Citation/COVID19IntensiveCareTreatmentGuidelineCitation"/>
+    </resourceReference>
+  </relatedArtifact>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <selectionBehavior value="exactly-one"/>
+    <definitionCanonical value="https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-oral"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <selectionBehavior value="exactly-one"/>
+    <definitionCanonical value="https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous"/>
+  </action>
+</PlanDefinition>

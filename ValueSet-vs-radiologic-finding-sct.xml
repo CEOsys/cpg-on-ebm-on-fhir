@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-radiologic-finding-sct"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  118247008 (Radiologic finding)</li></ul></div>
+  </text>
+  <url value="https://www.ceosys.de/fhir/ValueSet/vs-radiologic-finding-sct"/>
+  <version value="0.2.0-snapshot"/>
+  <name value="RadiologicFindingSCT"/>
+  <title value="Radiologic Finding SCT"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <description value="Radiologic findings from SNOMED CT"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="118247008"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="ExampleRecommendationPlan"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan"/>
+  </meta>
+  <version value="1.0"/>
+  <name value="RecommendationPlan"/>
+  <title value="Recommendation Plan"/>
+  <status value="active"/>
+  <subjectCanonical value="https://www.example.com/recommendation-eligibility-criteria"/>
+  <date value="2022-02-14"/>
+  <description value="Example Recommendation Plan"/>
+  <relatedArtifact>
+    <type value="justification"/>
+    <classifier>
+      <coding>
+        <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+        <code value="recommendation-rating"/>
+        <display value="Recommendation rating"/>
+      </coding>
+    </classifier>
+    <resourceReference>
+      <reference value="ArtifactAssessment/ExampleRecommendationJustification"/>
+    </resourceReference>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="citation"/>
+    <classifier>
+      <coding>
+        <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+        <code value="guideline-recommendation"/>
+        <display value="Clinical practice guideline recommendation"/>
+      </coding>
+    </classifier>
+    <resourceReference>
+      <reference value="Citation/ExampleRecommendationCitation"/>
+    </resourceReference>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="citation"/>
+    <classifier>
+      <coding>
+        <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-code-system"/>
+        <code value="clinical-practice-guideline"/>
+        <display value="Clinical practice guideline"/>
+      </coding>
+    </classifier>
+    <resourceReference>
+      <reference value="Citation/ExampleGuidelineCitation"/>
+    </resourceReference>
+  </relatedArtifact>
+  <goal id="ventilator-management-goal">
+    <category>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="385857005"/>
+        <display value="Ventilator care and adjustment (regime/therapy)"/>
+      </coding>
+    </category>
+    <description>
+      <text value="The ventilator should be set up to provide a breath reate of at least 20 and at most per minute."/>
+    </description>
+    <target>
+      <measure>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="33438-3"/>
+          <display value="Breath rate mechanical --on ventilator"/>
+        </coding>
+      </measure>
+      <detailRange>
+        <low>
+          <value value="20"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </low>
+        <high>
+          <value value="24"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </high>
+      </detailRange>
+    </target>
+  </goal>
+  <goal id="lab-ddimer-concentration-goal">
+    <category>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="410394004"/>
+        <display value="Lab findings surveillance (regime/therapy)"/>
+      </coding>
+    </category>
+    <description>
+      <text value="D-Dimer concentration shall be below 250 ng/mL"/>
+    </description>
+    <target>
+      <measure>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="48066-5"/>
+          <display value="Fibrin D-dimer DDU [Mass/volume] in Platelet poor plasma"/>
+        </coding>
+      </measure>
+      <detailRange>
+        <high>
+          <value value="250"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ng/mL"/>
+        </high>
+      </detailRange>
+    </target>
+  </goal>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="229824005"/>
+        <display value="Positioning patient (procedure)"/>
+      </coding>
+    </code>
+    <goalId value="ventilator-management-goal"/>
+    <definitionCanonical value="https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="410210009"/>
+        <display value="Ventilator care management (procedure)"/>
+      </coding>
+    </code>
+    <goalId value="ventilator-management-goal"/>
+  </action>
+</PlanDefinition>

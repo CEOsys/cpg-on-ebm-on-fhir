@@ -1,0 +1,137 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Evidence/DexamethasoneOutcomeMortality> a fhir:Evidence;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "DexamethasoneOutcomeMortality"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis>
+     ]
+  ];
+  fhir:Evidence.url [ fhir:value "https://www.ceosys.de/fhir/Evidence/DexamethasoneOutcomeMortality"];
+  fhir:Evidence.name [ fhir:value "ExampleOutcomeEvidence"];
+  fhir:Evidence.status [ fhir:value "active"];
+  fhir:Evidence.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:Evidence.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "citation" ];
+     fhir:RelatedArtifact.resourceReference [
+       fhir:link <https://www.ceosys.de/fhir/Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19>;
+       fhir:Reference.reference [ fhir:value "Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19" ]
+     ]
+  ];
+  fhir:Evidence.variableDefinition [
+     fhir:index 0;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "population" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/Group/StudyCohortCorticosteroidsCOVID19>;
+       fhir:Reference.reference [ fhir:value "Group/StudyCohortCorticosteroidsCOVID19" ]
+     ];
+     fhir:Evidence.variableDefinition.intended [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Evidence.variableDefinition.variableRole [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/variable-role" ];
+         fhir:Coding.code [ fhir:value "measuredVariable" ]
+       ]
+     ];
+     fhir:Evidence.variableDefinition.observed [
+       fhir:link <https://www.ceosys.de/fhir/EvidenceVariable/OutcomeAllCauseMortality>;
+       fhir:Reference.reference [ fhir:value "EvidenceVariable/OutcomeAllCauseMortality" ]
+     ]
+  ];
+  fhir:Evidence.synthesisType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/synthesis-type" ];
+       fhir:Coding.code [ fhir:value "NotApplicable" ]
+     ]
+  ];
+  fhir:Evidence.studyType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/study-type" ];
+       fhir:Coding.code [ fhir:value "RCT" ]
+     ]
+  ];
+  fhir:Evidence.statistic [
+     fhir:index 0;
+     fhir:Evidence.statistic.description [ fhir:value "Relative effect of intervention vs. comparator" ];
+     fhir:Evidence.statistic.statisticType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/statistic-type" ];
+         fhir:Coding.code [ fhir:value "C93152" ];
+         fhir:Coding.display [ fhir:value "Relative Risk" ]
+       ]
+     ];
+     fhir:Evidence.statistic.quantity [
+       fhir:Quantity.value [ fhir:value "0.89"^^xsd:decimal ]
+     ];
+     fhir:Evidence.statistic.sampleSize [
+       fhir:Evidence.statistic.sampleSize.numberOfStudies [ fhir:value "9"^^xsd:nonNegativeInteger ];
+       fhir:Evidence.statistic.sampleSize.numberOfParticipants [ fhir:value "7930"^^xsd:nonNegativeInteger ]
+     ];
+     fhir:Evidence.statistic.attributeEstimate [
+       fhir:index 0;
+       fhir:Evidence.statistic.attributeEstimate.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/attribute-estimate-type" ];
+           fhir:Coding.code [ fhir:value "C53324" ];
+           fhir:Coding.display [ fhir:value "Confidence interval" ]
+         ]
+       ];
+       fhir:Evidence.statistic.attributeEstimate.level [ fhir:value "0.95"^^xsd:decimal ];
+       fhir:Evidence.statistic.attributeEstimate.range [
+         fhir:Range.low [
+           fhir:Quantity.value [ fhir:value "0.8"^^xsd:decimal ]
+         ];
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Evidence.statistic.description [ fhir:value "Baseline risk/result in the comparison group" ];
+     fhir:Evidence.statistic.statisticType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/statistic-type" ];
+         fhir:Coding.code [ fhir:value "C16726" ];
+         fhir:Coding.display [ fhir:value "Incidence" ]
+       ]
+     ];
+     fhir:Evidence.statistic.quantity [
+       fhir:Quantity.value [ fhir:value "245"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "1/1000" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/Evidence/DexamethasoneOutcomeMortality.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

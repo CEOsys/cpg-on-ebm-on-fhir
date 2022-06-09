@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="PopulationCOVID19Ventilated"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated"/>
+  <identifier>
+    <system value="https://www.ceosys.de"/>
+    <value value="Ventilated"/>
+  </identifier>
+  <name value="Population_COVID19_Ventilated"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <description value="Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, Ventilated"/>
+  <characteristic>
+    <linkId value="covid19"/>
+    <definitionByTypeAndValue>
+      <typeCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="404684003"/>
+          <display value="Clinical finding (finding)"/>
+        </coding>
+      </typeCodeableConcept>
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="840539006"/>
+          <display value="Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"/>
+        </coding>
+      </valueCodeableConcept>
+    </definitionByTypeAndValue>
+  </characteristic>
+  <characteristic>
+    <exclude value="false"/>
+    <definitionByCombination>
+      <code value="any-of"/>
+      <characteristic>
+        <linkId value="oxy-administration-nasal-cannula"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <typeCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="71388002"/>
+              <display value="Procedure (procedure)"/>
+            </coding>
+          </typeCodeableConcept>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="371907003"/>
+              <display value="Oxygen administration by nasal cannula (procedure)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+        <timeFromEvent>
+          <eventId value="covid19"/>
+          <quantity>
+            <value value="0"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>
+          </quantity>
+        </timeFromEvent>
+      </characteristic>
+      <characteristic>
+        <linkId value="noninvasive-ventilation"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <typeCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="71388002"/>
+              <display value="Procedure (procedure)"/>
+            </coding>
+          </typeCodeableConcept>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="428311008"/>
+              <display value="Non-invasive ventilation (regime/therapy)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+        <timeFromEvent>
+          <eventId value="covid19"/>
+          <quantity>
+            <value value="0"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>
+          </quantity>
+        </timeFromEvent>
+      </characteristic>
+      <characteristic>
+        <linkId value="artificial-respiration"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <typeCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="71388002"/>
+              <display value="Procedure (procedure)"/>
+            </coding>
+          </typeCodeableConcept>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="40617009"/>
+              <display value="Artificial respiration (procedure)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+        <timeFromEvent>
+          <eventId value="covid19"/>
+          <quantity>
+            <value value="0"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>
+          </quantity>
+        </timeFromEvent>
+      </characteristic>
+    </definitionByCombination>
+  </characteristic>
+</EvidenceVariable>

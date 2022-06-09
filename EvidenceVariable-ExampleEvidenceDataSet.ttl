@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/ExampleEvidenceDataSet> a fhir:EvidenceVariable;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleEvidenceDataSet"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set>
+     ]
+  ];
+  fhir:EvidenceVariable.url [ fhir:value "https://www.ceosys.de/fhir/EvidenceVariable/ExampleEvidenceDataSet"];
+  fhir:EvidenceVariable.name [ fhir:value "ExampleEvidenceDataSet"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.definitionByCombination [
+       fhir:EvidenceVariable.characteristic.definitionByCombination.code [ fhir:value "dataset" ];
+       fhir:EvidenceVariable.characteristic.definitionByCombination.characteristic [
+         fhir:index 0;
+         fhir:EvidenceVariable.characteristic.definitionReference [
+           fhir:Reference.reference [ fhir:value "ExampleOutcomeEvidence" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/ExampleEvidenceDataSet.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

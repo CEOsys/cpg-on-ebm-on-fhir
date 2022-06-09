@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="OutcomeAllCauseMortality"/>
+  <meta>
+    <profile value="https://www.ceosys.de/fhir/StructureDefinition/outcome-definition"/>
+  </meta>
+  <url value="https://www.ceosys.de/fhir/EvidenceVariable/OutcomeAllCauseMortality"/>
+  <name value="AllCauseMortality"/>
+  <status value="active"/>
+  <date value="2022-06-09T15:00:21+00:00"/>
+  <characteristic>
+    <exclude value="false"/>
+    <definitionCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="409651001"/>
+        <display value="Mortality rate (observable entity)"/>
+      </coding>
+    </definitionCodeableConcept>
+  </characteristic>
+  <handling value="dichotomous"/>
+</EvidenceVariable>

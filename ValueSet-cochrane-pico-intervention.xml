@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="cochrane-pico-intervention"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <a href="CodeSystem-cochrane-pico-ontology.html"><code>http://data.cochrane.org/ontologies/pico/</code></a> where concept  is-a  <a href="CodeSystem-cochrane-pico-ontology.html#cochrane-pico-ontology-Intervention">Intervention</a></li></ul></div>
+  </text>
+  <url value="https://www.ceosys.de/fhir/ValueSet/cochrane-pico-intervention"/>
+  <version value="0.1.0"/>
+  <name value="CochranePICOIntervention"/>
+  <title value="Cochrane PICO Intervention"/>
+  <status value="draft"/>
+  <date value="2021-12-03"/>
+  <publisher value="CEOsys"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ceosys.de"/>
+    </telecom>
+  </contact>
+  <description value="All intervention codes from the Cochrane PICO ontology."/>
+  <compose>
+    <include>
+      <system value="http://data.cochrane.org/ontologies/pico/"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="Intervention"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

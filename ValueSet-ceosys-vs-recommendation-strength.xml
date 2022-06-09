@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ceosys-vs-recommendation-strength"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-ceosys-cs-recommendation-strength.html"><code>https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength</code></a></li></ul></div>
+  </text>
+  <url value="https://www.ceosys.de/fhir/ValueSet/ceosys-vs-recommendation-strength"/>
+  <version value="0.1.0"/>
+  <name value="RecommendationStrength"/>
+  <title value="Recommendation Strength"/>
+  <status value="draft"/>
+  <date value="2022-01-31"/>
+  <publisher value="CEOsys"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ceosys.de"/>
+    </telecom>
+  </contact>
+  <description value="Strength of a clinical guideline recommendation."/>
+  <compose>
+    <include>
+      <system value="https://www.ceosys.de/fhir/CodeSystem/ceosys-cs-recommendation-strength"/>
+    </include>
+  </compose>
+</ValueSet>

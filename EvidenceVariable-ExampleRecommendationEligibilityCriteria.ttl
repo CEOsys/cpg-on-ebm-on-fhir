@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/ExampleRecommendationEligibilityCriteria> a fhir:EvidenceVariable;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleRecommendationEligibilityCriteria"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria";
+       fhir:index 0;
+       fhir:link <https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria>
+     ]
+  ];
+  fhir:EvidenceVariable.url [ fhir:value "https://www.example.com/recommendation-eligibility-criteria"];
+  fhir:EvidenceVariable.name [ fhir:value "PopulationExample"];
+  fhir:EvidenceVariable.status [ fhir:value "active"];
+  fhir:EvidenceVariable.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:EvidenceVariable.characteristic [
+     fhir:index 0;
+     fhir:EvidenceVariable.characteristic.definitionByTypeAndValue [
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.typeCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:404684003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "404684003" ];
+           fhir:Coding.display [ fhir:value "Clinical finding (finding)" ]
+         ]
+       ];
+       fhir:EvidenceVariable.characteristic.definitionByTypeAndValue.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:840539006;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "840539006" ];
+           fhir:Coding.display [ fhir:value "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/EvidenceVariable/ExampleRecommendationEligibilityCriteria.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

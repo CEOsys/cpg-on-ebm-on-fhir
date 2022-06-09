@@ -1,0 +1,58 @@
+{
+  "resourceType": "Citation",
+  "id": "SystemicCorticosteroidsForTheTreatmentOfCOVID19",
+  "meta": {
+    "profile": [
+      "https://www.ceosys.de/fhir/StructureDefinition/study-citation"
+    ]
+  },
+  "url": "https://www.ceosys.de/fhir/Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19",
+  "name": "SystemicCorticosteroidsForTheTreatmentOfCOVID19",
+  "status": "active",
+  "date": "2022-06-09T15:00:21+00:00",
+  "citedArtifact": {
+    "identifier": [
+      {
+        "system": "https://pubmed.ncbi.nlm.nih.gov",
+        "value": "34396514"
+      },
+      {
+        "system": "https://doi.org",
+        "value": "10.1002/14651858.CD014963"
+      },
+      {
+        "system": "https://www.ncbi.nlm.nih.gov/pmc/",
+        "value": "PMC8406706"
+      }
+    ],
+    "title": [
+      {
+        "text": "Systemic corticosteroids for the treatment of COVID-19"
+      }
+    ],
+    "classification": [
+      {
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type",
+              "code": "publication-type",
+              "display": "Publication Type"
+            }
+          ]
+        },
+        "classifier": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier",
+                "code": "D016428",
+                "display": "Journal Article"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

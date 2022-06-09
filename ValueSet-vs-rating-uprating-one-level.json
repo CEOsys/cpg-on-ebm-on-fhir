@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-rating-uprating-one-level",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://build.fhir.org/codesystem-certainty-rating.html\"><code>http://terminology.hl7.org/CodeSystem/certainty-rating</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-no-change\">no-change</a></td><td>no change to rating</td><td>no change to quality rating.</td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-upcode1\">upcode1</a></td><td>increase rating: +1</td><td>increase quality rating by 1.</td></tr></table></li></ul></div>"
+  },
+  "url": "https://www.ceosys.de/fhir/ValueSet/vs-rating-uprating-one-level",
+  "version": "0.1.0",
+  "name": "RatingUpratingOneLevel",
+  "title": "Rating Up Rating One Level",
+  "status": "draft",
+  "date": "2022-04-05",
+  "publisher": "CEOsys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.ceosys.de"
+        }
+      ]
+    }
+  ],
+  "description": "Ratings for factors that might cause rating up the certainty",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/certainty-rating",
+        "concept": [
+          {
+            "code": "no-change",
+            "display": "no change to rating"
+          },
+          {
+            "code": "upcode1",
+            "display": "increase rating: +1"
+          }
+        ]
+      }
+    ]
+  }
+}

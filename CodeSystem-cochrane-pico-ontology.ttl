@@ -1,0 +1,629 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/cochrane-pico-ontology> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cochrane-pico-ontology"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Properties</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>parent</td><td>code</td><td>Parent codes.</td></tr><tr><td>imported</td><td>boolean</td><td>Indicates if the concept is imported from another code system.</td></tr><tr><td>root</td><td>boolean</td><td>Indicates if this concept is a root concept (i.e. Thing is equivalent or a direct parent)</td></tr><tr><td>deprecated</td><td>boolean</td><td>Indicates if this concept is deprecated.</td></tr></table><p><b>Filters</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Description</b></td><td><b>operator</b></td><td><b>Value</b></td></tr><tr><td>root</td><td/><td>= </td><td>True or false.</td></tr><tr><td>deprecated</td><td/><td>= </td><td>True or false.</td></tr><tr><td>imported</td><td/><td>= </td><td>True or false</td></tr></table><p>This code system http://data.cochrane.org/ontologies/pico/ defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>parent</b></td><td><b>imported</b></td><td><b>root</b></td><td><b>deprecated</b></td></tr><tr><td style=\"white-space:nowrap\">Age<a name=\"cochrane-pico-ontology-Age\"> </a></td><td>Age</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">InterventionProvider<a name=\"cochrane-pico-ontology-InterventionProvider\"> </a></td><td>InterventionProvider</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Dose<a name=\"cochrane-pico-ontology-Dose\"> </a></td><td>Dose</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">AssessmentScale<a name=\"cochrane-pico-ontology-AssessmentScale\"> </a></td><td>AssessmentScale</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Treatment<a name=\"cochrane-pico-ontology-Treatment\"> </a></td><td>Treatment</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">InterventionRationale<a name=\"cochrane-pico-ontology-InterventionRationale\"> </a></td><td>InterventionRationale</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Setting<a name=\"cochrane-pico-ontology-Setting\"> </a></td><td>Setting</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Thing<a name=\"cochrane-pico-ontology-Thing\"> </a></td><td>Thing</td><td/><td>false</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Outcome<a name=\"cochrane-pico-ontology-Outcome\"> </a></td><td>Outcome</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Schedule<a name=\"cochrane-pico-ontology-Schedule\"> </a></td><td>Schedule</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">OutcomeDomain<a name=\"cochrane-pico-ontology-OutcomeDomain\"> </a></td><td>OutcomeDomain</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">InterventionClassification<a name=\"cochrane-pico-ontology-InterventionClassification\"> </a></td><td>Intervention Classification</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">PICO<a name=\"cochrane-pico-ontology-PICO\"> </a></td><td>PICO</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Intervention<a name=\"cochrane-pico-ontology-Intervention\"> </a></td><td>Intervention</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">OutcomeClassification<a name=\"cochrane-pico-ontology-OutcomeClassification\"> </a></td><td>OutcomeClassification</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Population<a name=\"cochrane-pico-ontology-Population\"> </a></td><td>Population</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">OutcomeGroup<a name=\"cochrane-pico-ontology-OutcomeGroup\"> </a></td><td>OutcomeGroup</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">AppliedIntervention<a name=\"cochrane-pico-ontology-AppliedIntervention\"> </a></td><td>AppliedIntervention</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">AggregationMethod<a name=\"cochrane-pico-ontology-AggregationMethod\"> </a></td><td>AggregationMethod</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Sex<a name=\"cochrane-pico-ontology-Sex\"> </a></td><td>Sex</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">SocialContext<a name=\"cochrane-pico-ontology-SocialContext\"> </a></td><td>SocialContext</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">InterventionGroup<a name=\"cochrane-pico-ontology-InterventionGroup\"> </a></td><td>InterventionGroup</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Duration<a name=\"cochrane-pico-ontology-Duration\"> </a></td><td>Duration</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">ModeOfDelivery<a name=\"cochrane-pico-ontology-ModeOfDelivery\"> </a></td><td>ModeOfDelivery</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">Condition<a name=\"cochrane-pico-ontology-Condition\"> </a></td><td>Condition</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">SpecificMetric<a name=\"cochrane-pico-ontology-SpecificMetric\"> </a></td><td>SpecificMetric</td><td>Thing</td><td>false</td><td>false</td><td>false</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://data.cochrane.org/ontologies/pico/"];
+  fhir:CodeSystem.version [ fhir:value "4.0.1"];
+  fhir:CodeSystem.name [ fhir:value "CochranePICOOntology"];
+  fhir:CodeSystem.title [ fhir:value "Cochrane PICO Ontology"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.date [ fhir:value "2022-06-09T15:00:21+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "Cochrane"];
+  fhir:CodeSystem.description [ fhir:value "The PICO ontology describes questions in evidence based healthcare with the intention of supporting the publishing of evidence as linked data."];
+  fhir:CodeSystem.valueSet [
+     fhir:value "http://data.cochrane.org/ontologies/pico/?vs";
+     fhir:link <http://data.cochrane.org/ontologies/pico/?vs>
+  ];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.compositional [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.versionNeeded [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "26"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.filter [
+     fhir:index 0;
+     fhir:CodeSystem.filter.code [ fhir:value "root" ];
+     fhir:CodeSystem.filter.operator [
+       fhir:value "=";
+       fhir:index 0
+     ];
+     fhir:CodeSystem.filter.value [ fhir:value "True or false." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.filter.code [ fhir:value "deprecated" ];
+     fhir:CodeSystem.filter.operator [
+       fhir:value "=";
+       fhir:index 0
+     ];
+     fhir:CodeSystem.filter.value [ fhir:value "True or false." ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.filter.code [ fhir:value "imported" ];
+     fhir:CodeSystem.filter.operator [
+       fhir:value "=";
+       fhir:index 0
+     ];
+     fhir:CodeSystem.filter.value [ fhir:value "True or false" ]
+  ];
+  fhir:CodeSystem.property [
+     fhir:index 0;
+     fhir:CodeSystem.property.code [ fhir:value "parent" ];
+     fhir:CodeSystem.property.description [ fhir:value "Parent codes." ];
+     fhir:CodeSystem.property.type [ fhir:value "code" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.property.code [ fhir:value "imported" ];
+     fhir:CodeSystem.property.description [ fhir:value "Indicates if the concept is imported from another code system." ];
+     fhir:CodeSystem.property.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.property.code [ fhir:value "root" ];
+     fhir:CodeSystem.property.description [ fhir:value "Indicates if this concept is a root concept (i.e. Thing is equivalent or a direct parent)" ];
+     fhir:CodeSystem.property.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.property.code [ fhir:value "deprecated" ];
+     fhir:CodeSystem.property.description [ fhir:value "Indicates if this concept is deprecated." ];
+     fhir:CodeSystem.property.type [ fhir:value "boolean" ]
+  ];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "Age" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Age" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "InterventionProvider" ];
+     fhir:CodeSystem.concept.display [ fhir:value "InterventionProvider" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "Dose" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Dose" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "AssessmentScale" ];
+     fhir:CodeSystem.concept.display [ fhir:value "AssessmentScale" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "Treatment" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Treatment" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "InterventionRationale" ];
+     fhir:CodeSystem.concept.display [ fhir:value "InterventionRationale" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "Setting" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Setting" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "Thing" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Thing" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "Outcome" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Outcome" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "Schedule" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Schedule" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "OutcomeDomain" ];
+     fhir:CodeSystem.concept.display [ fhir:value "OutcomeDomain" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "InterventionClassification" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Intervention Classification" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "PICO" ];
+     fhir:CodeSystem.concept.display [ fhir:value "PICO" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "Intervention" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Intervention" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "OutcomeClassification" ];
+     fhir:CodeSystem.concept.display [ fhir:value "OutcomeClassification" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "Population" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Population" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value "OutcomeGroup" ];
+     fhir:CodeSystem.concept.display [ fhir:value "OutcomeGroup" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value "AppliedIntervention" ];
+     fhir:CodeSystem.concept.display [ fhir:value "AppliedIntervention" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value "AggregationMethod" ];
+     fhir:CodeSystem.concept.display [ fhir:value "AggregationMethod" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value "Sex" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sex" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value "SocialContext" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SocialContext" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 21;
+     fhir:CodeSystem.concept.code [ fhir:value "InterventionGroup" ];
+     fhir:CodeSystem.concept.display [ fhir:value "InterventionGroup" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 22;
+     fhir:CodeSystem.concept.code [ fhir:value "Duration" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Duration" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 23;
+     fhir:CodeSystem.concept.code [ fhir:value "ModeOfDelivery" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ModeOfDelivery" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 24;
+     fhir:CodeSystem.concept.code [ fhir:value "Condition" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Condition" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 25;
+     fhir:CodeSystem.concept.code [ fhir:value "SpecificMetric" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SpecificMetric" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "imported" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "parent" ];
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "Thing" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "root" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ];
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/CodeSystem/cochrane-pico-ontology.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

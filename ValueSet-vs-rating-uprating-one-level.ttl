@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ValueSet/vs-rating-uprating-one-level> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "vs-rating-uprating-one-level"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://build.fhir.org/codesystem-certainty-rating.html\"><code>http://terminology.hl7.org/CodeSystem/certainty-rating</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-no-change\">no-change</a></td><td>no change to rating</td><td>no change to quality rating.</td></tr><tr><td><a href=\"http://build.fhir.org/codesystem-certainty-rating.html#certainty-rating-upcode1\">upcode1</a></td><td>increase rating: +1</td><td>increase quality rating by 1.</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://www.ceosys.de/fhir/ValueSet/vs-rating-uprating-one-level"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "RatingUpratingOneLevel"];
+  fhir:ValueSet.title [ fhir:value "Rating Up Rating One Level"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2022-04-05"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "CEOsys"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.ceosys.de" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Ratings for factors that might cause rating up the certainty"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://terminology.hl7.org/CodeSystem/certainty-rating" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "no-change" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "no change to rating" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "upcode1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "increase rating: +1" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.ceosys.de/fhir/ValueSet/vs-rating-uprating-one-level.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
