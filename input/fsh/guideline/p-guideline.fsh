@@ -14,12 +14,9 @@ Description: "Representation of an evidence-based clinical practice guideline."
 * title 1..1 MS
 * date 1..1 MS
 * status 1..1 MS
-//* version 1..1 MS // TODO: uncomment once version field available (see https://jira.hl7.org/browse/FHIR-34159 )
-//* name 1..1 MS // TODO: uncomment once name field available (see https://jira.hl7.org/browse/FHIR-34159 )
-//* url 1..1 MS // TODO: uncomment once url field available (see https://jira.hl7.org/browse/FHIR-34159 )
+* version 1..1 MS
 * extension contains
-  CompositionVersion named version 1..1 MS // TODO: replace by actual version field once available
-  and CompositionPublicationStatus named publicationStatus 1..1 MS
+   CompositionPublicationStatus named publicationStatus 1..1 MS
 * encounter 0..0
 * subject 0..0
 * relatesTo 0..1
@@ -65,7 +62,7 @@ Description: "Example of a guideline resource."
 * date = "2022-01-28"
 * status = #final
 * extension[publicationStatus].valueCode = #active
-* extension[version].valueString = "0.1.0"
+* version = "0.1.0"
 * relatesTo.resourceReference = Reference(ExampleGuidelineCitation)
 * category[stageClassification] = $cs-guideline-stage-classification#S3 "Evidence- and consensus-based guideline"
 * section

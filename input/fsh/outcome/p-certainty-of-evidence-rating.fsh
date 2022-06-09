@@ -8,7 +8,7 @@ Description: "Rating of a single outcome (evidence) underlying a clinical practi
 * insert profile("This profile is used to define the certainty of evidence rating")
 * artifact[x] only Reference
 * artifactReference only Reference(OutcomeEvidence)
-//* version 1..1 MS // TODO: uncomment if version
+//* version 1..1 MS // TODO: uncomment if this field is added
 * extension contains
   ArtifactAssessmentVersion named version 1..1 MS and // TODO: replace by actual version field if added
   ArtifactAssessmentPublicationStatus named publicationStatus 1..1 MS
