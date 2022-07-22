@@ -24,7 +24,7 @@ Description: "Example of an outcome evidence variable."
   * value = "outcome-example"
 * name = "Mortality"
 * characteristic.definitionByTypeAndValue
-  * typeCodeableConcept = $sct#409651001 "Mortality rate (observable entity)"
+  * type = $sct#409651001 "Mortality rate (observable entity)"
   * valueQuantity
     * unit = "percent"
     * system = $ucum
