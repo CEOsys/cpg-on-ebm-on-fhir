@@ -60,3 +60,4 @@ Alias: $cs-citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/
 Alias: $vs-snomed-procedures = http://hl7.org/fhir/ValueSet/procedure-code
 
 Alias: $cs-fhir-types = http://hl7.org/fhir/fhir-types
+Alias: $cs-group-membership-basis = http://hl7.org/fhir/group-membership-basis

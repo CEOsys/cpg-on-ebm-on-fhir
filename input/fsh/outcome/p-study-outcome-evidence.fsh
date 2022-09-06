@@ -17,7 +17,6 @@ Title: "Example Study Outcome Evidence"
 Description: "Example Study Outcome Evidence"
 * name = "ExampleStudyOutcomeEvidence"
 * status = #active
-* studyType = $cs-study-type#RCT
 * synthesisType = $cs-synthesis-type#NotApplicable
 * relatedArtifact[studyCitation].resourceReference = Reference(ExampleStudyCitation)
 * variableDefinition[population].intended = Reference(ExampleStudyEligibilityCriteria)

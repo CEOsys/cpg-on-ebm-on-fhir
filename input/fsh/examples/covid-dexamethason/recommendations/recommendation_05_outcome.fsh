@@ -22,7 +22,6 @@ Title: "Mortality Outcome for Dexamethasone application"
 Description: "Mortality Outcome for Dexamethasone application in hospitalized COVID-19 patients"
 * name = "ExampleOutcomeEvidence"
 * status = #active
-* studyType = $cs-study-type#RCT
 * synthesisType = $cs-synthesis-type#NotApplicable
 * relatedArtifact[studyCitation].resourceReference = Reference(SystemicCorticosteroidsForTheTreatmentOfCOVID19)
 * variableDefinition[population].intended = Reference(StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19)
