@@ -7,6 +7,7 @@ Profile: CPGRecommendationDefinition
 Parent: CPGComputablePlanDefinition
 Id: cpg-recommendationdefinition
 Description: "Profile of PlanDefinition as a Recommendation Definition for use with CPG Implementation Guide"
+* ^abstract = true // modification to original CPGonFHIR definition to not having the FSH Validator require a defined instance
 * ^status = #draft
 * ^experimental = false
 * ^date = "2019-06-06"

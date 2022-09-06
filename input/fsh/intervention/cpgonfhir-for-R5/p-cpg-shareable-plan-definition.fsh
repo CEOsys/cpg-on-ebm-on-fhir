@@ -11,6 +11,7 @@ Profile: CPGShareablePlanDefinition
 Parent: $shareableplandefinition
 Id: cpg-shareableplandefinition
 Description: "Defines the minimum expectations for a shareable plan definition for use with computable guideline content. This profile derives from the ShareablePlanDefinition profile defined in the base FHIR specification, and adds support for declaring knowledge representation level and knowledge artifact capabilities."
+* ^abstract = true // modification to original CPGonFHIR definition to not having the FSH Validator require a defined instance
 * ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false

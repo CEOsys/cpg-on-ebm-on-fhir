@@ -14,6 +14,7 @@ Profile: CPGComputablePlanDefinition
 Parent: CPGShareablePlanDefinition
 Id: cpg-computableplandefinition
 Description: "Defines the minimum expectations and behavior for a computable plan definition"
+* ^abstract = true // modification to original CPGonFHIR definition to not having the FSH Validator require a defined instance
 * ^status = #draft
 * ^experimental = false
 * ^date = "2019-06-06"
