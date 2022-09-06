@@ -19,3 +19,4 @@ Description: "Definition of an activity that is part of an intervention in the c
 * quantity MS
 * dosage MS
 * bodySite MS
+//* extension[knowledgeCapability].valueCode = #computable

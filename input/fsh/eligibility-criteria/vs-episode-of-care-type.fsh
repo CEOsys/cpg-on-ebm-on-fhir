@@ -3,6 +3,8 @@ ValueSet: EpisodeOfCareType
 Id: vs-episode-of-care-type
 Title: "Episode Of Care Type"
 Description: "Episdoe Of Care Type"
+* insert metadata(2022-09-06, #draft, 0.1.1)
+* insert cpg-computable-valueset
 * $cs-kontaktart-de#vorstationaer "Vorstationär"
 * $cs-kontaktart-de#nachstationaer "Nachstationär"
 * $cs-kontaktart-de#teilstationaer "Teilstationäre Behandlung"

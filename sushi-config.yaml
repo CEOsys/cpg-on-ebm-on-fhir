@@ -15,6 +15,10 @@ publisher:
   name: Charité - Universitätsmedizin Berlin
   url: https://www.charite.de/
 
+dependencies:
+  hl7.fhir.uv.cpg:
+    version: 1.0.0
+
 pages:
   index.md:
     title: Clinical Practice Guidelines (CPG) on EBMonFHIR
