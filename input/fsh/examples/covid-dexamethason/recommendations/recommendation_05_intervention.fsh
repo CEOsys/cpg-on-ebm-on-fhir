@@ -12,6 +12,9 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. o
 * date = "2021-12-12"
 * status = #active
 * description = "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"
+* url = "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/covid19-ventilated-patients-dexamethasone-application-plan"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(PopulationCOVID19Ventilated)
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActionOral)
@@ -34,6 +37,9 @@ Description: "No application of Dexamethasone for non-ventilated COVID-19 patien
 * date = "2021-12-12"
 * status = #active
 * description = "No Dexamethasone Application for non-ventilated COVID19 patients"
+* url = "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/covid19-non-ventilated-patients-no-dexamethasone-application-plan"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(PopulationCOVID19NonVentilated)
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(NoDexamethasoneApplication)
