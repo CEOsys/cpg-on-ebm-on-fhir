@@ -67,6 +67,10 @@ Title: "Dexamethasone Application (Oral)"
 Description: "Application of Dexamethasone: 6 mg once per day for 10 days (oral route)"
 * name = "DexamethasoneApplicationActionOral"
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-oral"
+* version = "1.0"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* description = "Application of Dexamethasone: 6 mg once per day for 10 days (oral route)"
 * status = #active
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
@@ -92,6 +96,10 @@ Title: "Dexamethasone Application (Intravenous)"
 Description: "Application of Dexamethasone: 6 mg once per day for 10 days (intravenous route)"
 * name = "DexamethasoneApplicationActionIntravenous"
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/dexamethasone-application-intravenous"
+* version = "1.0"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* description = "Application of Dexamethasone: 6 mg once per day for 10 days (intravenous route)"
 * status = #active
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
@@ -117,6 +125,10 @@ Title: "No Dexamethasone Application"
 Description: "No Application of Dexamethasone"
 * name = "NoDexamethasoneApplicationActivity"
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/no-dexamethasone-application"
+* version = "1.0"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* description = "No Application of Dexamethasone"
 * status = #active
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"

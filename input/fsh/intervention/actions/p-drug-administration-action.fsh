@@ -39,6 +39,10 @@ Description: "A drug administration that should be performed."
 * name = "DrugAdministrationAction"
 * status = #active
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example"
+* version = "1.0"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* description = "A drug administration that should be performed."
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
@@ -67,6 +71,10 @@ Description: "A drug administration that should not be performed."
 * name = "DrugAdministrationAction"
 * status = #active
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/no-drug-administration-example"
+* version = "1.0"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* description = "A drug administration that should not be performed."
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"

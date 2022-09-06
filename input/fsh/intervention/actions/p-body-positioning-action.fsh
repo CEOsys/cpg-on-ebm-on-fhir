@@ -17,6 +17,10 @@ Usage: #example
 Title: "Example Body Positioning Action"
 Description: "Example of a body positioning action."
 * name = "DrugAdministrationAction"
+* version = "1.0"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* description = "Example of a body positioning action."
 * status = #active
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example"
 * code = $sct#431182000 "Placing subject in prone position (procedure)"
