@@ -21,7 +21,7 @@ Description: "Definition of an activity that is part of an intervention in the c
 * jurisdiction MS
 * subject[x] only CodeableConcept
 * subjectCodeableConcept 1..1 MS
-* subjectCodeableConcept = $cs-resource-type#Patient
+* subjectCodeableConcept = $cs-fhir-types#Patient
 * doNotPerform MS
 * kind MS
 * code 1..1 MS
@@ -30,5 +30,9 @@ Description: "Definition of an activity that is part of an intervention in the c
 * quantity MS
 * dosage MS
 * bodySite MS
-* extension[cpg-knowledgeCapability].valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
-* extension[cpg-knowledgeRepresentationLevel].valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
+* extension[cpg-knowledgeCapability] 1..1
+  * valueCode 1..1
+  * valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
+* extension[cpg-knowledgeRepresentationLevel] 1..1
+  * valueCode 1..1
+  * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"

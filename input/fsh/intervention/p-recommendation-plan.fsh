@@ -14,8 +14,12 @@ Description: "Definition of an activity that is part of an intervention in the c
 * title 1..1
 * date 1..1
 * description 1..1
-* extension[cpg-knowledgeCapability].valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
-* extension[cpg-knowledgeRepresentationLevel].valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
+* extension[cpg-knowledgeCapability] 1..1
+  * valueCode 1..1
+  * valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
+* extension[cpg-knowledgeRepresentationLevel] 1..1
+  * valueCode 1..1
+  * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
 * action 1..*
 * action ^slicing.discriminator.type = #pattern
 * action ^slicing.discriminator.path = "code"
