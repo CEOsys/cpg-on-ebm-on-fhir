@@ -58,3 +58,5 @@ Alias: $cs-ceosys = CEOsysCodeSystem
 Alias: $cs-citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier
 
 Alias: $vs-snomed-procedures = http://hl7.org/fhir/ValueSet/procedure-code
+
+Alias: $cs-fhir-types = http://hl7.org/fhir/fhir-types

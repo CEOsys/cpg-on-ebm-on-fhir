@@ -72,6 +72,7 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days (oral 
 * publisher = "CPGonEBMonFHIR"
 * description = "Application of Dexamethasone: 6 mg once per day for 10 days (oral route)"
 * status = #active
+* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
@@ -101,6 +102,7 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days (intra
 * publisher = "CPGonEBMonFHIR"
 * description = "Application of Dexamethasone: 6 mg once per day for 10 days (intravenous route)"
 * status = #active
+* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
@@ -130,6 +132,7 @@ Description: "No Application of Dexamethasone"
 * publisher = "CPGonEBMonFHIR"
 * description = "No Application of Dexamethasone"
 * status = #active
+* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"

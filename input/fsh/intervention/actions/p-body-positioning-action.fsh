@@ -22,5 +22,6 @@ Description: "Example of a body positioning action."
 * publisher = "CPGonEBMonFHIR"
 * description = "Example of a body positioning action."
 * status = #active
+* kind = $cs-fhir-types#ServiceRequest "ServiceRequest"
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example"
 * code = $sct#431182000 "Placing subject in prone position (procedure)"

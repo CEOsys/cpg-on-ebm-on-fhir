@@ -43,6 +43,7 @@ Description: "A drug administration that should be performed."
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * description = "A drug administration that should be performed."
+* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
@@ -75,6 +76,7 @@ Description: "A drug administration that should not be performed."
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * description = "A drug administration that should not be performed."
+* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"

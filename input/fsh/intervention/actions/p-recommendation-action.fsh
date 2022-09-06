@@ -1,6 +1,6 @@
 // Author: Gregor Lichtner @glichtner
 Profile: RecommendationAction
-Parent: CPGShareableActivityDefinition
+Parent: CPGComputableActivityDefinition
 Id: recommendation-action
 Title: "Recommendation Action"
 Description: "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation."
@@ -32,4 +32,3 @@ Description: "Definition of an activity that is part of an intervention in the c
 * bodySite MS
 * extension[cpg-knowledgeCapability].valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
 * extension[cpg-knowledgeRepresentationLevel].valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
-//* extension[knowledgeCapability].valueCode = #computable
