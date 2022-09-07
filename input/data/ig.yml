@@ -73,6 +73,26 @@ definition:
     name: Body Positioning Action
     reference:
       reference: StructureDefinition/body-positioning-action
+  - description: Defines the minimum expectations and behavior for a computable plan
+      definition
+    exampleBoolean: false
+    name: CPGComputablePlanDefinition
+    reference:
+      reference: StructureDefinition/cpg-computableplandefinition
+  - description: Profile of PlanDefinition as a Recommendation Definition for use
+      with CPG Implementation Guide
+    exampleBoolean: false
+    name: CPGRecommendationDefinition
+    reference:
+      reference: StructureDefinition/cpg-recommendationdefinition
+  - description: Defines the minimum expectations for a shareable plan definition
+      for use with computable guideline content. This profile derives from the ShareablePlanDefinition
+      profile defined in the base FHIR specification, and adds support for declaring
+      knowledge representation level and knowledge artifact capabilities.
+    exampleBoolean: false
+    name: CPGShareablePlanDefinition
+    reference:
+      reference: StructureDefinition/cpg-shareableplandefinition
   - description: Rating of a single outcome (evidence) underlying a clinical practice
       guideline recommendation
     exampleBoolean: false
@@ -218,16 +238,6 @@ definition:
     name: ArtifactAssessment Version
     reference:
       reference: StructureDefinition/ceosys-extension-artifact-assessment-version
-  - description: Adds publication status attribute to Composition.
-    exampleBoolean: false
-    name: Composition Publication Status
-    reference:
-      reference: StructureDefinition/ceosys-extension-composition-publication-status
-  - description: Adds version attribute to Composition.
-    exampleBoolean: false
-    name: Composition Version
-    reference:
-      reference: StructureDefinition/ceosys-extension-composition-version
   - description: Adds type/value pair to elements of datatype Dosage to express a
       condition on the dosage.
     exampleBoolean: false
@@ -654,6 +664,11 @@ definition:
     name: Systemic corticosteroids for the treatment of COVID-19
     reference:
       reference: Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19
+dependsOn:
+- id: hl7_fhir_uv_cpg
+  packageId: hl7.fhir.uv.cpg
+  uri: http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg
+  version: 1.0.0
 fhirVersion:
 - 5.0.0-cibuild
 id: cpg.ceosys.de
@@ -664,4 +679,4 @@ resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de
-version: 0.2.0-snapshot
+version: 0.3.0

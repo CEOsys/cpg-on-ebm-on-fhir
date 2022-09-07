@@ -23,7 +23,6 @@ Alias: $ceosys = https://www.ceosys.de
 Alias: $cs-focus-characteristic = http://terminology.hl7.org/CodeSystem/focus-characteristic-code
 Alias: $vs-focus-characteristic = http://hl7.org/fhir/ValueSet/focus-characteristic-code
 Alias: $cs-variable-role = http://terminology.hl7.org/CodeSystem/variable-role
-Alias: $cs-resource-type = http://hl7.org/fhir/resource-types
 
 Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $ext-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation
@@ -52,9 +51,11 @@ Alias: $cs-clinical-importance = cs-clinical-importance
 
 Alias: $cs-cited-artifact-classification-type = http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type
 Alias: $cs-cited-artifact-status-type = http://terminology.hl7.org/CodeSystem/cited-artifact-status-type
+Alias: $cs-citation-artifact-classifier = http://hl7.org/fhir/citation-artifact-classifier
 Alias: $cs-related-artifact-type = http://hl7.org/fhir/related-artifact-type
 Alias: $cs-ceosys = CEOsysCodeSystem
 
-Alias: $cs-citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier
-
 Alias: $vs-snomed-procedures = http://hl7.org/fhir/ValueSet/procedure-code
+
+Alias: $cs-fhir-types = http://hl7.org/fhir/fhir-types
+Alias: $cs-group-membership-basis = http://hl7.org/fhir/group-membership-basis

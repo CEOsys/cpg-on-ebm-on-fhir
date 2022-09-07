@@ -7,13 +7,17 @@ canonical: https://www.ceosys.de/fhir
 name: CPG-on-EBMonFHIR
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
-version: 0.2.0-snapshot
+version: 0.3.0
 fhirVersion: 5.0.0-cibuild
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
   name: Charité - Universitätsmedizin Berlin
   url: https://www.charite.de/
+
+dependencies:
+  hl7.fhir.uv.cpg:
+    version: 1.0.0
 
 pages:
   index.md:

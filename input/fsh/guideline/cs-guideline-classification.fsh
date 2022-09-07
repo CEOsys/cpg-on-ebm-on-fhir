@@ -3,6 +3,8 @@ CodeSystem: GuidelineStageClassification
 Id: cs-guideline-stage-classification
 Title: "Guideline Stage Classification"
 Description: "Stage classification according to systematics"
+* insert metadata(2022-09-06, #draft, 0.1.1)
+* insert cpg-computable-codesystem
 * ^name = "GuidelineStageClassification"
 * ^status = #active
 * ^publisher = "Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften (AWMF) e.V"

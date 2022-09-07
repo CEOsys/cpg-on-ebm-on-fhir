@@ -1,6 +1,6 @@
 // Author: Gregor Lichtner @glichtner
 Profile: RecommendationPlan
-Parent: PlanDefinition
+Parent: CPGRecommendationDefinition
 Id: recommendation-plan
 Title: "Recommendation Plan"
 Description: "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation."
@@ -14,6 +14,12 @@ Description: "Definition of an activity that is part of an intervention in the c
 * title 1..1
 * date 1..1
 * description 1..1
+* extension[cpg-knowledgeCapability] 1..1
+  * valueCode 1..1
+  * valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
+* extension[cpg-knowledgeRepresentationLevel] 1..1
+  * valueCode 1..1
+  * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
 * action 1..*
 * action ^slicing.discriminator.type = #pattern
 * action ^slicing.discriminator.path = "code"
@@ -110,6 +116,9 @@ Description: "An active recommendation plan."
 * date = "2022-02-14"
 * status = #active
 * description = "Example Recommendation Plan"
+* url = "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/recommendation-plan/example-recommendation-plan"
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
 * action[drugAdministration][+]
   * code = $sct#432102000 "Administration of substance (procedure)"

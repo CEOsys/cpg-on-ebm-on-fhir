@@ -7,7 +7,6 @@ Description: "A single evidence for an outcome from a specific study, meta analy
 * insert metadata(2022-05-10, #draft, 0.2.0)
 * ^abstract = true
 * name 1..1
-* studyType 1..1 MS
 * synthesisType 1..1 MS
 * relatedArtifact 1..* MS
 * relatedArtifact ^slicing.discriminator.type = #pattern

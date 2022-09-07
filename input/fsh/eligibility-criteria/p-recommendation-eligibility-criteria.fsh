@@ -6,7 +6,7 @@ Title: "Recommendation Eligibility Criteria"
 Description: "Eligibility Criteria for a Clinical Guideline Recommendation"
 * insert metadata(2022-05-15, #draft, 0.1.1)
 * insert profile("This profile describes a population defined in clinical practice guideline recommendation.")
-* url 1..1 MS // canoical resource
+* url 1..1 MS // canonical resource
 
 Instance: ExampleRecommendationEligibilityCriteria
 InstanceOf: recommendation-eligibility-criteria

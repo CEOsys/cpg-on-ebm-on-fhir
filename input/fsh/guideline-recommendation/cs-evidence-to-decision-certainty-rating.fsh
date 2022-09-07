@@ -3,7 +3,8 @@ CodeSystem: EvidenceToDecisionCertaintyRating
 Id: cs-evidence-to-decision-certainty-rating
 Title: "Evidence To Decision Certainty Rating"
 Description: "GRADE Evidence to Decision (EtD) Framework Certainty Ratings"
-* insert metadata(2022-03-03, #draft, 0.1.0)
+* insert metadata(2022-09-06, #draft, 0.1.1)
+* insert cpg-computable-codesystem
 * #small-net-benefit "Small net benefit" "Small net benefit, or little difference between alternatives"
 * #substantial-net-benefit "Substantial net benefit" "Substantial net benefits of the recommended alternative"
 * #important-harms "Important harms" "Important harms"
