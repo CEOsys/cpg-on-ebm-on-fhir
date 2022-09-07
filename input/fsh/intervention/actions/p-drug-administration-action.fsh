@@ -4,8 +4,9 @@ Parent: RecommendationAction
 Id: drug-administration-action
 Title: "Drug Administration Action"
 Description: "Definition of a drug administration action as part of a recommended intervention."
-* insert metadata(2022-05-31, #draft, 0.1.0)
+* insert metadata(2022-09-06, #draft, 0.3.1)
 * obeys dosage-required-if-administration-should-be-performed
+* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * code = $sct#432102000 "Administration of substance (procedure)"
 * product[x] only CodeableConcept
 * productCodeableConcept
@@ -43,7 +44,6 @@ Description: "A drug administration that should be performed."
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * description = "A drug administration that should be performed."
-* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"

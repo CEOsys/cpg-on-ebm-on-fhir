@@ -679,4 +679,4 @@ resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de
-version: 0.3.0
+version: 0.3.1-snapshot

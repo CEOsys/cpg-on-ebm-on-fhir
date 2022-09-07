@@ -7,7 +7,7 @@ canonical: https://www.ceosys.de/fhir
 name: CPG-on-EBMonFHIR
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
-version: 0.3.0
+version: 0.3.1-snapshot
 fhirVersion: 5.0.0-cibuild
 copyrightYear: 2021+
 releaseLabel: ci-build
