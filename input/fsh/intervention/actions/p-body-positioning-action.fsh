@@ -10,7 +10,6 @@ Description: "Definition of a body positioning action as part of a recommended i
 * product[x] 0..0
 * dosage 0..0
 * quantity 0..0
-* timing[x] 0..0
 
 Instance: ExampleBodyPositioningAction
 InstanceOf: body-positioning-action
