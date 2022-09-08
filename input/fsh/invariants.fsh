@@ -1,6 +1,6 @@
 // Author: Gregor Lichtner @glichtner
 Invariant: evidence-variable-unique-definition
-Description: "For each characteristic, either one and only one type of definition must exist"
+Description: "For each characteristic, one and only one type of definition must exist"
 Expression: "(
   definitionReference.exists().toInteger()
   + definitionCanonical.exists().toInteger()
