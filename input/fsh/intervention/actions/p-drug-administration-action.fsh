@@ -5,7 +5,7 @@ Id: drug-administration-action
 Title: "Drug Administration Action"
 Description: "Definition of a drug administration action as part of a recommended intervention."
 * insert metadata(2022-09-06, #draft, 0.3.1)
-* obeys dosage-required-if-administration-should-be-performed
+* obeys dosage-if-administration-should-be-performed
 * kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * code = $sct#432102000 "Administration of substance (procedure)"
 * product[x] only CodeableConcept
@@ -27,10 +27,10 @@ Description: "Definition of a drug administration action as part of a recommende
 * quantity 0..0 // we don't use quantity, instead use dosage
 * timing[x] 0..0 // we don't use timing, instead use dosage.timing
 
-Invariant: dosage-required-if-administration-should-be-performed
-Description: "Dosage must be defined if the drug administration should be performed"
+Invariant: dosage-if-administration-should-be-performed
+Description: "Dosage should be defined if the drug administration should be performed"
 Expression: "(doNotPerform = false) implies dosage.exists()"
-Severity: #error
+Severity: #warning
 
 Instance: ExampleDrugAdministrationAction
 InstanceOf: drug-administration-action
