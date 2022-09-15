@@ -8,6 +8,6 @@
   "base": "fhir.base.template",
   "dependencies": {
     "fhir.base.template": "current",
-    "hl7.fhir.r4.core": "4.0.1"
+    "hl7.fhir.r5.core": "5.0.0-ballot"
   }
 }
