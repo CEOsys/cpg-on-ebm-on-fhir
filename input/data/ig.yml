@@ -1,87 +1,128 @@
 contact:
-- name: "Charit\xE9 - Universit\xE4tsmedizin Berlin"
+- name: "Universit\xE4tsmedizin Greifswald"
   telecom:
   - system: url
-    value: https://www.charite.de/
+    value: https://www.med.uni-greifswald.de/
 definition:
   page:
     generation: html
-    nameUrl: toc.html
+    name: toc.html
     page:
     - generation: markdown
-      nameUrl: index.html
+      name: index.html
+      sourceUrl: index.html
       title: Clinical Practice Guidelines (CPG) on EBMonFHIR
     - generation: markdown
-      nameUrl: profiles.html
+      name: profiles.html
+      sourceUrl: profiles.html
       title: Profiles
     - generation: markdown
-      nameUrl: codesystems.html
+      name: codesystems.html
+      sourceUrl: codesystems.html
       title: Code Systems
     - generation: markdown
-      nameUrl: valuesets.html
+      name: valuesets.html
+      sourceUrl: valuesets.html
       title: Value Sets
     - generation: markdown
-      nameUrl: extensions.html
+      name: extensions.html
+      sourceUrl: extensions.html
       title: Extensions
     - generation: markdown
-      nameUrl: examples.html
+      name: examples.html
+      sourceUrl: examples.html
       title: Examples
     - generation: html
-      nameUrl: downloads.html
+      name: downloads.html
+      sourceUrl: downloads.html
       title: Downloads
     - generation: markdown
-      nameUrl: changelog.html
+      name: changelog.html
+      sourceUrl: changelog.html
       title: Change Log
+    sourceUrl: toc.html
     title: Table of Contents
   parameter:
-  - code: copyrightyear
+  - code:
+      code: copyrightyear
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 2021+
-  - code: releaselabel
+  - code:
+      code: releaselabel
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: ci-build
-  - code: active-tables
+  - code:
+      code: active-tables
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'true'
-  - code: apply-contact
+  - code:
+      code: apply-contact
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'false'
-  - code: apply-jurisdiction
+  - code:
+      code: apply-jurisdiction
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'false'
-  - code: apply-publisher
+  - code:
+      code: apply-publisher
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'false'
-  - code: apply-version
+  - code:
+      code: apply-version
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'false'
-  - code: show-inherited-invariants
+  - code:
+      code: show-inherited-invariants
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'false'
-  - code: usage-stats-opt-out
+  - code:
+      code: usage-stats-opt-out
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'true'
-  - code: excludexml
+  - code:
+      code: excludexml
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'false'
-  - code: excludejsn
+  - code:
+      code: excludejsn
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'false'
-  - code: excludettl
+  - code:
+      code: excludettl
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'true'
-  - code: excludemap
+  - code:
+      code: excludemap
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'true'
-  - code: excludeexample
+  - code:
+      code: excludeexample
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: 'true'
-  - code: extension-domain
+  - code:
+      code: extension-domain
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: https://www.netzwerk-universitaetsmedizin.de
-  - code: extension-domain
+  - code:
+      code: extension-domain
+      system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: https://simplifier.net
   resource:
   - description: Definition of a body positioning action as part of a recommended
       intervention.
-    exampleBoolean: false
+    isExample: false
     name: Body Positioning Action
     reference:
       reference: StructureDefinition/body-positioning-action
   - description: Defines the minimum expectations and behavior for a computable plan
       definition
-    exampleBoolean: false
+    isExample: false
     name: CPGComputablePlanDefinition
     reference:
       reference: StructureDefinition/cpg-computableplandefinition
   - description: Profile of PlanDefinition as a Recommendation Definition for use
       with CPG Implementation Guide
-    exampleBoolean: false
+    isExample: false
     name: CPGRecommendationDefinition
     reference:
       reference: StructureDefinition/cpg-recommendationdefinition
@@ -89,330 +130,330 @@ definition:
       for use with computable guideline content. This profile derives from the ShareablePlanDefinition
       profile defined in the base FHIR specification, and adds support for declaring
       knowledge representation level and knowledge artifact capabilities.
-    exampleBoolean: false
+    isExample: false
     name: CPGShareablePlanDefinition
     reference:
       reference: StructureDefinition/cpg-shareableplandefinition
   - description: Rating of a single outcome (evidence) underlying a clinical practice
       guideline recommendation
-    exampleBoolean: false
+    isExample: false
     name: Certainty of Evidence Rating
     reference:
       reference: StructureDefinition/certainty-of-evidence-rating
   - description: The actual group observed in a study or groups of groups in an evidence
       synthesis.
-    exampleBoolean: false
+    isExample: false
     name: Cohorts
     reference:
       reference: StructureDefinition/cohorts
   - description: Definition of a drug administration action as part of a recommended
       intervention.
-    exampleBoolean: false
+    isExample: false
     name: Drug Administration Action
     reference:
       reference: StructureDefinition/drug-administration-action
   - description: Definition of a population (e.g. for guideline recommendation, clinical
       study) via the eligibility criteria.
-    exampleBoolean: false
+    isExample: false
     name: Eligibility Criteria
     reference:
       reference: StructureDefinition/eligibility-criteria
   - description: Definition of the outcome used as the observed measured variable
       for an evidence synthesis.
-    exampleBoolean: false
+    isExample: false
     name: Evidence Data Set
     reference:
       reference: StructureDefinition/evidence-data-set
   - description: The actual group of Groups observed in an evidence synthesis.
-    exampleBoolean: false
+    isExample: false
     name: Evidence Synthesis Cohorts
     reference:
       reference: StructureDefinition/evidence-synthesis-cohorts
   - description: Representation of an evidence-based clinical practice guideline.
-    exampleBoolean: false
+    isExample: false
     name: Clinical Practice Guideline
     reference:
       reference: StructureDefinition/guideline
   - description: Collection of all resources that represent a single clinical practice
       guideline.
-    exampleBoolean: false
+    isExample: false
     name: Guideline Bundle
     reference:
       reference: StructureDefinition/guideline-bundle
   - description: Citation of a clinical practice guideline
-    exampleBoolean: false
+    isExample: false
     name: Guideline Citation
     reference:
       reference: StructureDefinition/guideline-citation
   - description: Description of the intervention element of a PICO construct that
       evidence is about.
-    exampleBoolean: false
+    isExample: false
     name: Intervention Definition
     reference:
       reference: StructureDefinition/intervention-definition
   - description: The net effect is the overall expected effect of a recommendation,
       calculated by an importance-weighted average of the individual outcome effects
-    exampleBoolean: false
+    isExample: false
     name: Net Effect Estimate
     reference:
       reference: StructureDefinition/net-effect-estimate
   - description: Description of the outcome element of a PICO construct that evidence
       is about.
-    exampleBoolean: false
+    isExample: false
     name: Outcome Definition
     reference:
       reference: StructureDefinition/outcome-definition
   - description: A single evidence for an outcome from a specific study, meta analysis
       or systematic review.
-    exampleBoolean: false
+    isExample: false
     name: Outcome Evidence
     reference:
       reference: StructureDefinition/outcome-evidence
   - description: A single evidence for an outcome from an evidence synthesis.
-    exampleBoolean: false
+    isExample: false
     name: Outcome Evidence Synthesis
     reference:
       reference: StructureDefinition/outcome-evidence-synthesis
   - description: Description of the a PICO element that knowledge is about. This abstract
       resource is used as parent for all PICO (population, intervention, comparison,
       outcome) evidence variables.
-    exampleBoolean: false
+    isExample: false
     name: PICO Evidence Variable
     reference:
       reference: StructureDefinition/pico-evidence-variable
   - description: Definition of an activity that is part of an intervention in the
       context of a clinical practice guideline recommendation.
-    exampleBoolean: false
+    isExample: false
     name: Recommendation Action
     reference:
       reference: StructureDefinition/recommendation-action
   - description: Citation of a clinical practice guideline recommendation
-    exampleBoolean: false
+    isExample: false
     name: Recommendation Citation
     reference:
       reference: StructureDefinition/recommendation-citation
   - description: Eligibility Criteria for a Clinical Guideline Recommendation
-    exampleBoolean: false
+    isExample: false
     name: Recommendation Eligibility Criteria
     reference:
       reference: StructureDefinition/recommendation-eligibility-criteria
   - description: Justification of a clinical guideline recommendation through the
       underlying evidence and their ratings
-    exampleBoolean: false
+    isExample: false
     name: Recommendation Justification
     reference:
       reference: StructureDefinition/recommendation-justification
   - description: Definition of an activity that is part of an intervention in the
       context of a clinical practice guideline recommendation.
-    exampleBoolean: false
+    isExample: false
     name: Recommendation Plan
     reference:
       reference: StructureDefinition/recommendation-plan
   - description: Citation of a study from which evidence is determined.
-    exampleBoolean: false
+    isExample: false
     name: Study Citation
     reference:
       reference: StructureDefinition/study-citation
   - description: The actual group observed in a study.
-    exampleBoolean: false
+    isExample: false
     name: Study Cohort
     reference:
       reference: StructureDefinition/study-cohort
   - description: Eligibility Criteria for a clinical study
-    exampleBoolean: false
+    isExample: false
     name: Study Eligibility Criteria
     reference:
       reference: StructureDefinition/study-eligibility-criteria
   - description: A single evidence for an outcome from a primary study.
-    exampleBoolean: false
+    isExample: false
     name: Study Outcome Evidence
     reference:
       reference: StructureDefinition/study-outcome-evidence
   - description: Adds publication status attribute to ArtifactAssessment.
-    exampleBoolean: false
+    isExample: false
     name: ArtifactAssessment Publication Status
     reference:
       reference: StructureDefinition/ceosys-extension-artifact-assessment-publication-status
   - description: Adds version attribute to Artifact Assessment.
-    exampleBoolean: false
+    isExample: false
     name: ArtifactAssessment Version
     reference:
       reference: StructureDefinition/ceosys-extension-artifact-assessment-version
   - description: Adds type/value pair to elements of datatype Dosage to express a
       condition on the dosage.
-    exampleBoolean: false
+    isExample: false
     name: Dosage Condition
     reference:
       reference: StructureDefinition/ext-dosage-condition
   - description: Allergic Dispositions from SNOMED CT
-    exampleBoolean: false
+    isExample: false
     name: Allergic Disposition SCT
     reference:
       reference: ValueSet/vs-allergic-disposition-sct
   - description: Body positioning procedure codes from SNOMED CT
-    exampleBoolean: false
+    isExample: false
     name: Body Positioning SNOMED CT
     reference:
       reference: ValueSet/vs-body-positioning-snomed
   - description: All codes from the Cochrane PICO ontology.
-    exampleBoolean: false
+    isExample: false
     name: Cochrane PICO
     reference:
       reference: ValueSet/cochrane-pico
   - description: All intervention codes from the Cochrane PICO ontology.
-    exampleBoolean: false
+    isExample: false
     name: Cochrane PICO Intervention
     reference:
       reference: ValueSet/cochrane-pico-intervention
   - description: All outcome codes from the Cochrane PICO ontology.
-    exampleBoolean: false
+    isExample: false
     name: Cochrane PICO Outcome
     reference:
       reference: ValueSet/cochrane-pico-outcome
   - description: All population codes from the Cochrane PICO ontology.
-    exampleBoolean: false
+    isExample: false
     name: Cochrane PICO Population
     reference:
       reference: ValueSet/cochrane-pico-population
   - description: Episdoe Of Care Type
-    exampleBoolean: false
+    isExample: false
     name: Episode Of Care Type
     reference:
       reference: ValueSet/vs-episode-of-care-type
   - description: Current status of a clinical practice guideline recommendation
-    exampleBoolean: false
+    isExample: false
     name: Guideline Recommendation Status
     reference:
       reference: ValueSet/vs-guideline-recommendation-status
   - description: Stage classification according to systematics
-    exampleBoolean: false
+    isExample: false
     name: Guideline Stage Classification
     reference:
       reference: ValueSet/vs-guideline-stage-classification
   - description: Mean difference types
-    exampleBoolean: false
+    isExample: false
     name: Mean Difference Type
     reference:
       reference: ValueSet/vs-mean-difference-type
   - description: Radiologic findings from SNOMED CT
-    exampleBoolean: false
+    isExample: false
     name: Radiologic Finding SCT
     reference:
       reference: ValueSet/vs-radiologic-finding-sct
   - description: Are the alternatives acceptable for the target population and its
       implementors?
-    exampleBoolean: false
+    isExample: false
     name: Rating Acceptability
     reference:
       reference: ValueSet/vs-rating-acceptability
   - description: Summary of most important benefits and harms
-    exampleBoolean: false
+    isExample: false
     name: Rating Benefit And Harms
     reference:
       reference: ValueSet/vs-rating-benefit-and-harms
   - description: Codes from EvidenceCertaintyRating related to certainty of evidence
-    exampleBoolean: false
+    isExample: false
     name: Rating Certainty Of Evidence
     reference:
       reference: ValueSet/vs-rating-certainty-of-evidence
   - description: Clinical Importance of Outcome
-    exampleBoolean: false
+    isExample: false
     name: Clinical Importance of Outcome
     reference:
       reference: ValueSet/vs-rating-clinical-importance
   - description: Codes from EvidenceCertaintyRating related to degree of concern
-    exampleBoolean: false
+    isExample: false
     name: Rating Concern Degree
     reference:
       reference: ValueSet/vs-rating-concern-degree
   - description: Degree of consensus reached
-    exampleBoolean: false
+    isExample: false
     name: Rating Consensus
     reference:
       reference: ValueSet/vs-rating-consensus
   - description: How do the different alternatives affect equity?
-    exampleBoolean: false
+    isExample: false
     name: Rating Equity
     reference:
       reference: ValueSet/vs-rating-equity
   - description: How feasible will it be to implement the different alternatives?
       Any issues?
-    exampleBoolean: false
+    isExample: false
     name: Rating Feasibility
     reference:
       reference: ValueSet/vs-rating-feasibility
   - description: Typical patient preferences and values? Common issues or expected
       variability?
-    exampleBoolean: false
+    isExample: false
     name: Rating Preference And Values
     reference:
       reference: ValueSet/vs-rating-preference-and-values
   - description: Issues with costs or resource use? For whom? Cost-benefit analysis?
       Implementation or other issues?
-    exampleBoolean: false
+    isExample: false
     name: Rating Resources
     reference:
       reference: ValueSet/vs-rating-resources
   - description: Ratings for factors that might cause rating up the certainty
-    exampleBoolean: false
+    isExample: false
     name: Rating Up Rating One Level
     reference:
       reference: ValueSet/vs-rating-uprating-one-level
   - description: Ratings for factors that might cause rating up the certainty
-    exampleBoolean: false
+    isExample: false
     name: Rating Up Rating Two Levels
     reference:
       reference: ValueSet/vs-rating-uprating-two-levels
   - description: Strength of a clinical guideline recommendation.
-    exampleBoolean: false
+    isExample: false
     name: Recommendation Strength
     reference:
       reference: ValueSet/ceosys-vs-recommendation-strength
   - description: Relative effect types
-    exampleBoolean: false
+    isExample: false
     name: Relative Effect Type
     reference:
       reference: ValueSet/vs-relative-effect-type
   - description: All substance codes from SNOMED CT
-    exampleBoolean: false
+    isExample: false
     name: Substances SNOMED CT
     reference:
       reference: ValueSet/vs-substances-snomed
   - description: Ventilation Observables from SNOMED CT
-    exampleBoolean: false
+    isExample: false
     name: Ventilation Observable SCT
     reference:
       reference: ValueSet/vs-ventilation-observable-sct
   - description: Codes for clinical guideline recommendation representation missing
       from other code systems.
-    exampleBoolean: false
+    isExample: false
     name: CEOsys Code System
     reference:
       reference: CodeSystem/ceosys-code-system
   - description: Clinical Importance of Outcome
-    exampleBoolean: false
+    isExample: false
     name: Clinical Importance of Outcome
     reference:
       reference: CodeSystem/cs-clinical-importance
   - description: The Cochrane Core ontology describes the entities and concepts that
       exist in the domain of evidence based healthcare.
-    exampleBoolean: false
+    isExample: false
     name: Cochrane Core Ontology
     reference:
       reference: CodeSystem/cochrane-core-ontology
   - description: The PICO ontology describes questions in evidence based healthcare
       with the intention of supporting the publishing of evidence as linked data.
-    exampleBoolean: false
+    isExample: false
     name: Cochrane PICO Ontology
     reference:
       reference: CodeSystem/cochrane-pico-ontology
   - description: GRADE Evidence to Decision (EtD) Framework Certainty Ratings
-    exampleBoolean: false
+    isExample: false
     name: Evidence To Decision Certainty Rating
     reference:
       reference: CodeSystem/cs-evidence-to-decision-certainty-rating
   - description: GRADE Evidence to Decision (EtD) Framework Certainty Type
-    exampleBoolean: false
+    isExample: false
     name: Evidence To Decision Certainty type
     reference:
       reference: CodeSystem/cs-evidence-to-decision-certainty-type
@@ -430,253 +471,337 @@ definition:
       \ be taken into account.\n    When choosing a higher S-classification in the\
       \ context of updating a guideline, the adaptation to the corresponding methodology\
       \ has to be considered."
-    exampleBoolean: false
+    isExample: false
     name: Guideline Stage Classification
     reference:
       reference: CodeSystem/cs-guideline-stage-classification
   - description: Strength of a clinical guideline recommendation.
-    exampleBoolean: false
+    isExample: false
     name: Recommendation Strength
     reference:
       reference: CodeSystem/ceosys-cs-recommendation-strength
   - description: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
       (AWMF) e.V
-    exampleBoolean: true
+    isExample: true
     name: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
       (AWMF) e.V
     reference:
       reference: Organization/AWMFOrganization
   - description: COVID19 Intensive Care Treatment Guideline.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
+    isExample: true
     name: COVID19 Intensive Care Treatment Guideline
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/guideline
     reference:
       reference: Composition/COVID19IntensiveCareTreatmentGuideline
   - description: COVID19 Intensive Care Treatment Guideline (Bundle).
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
+    isExample: true
     name: COVID19 Intensive Care Treatment Guideline
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/guideline-bundle
     reference:
       reference: Bundle/COVID19IntensiveCareTreatmentGuidelineBundle
   - description: Guideline for therapy of hospitalized COVID-19 patients
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
+    isExample: true
     name: Therapy of hospitalized COVID-19 patients
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/guideline-citation
     reference:
       reference: Citation/COVID19IntensiveCareTreatmentGuidelineCitation
   - description: No application of Dexamethasone for non-ventilated COVID-19 patients
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan
+    isExample: true
     name: No dexamethasone application for non-ventilated COVID-19 patients
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan
     reference:
       reference: PlanDefinition/COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days p.o.
       or i.v. for ventilated COVID-19 patients'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan
+    isExample: true
     name: Dexamethasone Application
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan
     reference:
       reference: PlanDefinition/COVID19VentilatedPatientsDexamethasoneApplicationPlan
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (intravenous
       route)'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
+    isExample: true
     name: Dexamethasone Application (Intravenous)
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action
     reference:
       reference: ActivityDefinition/DexamethasoneApplicationActionIntravenous
   - description: 'Application of Dexamethasone: 6 mg once per day for 10 days (oral
       route)'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
+    isExample: true
     name: Dexamethasone Application (Oral)
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action
     reference:
       reference: ActivityDefinition/DexamethasoneApplicationActionOral
   - description: Mortality Outcome for Dexamethasone application in hospitalized COVID-19
       patients
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis
+    isExample: true
     name: Mortality Outcome for Dexamethasone application
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/outcome-evidence-synthesis
     reference:
       reference: Evidence/DexamethasoneOutcomeMortality
   - description: Certainty of evidence rating for mortality outcome of Dexamethasonse
       application recommendation
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
+    isExample: true
     name: 'Certainty of Evidence for outcome: mortality of Dexamethasone application'
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/certainty-of-evidence-rating
     reference:
       reference: ArtifactAssessment/DexamethasoneRatingOutcomeMortality
   - description: Citation of Dexamethasone Recommenation from COVID-19 intensive care
       patients treatment guideline
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
+    isExample: true
     name: Dexamethasone Recommendation
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-citation
     reference:
       reference: Citation/DexamethasoneRecommendationCitation
   - description: Dexamethasone in critically ill patients with COVID-19.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification
+    isExample: true
     name: Dexamethasone for critically ill COVID-19 patients
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-justification
     reference:
       reference: ArtifactAssessment/DexamethasoneRecommendationJustification
   - description: Example of a body positioning action.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/body-positioning-action
+    isExample: true
     name: Example Body Positioning Action
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/body-positioning-action
     reference:
       reference: ActivityDefinition/ExampleBodyPositioningAction
   - description: Example Certainty Of Evidence Rating
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/certainty-of-evidence-rating
+    isExample: true
     name: Example Certainty Of Evidence Rating
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/certainty-of-evidence-rating
     reference:
       reference: ArtifactAssessment/ExampleCertaintyOfEvidenceRating
   - description: A drug administration that should be performed.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
+    isExample: true
     name: Example DrugAdministration Action
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action
     reference:
       reference: ActivityDefinition/ExampleDrugAdministrationAction
   - description: Example of an evidence data set
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/evidence-data-set
+    isExample: true
     name: Example Evidence Data Set
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/evidence-data-set
     reference:
       reference: EvidenceVariable/ExampleEvidenceDataSet
   - description: Example of a cohort in an evidence synthesis
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts
+    isExample: true
     name: Example Evidence Synthesis Cohorts
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/evidence-synthesis-cohorts
     reference:
       reference: Group/ExampleEvidenceSynthesisCohorts
   - description: Example of a Citation of a clinical practice guideline
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-citation
+    isExample: true
     name: Example Guideline Citation
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/guideline-citation
     reference:
       reference: Citation/ExampleGuidelineCitation
   - description: Example of an intervention definition.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/intervention-definition
+    isExample: true
     name: Example Intervention
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/intervention-definition
     reference:
       reference: EvidenceVariable/ExampleIntervention
   - description: Example of a net effect estimate
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/net-effect-estimate
+    isExample: true
     name: Example Net Effect Estimate
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/net-effect-estimate
     reference:
       reference: Evidence/ExampleNetEffectEstimate
   - description: A drug administration that should not be performed.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
+    isExample: true
     name: Example No DrugAdministration Action
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action
     reference:
       reference: ActivityDefinition/ExampleNoDrugAdministrationAction
   - description: Example of a organization resource.
-    exampleBoolean: true
+    isExample: true
     name: Example Organization
     reference:
       reference: Organization/ExampleOrganization
   - description: Example of an outcome evidence variable.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-definition
+    isExample: true
     name: Example Outcome
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/outcome-definition
     reference:
       reference: EvidenceVariable/ExampleOutcome
   - description: Example Outcome Evidence Synthesis
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-evidence-synthesis
+    isExample: true
     name: Example Outcome Evidence Synthesis
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/outcome-evidence-synthesis
     reference:
       reference: Evidence/ExampleOutcomeEvidenceSynthesis
   - description: Example of a Citation of a clinical practice guideline recommendation
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-citation
+    isExample: true
     name: Example Recommendation Citation
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-citation
     reference:
       reference: Citation/ExampleRecommendationCitation
   - description: Example of a population element of a PICO construct that evidence
       is about.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria
+    isExample: true
     name: Example Recommendation Eligibility Criteria
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria
     reference:
       reference: EvidenceVariable/ExampleRecommendationEligibilityCriteria
   - description: Example of a recommendation justification
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification
+    isExample: true
     name: Example Recommendation Justification
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-justification
     reference:
       reference: ArtifactAssessment/ExampleRecommendationJustification
   - description: An active recommendation plan.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-plan
+    isExample: true
     name: Example Recommendation plan
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan
     reference:
       reference: PlanDefinition/ExampleRecommendationPlan
   - description: Example Study Citation
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
+    isExample: true
     name: Example Study Citation
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/study-citation
     reference:
       reference: Citation/ExampleStudyCitation
   - description: Example study cohort of 20 patients
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-cohort
+    isExample: true
     name: Example Study Cohort
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/study-cohort
     reference:
       reference: Group/ExampleStudyCohort
   - description: Example of Study Eligbility Criteria
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria
+    isExample: true
     name: Example Study Eligibility Criteria
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/study-eligibility-criteria
     reference:
       reference: EvidenceVariable/ExampleStudyEligibilityCriteria
   - description: Example Study Outcome Evidence
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-outcome-evidence
+    isExample: true
     name: Example Study Outcome Evidence
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/study-outcome-evidence
     reference:
       reference: Evidence/ExampleStudyOutcomeEvidence
   - description: Example of a guideline resource.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline
+    isExample: true
     name: Example Guideline
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/guideline
     reference:
       reference: Composition/GuidelineExample
   - description: Example of a clinical practice guideline representation bundle.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/guideline-bundle
+    isExample: true
     name: Guideline Recommendation Example
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/guideline-bundle
     reference:
       reference: Bundle/GuidelineRecommendationExample
   - description: No Application of Dexamethasone
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/drug-administration-action
+    isExample: true
     name: No Dexamethasone Application
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action
     reference:
       reference: ActivityDefinition/NoDexamethasoneApplication
   - description: No Dexamethasone in moderately ill patients with COVID-19.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-justification
+    isExample: true
     name: NO Dexamethasone for moderately ill COVID-19 patients
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-justification
     reference:
       reference: ArtifactAssessment/NoDexamethasoneRecommendationJustification
   - description: All-cause mortality.
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/outcome-definition
+    isExample: true
     name: All-cause mortality
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/outcome-definition
     reference:
       reference: EvidenceVariable/OutcomeAllCauseMortality
   - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
       / 5691 with characteristics: COVID-19, not ventilated'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria
+    isExample: true
     name: 'Population: COVID19 Non-Ventilated'
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria
     reference:
       reference: EvidenceVariable/PopulationCOVID19NonVentilated
   - description: 'Population for guideline from https://app.magicapp.org/#/guidelines
       / 5691 with characteristics: COVID-19, Ventilated'
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/recommendation-eligibility-criteria
+    isExample: true
     name: 'Population: COVID19 Ventilated'
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria
     reference:
       reference: EvidenceVariable/PopulationCOVID19Ventilated
   - description: Study cohort for for Systemic corticosteroids plus standard care
       vs. standard care (plus/minus placebo)
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/evidence-synthesis-cohorts
+    isExample: true
     name: Study cohort for Systemic corticosteroids plus standard care vs. standard
       care (plus/minus placebo)
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/evidence-synthesis-cohorts
     reference:
       reference: Group/StudyCohortCorticosteroidsCOVID19
   - description: Study eligibility criteria for Systemic corticosteroids plus standard
       care vs. standard care (plus/minus placebo)
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-eligibility-criteria
+    isExample: true
     name: Study eligibility criteria for Systemic corticosteroids plus standard care
       vs. standard care (plus/minus placebo)
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/study-eligibility-criteria
     reference:
       reference: EvidenceVariable/StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
   - description: Systemic corticosteroids for the treatment of COVID-19
-    exampleCanonical: https://www.ceosys.de/fhir/StructureDefinition/study-citation
+    isExample: true
     name: Systemic corticosteroids for the treatment of COVID-19
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/study-citation
     reference:
       reference: Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19
 dependsOn:
+- id: hl7_terminology
+  packageId: hl7.terminology
+  uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+  version: 3.1.0
 - id: hl7_fhir_uv_cpg
   packageId: hl7.fhir.uv.cpg
   uri: http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg
   version: 1.0.0
 fhirVersion:
-- 5.0.0-cibuild
+- 5.0.0-ballot
 id: cpg.ceosys.de
 name: CPGonEBMonFHIR
 packageId: cpg.ceosys.de
-publisher: "Charit\xE9 - Universit\xE4tsmedizin Berlin"
+publisher: "Universit\xE4tsmedizin Greifswald"
 resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
-url: https://www.ceosys.de/fhir/ImplementationGuide/cpg.ceosys.de
-version: 0.3.1-snapshot
+url: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/cpg.ceosys.de
+version: 0.3.2-snapshot

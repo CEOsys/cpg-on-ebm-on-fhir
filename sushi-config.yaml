@@ -3,17 +3,17 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: cpg.ceosys.de
-canonical: https://www.ceosys.de/fhir
+canonical: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir
 name: CPG-on-EBMonFHIR
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
-version: 0.3.1-snapshot
+version: 0.3.2-snapshot
 fhirVersion: 5.0.0-ballot
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
-  name: Charité - Universitätsmedizin Berlin
-  url: https://www.charite.de/
+  name: Universitätsmedizin Greifswald
+  url: https://www.med.uni-greifswald.de/
 
 dependencies:
   # Explicit dependency on hl7.terminology not required (and probably wrong version), but if this is not specified here
@@ -61,6 +61,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludettl: 'true' # when true, these parameters will cause the publisher to exclude the generation of the respective formats - xml, json or ttl  - and to exclude the respective tabs from the implementation guide pages.
   excludemap: 'true' # when true, these parameters will cause the publisher to exclude the generation of the respective formats - xml, json or ttl  - and to exclude the respective tabs from the implementation guide pages.
   excludeexample: 'true'
-  extension-domain: # An external domain fro which extensions are allowed to come (else they'll be flagged as invalid when validating).
+  extension-domain: # An external domain from which extensions are allowed to come (else they'll be flagged as invalid when validating).
   - https://www.netzwerk-universitaetsmedizin.de
   - https://simplifier.net

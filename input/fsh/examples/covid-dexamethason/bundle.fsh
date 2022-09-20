@@ -5,49 +5,49 @@ Title: "COVID19 Intensive Care Treatment Guideline"
 Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
 * entry[guideline]
   * resource = COVID19IntensiveCareTreatmentGuideline
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/guideline)
 * entry[guidelineCitation][+]
   * resource = COVID19IntensiveCareTreatmentGuidelineCitation
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/guideline-citation"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/guideline-citation)
 * entry[recommendationPlan][+]
   * resource = COVID19VentilatedPatientsDexamethasoneApplicationPlan
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-ventilated-patients"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-ventilated-patients)
 * entry[recommendationPlan][+]
   * resource = COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-non-ventilated-patients"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-non-ventilated-patients)
 * entry[recommendationAction][+]
   * resource = DexamethasoneApplicationActionOral
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-oral"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-oral)
 * entry[recommendationAction][+]
   * resource = DexamethasoneApplicationActionIntravenous
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-intravenous"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-intravenous)
 * entry[recommendationAction][+]
   * resource = NoDexamethasoneApplication
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-no-application"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-action-no-application)
 * entry[recommendationCitation][+]
   * resource = DexamethasoneRecommendationCitation
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-citation)
 * entry[PICOEvidenceVariable][+]
   * resource = PopulationCOVID19Ventilated
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/evidence-variable-ventilated)
 * entry[PICOEvidenceVariable][+]
   * resource = PopulationCOVID19NonVentilated
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/evidence-variable-non-ventilated"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/evidence-variable-non-ventilated)
 * entry[certaintyOfEvidenceRating][+]
   * resource = DexamethasoneRatingOutcomeMortality
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/rating-outcome-mortality"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/rating-outcome-mortality)
 * entry[outcomeEvidence][+]
   * resource = DexamethasoneOutcomeMortality
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/outcome-mortality)
 * entry[PICOEvidenceVariable][+]
   * resource = StudyEligibilityCriteriaSystemicCorticosteroidsCOVID19
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/study-eligibility-criteria)
 * entry[PICOEvidenceVariable][+]
   * resource = OutcomeAllCauseMortality
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/outcome-all-cause-mortality"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/outcome-all-cause-mortality)
 * entry[recommendationJustification][+]
   * resource = DexamethasoneRecommendationJustification
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-justification"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-justification)
 * entry[studyCitation][+]
   * resource = SystemicCorticosteroidsForTheTreatmentOfCOVID19
-  * fullUrl = "https://www.ceosys.de/guidelines/covid19-intensive-care-treatment/dexamethasone/study-citation"
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/study-citation)

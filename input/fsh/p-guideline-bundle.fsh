@@ -82,43 +82,43 @@ Title: "Guideline Recommendation Example"
 Description: "Example of a clinical practice guideline representation bundle."
 * entry[guideline][+]
   * resource = GuidelineExample
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example"
+  * insert canonical-full-url(example/guidelines/guideline-example)
 * entry[guidelineCitation][+]
   * resource = ExampleGuidelineCitation
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/citation"
+  * insert canonical-full-url(example/guidelines/guideline-example/citation)
 * entry[recommendationPlan][+]
   * resource = ExampleRecommendationPlan
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-plan"
+  * insert canonical-full-url(example/guidelines/guideline-example/recommendation-plan)
 * entry[recommendationAction][+]
   * resource = ExampleDrugAdministrationAction
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-action"
+  * insert canonical-full-url(example/guidelines/guideline-example/recommendation-action)
 * entry[PICOEvidenceVariable][+]
   * resource = ExampleRecommendationEligibilityCriteria
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/population"
+  * insert canonical-full-url(example/guidelines/guideline-example/population)
 * entry[recommendationJustification][+]
   * resource = ExampleRecommendationJustification
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-justification"
+  * insert canonical-full-url(example/guidelines/guideline-example/recommendation-justification)
 * entry[certaintyOfEvidenceRating][+]
   * resource = ExampleCertaintyOfEvidenceRating
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/certainty-of-evidence-rating"
+  * insert canonical-full-url(example/guidelines/guideline-example/certainty-of-evidence-rating)
 * entry[outcomeEvidence][+]
   * resource = ExampleStudyOutcomeEvidence
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-outcome-evidence"
+  * insert canonical-full-url(example/guidelines/guideline-example/study-outcome-evidence)
 * entry[outcomeEvidence][+]
   * resource = ExampleOutcomeEvidenceSynthesis
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome-evidence-synthesis"
+  * insert canonical-full-url(example/guidelines/guideline-example/outcome-evidence-synthesis)
 * entry[PICOEvidenceVariable][+] // StudyEligibilityCriteria
   * resource = ExampleStudyEligibilityCriteria
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-eligbility-criteria"
+  * insert canonical-full-url(example/guidelines/guideline-example/study-eligbility-criteria)
 * entry[studyCitation][+]
   * resource = ExampleStudyCitation
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/study-citation"
+  * insert canonical-full-url(example/guidelines/guideline-example/study-citation)
 * entry[PICOEvidenceVariable][+] // Outcome
   * resource = ExampleOutcome
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/outcome"
+  * insert canonical-full-url(example/guidelines/guideline-example/outcome)
 * entry[recommendationCitation][+]
   * resource = ExampleRecommendationCitation
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/recommendation-citation"
+  * insert canonical-full-url(example/guidelines/guideline-example/recommendation-citation)
 * entry[netEffect][+]
   * resource = ExampleNetEffectEstimate
-  * fullUrl = "https://www.ceosys.de/guidelines/guideline-example/net-effect-estimate"
+  * insert canonical-full-url(example/guidelines/guideline-example/net-effect-estimate)
