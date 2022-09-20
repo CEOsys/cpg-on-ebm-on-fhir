@@ -39,7 +39,7 @@ Title: "Example DrugAdministration Action"
 Description: "A drug administration that should be performed."
 * name = "DrugAdministrationAction"
 * status = #active
-* url = "https://www.ceosys.de/fhir/canonical/recommendation-action/drug-administration-example"
+* insert canonical-url(example/recommendation-action/drug-administration-example)
 * version = "1.0"
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
@@ -71,7 +71,7 @@ Title: "Example No DrugAdministration Action"
 Description: "A drug administration that should not be performed."
 * name = "DrugAdministrationAction"
 * status = #active
-* url = "https://www.ceosys.de/fhir/canonical/recommendation-action/no-drug-administration-example"
+* insert canonical-url(example/recommendation-action/no-drug-administration-example)
 * version = "1.0"
 * experimental = true
 * publisher = "CPGonEBMonFHIR"

@@ -10,7 +10,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * identifier.system = $ceosys
 * status = #active
 * name = "Population_COVID19_Ventilated"
-* url = "https://www.ceosys.de/fhir/population/Population_COVID19_Ventilated"
+* insert canonical-url(example/population/Population_COVID19_Ventilated)
 * description = "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, Ventilated"
 * characteristic[0][condition]
   * linkId = "covid19"
@@ -53,7 +53,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
 * identifier.system = $ceosys
 * status = #active
 * name = "Population_COVID19_NonVentilated"
-* url = "https://www.ceosys.de/fhir/population/Population_COVID19_NonVentilated"
+* insert canonical-url(example/population/Population_COVID19_NonVentilated)
 * description = "Population for guideline from https://app.magicapp.org/#/guidelines / 5691 with characteristics: COVID-19, not ventilated"
 * characteristic[0][condition]
   * linkId = "covid19"

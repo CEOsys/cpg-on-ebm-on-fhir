@@ -116,7 +116,7 @@ Description: "An active recommendation plan."
 * date = "2022-02-14"
 * status = #active
 * description = "Example Recommendation Plan"
-* url = "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/recommendation-plan/example-recommendation-plan"
+* insert canonical-url(example/recommendation-plan/example-recommendation-plan)
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
