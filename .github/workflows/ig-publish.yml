@@ -39,15 +39,17 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           force_orphan: true
-      
+
       - name: Get Version
+        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
         id: version
         uses: notiz-dev/github-action-json-property@release
-        with: 
+        with:
           path: './output/package.manifest.json'
           prop_path: 'version'
-      
+
       - name: Upload binaries to release
+        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
