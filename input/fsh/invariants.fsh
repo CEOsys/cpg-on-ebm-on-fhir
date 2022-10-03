@@ -11,3 +11,8 @@ Expression: "(
   + definitionByCombination.exists().toInteger()
   ) = 1"
 Severity: #error
+
+Invariant: selection-behavior-unique-or-no-value
+Description: "If action.selectionBehavior is present, it must be the same for all actions in the group"
+Expression: "action.selectionBehaviour.distinct().count() <= 1"
+Severity: #error

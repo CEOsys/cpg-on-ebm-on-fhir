@@ -21,6 +21,7 @@ Description: "Definition of an activity that is part of an intervention in the c
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
 * action 1..*
+* action obeys selection-behavior-unique-or-no-value
 * action ^slicing.discriminator.type = #pattern
 * action ^slicing.discriminator.path = "code"
 * action ^slicing.rules = #open
