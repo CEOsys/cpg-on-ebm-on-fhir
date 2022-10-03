@@ -1,4 +1,3 @@
-
 // Workaround for CPGonFHIR snapshots being based on FHIR R4,
 // where PlanDefinition.action.code has a cardinality of 0..* instead of 0..1 in R5
 // By generating the profiles via sushi based on FHIR R5, the R5 PlanDefinition resource is used,
@@ -10,6 +9,7 @@ Profile: CPGStrategyDefinition
 Parent: CPGComputablePlanDefinition
 Id: cpg-strategydefinition
 Description: "Profile of PlanDefinition as a Strategy Definition for use with CPG Implementation Guide. Strategies are used to group recommendations together, typically focused on a particular condition or state within the overall guideline or pathway"
+* ^abstract = true // modification to original CPGonFHIR definition to not having the FSH Validator require a defined instance
 * ^status = #draft
 * ^experimental = false
 * ^date = "2019-06-06"
