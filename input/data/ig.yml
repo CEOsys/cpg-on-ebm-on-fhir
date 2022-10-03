@@ -134,6 +134,14 @@ definition:
     name: CPGShareablePlanDefinition
     reference:
       reference: StructureDefinition/cpg-shareableplandefinition
+  - description: Profile of PlanDefinition as a Strategy Definition for use with CPG
+      Implementation Guide. Strategies are used to group recommendations together,
+      typically focused on a particular condition or state within the overall guideline
+      or pathway
+    isExample: false
+    name: CPGStrategyDefinition
+    reference:
+      reference: StructureDefinition/cpg-strategydefinition
   - description: Rating of a single outcome (evidence) underlying a clinical practice
       guideline recommendation
     isExample: false
@@ -221,6 +229,10 @@ definition:
     name: PICO Evidence Variable
     reference:
       reference: StructureDefinition/pico-evidence-variable
+  - isExample: false
+    name: Recommendation
+    reference:
+      reference: StructureDefinition/recommendation
   - description: Definition of an activity that is part of an intervention in the
       context of a clinical practice guideline recommendation.
     isExample: false
@@ -652,6 +664,13 @@ definition:
     - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/outcome-evidence-synthesis
     reference:
       reference: Evidence/ExampleOutcomeEvidenceSynthesis
+  - description: Recommendation
+    isExample: true
+    name: recommendation
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation
+    reference:
+      reference: PlanDefinition/ExampleRecommendation
   - description: Example of a Citation of a clinical practice guideline recommendation
     isExample: true
     name: Example Recommendation Citation
@@ -804,4 +823,4 @@ resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/cpg.ceosys.de
-version: 0.3.3
+version: 0.3.4
