@@ -28,6 +28,8 @@ RuleSet: characteristic-definition
   ventilationObservableSCT 0..* and
   ventilationObservableLOINC 0..* and
   procedure 0..*
+* characteristic.definitionByTypeAndValue
+  * value[x] only Quantity or Range or CodeableConcept // 22-11-02 @glichtner: required, otherwise "* valueCodeableConcept.coding 1..1 MS" leads to FHIR validator error
 * characteristic[condition].definitionByTypeAndValue
   * type = $sct#404684003 "Clinical finding (finding)"
   //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
