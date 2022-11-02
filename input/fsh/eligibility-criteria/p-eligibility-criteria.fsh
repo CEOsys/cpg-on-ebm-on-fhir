@@ -7,6 +7,9 @@ Description: "Definition of a population (e.g. for guideline recommendation, cli
 * insert metadata(2022-05-15, #draft, 0.2.0)
 * ^abstract = true
 * insert characteristic-definition
+* characteristic.definitionByTypeAndValue // allow only a single type and single valueCodeableConcept coding
+  * type.coding 1..1 MS
+  * valueCodeableConcept.coding 1..1 MS
 * characteristic.definitionByCombination
   * insert characteristic-definition
   * characteristic.definitionByCombination 0..0 // disallow more than one level of nesting
@@ -25,9 +28,6 @@ RuleSet: characteristic-definition
   ventilationObservableSCT 0..* and
   ventilationObservableLOINC 0..* and
   procedure 0..*
-* characteristic.definitionByTypeAndValue // allow only a single type and single valueCodeableConcept coding
-  * type.coding 1..1 MS
-  * valueCodeableConcept.coding 1..1 MS
 * characteristic[condition].definitionByTypeAndValue
   * type = $sct#404684003 "Clinical finding (finding)"
   //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
