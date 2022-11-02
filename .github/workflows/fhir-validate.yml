@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+        # locale must be set explicitly, otherwise fhir validator 5.7.75 fails
       - name: set locale
         run: |
           sudo locale-gen en_US.UTF-8
