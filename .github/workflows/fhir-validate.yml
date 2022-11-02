@@ -15,11 +15,20 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  LANG: "en_US.UTF-8"
+
 jobs:
 
   fsh-fhir-validation:
     runs-on: ubuntu-latest
     steps:
+
+      - name: set locale
+        run: |
+          sudo locale-gen en_US.UTF-8
+          sudo update-locale LANG=en_US.UTF-8
+
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -35,6 +44,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
+          distribution: 'temurin'
 
       - name: Setup NodeJS
         uses: actions/setup-node@v3
@@ -42,7 +52,7 @@ jobs:
           node-version: '18'
 
       - name: Install fsh-sushi
-        run: npm install && npm install -g fsh-sushi
+        run: npm install -g fsh-sushi
 
       - name: Load validator
         run: curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o ./validator_cli.jar
