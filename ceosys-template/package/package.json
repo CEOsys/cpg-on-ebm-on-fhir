@@ -7,7 +7,7 @@
   "author": "Gregor Lichtner",
   "base": "fhir.base.template",
   "dependencies": {
-    "fhir.base.template": "current",
+    "fhir.base.template": "0.2.2",
     "hl7.fhir.r5.core": "5.0.0-ballot"
   }
 }

@@ -7,8 +7,12 @@ Description: "Definition of a population (e.g. for guideline recommendation, cli
 * insert metadata(2022-05-15, #draft, 0.2.0)
 * ^abstract = true
 * insert characteristic-definition
+* characteristic.definitionByTypeAndValue // allow only a single type and single valueCodeableConcept coding
+  * type.coding 1..1 MS
+  * valueCodeableConcept.coding 1..1 MS
 * characteristic.definitionByCombination
   * insert characteristic-definition
+  * characteristic.definitionByCombination 0..0 // disallow more than one level of nesting
 
 RuleSet: characteristic-definition
 * characteristic 1..* MS
