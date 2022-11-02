@@ -25,6 +25,9 @@ RuleSet: characteristic-definition
   ventilationObservableSCT 0..* and
   ventilationObservableLOINC 0..* and
   procedure 0..*
+* characteristic.definitionByTypeAndValue // allow only a single type and single valueCodeableConcept coding
+  * type.coding 1..1 MS
+  * valueCodeableConcept.coding 1..1 MS
 * characteristic[condition].definitionByTypeAndValue
   * type = $sct#404684003 "Clinical finding (finding)"
   //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
