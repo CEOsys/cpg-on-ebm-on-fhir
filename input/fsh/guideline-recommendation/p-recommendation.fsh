@@ -2,6 +2,7 @@
 Profile: Recommendation
 Parent: CPGStrategyDefinition
 Id: recommendation
+* obeys selection-behavior-unique-or-no-value
 * insert metadata(2022-10-03, #draft, 0.1.0)
 * insert profile("This profile is used to group separate recommendations in the context of a clinical practice guideline recommendation.")
 * extension[cpg-knowledgeCapability] 1..1
@@ -11,7 +12,6 @@ Id: recommendation
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
 * action
-  * obeys selection-behavior-unique-or-no-value
   * definitionCanonical 1..1
   * definition[x] only canonical
   * definitionCanonical only Canonical(RecommendationPlan)
@@ -24,6 +24,12 @@ InstanceOf: recommendation
 Usage: #example
 Title: "recommendation"
 Description: "Recommendation"
+* action[+]
+  * title = "example recommendation"
+  * code = $cs-common-process#guideline-based-care
+  * description = "Example recommendation"
+  * definitionCanonical = Canonical(ExampleRecommendationPlan)
+  * selectionBehavior = #all
 * action[+]
   * title = "example recommendation"
   * code = $cs-common-process#guideline-based-care

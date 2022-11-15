@@ -13,6 +13,6 @@ Expression: "(
 Severity: #error
 
 Invariant: selection-behavior-unique-or-no-value
-Description: "If action.selectionBehavior is present, it must be the same for all actions in the group"
-Expression: "action.selectionBehaviour.distinct().count() <= 1"
+Description: "If selectionBehavior is present, it must be the same for all actions in the group"
+Expression: "action.selectionBehavior.distinct().count() <= 1"
 Severity: #error

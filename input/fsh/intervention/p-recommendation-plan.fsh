@@ -6,6 +6,7 @@ Title: "Recommendation Plan"
 Description: "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation."
 * insert metadata(2022-05-31, #draft, 0.2.0)
 * insert profile("This profile is used to define the recommended activities for an intervention in the context of a clinical practice guideline recommendation.")
+* obeys selection-behavior-unique-or-no-value
 * subject[x] 1..1 MS
 * subject[x] only canonical
 * subjectCanonical only Canonical(RecommendationEligibilityCriteria)
@@ -21,7 +22,6 @@ Description: "Definition of an activity that is part of an intervention in the c
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
 * action 1..*
-* action obeys selection-behavior-unique-or-no-value
 * action ^slicing.discriminator.type = #pattern
 * action ^slicing.discriminator.path = "code"
 * action ^slicing.rules = #open
@@ -99,10 +99,12 @@ Description: "An active recommendation plan."
 * action[drugAdministration][+]
   * code = $sct#432102000 "Administration of substance (procedure)"
   * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
+  * selectionBehavior = #exactly-one
 * action[bodyPositioning][+]
   * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical = Canonical(ExampleBodyPositioningAction)
   * goalId[+] = "ventilator-management-goal"
+  * selectionBehavior = #exactly-one
 * action[ventilatorManagement][+]
   * code = $sct#410210009 "Ventilator care management (procedure)"
   * goalId[+] = "ventilator-management-goal"
