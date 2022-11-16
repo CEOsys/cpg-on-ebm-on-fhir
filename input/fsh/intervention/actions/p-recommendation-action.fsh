@@ -29,6 +29,8 @@ Description: "Definition of an activity that is part of an intervention in the c
 * product[x] MS
 * quantity MS
 * dosage MS
+  * timing
+    * code 0..0 // This element can be expressed using the timing.repeat element, which is far more flexible, and we don't want to have double coding
 * bodySite MS
 * extension[cpg-knowledgeCapability] 1..1
   * valueCode 1..1
