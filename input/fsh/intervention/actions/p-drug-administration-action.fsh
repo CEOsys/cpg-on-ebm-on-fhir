@@ -14,10 +14,14 @@ Description: "Definition of a drug administration action as part of a recommende
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains
-      atcde 1..* and
-      sct 0..*
+      sct 1..1 and
+      atc 0..1 and
+      rxnorm 0..1 and
+      atcde 0..1
   * insert code-system-pattern(sct, $sct)
   * coding[sct] from vs-substances-snomed (required)
+  * insert code-system-pattern(atc, $atc)
+  * insert code-system-pattern(rxnorm, $rxnorm)
   * insert code-system-pattern(atcde, $atcde)
 * dosage 0..1
   * extension contains DosageCondition named condition 0..1 MS
