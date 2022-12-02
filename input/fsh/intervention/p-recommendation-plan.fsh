@@ -38,6 +38,7 @@ Description: "Definition of an activity that is part of an intervention in the c
   * definition[x] 0..1 MS
   * definition[x] only canonical
   * definitionCanonical only Canonical(RecommendationAction)
+  * selectionBehavior from vs-action-selection-behavior-required (required)
 * action[drugAdministration]
   * code = $sct#432102000 "Administration of substance (procedure)"
   * definitionCanonical only Canonical(DrugAdministrationAction)
