@@ -56,7 +56,7 @@ Description: "Definition of an activity that is part of an intervention in the c
   * id 1..1 MS
 * goal ^slicing.discriminator.type = #pattern
 * goal ^slicing.discriminator.path = "category"
-* goal ^slicing.rules = #open
+* goal ^slicing.rules = #closed
 * goal contains
     ventilatorManagement 0..* and
     laboratoryValue 0..*
