@@ -62,3 +62,4 @@ Alias: $cs-group-membership-basis = http://hl7.org/fhir/group-membership-basis
 
 Alias: $cs-action-code = http://terminology.hl7.org/CodeSystem/action-code
 Alias: $cs-common-process = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process
+Alias: $cs-action-selection-behavior = http://hl7.org/fhir/action-selection-behavior
