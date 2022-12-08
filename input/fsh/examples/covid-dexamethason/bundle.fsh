@@ -9,6 +9,9 @@ Description: "COVID19 Intensive Care Treatment Guideline (Bundle)."
 * entry[guidelineCitation][+]
   * resource = COVID19IntensiveCareTreatmentGuidelineCitation
   * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/guideline-citation)
+* entry[recommendation][+]
+  * resource = COVID19DexamethasoneApplication
+  * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation)
 * entry[recommendationPlan][+]
   * resource = COVID19VentilatedPatientsDexamethasoneApplicationPlan
   * insert canonical-full-url(example/guidelines/covid19-intensive-care-treatment/dexamethasone/recommendation-plan-ventilated-patients)

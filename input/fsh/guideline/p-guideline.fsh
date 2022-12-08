@@ -45,7 +45,7 @@ Description: "Representation of an evidence-based clinical practice guideline."
   * title 1..1 MS
   * code 1..1 MS
   * code = $cs-ceosys#guideline-recommendation "Clinical practice guideline recommendation"
-  * focus only Reference(RecommendationPlan)
+  * focus only Reference(Recommendation)
 
 Instance: GuidelineExample
 InstanceOf: guideline
@@ -67,4 +67,4 @@ Description: "Example of a guideline resource."
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an example guideline recommendation.</div>"
-  * focus = Reference(ExampleRecommendationPlan)
+  * focus = Reference(ExampleRecommendation)

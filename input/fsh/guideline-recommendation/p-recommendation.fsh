@@ -24,18 +24,6 @@ InstanceOf: recommendation
 Usage: #example
 Title: "recommendation"
 Description: "Recommendation"
-* action[+]
-  * title = "example recommendation"
-  * code = $cs-common-process#guideline-based-care
-  * description = "Example recommendation"
-  * definitionCanonical = Canonical(ExampleRecommendationPlan)
-  * selectionBehavior = #all
-* action[+]
-  * title = "example recommendation"
-  * code = $cs-common-process#guideline-based-care
-  * description = "Example recommendation"
-  * definitionCanonical = Canonical(ExampleRecommendationPlan)
-  * selectionBehavior = #all
 * name = "Recommendation"
 * title = "Recommendation"
 * version = "1.0"
@@ -45,6 +33,18 @@ Description: "Recommendation"
 * insert canonical-url(example/recommendation-plan/example-recommendation)
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
+* action[+]
+  * title = "example recommendation"
+  * code = $cs-common-process#guideline-based-care
+  * description = "Example recommendation"
+  * definitionCanonical = Canonical(ExampleRecommendationPlan)
+  * selectionBehavior = #all
+* action[+]
+  * title = "example recommendation"
+  * code = $cs-common-process#guideline-based-care
+  * description = "Example recommendation"
+  * definitionCanonical = Canonical(ExampleRecommendationPlan)
+  * selectionBehavior = #all
 * relatedArtifact[recommendationJustification].resourceReference = Reference(ExampleRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(ExampleRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(ExampleGuidelineCitation)
