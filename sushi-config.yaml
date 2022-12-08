@@ -7,7 +7,7 @@ canonical: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir
 name: CPG-on-EBMonFHIR
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
-version: 0.4.0
+version: 0.4.1-snapshot
 fhirVersion: 5.0.0-ballot
 copyrightYear: 2021+
 releaseLabel: ci-build
