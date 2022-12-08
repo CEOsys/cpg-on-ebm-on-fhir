@@ -75,7 +75,6 @@ Description: "Definition of an activity that is part of an intervention in the c
         * system 1.. MS
         * code 1.. MS
     * detail[x] 1..1 MS
-* insert recommendation-related-artifacts
 
 Invariant: goal-must-be-linked
 Description: "The goal linked by goalId is not defined"
@@ -126,6 +125,3 @@ Description: "An active recommendation plan."
     * measure = $loinc#48066-5 "Fibrin D-dimer DDU [Mass/volume] in Platelet poor plasma"
     * detailRange
       * high = 250 'ng/mL'
-* relatedArtifact[recommendationJustification].resourceReference = Reference(ExampleRecommendationJustification)
-* relatedArtifact[recommendationCitation].resourceReference = Reference(ExampleRecommendationCitation)
-* relatedArtifact[guidelineCitation].resourceReference = Reference(ExampleGuidelineCitation)

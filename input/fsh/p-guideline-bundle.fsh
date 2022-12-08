@@ -16,6 +16,7 @@ Description: "Collection of all resources that represent a single clinical pract
 * entry contains
   guideline 1..1 MS
   and guidelineCitation 0..1 MS
+  and recommendation 1..* MS
   and recommendationPlan 1..* MS
   and recommendationAction 1..* MS
   and PICOEvidenceVariable 1..* MS // includes RecommendationEligibilityCriteria, StudyEligibilityCriteria, and Outcome
@@ -25,50 +26,33 @@ Description: "Collection of all resources that represent a single clinical pract
   and studyCitation 0..* MS
   and recommendationCitation 0..* MS
   and netEffect 0..* MS
+* entry
+  * resource 1.. MS
+  * fullUrl 1..1 MS
 * entry[guideline]
-  * resource 1.. MS
   * resource only Guideline
-  * fullUrl 1..1 MS
 * entry[guidelineCitation]
-  * resource 1.. MS
   * resource only GuidelineCitation
-  * fullUrl 1..1 MS
+* entry[recommendation]
+  * resource only Recommendation
 * entry[recommendationPlan]
-  * resource 1.. MS
   * resource only RecommendationPlan
-  * fullUrl 1..1 MS
 * entry[recommendationAction]
-  * resource 1.. MS
   * resource only RecommendationAction
-  * fullUrl 1..1 MS
 * entry[PICOEvidenceVariable]
-  * resource 1.. MS
   * resource only PICOEvidenceVariable
-  * fullUrl 1..1 MS
 * entry[recommendationJustification]
-  * resource 1.. MS
   * resource only RecommendationJustification
-  * fullUrl 1..1 MS
 * entry[certaintyOfEvidenceRating]
-  * resource 1.. MS
   * resource only CertaintyOfEvidenceRating
-  * fullUrl 1..1 MS
 * entry[outcomeEvidence]
-  * resource 1.. MS
   * resource only OutcomeEvidence
-  * fullUrl 1..1 MS
 * entry[studyCitation]
-  * resource 1.. MS
   * resource only StudyCitation
-  * fullUrl 1..1 MS
 * entry[recommendationCitation]
-  * resource 1.. MS
   * resource only RecommendationCitation
-  * fullUrl 1..1 MS
 * entry[netEffect]
-  * resource 1.. MS
   * resource only NetEffectEstimate
-  * fullUrl 1..1 MS
 
 Invariant: bdl-1
 Description: "First element of Bundle must be an Composition."
@@ -86,6 +70,9 @@ Description: "Example of a clinical practice guideline representation bundle."
 * entry[guidelineCitation][+]
   * resource = ExampleGuidelineCitation
   * insert canonical-full-url(example/guidelines/guideline-example/citation)
+* entry[recommendation][+]
+  * resource = ExampleRecommendation
+  * insert canonical-full-url(example/guidelines/guideline-example/recommendation)
 * entry[recommendationPlan][+]
   * resource = ExampleRecommendationPlan
   * insert canonical-full-url(example/guidelines/guideline-example/recommendation-plan)

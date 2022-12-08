@@ -1,6 +1,37 @@
 /*********************/
 /* Intervention Plan */
 /*********************/
+Instance: COVID19DexamethasoneApplication
+InstanceOf: recommendation
+Usage: #example
+Title: "Dexamethasone Application"
+Description: "Application of Dexamethasone for ventilated patients only"
+* name = "Dexamethasone_Application"
+* title = "Dexamethasone Application"
+* version = "4.0"
+* date = "2021-12-12"
+* status = #active
+* description = "Application of Dexamethasone for ventilated patients only"
+* insert canonical-url(example/covid19-dexamethasone-recommendation)
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* subjectCanonical = Canonical(PopulationCOVID19Ventilated)
+* action[+]
+  * title = "Dexamethasone Application"
+  * code = $cs-common-process#guideline-based-care
+  * description = "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"
+  * definitionCanonical = Canonical(COVID19VentilatedPatientsDexamethasoneApplicationPlan)
+  * selectionBehavior = #exactly-one
+* action[+]
+  * title = "No Dexamethasone Application"
+  * code = $cs-common-process#guideline-based-care
+  * description = "No Dexamethasone Application for non-ventilated COVID-19 patients"
+  * definitionCanonical = Canonical(COVID19NonVentilatedPatientsDexamethasoneApplicationPlan)
+  * selectionBehavior = #exactly-one
+* relatedArtifact[recommendationJustification].resourceReference = Reference(DexamethasoneRecommendationJustification)
+* relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
+* relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
+
 Instance: COVID19VentilatedPatientsDexamethasoneApplicationPlan
 InstanceOf: recommendation-plan
 Usage: #example
@@ -22,9 +53,6 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. o
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActionIntravenous)
   * selectionBehavior = #exactly-one
-* relatedArtifact[recommendationJustification].resourceReference = Reference(DexamethasoneRecommendationJustification)
-* relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
-* relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
 Instance: COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
 InstanceOf: recommendation-plan
@@ -44,9 +72,6 @@ Description: "No application of Dexamethasone for non-ventilated COVID-19 patien
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(NoDexamethasoneApplication)
   * selectionBehavior = #exactly-one
-* relatedArtifact[recommendationJustification].resourceReference = Reference(DexamethasoneRecommendationJustification)
-* relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
-* relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
 
 Instance: DexamethasoneRecommendationCitation
 InstanceOf: recommendation-citation
