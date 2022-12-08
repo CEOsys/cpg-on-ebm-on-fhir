@@ -4,7 +4,7 @@ Parent: CPGRecommendationDefinition
 Id: recommendation-plan
 Title: "Recommendation Plan"
 Description: "Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation."
-* insert metadata(2022-05-31, #draft, 0.2.0)
+* insert metadata(2022-12-08, #draft, 0.3.0)
 * insert profile("This profile is used to define the recommended activities for an intervention in the context of a clinical practice guideline recommendation.")
 * obeys selection-behavior-unique-or-no-value
 * subject[x] 1..1 MS

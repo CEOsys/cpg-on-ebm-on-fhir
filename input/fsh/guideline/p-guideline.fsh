@@ -4,7 +4,7 @@ Parent: Composition
 Id: guideline
 Title: "Clinical Practice Guideline"
 Description: "Representation of an evidence-based clinical practice guideline."
-* insert metadata(2021-12-03, #draft, 0.1.0)
+* insert metadata(2022-12-08, #draft, 0.2.0)
 * insert profile("This profile is intended to be used as a description of clinical practice guidelines.")
 * identifier 1..1 MS
   * type 1.. MS
