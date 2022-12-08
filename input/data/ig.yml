@@ -297,6 +297,12 @@ definition:
     name: Dosage Condition
     reference:
       reference: StructureDefinition/ext-dosage-condition
+  - description: Action selection behavior with only codes that require at least one
+      action to be performed.
+    isExample: false
+    name: Action Selection Behavior Required
+    reference:
+      reference: ValueSet/vs-action-selection-behavior-required
   - description: Allergic Dispositions from SNOMED CT
     isExample: false
     name: Allergic Disposition SCT
@@ -342,6 +348,11 @@ definition:
     name: Guideline Stage Classification
     reference:
       reference: ValueSet/vs-guideline-stage-classification
+  - description: Most important
+    isExample: false
+    name: Laboratory Observations
+    reference:
+      reference: ValueSet/vs-laboratory-observations
   - description: Mean difference types
     isExample: false
     name: Mean Difference Type
@@ -499,6 +510,13 @@ definition:
       (AWMF) e.V
     reference:
       reference: Organization/AWMFOrganization
+  - description: Application of Dexamethasone for ventilated patients only
+    isExample: true
+    name: Dexamethasone Application
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation
+    reference:
+      reference: PlanDefinition/COVID19DexamethasoneApplication
   - description: COVID19 Intensive Care Treatment Guideline.
     isExample: true
     name: COVID19 Intensive Care Treatment Guideline
@@ -823,4 +841,4 @@ resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/cpg.ceosys.de
-version: 0.3.6-snapshot
+version: 0.3.6
