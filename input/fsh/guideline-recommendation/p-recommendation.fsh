@@ -5,10 +5,10 @@ Id: recommendation
 * obeys selection-behavior-unique-or-no-value
 * insert metadata(2022-10-03, #draft, 0.1.0)
 * insert profile("This profile is used to group separate recommendations in the context of a clinical practice guideline recommendation.")
-* extension[cpg-knowledgeCapability] 1..1
+* extension[knowledgeCapability] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
-* extension[cpg-knowledgeRepresentationLevel] 1..1
+* extension[knowledgeRepresentationLevel] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
 * action

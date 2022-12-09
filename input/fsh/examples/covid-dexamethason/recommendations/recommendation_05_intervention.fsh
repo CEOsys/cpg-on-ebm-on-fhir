@@ -47,7 +47,7 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. o
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(PopulationCOVID19Ventilated)
-* extension[cpg-partOf].valueCanonical = Canonical(COVID19DexamethasoneApplication)
+* extension[partOf].valueCanonical = Canonical(COVID19DexamethasoneApplication)
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActionOral)
   * selectionBehavior = #exactly-one
@@ -70,7 +70,7 @@ Description: "No application of Dexamethasone for non-ventilated COVID-19 patien
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(PopulationCOVID19NonVentilated)
-* extension[cpg-partOf].valueCanonical = Canonical(COVID19DexamethasoneApplication)
+* extension[partOf].valueCanonical = Canonical(COVID19DexamethasoneApplication)
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(NoDexamethasoneApplication)
   * selectionBehavior = #exactly-one

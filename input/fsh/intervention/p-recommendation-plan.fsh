@@ -15,13 +15,13 @@ Description: "Definition of an activity that is part of an intervention in the c
 * title 1..1
 * date 1..1
 * description 1..1
-* extension[cpg-knowledgeCapability] 1..1
+* extension[knowledgeCapability] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
-* extension[cpg-knowledgeRepresentationLevel] 1..1
+* extension[knowledgeRepresentationLevel] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
-* extension[cpg-partOf] 1..1
+* extension[partOf] 1..1
   * valueCanonical 1..1 MS
   * valueCanonical only Canonical(Recommendation)
 * action 1..*
@@ -99,7 +99,7 @@ Description: "An active recommendation plan."
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
-* extension[cpg-partOf].valueCanonical = Canonical(ExampleRecommendation)
+* extension[partOf].valueCanonical = Canonical(ExampleRecommendation)
 * action[drugAdministration][+]
   * code = $sct#432102000 "Administration of substance (procedure)"
   * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
