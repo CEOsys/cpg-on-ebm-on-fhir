@@ -32,9 +32,9 @@ Description: "Definition of an activity that is part of an intervention in the c
   * timing
     * code 0..0 // This element can be expressed using the timing.repeat element, which is far more flexible, and we don't want to have double coding
 * bodySite MS
-* extension[cpg-knowledgeCapability] 1..1
+* extension[knowledgeCapability] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeCapability#computable "Computable"
-* extension[cpg-knowledgeRepresentationLevel] 1..1
+* extension[knowledgeRepresentationLevel] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
