@@ -21,6 +21,9 @@ Description: "Definition of an activity that is part of an intervention in the c
 * extension[cpg-knowledgeRepresentationLevel] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
+* extension[cpg-partOf] 1..1
+  * valueCanonical 1..1 MS
+  * valueCanonical only Canonical(Recommendation)
 * action 1..*
 * action ^slicing.discriminator.type = #pattern
 * action ^slicing.discriminator.path = "code"
@@ -96,6 +99,7 @@ Description: "An active recommendation plan."
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
+* extension[cpg-partOf].valueCanonical = Canonical(ExampleRecommendation)
 * action[drugAdministration][+]
   * code = $sct#432102000 "Administration of substance (procedure)"
   * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
