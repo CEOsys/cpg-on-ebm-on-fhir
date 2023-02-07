@@ -1,18 +1,19 @@
 {% include variables.md %}
 
-This implementation guide is currently being updated and may not represent the current development status of the CPG-on-EBMonFHIR project.
-{:.stu-note}
-
 ### Summary
 
-This implementation guide describes an [evidence-based medicine on FHIR (EBMonFHIR)][EMBonFHIR] approach to represent clinical practice guidelines using FHIR resources.
+This implementation guide describes an approach to using [evidence-based medicine on FHIR (EBMonFHIR)][EMBonFHIR] in combination with [FHIR Clinical Guidelines][CPGonFHIR] to represent evidence-based clinical practice guidelines including the evidence upon which the recommendations are based. The approach is based on the PICO (population, intervention, comparator, outcome) framework and the GRADE (Grading of Recommendations Assessment, Development and Evaluation) approach.
 
-Apart from representing the actual treatment recommendations provided by the guidelines, the evidence generation and evidence assessment components of evidence-based guideline development is also represented. The representation of clinical practice guidelines is oriented to the PICO (population, intervention, comparator, outcome) framework.
+This implementation guide is based on FHIR R5 (5.0.0-snapshot3).
+{.stu-note}
+
+Apart from representing the actual treatment recommendations provided by the guidelines according to [FHIR Clinical Guidelines][CPGonFHIR], the evidence generation and evidence assessment components of evidence-based guideline development is also represented.
 
 The following elements are required to represent a clinical practice guideline recommendation for automated clinical decision support systems:
 
 | Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
+| [Recommendation][Recommendation] | [PlanDefinition]({{ fhir_base_url }}plandefinition.html) | Representation of a single guideline recommendation. | [Recommendation Plan][Recommendation Plan],  [Guideline Citation][Guideline Citation], [Recommendation Citation][Recommendation Citation]. |
 | [Recommendation Plan][Recommendation Plan] | [PlanDefinition]({{ fhir_base_url }}plandefinition.html) | Description of a recommended intervention addressed in a specific guideline recommendation. | [Intervention Activities][Recommendation Action] specified in the guideline recommendation; [Recommendation Eligibility Criteria][Recommendation Eligibility Criteria] defining the group of patients to which the recommendation applies to; [Recommendation Justification][Recommendation Justification] providing the justification of the recommendation; [Guideline Citation][Guideline Citation], [Recommendation Citation][Recommendation Citation]. |
 | [Recommendation Action][Recommendation Action] | [ActivityDefinition]({{ fhir_base_url }}activitydefinition.html) | Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation. | - |
 | [Recommendation Eligibility Criteria][Recommendation Eligibility Criteria] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Description of the population to which a specific guideline recommendation applies. | - |
@@ -22,11 +23,16 @@ The following profiles are used to represent the evidence upon which a clinical 
 
 | Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| [Outcome Evidence][Outcome Evidence] | [Evidence]({{ fhir_base_url }}evidence.html) | Evidence statistics generated from a single study or systematic review regarding a clinical question. | [Study Eligibility Criteria][Study Eligibility Criteria], [Intervention Definition][Intervention Definition], [Outcome Definition][Outcome Definition], [Study Citation][Study Citation] |
-| [Study Eligibility Criteria][Study Eligibility Criteria] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Definition of the patient group for which evidence was generated. | - |
+| [Study Outcome Evidence][Study Outcome Evidence] | [Evidence]({{ fhir_base_url }}evidence.html) | Evidence statistics generated from a single study or systematic review regarding a clinical question. | [Study Eligibility Criteria][Study Eligibility Criteria], [Intervention Definition][Intervention Definition], [Outcome Definition][Outcome Definition], [Study Citation][Study Citation] |
+| [Study Eligibility Criteria][Study Eligibility Criteria] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Intended definition of the patient group for which evidence or was generated or evidence synthesis was performed. | - |
+| [Study Cohort][Study Cohort] | [Group]({{ fhir_base_url }}group.html) | Actual composition of the patient group for which the evidence was generated.  | - |
+| [Outcome Evidence Synthesis][Outcome Evidence Synthesis] | [Evidence]({{ fhir_base_url }}evidence.html) | A single evidence for an outcome from an evidence synthesis (e.g., meta-analysis). | [Evidence Synthesis Cohorts][Evidence Synthesis Cohorts], [Evidence Data Set][Evidence Data Set] |
+| [Evidence Synthesis Cohorts][Evidence Synthesis Cohorts] | [Group]({{ fhir_base_url }}group.html) | Actual composition of the patient group for which evidence synthesis was performed. | - |
 | [Intervention Definition][Intervention Definition] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Definition of an intervention or comparison with respect to which evidence was generated. | - |
 | [Outcome Definition][Outcome Definition] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Definition of the outcome for which evidence was generated. | - |
-| [Study Citation][Study Citation] | [Citation]({{ fhir_base_url }}citation.html) | Citation of the study or systematic review. | - |
+| [Evidence Data Set][Evidence Data Set] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Definition of the outcome used as the observed measured variable for an evidence synthesis. | - |
+| [Outcome Evidence][Outcome Evidence] | [Evidence]({{ fhir_base_url }}evidence.html) | Evidence statistics generated from a single study or systematic review regarding a clinical question. | [Study Eligibility Criteria][Study Eligibility Criteria], [Intervention Definition][Intervention Definition], [Outcome Definition][Outcome Definition], [Study Citation][Study Citation] |
+| [Study Eligibility Criteria][Study Eligibility Criteria] | [EvidenceVariable]({{ fhir_base_url }}evidencevariable.html) | Definition of the patient group for which evidence was generated. | - |
 {:.grid}
 
 The following profiles are used to represent the assessment of evidence which justify the recommendation:
@@ -62,15 +68,30 @@ In short, a single guideline recommendation describes a specific group of patien
 
 <br/>
 
+### Examples
+
+Multiple recommendations represented in the here shown format can be found at the [CODEX+ CELIDA Recommendations repository][CELIDA_Recommendations].
+
+
+### Related projects
+
+The EBMonFHIR project is currently developing an Implementation Guide aimed at representing computable knowledge for guideline recommendations (and others) at https://github.com/hl7/ebm.
+
+The CODEX+ CELIDA project has developed an execution engine for applying the recommendations to patient data in OMOP Common Data Model format. The engine is available at https://github.com/CODEX-CELIDA/execution-engine.
+
+### Publication
+Lichtner, G., Alper, B. S., Jurth, C., Spies, C., Boeker, M., Meerpohl, J. J., & von Dincklage, F. (2023). _"Representation of evidence-based clinical practice guideline recommendations on FHIR"_. Journal of Biomedical Informatics (2023). https://doi.org/10.1016/j.jbi.2023.104305
 
 ### Authors
-* [Gregor Lichtner](https://github.com/glichtner) (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
-* Falk von Dincklage (University Medicine Greifswald, Charité -- Universitätsmedizin Berlin)
+* [Gregor Lichtner](https://github.com/glichtner) (University Medicine Greifswald)
+* [Brian Alper](https://github.com/brianalperMD) (Computable Publishing LLC,
+Scientific Knowledge Accelerator Foundation)
+* Falk von Dincklage (University Medicine Greifswald)
 * Carlo Jurth (Charité -- Universitätsmedizin Berlin)
+* Claudia Spies (Charité -- Universitätsmedizin Berlin)
+* Martin Boeker (Medical Center rechts der Isar, Technical University of Munich)
+* Joerg Meerpohl (Medical Center & Faculty of Medicine, University of Freiburg; Cochrane Germany)
 
-### Involved organizations
-* [Charité -- Universitätsmedizin Berlin](https://www.charite.de)
-* [University Medicine Greifswald](https://www.medizin.uni-greifswald.de/de/home/)
 
 ### Links
 * [Netzwerk Universitätsmedizin (NUM)][NUM]

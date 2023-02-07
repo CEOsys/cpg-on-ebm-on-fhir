@@ -1,13 +1,13 @@
 {
   "name": "ceosys.de.template",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "fhir.template",
   "license": "CC0-1.0",
   "description": "ceosys template extension for FHIR IG",
   "author": "Gregor Lichtner",
   "base": "fhir.base.template",
   "dependencies": {
-    "fhir.base.template": "0.2.2",
-    "hl7.fhir.r5.core": "5.0.0-ballot"
+    "fhir.base.template": "0.4.0",
+    "hl7.fhir.r5.core": "5.0.0-snapshot3"
   }
 }

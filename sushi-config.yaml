@@ -8,7 +8,7 @@ name: CPG-on-EBMonFHIR
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
 version: 0.4.1-snapshot
-fhirVersion: 5.0.0-ballot
+fhirVersion: 5.0.0-snapshot3
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
@@ -19,8 +19,8 @@ dependencies:
   # Explicit dependency on hl7.terminology not required (and probably wrong version), but if this is not specified here
   # then the IG publisher will insert "hl7.terminology.r5#3.0.0" into the package, which uses version string "4.6.0" which
   # is otherwise not known by the IG publisher and will yield errors
-  hl7.terminology:
-    version: 3.1.0
+  #hl7.terminology:
+  #  version: 3.1.0
   hl7.fhir.uv.cpg:
     version: 1.0.0
 
@@ -51,7 +51,7 @@ menu:
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   active-tables: 'true' # Whether to generate active tables in the generated fragments (tables that will expand and contract).
   apply-contact: 'false' # if true, overwrite all canonical resource contact details with that found in the IG.
-  apply-jurisdiction: 'false' # if true, overwrite all canonical resource jurisidiction details with that found in the IG.
+  apply-jurisdiction: 'false' # if true, overwrite all canonical resource jurisdiction details with that found in the IG.
   apply-publisher: 'false' # if true, overwrite all canonical resource publisher details with that found in the IG.
   apply-version: 'false' # if true, overwrite all canonical resource version details with that found in the IG.  Default = false
   show-inherited-invariants: 'false' # If true, render inherited constraints in the full details and invariants view. Default = true
