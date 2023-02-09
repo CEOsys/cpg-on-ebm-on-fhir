@@ -2,6 +2,7 @@
 Profile: Recommendation
 Parent: CPGStrategyDefinition
 Id: recommendation
+Description: "A recommendation as part of a clinical practice guideline."
 * obeys selection-behavior-unique-or-no-value
 * insert metadata(2022-10-03, #draft, 0.1.0)
 * insert profile("This profile is used to group separate recommendations in the context of a clinical practice guideline recommendation.")
