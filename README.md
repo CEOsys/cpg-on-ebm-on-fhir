@@ -19,6 +19,8 @@ The following elements are required to represent a clinical practice guideline r
 The following diagram provides an overview of the different profiles used in this implementation guide and their relationship:
 
 ![FHIR structure overview](https://github.com/CEOsys/cpg-on-ebm-on-fhir/raw/main/input/images/fhir-structure-overview.png)
+> Reprinted from Journal of Biomedical Informatics, Lichtner, G., Alper, B. S., Jurth, C., Spies, C., Boeker, M., Meerpohl, J. J., & von Dincklage, F. (2023). _"Representation of evidence-based clinical practice guideline recommendations on FHIR"_. 2023., with permission from Elsevier. DOI: [https://doi.org/10.1016/j.jbi.2023.104305](https://doi.org/10.1016/j.jbi.2023.104305).
+> Journal homepage: [https://www.sciencedirect.com/journal/journal-of-biomedical-informatics](https://www.sciencedirect.com/journal/journal-of-biomedical-informatics).
 
 ## Description
 The following elements are required to represent a clinical practice guideline recommendation for automated clinical decision support systems:

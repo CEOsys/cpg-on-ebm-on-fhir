@@ -1,6 +1,5 @@
 {% include link-list.md %}
 <img src="fhir-structure-overview.png" usemap="#image-map" alt="FHIR Structure Overview" style="width:100%;" />
-
 <map name="image-map">
     <area target="_self" alt="Study Outcome Evidencea" title="Study Outcome Evidence" href="StructureDefinition-study-outcome-evidence.html" coords="124,318,636,533" shape="rect">
     <area target="_self" alt="Study Eligibility Criteria" title="Study Eligibility Criteria" href="StructureDefinition-study-eligibility-criteria.html" coords="707,586,1240,805" shape="rect">
@@ -20,3 +19,5 @@
     <area target="_self" alt="Recommendation Citation" title="Recommendation Citation" href="StructureDefinition-recommendation-citation.html" coords="3307,1007,3806,1201" shape="rect">
     <area target="_self" alt="Guideline Citation" title="Guideline Citation" href="StructureDefinition-guideline-citation.html" coords="3307,1240,3802,1434" shape="rect">
 </map>
+> Reprinted from Journal of Biomedical Informatics, Lichtner, G., Alper, B. S., Jurth, C., Spies, C., Boeker, M., Meerpohl, J. J., & von Dincklage, F. (2023). _"Representation of evidence-based clinical practice guideline recommendations on FHIR"_. 2023., with permission from Elsevier. DOI: [https://doi.org/10.1016/j.jbi.2023.104305](https://doi.org/10.1016/j.jbi.2023.104305).
+> Journal homepage: [https://www.sciencedirect.com/journal/journal-of-biomedical-informatics](https://www.sciencedirect.com/journal/journal-of-biomedical-informatics).
