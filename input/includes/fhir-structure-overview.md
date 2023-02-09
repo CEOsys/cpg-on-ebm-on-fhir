@@ -1,17 +1,22 @@
 {% include link-list.md %}
-<img src="fhir-structure-overview.png" usemap="#image-map-fhir-structure-overview" alt="FHIR Structure Overview" style="width:100%;" />
-{% comment %}
-// TODO: Update
-<map name="image-map-fhir-structure-overview">
-    <area target="_self" alt="Guideline" title="Guideline" href="StructureDefinition-guideline.html" coords="451,15,832,96" shape="rect">
-    <area target="_self" alt="Guideline Recommendation" title="Guideline Recommendation" href="StructureDefinition-guideline-recommendation.html" coords="449,131,832,214" shape="rect">
-    <area target="_self" alt="Population" title="Population" href="StructureDefinition-population-evidence-variable.html" coords="74,263,345,342" shape="rect">
-    <area target="_self" alt="Intervention" title="Intervention" href="StructureDefinition-intervention-evidence-variable.html" coords="368,263,641,344" shape="rect">
-    <area target="_self" alt="Outcome" title="Outcome" href="StructureDefinition-outcome-evidence-variable.html" coords="664,263,937,344" shape="rect">
-    <area target="_self" alt="Net Effect" title="Net Effect" href="StructureDefinition-net-effect-evidence-variable.html" coords="961,266,1231,345" shape="rect">
-    <area target="_self" alt="Population Group" title="Population Group" href="StructureDefinition-population-group.html" coords="73,378,347,461" shape="rect">
-    <area target="_self" alt="Intervention Plan" title="Intervention Plan" href="StructureDefinition-intervention-plan.html" coords="367,380,639,460" shape="rect">
-    <area target="_self" alt="Intervention Activity" title="Intervention Activity" href="StructureDefinition-intervention-activity.html" coords="368,494,642,575" shape="rect">
-    <area target="_self" alt="Guideline Bundle" title="Guideline Bundle" href="StructureDefinition-guideline-bundle.html" coords="461,619,842,704" shape="rect">
+<img src="fhir-structure-overview.png" usemap="#image-map" alt="FHIR Structure Overview" style="width:100%;" />
+
+<map name="image-map">
+    <area target="_self" alt="Study Outcome Evidencea" title="Study Outcome Evidence" href="StructureDefinition-study-outcome-evidence.html" coords="124,318,636,533" shape="rect">
+    <area target="_self" alt="Study Eligibility Criteria" title="Study Eligibility Criteria" href="StructureDefinition-study-eligibility-criteria.html" coords="707,586,1240,805" shape="rect">
+    <area target="_self" alt="Outcome Evidence Synthesis" title="Outcome Evidence Synthesis" href="StructureDefinition-outcome-evidence-synthesis.html" coords="1332,318,1887,530" shape="rect">
+    <area target="_self" alt="Study Cohort" title="Study Cohort" href="StructureDefinition-study-cohort.html" coords="279,872,795,1077" shape="rect">
+    <area target="_self" alt="Evidence Synthesis Cohorts" title="Evidence Synthesis Cohorts" href="StructureDefinition-evidence-synthesis-cohorts.html" coords="1159,869,1689,1081" shape="rect">
+    <area target="_self" alt="Intervention Definition" title="Intervention Definition" href="StructureDefinition-intervention-definition.html" coords="710,1169,1226,1374" shape="rect">
+    <area target="_self" alt="Outcome Definition" title="Outcome Definition" href="StructureDefinition-outcome-definition.html" coords="710,1416,1233,1625" shape="rect">
+    <area target="_self" alt="Evidence Data Set" title="Evidence Data Set" href="StructureDefinition-evidence-data-set.html" coords="707,1681,1233,1890" shape="rect">
+    <area target="_self" alt="Study Citation" title="Study Citation" href="StructureDefinition-study-citation.html" coords="710,1936,1226,2148" shape="rect">
+    <area target="_self" alt="Certainty of Evidence Rating" title="Certainty of Evidence Rating" href="StructureDefinition-certainty-of-evidence-rating.html" coords="1947,180,2512,872" shape="rect">
+    <area target="_self" alt="Net Effect Estimate" title="Net Effect Estimate" href="StructureDefinition-net-effect-estimate.html" coords="1975,1950,2470,2148" shape="rect">
+    <area target="_self" alt="Recommendation Justification" title="Recommendation Justification" href="StructureDefinition-recommendation-justification.html" coords="2657,1452,3166,2052" shape="rect">
+    <area target="_self" alt="Recommendation Plan" title="Recommendation Plan" href="StructureDefinition-recommendation-plan.html" coords="2880,286,3367,484" shape="rect">
+    <area target="_self" alt="Recommendation Action" title="Recommendation Action" href="StructureDefinition-recommendation-action.html" coords="3304,537,3802,724" shape="rect">
+    <area target="_self" alt="Recommendation Eligibility Criteria" title="Recommendation Eligibility Criteria" href="StructureDefinition-recommendation-eligibility-criteria.html" coords="3307,766,3802,961" shape="rect">
+    <area target="_self" alt="Recommendation Citation" title="Recommendation Citation" href="StructureDefinition-recommendation-citation.html" coords="3307,1007,3806,1201" shape="rect">
+    <area target="_self" alt="Guideline Citation" title="Guideline Citation" href="StructureDefinition-guideline-citation.html" coords="3307,1240,3802,1434" shape="rect">
 </map>
-{% endcomment %}
