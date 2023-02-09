@@ -4,9 +4,13 @@
 
 ### Guidance
 
-This profile defines a specific recommended activity as part of an [Intervention][Intervention] recommended by a specific [Guideline Recommendation][Guideline Recommendation].
+This profile defines a specific recommended activity as part of an intervention recommended by a specific [Recommendation][Recommendation].
 
-The actions defined using htis profile are combined to a plan using the [Intervention Plan profile][Intervention Plan].
+The actions defined using this profile are combined to a plan using the [Recommendation Plan profile][Recommendation Plan].
+
+The following profiles are used to define specific actions:
+* [Body Positioning Action][Body Positioning Action] - for describing the action of positioning a patient
+* [Drug Administration Action][Drug Administration Action] - for describing the action of administering a drug
 
 {% include fhir-structure-detailed.md name='08-intervention-activity' alt='FHIR Intervention Activity' %}
 

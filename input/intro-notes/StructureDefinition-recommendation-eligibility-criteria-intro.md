@@ -4,7 +4,9 @@
 
 ### Guidance
 
+This resource is used to define the eligibility criteria for a specific [Recommendation Plan][Recommendation Plan].
 
+{% include categories-population.md %}
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.

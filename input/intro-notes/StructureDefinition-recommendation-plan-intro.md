@@ -4,10 +4,11 @@
 
 ### Guidance
 
-This profile defines a specific recommended plan as part of an [Intervention][Intervention] recommended by a specific [Guideline Recommendation][Guideline Recommendation].
+This profile defines a specific recommended plan as part of an intervention recommended by a specific [Recommendation][Recommendation].
 
-The actions to be performed are specified using the [Intervention Activity profile][Intervention Activity].
+The actions to be performed are specified using the [Recommendation Action][Recommendation Action].
 
+{% include categories-intervention.md %}
 
 {% include fhir-structure-detailed.md name='07-intervention-plan' alt='FHIR Intervention Plan' %}
 

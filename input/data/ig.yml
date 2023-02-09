@@ -229,7 +229,8 @@ definition:
     name: PICO Evidence Variable
     reference:
       reference: StructureDefinition/pico-evidence-variable
-  - isExample: false
+  - description: A recommendation as part of a clinical practice guideline.
+    isExample: false
     name: Recommendation
     reference:
       reference: StructureDefinition/recommendation

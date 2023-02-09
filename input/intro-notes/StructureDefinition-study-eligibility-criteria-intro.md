@@ -4,6 +4,9 @@
 
 ### Guidance
 
+This resource is used to define the eligibility criteria for a specific study.
+
+{% include categories-population.md %}
 
 
 {% capture resource_inheritance %}
