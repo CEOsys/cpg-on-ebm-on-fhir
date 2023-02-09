@@ -40,3 +40,6 @@ __pycache__/
 # generated files
 ###########################
 *-generated.md
+
+
+test.sh
