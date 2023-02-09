@@ -44,11 +44,8 @@ jobs:
       # run ig publisher
       - name: Run the IG publisher
         uses: docker://hl7fhir/ig-publisher-base:latest
-        env:
-          RELEASE_VERSION: ${{ steps.yaml-data.outputs.version }}
-          IG_TARGET_URL: ${{ steps.yaml-data.outputs.canonical }}
         with:
-          args: ./run-ig-publisher.sh $IG_TARGET_URL $RELEASE_VERSION
+          args: ./run-ig-publisher.sh ${{ steps.yaml-data.outputs.canonical }} ${{ steps.yaml-data.outputs.version }}
 
       # deploy implementation guide to github pages
       - name: Deploy

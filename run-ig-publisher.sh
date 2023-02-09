@@ -44,11 +44,11 @@ if [[ "$version" == *"-snapshot"* ]]; then
   # snapshot build
   echo "Running snapshot build..."
   set_release_label "ci-build" #  the continuous integration build release (not stable); see #https://fshschool.org/docs/sushi/configuration/#fsh-and-ig-processing-minimum-configuration
-  java -jar $publisher -ig . -no-sushi $*
+  java -jar $publisher -ig . $*
 else
   # release build
   echo "Running release build..."
   set_release_label "qa-preview" # frozen snapshot for non-ballot feedback; see #https://fshschool.org/docs/sushi/configuration/#fsh-and-ig-processing-minimum-configuration
-  java -jar $publisher -ig . -no-sushi -publish $targetUrl $*
+  java -jar $publisher -ig . -publish $targetUrl $*
   find ./output -name "*.html" -exec sed -i 's/Publication Build: This will be filled in by the publication tooling/This page is part of the CPG-on-EBMonFHIR Implementation Guide ($2)./g' {} +
 fi
