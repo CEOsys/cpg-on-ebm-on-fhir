@@ -37,9 +37,9 @@ definition:
       sourceUrl: downloads.html
       title: Downloads
     - generation: markdown
-      name: changelog.html
-      sourceUrl: changelog.html
-      title: Change Log
+      name: history.html
+      sourceUrl: history.html
+      title: History
     sourceUrl: toc.html
     title: Table of Contents
   parameter:
@@ -829,12 +829,12 @@ dependsOn:
   version: 1.0.0
 fhirVersion:
 - 5.0.0-snapshot3
-id: cpg.ceosys.de
+id: ebm-cpg.netzwerk-universitaetsmedizin.de
 name: CPGonEBMonFHIR
-packageId: cpg.ceosys.de
+packageId: ebm-cpg.netzwerk-universitaetsmedizin.de
 publisher: "Universit\xE4tsmedizin Greifswald"
 resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
-url: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/cpg.ceosys.de
+url: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/ebm-cpg.netzwerk-universitaetsmedizin.de
 version: 0.4.1-snapshot

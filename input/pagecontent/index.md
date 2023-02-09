@@ -74,13 +74,11 @@ Multiple recommendations represented in the here shown format can be found at th
 
 
 ### Related projects
-
-The EBMonFHIR project is currently developing an Implementation Guide aimed at representing computable knowledge for guideline recommendations (and others) at https://github.com/hl7/ebm.
-
-The CODEX+ CELIDA project has developed an execution engine for applying the recommendations to patient data in OMOP Common Data Model format. The engine is available at https://github.com/CODEX-CELIDA/execution-engine.
+* The EBMonFHIR project is currently developing an [EBM Implementation Guide](https://github.com/hl7/ebm) aimed at representing computable knowledge for guideline recommendations (and others).
+* The [CODEX+ CELIDA][CELIDA] project has developed an [execution engine][CELIDA_ExecutionEngine] for applying the recommendations to patient data in OMOP Common Data Model format..
 
 ### Publication
-Lichtner, G., Alper, B. S., Jurth, C., Spies, C., Boeker, M., Meerpohl, J. J., & von Dincklage, F. (2023). _"Representation of evidence-based clinical practice guideline recommendations on FHIR"_. Journal of Biomedical Informatics (2023). https://doi.org/10.1016/j.jbi.2023.104305
+Lichtner, G., Alper, B. S., Jurth, C., Spies, C., Boeker, M., Meerpohl, J. J., & von Dincklage, F. (2023). _"Representation of evidence-based clinical practice guideline recommendations on FHIR"_. Journal of Biomedical Informatics (2023). [https://doi.org/10.1016/j.jbi.2023.104305](https://doi.org/10.1016/j.jbi.2023.104305).
 
 ### Authors
 * [Gregor Lichtner](https://github.com/glichtner) (University Medicine Greifswald)

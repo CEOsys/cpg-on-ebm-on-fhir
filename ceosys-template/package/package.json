@@ -1,5 +1,6 @@
 {
   "name": "ceosys.de.template",
+  "id": "ceosys.de.template",
   "version": "0.1.0",
   "type": "fhir.template",
   "license": "CC0-1.0",
