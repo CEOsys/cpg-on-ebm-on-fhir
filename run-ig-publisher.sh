@@ -37,7 +37,6 @@ publisher=$input_cache_path/$publisher_jar
 if ! test -f "$publisher"; then
     echo "Downloading IG Publisher..."
 	curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
-	exit 1
 fi
 
 if [[ "$version" == *"-snapshot"* ]]; then
