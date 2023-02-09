@@ -4,8 +4,6 @@
 
 ### Guidance
 
-
-
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.
 {% endcapture %}
