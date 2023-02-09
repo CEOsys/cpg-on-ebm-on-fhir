@@ -3,12 +3,12 @@
 {% assign resource = site.data.structuredefinitions.[id] %}
 
 ### Guidance
-This profile describe the metadata of the outcome for a specific [Guideline Recommendation][Guideline Recommendation] and references or specifies the (expected) outcomes of the intervention on the population.
+This profile describe the metadata of the outcome for a specific [Recommendation][Recommendation] and references or specifies the (expected) outcomes of the intervention on the population.
 
 | Field | Description |
 | ----- | ----------- |
 | `characteristicCombination` | Fixed to `#all-of`, implying that this recommendation leads to all of the described outcomes. |
-| `characteristic.type` | Type of outcome (from [Cochrane PICO Outcome value set][Cochrane PICO Outcome]). |
+| `characteristic.type` | Type of outcome. |
 | `characteristic.definition` | CodeableConcept or Reference to a resource describing the (expected) outcome. |
 | `characteristic.exclude` | Fixed to `false`. |
 {:.grid}

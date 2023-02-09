@@ -4,7 +4,7 @@
 
 ### Guidance
 
-This profile describe the metadata of the net effect for a specific [Guideline Recommendation][Guideline Recommendation] and references the [Outcomes][Outcome] that are aggregated to yield the net effect.
+This profile describe the metadata of the net effect for a specific [Recommendation][Recommendation] and references the [Outcome Definition][Outcome Definition] that are aggregated to yield the net effect.
 
 For more information on the net effect, see
 [Alper, B. S. et al. Defining certainty of net benefit: a GRADE concept paper. BMJ Open 9, e027445 (2019)](https://bmjopen.bmj.com/content/9/6/e027445.long).
@@ -12,8 +12,8 @@ For more information on the net effect, see
 | Field | Description |
 | ----- | ----------- |
 | `characteristicCombination` | Fixed to `#net-effect`. |
-| `characteristic.type` | Type of outcome (from [Cochrane PICO Outcome value set][Cochrane PICO Outcome]). |
-| `characteristic.definition` | Reference to a [Outcome EvidenceVariable resource][Outcome] describing the (expected) outcome. |
+| `characteristic.type` | Type of outcome . |
+| `characteristic.definition` | Reference to a [Outcome Definition EvidenceVariable resource][Outcome Definition] describing the (expected) outcome. |
 | `characteristic.exclude` | Fixed to `false`. |
 {:.grid}
 

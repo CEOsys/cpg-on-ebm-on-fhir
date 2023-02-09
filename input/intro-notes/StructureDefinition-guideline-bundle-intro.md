@@ -7,17 +7,19 @@
 This bundle is used to collect all resources of a specific clinical practice guideline. It contains the following resources:
 
 * Required
-  * [Clinical Practice Guideline][Clinical Practice Guideline]
-  * [Guideline Recommendation][Guideline Recommendation]
-  * [Population][Population]
-  * [Population Group][Population Group]
-  * [Intervention][Intervention]
-  * [Intervention Activity][Intervention Activity]
+  * [Guideline][Guideline]
+  * [Recommendation][Recommendation]
+  * [Recommendation Plan][Recommendation Plan]
+  * [PICO Evidence Variable][PICO Evidence Variable] (includes [Recommendation Eligibility Criteria][Recommendation Eligibility Criteria], [Study Eligibility Criteria][Study Eligibility Criteria], [Outcome Definition][Outcome Definition] and [Intervention Definition][Intervention Definition])
+  * [Recommendation Action][Recommendation Action]
+  * [Recommendation Justification][Recommendation Justification]
 * Optional
-  * [Net Effect][Net Effect]
-  * [Outcome][Outcome]
-
-<img src="10-bundle.png" alt="FHIR Bundle" />
+  * [Certainty of Evidence Rating][Certainty of Evidence Rating]
+  * [Outcome Evidence][Outcome Evidence]
+  * [Study Citation][Study Citation]
+  * [Recommendation Citation][Recommendation Citation]
+  * [Guideline Citation][Guideline Citation]
+  * [Net Effect Estimate][Net Effect Estimate]
 
 {% capture resource_inheritance %}
 This profile of a FHIR {{resource.type}} is derived from the [{{resource.base | split: '/' | last}}]({{resource.base}}) FHIR resource.
