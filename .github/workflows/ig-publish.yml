@@ -1,6 +1,5 @@
 name: ImplementationGuide Publisher
 
-# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main or master branch
   push:
@@ -19,17 +18,37 @@ on:
 
 jobs:
   run-publisher:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # checkout
       - uses: actions/checkout@v3
 
+      # read id, version and canonical from sushi-config.yaml
+      - name: Run read-yaml action
+        id: yaml-data
+        uses: CumulusDS/get-yaml-paths-action@v1.0.1
+        with:
+          file: sushi-config.yaml
+          version: version
+          canonical: canonical
+          id: id
+
+      # display outputs from read-yaml action
+      - name: Display read-yaml output
+        run: |
+          echo "id: ${{ steps.yaml-data.outputs.id }}"
+          echo "target url: ${{ steps.yaml-data.outputs.canonical }}"
+          echo "version: ${{ steps.yaml-data.outputs.version }}"
+
+      # run ig publisher
       - name: Run the IG publisher
         uses: docker://hl7fhir/ig-publisher-base:latest
+        env:
+          RELEASE_VERSION: ${{ steps.yaml-data.outputs.version }}
+          IG_TARGET_URL: ${{ steps.yaml-data.outputs.canonical }}
         with:
-          args: ./run-ig-publisher.sh
+          args: ./run-ig-publisher.sh $IG_TARGET_URL $RELEASE_VERSION
 
       # deploy implementation guide to github pages
       - name: Deploy
@@ -40,21 +59,14 @@ jobs:
           publish_dir: ./output
           force_orphan: true
 
-      - name: Get Version
-        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
-        id: version
-        uses: notiz-dev/github-action-json-property@release
-        with:
-          path: './output/package.manifest.json'
-          prop_path: 'version'
-
+      # upload binaries to release
       - name: Upload binaries to release
         if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./output/package.tgz
-          asset_name: cpg.ceosys.de-${{ steps.version.outputs.prop }}.tgz
-          tag: v${{ steps.version.outputs.prop }}
-          release_name: Release v${{ steps.version.outputs.prop }}
+          asset_name: ${{ steps.yaml-data.outputs.id }}-${{ steps.yaml-data.outputs.version }}.tgz
+          tag: v${{ steps.yaml-data.outputs.version }}
+          release_name: Release v${{ steps.yaml-data.outputs.version }}
           overwrite: true
