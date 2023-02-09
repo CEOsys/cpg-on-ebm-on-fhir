@@ -7,8 +7,6 @@ This implementation guide describes an approach to using [evidence-based medicin
 This implementation guide is based on FHIR R5 (5.0.0-snapshot3).
 {.stu-note}
 
-Apart from representing the actual treatment recommendations provided by the guidelines according to [FHIR Clinical Guidelines][CPGonFHIR], the evidence generation and evidence assessment components of evidence-based guideline development is also represented.
-
 The following elements are required to represent a clinical practice guideline recommendation for automated clinical decision support systems:
 
 | Name | FHIR Base Resource | Description | References |
