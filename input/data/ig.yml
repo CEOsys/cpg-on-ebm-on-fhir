@@ -50,7 +50,7 @@ definition:
   - code:
       code: releaselabel
       system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
-    value: qa-preview
+    value: ci-build
   - code:
       code: active-tables
       system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters

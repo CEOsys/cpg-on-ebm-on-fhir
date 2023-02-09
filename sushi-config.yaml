@@ -6,7 +6,7 @@ status: draft
 version: 0.5.1-snapshot
 fhirVersion: 5.0.0-snapshot3
 copyrightYear: 2021+
-releaseLabel: qa-preview
+releaseLabel: ci-build
 publisher:
   name: Universitätsmedizin Greifswald
   url: https://www.med.uni-greifswald.de/
