@@ -837,4 +837,4 @@ resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/ebm-cpg.netzwerk-universitaetsmedizin.de
-version: 0.4.1-snapshot
+version: 0.5.0
