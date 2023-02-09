@@ -5,7 +5,7 @@ if [[ $# -eq 0 ]] ; then
     exit 0
 fi
 
-OUTPUT=$(bump2version --list $1)
+OUTPUT=$(bump2version --list $@)
 if [ $? -ne 0 ]
 then
   echo "Failed to run bump2version" >&2
@@ -32,5 +32,5 @@ fi
 rm input/data/ig.yml
 python create-intros.py
 git add .
-git commit -m "$message"
-git tag -a "v$new_version" -m "$message"
+git commit -m "$message" --edit
+git tag -a "v$new_version" -m "$(git log -1 --pretty=%B)"

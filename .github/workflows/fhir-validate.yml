@@ -56,7 +56,6 @@ jobs:
         run: npm install -g fsh-sushi
 
       - name: Load validator
-        # fixed version because 5.6.76 fails
         run: curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/downloads/validator_cli.jar -o ./validator_cli.jar
 
       - name: Install FHIR R5 CI
