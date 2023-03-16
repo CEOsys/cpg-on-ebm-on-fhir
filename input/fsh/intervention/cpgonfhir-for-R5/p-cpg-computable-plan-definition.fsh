@@ -5,9 +5,10 @@
 // Auto-generated using GoFSH v1.6.2 (via FSH Online)
 Alias: $cpg-enabled = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-enabled
 Alias: $cpg-partOf = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-partOf
-Alias: $cqf-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation
+// The following two extensions had to be added as fsh files, because sushi 2.9.0 could not use them based on the URL
+Alias: $cqf-strengthOfRecommendation = cqf-strengthOfRecommendation //http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation
+Alias: $cqf-qualityOfEvidence = cqf-qualityOfEvidence // http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence
 Alias: $cpg-directionOfRecommendation = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-directionOfRecommendation
-Alias: $cqf-qualityOfEvidence = http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence
 Alias: $cpg-common-persona = http://hl7.org/fhir/uv/cpg/ValueSet/cpg-common-persona
 
 Profile: CPGComputablePlanDefinition

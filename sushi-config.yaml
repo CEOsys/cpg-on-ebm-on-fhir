@@ -4,7 +4,7 @@ name: CPG-on-EBMonFHIR
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
 version: 0.5.1-snapshot
-fhirVersion: 5.0.0-snapshot3
+fhirVersion: 5.0.0-draft-final
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
