@@ -30,9 +30,9 @@ Alias: $ext-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/c
 Alias: $cs-data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $cs-v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
-Alias: $cs-certainty-rating = http://terminology.hl7.org/CodeSystem/certainty-rating
-Alias: $vs-certainty-rating = http://terminology.hl7.org/ValueSet/certainty-rating
-Alias: $cs-certainty-type = http://terminology.hl7.org/CodeSystem/certainty-type
+Alias: $cs-certainty-rating = http://hl7.org/fhir/certainty-rating
+Alias: $vs-certainty-rating = http://hl7.org/fhir/ValueSet/certainty-rating
+Alias: $cs-certainty-type = http://hl7.org/fhir/certainty-type
 Alias: $cs-evidence-quality = http://terminology.hl7.org/CodeSystem/evidence-quality
 Alias: $cs-recommendation-strength = http://terminology.hl7.org/CodeSystem/recommendation-strength
 Alias: $vs-recommendation-strength = http://hl7.org/fhir/ValueSet/recommendation-strength
@@ -49,8 +49,8 @@ Alias: $cs-etd-certainty-type = cs-evidence-to-decision-certainty-type
 Alias: $cs-guideline-stage-classification = cs-guideline-stage-classification
 Alias: $cs-clinical-importance = cs-clinical-importance
 
-Alias: $cs-cited-artifact-classification-type = http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type
-Alias: $cs-cited-artifact-status-type = http://terminology.hl7.org/CodeSystem/cited-artifact-status-type
+Alias: $cs-cited-artifact-classification-type = http://hl7.org/fhir/cited-artifact-classification-type
+Alias: $cs-cited-artifact-status-type = http://hl7.org/fhir/cited-artifact-status-type
 Alias: $cs-citation-artifact-classifier = http://hl7.org/fhir/citation-artifact-classifier
 Alias: $cs-related-artifact-type = http://hl7.org/fhir/related-artifact-type
 Alias: $cs-ceosys = CEOsysCodeSystem
