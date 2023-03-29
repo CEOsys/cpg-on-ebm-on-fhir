@@ -262,6 +262,12 @@ definition:
     name: Recommendation Plan
     reference:
       reference: StructureDefinition/recommendation-plan
+  - description: Enforces the minimum information set for the plan definition metadata
+      required by HL7 and other organizations that share and publish plan definitions
+    isExample: false
+    name: Shareable PlanDefinition
+    reference:
+      reference: StructureDefinition/shareableplandefinition
   - description: Citation of a study from which evidence is determined.
     isExample: false
     name: Study Citation
@@ -292,12 +298,34 @@ definition:
     name: ArtifactAssessment Version
     reference:
       reference: StructureDefinition/ceosys-extension-artifact-assessment-version
+  - description: A comment containing additional documentation, a review comment,
+      usage guidance, or other relevant information from a particular user.
+    isExample: false
+    name: CQFM Artifact Comment
+    reference:
+      reference: StructureDefinition/cqfm-artifactComment
   - description: Adds type/value pair to elements of datatype Dosage to express a
       condition on the dosage.
     isExample: false
     name: Dosage Condition
     reference:
       reference: StructureDefinition/ext-dosage-condition
+  - description: The quality of the evidence described. The code system used specifies
+      the quality scale used to grade this evidence source while the code specifies
+      the actual quality score (represented as a coded value) associated with the
+      evidence.
+    isExample: false
+    name: qualityOfEvidence
+    reference:
+      reference: StructureDefinition/cqf-qualityOfEvidence
+  - description: The strength of the recommendation assigned to this reference. The
+      code system used specifies the rating scale used to rate this recommendation
+      while the code specifies the actual recommendation rating (represented as a
+      coded value) associated with this recommendation.
+    isExample: false
+    name: strengthOfRecommendation
+    reference:
+      reference: StructureDefinition/cqf-strengthOfRecommendation
   - description: Action selection behavior with only codes that require at least one
       action to be performed.
     isExample: false
@@ -471,6 +499,11 @@ definition:
     name: Cochrane PICO Ontology
     reference:
       reference: CodeSystem/cochrane-pico-ontology
+  - description: The assessment of quality, confidence, or certainty.
+    isExample: false
+    name: Evidence Certainty Rating
+    reference:
+      reference: CodeSystem/certainty-rating
   - description: GRADE Evidence to Decision (EtD) Framework Certainty Ratings
     isExample: false
     name: Evidence To Decision Certainty Rating
@@ -504,6 +537,12 @@ definition:
     name: Recommendation Strength
     reference:
       reference: CodeSystem/ceosys-cs-recommendation-strength
+  - description: Types of combining results from a body of evidence (eg. summary data
+      meta-analysis).
+    isExample: false
+    name: SynthesisType
+    reference:
+      reference: CodeSystem/synthesis-type
   - description: Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
       (AWMF) e.V
     isExample: true
@@ -829,7 +868,7 @@ dependsOn:
   uri: http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg
   version: 1.0.0
 fhirVersion:
-- 5.0.0-snapshot3
+- 5.0.0
 id: ebm-cpg.netzwerk-universitaetsmedizin.de
 name: CPGonEBMonFHIR
 packageId: ebm-cpg.netzwerk-universitaetsmedizin.de
@@ -838,4 +877,4 @@ resourceType: ImplementationGuide
 status: draft
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 url: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/ebm-cpg.netzwerk-universitaetsmedizin.de
-version: 0.5.1-snapshot
+version: 0.6.0-snapshot
