@@ -4,8 +4,8 @@
 
 This implementation guide describes an approach to using [evidence-based medicine on FHIR (EBMonFHIR)][EMBonFHIR] in combination with [FHIR Clinical Guidelines][CPGonFHIR] to represent evidence-based clinical practice guidelines including the evidence upon which the recommendations are based. The approach is based on the PICO (population, intervention, comparator, outcome) framework and the GRADE (Grading of Recommendations Assessment, Development and Evaluation) approach.
 
-This implementation guide is based on FHIR R5 (5.0.0-snapshot3).
-{.stu-note}
+This implementation guide is based on FHIR R5 (5.0.0).
+{:.stu-note}
 
 The following elements are required to represent a clinical practice guideline recommendation for automated clinical decision support systems:
 
@@ -80,8 +80,7 @@ Lichtner, G., Alper, B. S., Jurth, C., Spies, C., Boeker, M., Meerpohl, J. J., &
 
 ### Authors
 * [Gregor Lichtner](https://github.com/glichtner) (University Medicine Greifswald)
-* [Brian Alper](https://github.com/brianalperMD) (Computable Publishing LLC,
-Scientific Knowledge Accelerator Foundation)
+* [Brian Alper](https://github.com/brianalperMD) (Computable Publishing LLC, Scientific Knowledge Accelerator Foundation)
 * Falk von Dincklage (University Medicine Greifswald)
 * Carlo Jurth (Charité -- Universitätsmedizin Berlin)
 * Claudia Spies (Charité -- Universitätsmedizin Berlin)

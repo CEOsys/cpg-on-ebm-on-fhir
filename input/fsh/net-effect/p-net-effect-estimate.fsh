@@ -15,7 +15,6 @@ Description: "The net effect is the overall expected effect of a recommendation,
   * variableRole = $cs-variable-role#measuredVariable
   * intended 1..1 MS
   * intended only Reference(OutcomeDefinition)
-
 * statistic 1..* MS
 * statistic ^slicing.discriminator.type = #value
 * statistic ^slicing.discriminator.path = "statisticType"
