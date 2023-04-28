@@ -7,7 +7,7 @@
 ## Quick start
 This implementation guide describes an approach to using [evidence-based medicine on FHIR (EBMonFHIR)][EMBonFHIR] in combination with [FHIR Clinical Guidelines][CPGonFHIR] to represent evidence-based clinical practice guidelines including the evidence upon which the recommendations are based. The approach is based on the PICO (population, intervention, comparator, outcome) framework and the GRADE (Grading of Recommendations Assessment, Development and Evaluation) approach.
 
-> :warning: This implementation guide is based on FHIR R5 (5.0.0-snapshot3).
+> :warning: This implementation guide is based on FHIR R5 (5.0.0).
 
 The following elements are required to represent a clinical practice guideline recommendation for automated clinical decision support systems:
 
@@ -27,42 +27,42 @@ The following elements are required to represent a clinical practice guideline r
 
 | Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| [Recommendation][Recommendation] | [PlanDefinition](http://hl7.org/fhir/5.0.0-snapshot3/plandefinition.html) | Representation of a single guideline recommendation. | [Recommendation Plan][Recommendation Plan],  [Guideline Citation][Guideline Citation], [Recommendation Citation][Recommendation Citation]. |
-| [Recommendation Plan][Recommendation Plan] | [PlanDefinition](http://hl7.org/fhir/5.0.0-snapshot3/plandefinition.html) | Description of a recommended intervention addressed in a specific guideline recommendation. | [Intervention Activities][Recommendation Action] specified in the guideline recommendation; [Recommendation Eligibility Criteria][Recommendation Eligibility Criteria] defining the group of patients to which the recommendation applies to; [Recommendation Justification][Recommendation Justification] providing the justification of the recommendation; [Guideline Citation][Guideline Citation], [Recommendation Citation][Recommendation Citation]. |
-| [Recommendation Action][Recommendation Action] | [ActivityDefinition](http://hl7.org/fhir/5.0.0-snapshot3/activitydefinition.html) | Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation. | - |
-| [Recommendation Eligibility Criteria][Recommendation Eligibility Criteria] | [EvidenceVariable](http://hl7.org/fhir/5.0.0-snapshot3/evidencevariable.html) | Description of the population to which a specific guideline recommendation applies. | - |
+| [Recommendation][Recommendation] | [PlanDefinition](http://hl7.org/fhir/R5/plandefinition.html) | Representation of a single guideline recommendation. | [Recommendation Plan][Recommendation Plan],  [Guideline Citation][Guideline Citation], [Recommendation Citation][Recommendation Citation]. |
+| [Recommendation Plan][Recommendation Plan] | [PlanDefinition](http://hl7.org/fhir/R5/plandefinition.html) | Description of a recommended intervention addressed in a specific guideline recommendation. | [Intervention Activities][Recommendation Action] specified in the guideline recommendation; [Recommendation Eligibility Criteria][Recommendation Eligibility Criteria] defining the group of patients to which the recommendation applies to; [Recommendation Justification][Recommendation Justification] providing the justification of the recommendation; [Guideline Citation][Guideline Citation], [Recommendation Citation][Recommendation Citation]. |
+| [Recommendation Action][Recommendation Action] | [ActivityDefinition](http://hl7.org/fhir/R5/activitydefinition.html) | Definition of an activity that is part of an intervention in the context of a clinical practice guideline recommendation. | - |
+| [Recommendation Eligibility Criteria][Recommendation Eligibility Criteria] | [EvidenceVariable](http://hl7.org/fhir/R5/evidencevariable.html) | Description of the population to which a specific guideline recommendation applies. | - |
 
 
 The following profiles are used to represent the evidence upon which a clinical practice guideline recommendation is based:
 
 | Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| [Study Outcome Evidence][Study Outcome Evidence] | [Evidence](http://hl7.org/fhir/5.0.0-snapshot3/evidence.html) | Evidence statistics generated from a single study or systematic review regarding a clinical question. | [Study Eligibility Criteria][Study Eligibility Criteria], [Intervention Definition][Intervention Definition], [Outcome Definition][Outcome Definition], [Study Citation][Study Citation] |
-| [Study Eligibility Criteria][Study Eligibility Criteria] | [EvidenceVariable](http://hl7.org/fhir/5.0.0-snapshot3/evidencevariable.html) | Intended definition of the patient group for which evidence or was generated or evidence synthesis was performed. | - |
-| [Study Cohort][Study Cohort] | [Group](http://hl7.org/fhir/5.0.0-snapshot3/group.html) | Actual composition of the patient group for which the evidence was generated.  | - |
-| [Outcome Evidence Synthesis][Outcome Evidence Synthesis] | [Evidence](http://hl7.org/fhir/5.0.0-snapshot3/evidence.html) | A single evidence for an outcome from an evidence synthesis (e.g., meta-analysis). | [Evidence Synthesis Cohorts][Evidence Synthesis Cohorts], [Evidence Data Set][Evidence Data Set] |
-| [Evidence Synthesis Cohorts][Evidence Synthesis Cohorts] | [Group](http://hl7.org/fhir/5.0.0-snapshot3/group.html) | Actual composition of the patient group for which evidence synthesis was performed. | - |
-| [Intervention Definition][Intervention Definition] | [EvidenceVariable](http://hl7.org/fhir/5.0.0-snapshot3/evidencevariable.html) | Definition of an intervention or comparison with respect to which evidence was generated. | - |
-| [Outcome Definition][Outcome Definition] | [EvidenceVariable](http://hl7.org/fhir/5.0.0-snapshot3/evidencevariable.html) | Definition of the outcome for which evidence was generated. | - |
-| [Evidence Data Set][Evidence Data Set] | [EvidenceVariable](http://hl7.org/fhir/5.0.0-snapshot3/evidencevariable.html) | Definition of the outcome used as the observed measured variable for an evidence synthesis. | - |
-| [Outcome Evidence][Outcome Evidence] | [Evidence](http://hl7.org/fhir/5.0.0-snapshot3/evidence.html) | Evidence statistics generated from a single study or systematic review regarding a clinical question. | [Study Eligibility Criteria][Study Eligibility Criteria], [Intervention Definition][Intervention Definition], [Outcome Definition][Outcome Definition], [Study Citation][Study Citation] |
-| [Study Eligibility Criteria][Study Eligibility Criteria] | [EvidenceVariable](http://hl7.org/fhir/5.0.0-snapshot3/evidencevariable.html) | Definition of the patient group for which evidence was generated. | - |
+| [Study Outcome Evidence][Study Outcome Evidence] | [Evidence](http://hl7.org/fhir/R5/evidence.html) | Evidence statistics generated from a single study or systematic review regarding a clinical question. | [Study Eligibility Criteria][Study Eligibility Criteria], [Intervention Definition][Intervention Definition], [Outcome Definition][Outcome Definition], [Study Citation][Study Citation] |
+| [Study Eligibility Criteria][Study Eligibility Criteria] | [EvidenceVariable](http://hl7.org/fhir/R5/evidencevariable.html) | Intended definition of the patient group for which evidence or was generated or evidence synthesis was performed. | - |
+| [Study Cohort][Study Cohort] | [Group](http://hl7.org/fhir/R5/group.html) | Actual composition of the patient group for which the evidence was generated.  | - |
+| [Outcome Evidence Synthesis][Outcome Evidence Synthesis] | [Evidence](http://hl7.org/fhir/R5/evidence.html) | A single evidence for an outcome from an evidence synthesis (e.g., meta-analysis). | [Evidence Synthesis Cohorts][Evidence Synthesis Cohorts], [Evidence Data Set][Evidence Data Set] |
+| [Evidence Synthesis Cohorts][Evidence Synthesis Cohorts] | [Group](http://hl7.org/fhir/R5/group.html) | Actual composition of the patient group for which evidence synthesis was performed. | - |
+| [Intervention Definition][Intervention Definition] | [EvidenceVariable](http://hl7.org/fhir/R5/evidencevariable.html) | Definition of an intervention or comparison with respect to which evidence was generated. | - |
+| [Outcome Definition][Outcome Definition] | [EvidenceVariable](http://hl7.org/fhir/R5/evidencevariable.html) | Definition of the outcome for which evidence was generated. | - |
+| [Evidence Data Set][Evidence Data Set] | [EvidenceVariable](http://hl7.org/fhir/R5/evidencevariable.html) | Definition of the outcome used as the observed measured variable for an evidence synthesis. | - |
+| [Outcome Evidence][Outcome Evidence] | [Evidence](http://hl7.org/fhir/R5/evidence.html) | Evidence statistics generated from a single study or systematic review regarding a clinical question. | [Study Eligibility Criteria][Study Eligibility Criteria], [Intervention Definition][Intervention Definition], [Outcome Definition][Outcome Definition], [Study Citation][Study Citation] |
+| [Study Eligibility Criteria][Study Eligibility Criteria] | [EvidenceVariable](http://hl7.org/fhir/R5/evidencevariable.html) | Definition of the patient group for which evidence was generated. | - |
 
 The following profiles are used to represent the assessment of evidence which justify the recommendation:
 
 | Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| [Recommendation Justification][Recommendation Justification] | [ArtifactAssessment](http://hl7.org/fhir/5.0.0-snapshot3/artifactassessment.html) | Rating of the recommendation given all evidence for all considered outcomes. | [Recommendation Plan][Recommendation Plan], [Certainty of Evidence Rating][Certainty of Evidence Rating], [Net Effect Estimate][Net Effect Estimate] |
-| [Certainty of Evidence Rating][Certainty of Evidence Rating] | [ArtifactAssessment](http://hl7.org/fhir/5.0.0-snapshot3/artifactassessment.html) | Rating of the evidence for individual outcomes. | [Outcome Evidence][Outcome Evidence] |
-| [Net Effect Estimate][Net Effect Estimate] | [EvidenceVariable](http://hl7.org/fhir/5.0.0-snapshot3/evidencevariable.html) | Description of the net effect of a guideline recommendation. | (Expected) [Outcomes][Outcome Definition] of a guideline recommendation. |
+| [Recommendation Justification][Recommendation Justification] | [ArtifactAssessment](http://hl7.org/fhir/R5/artifactassessment.html) | Rating of the recommendation given all evidence for all considered outcomes. | [Recommendation Plan][Recommendation Plan], [Certainty of Evidence Rating][Certainty of Evidence Rating], [Net Effect Estimate][Net Effect Estimate] |
+| [Certainty of Evidence Rating][Certainty of Evidence Rating] | [ArtifactAssessment](http://hl7.org/fhir/R5/artifactassessment.html) | Rating of the evidence for individual outcomes. | [Outcome Evidence][Outcome Evidence] |
+| [Net Effect Estimate][Net Effect Estimate] | [EvidenceVariable](http://hl7.org/fhir/R5/evidencevariable.html) | Description of the net effect of a guideline recommendation. | (Expected) [Outcomes][Outcome Definition] of a guideline recommendation. |
 
 
 Additionally, the following profiles are used to bundle recommendations and resources:
 
 | Name | FHIR Base Resource | Description | References |
 | ---- | ------------- | ----------- | ---------- |
-| [Clinical Practice Guideline][Clinical Practice Guideline] | [Composition](http://hl7.org/fhir/5.0.0-snapshot3/composition.html) | Composition of several individual guideline recommendations | [Recommendation Plan][Recommendation Plan], [Guideline Citation][Guideline Citation] |
-| [Guideline Bundle][Guideline Bundle] | [Bundle](http://hl7.org/fhir/5.0.0-snapshot3/bundle.html) | Bundle of all resources of a single clinical practice guideline. | All other resources in this IG. |
+| [Clinical Practice Guideline][Clinical Practice Guideline] | [Composition](http://hl7.org/fhir/R5/composition.html) | Composition of several individual guideline recommendations | [Recommendation Plan][Recommendation Plan], [Guideline Citation][Guideline Citation] |
+| [Guideline Bundle][Guideline Bundle] | [Bundle](http://hl7.org/fhir/R5/bundle.html) | Bundle of all resources of a single clinical practice guideline. | All other resources in this IG. |
 
 
 ## Examples
