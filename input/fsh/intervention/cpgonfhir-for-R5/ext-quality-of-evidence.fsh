@@ -22,5 +22,7 @@ Description: "The quality of the evidence described. The code system used specif
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from QualityOfEvidenceRating (example)
-* value[x] ^binding.extension[http://hl7.org/fhir/build/StructureDefinition/binding-definition].valueString = "A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems."
-* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName].valueString = "QualityOfEvidenceRating"
+* value[x] ^binding.extension[0].url = "http://hl7.org/fhir/build/StructureDefinition/binding-definition"
+* value[x] ^binding.extension[=].valueString = "A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems."
+* value[x] ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+* value[x] ^binding.extension[=].valueString = "QualityOfEvidenceRating"

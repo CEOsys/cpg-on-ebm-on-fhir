@@ -22,5 +22,7 @@ Description: "The strength of the recommendation assigned to this reference. The
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from StrengthOfRecommendationRating (example)
-* value[x] ^binding.extension[http://hl7.org/fhir/build/StructureDefinition/binding-definition].valueString = "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems."
-* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName].valueString = "StrengthOfRecommendationRating"
+* value[x] ^binding.extension[0].url = "http://hl7.org/fhir/build/StructureDefinition/binding-definition"
+* value[x] ^binding.extension[=].valueString = "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems."
+* value[x] ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+* value[x] ^binding.extension[=].valueString = "StrengthOfRecommendationRating"
