@@ -8,7 +8,7 @@ declare -a packages=(
 #  "hl7.fhir.r5.examples.tgz"
 )
 
-fhir_version="5.0.0-snapshot1"
+fhir_version="5.0.0"
 
 echo $HOME
 mkdir -p $HOME/.fhir

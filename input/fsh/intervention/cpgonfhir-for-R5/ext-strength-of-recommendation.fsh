@@ -7,10 +7,8 @@ Extension: StrengthOfRecommendation
 Id: cqf-strengthOfRecommendation
 Title: "strengthOfRecommendation"
 Description: "The strength of the recommendation assigned to this reference. The code system used specifies the rating scale used to rate this recommendation while the code specifies the actual recommendation rating (represented as a coded value) associated with this recommendation."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-* ^extension[=].valueCode = #fhir
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 1
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #fhir
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 * ^version = "4.3.0"
 * ^status = #draft
 * ^experimental = false

@@ -3,13 +3,13 @@
 # this script downloads the continuous build of the FHIR specification
 
 declare -a packages=(
-  "hl7.fhir.r5.core.tgz"
-  "hl7.fhir.r5.expansions.tgz"
+  "hl7.fhir.r6.core.tgz"
+  "hl7.fhir.r6.expansions.tgz"
 #  "hl7.fhir.r5.examples.tgz"
 )
 
-fhir_base_version="5.0.0"
-fhir_version="5.0.0-cibuild" # used only for local FHIR path
+fhir_base_version="6.0.0"
+fhir_version="6.0.0-cibuild" # used only for local FHIR path
 
 echo $HOME
 mkdir -p $HOME/.fhir
@@ -35,6 +35,7 @@ do
   find $fhir_path -type f -exec sed -i 's/4.6.0/'"$fhir_version"'/g' {} ';'
   find $fhir_path -type f -exec sed -i 's/5.0.0-snapshot1/'"$fhir_version"'/g' {} ';'
   find $fhir_path -type f -exec sed -i 's/5.0.0-ballot/'"$fhir_version"'/g' {} ';'
+  find $fhir_path -type f -exec sed -i 's/5.0.0/'"$fhir_version"'/g' {} ';'
   sed -i 's/"type": "Core"/"type": "fhir.core"/g' $fhir_path/package/package.json
 done
 
