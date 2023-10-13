@@ -37,7 +37,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
   * characteristic[procedure][+]
     * linkId = "artificial-respiration"
     * definitionByTypeAndValue
-      * valueCodeableConcept = $sct#40617009 "Artificial respiration (procedure)"
+      * valueCodeableConcept = $sct#40617009 "Artificial ventilation (regime/therapy)"
     * timeFromEvent
       * eventId = "covid19"
       * quantity = 0 'd'
@@ -81,7 +81,7 @@ Description: "Population for guideline from https://app.magicapp.org/#/guideline
   * characteristic[procedure][+]
     * linkId = "artificial-respiration"
     * definitionByTypeAndValue
-      * valueCodeableConcept = $sct#40617009 "Artificial respiration (procedure)"
+      * valueCodeableConcept = $sct#40617009 "Artificial ventilation (regime/therapy)"
     * timeFromEvent
       * eventId = "covid19"
       * quantity = 0 'd'
