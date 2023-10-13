@@ -7,10 +7,8 @@ Extension: StrengthOfRecommendation
 Id: cqf-strengthOfRecommendation
 Title: "strengthOfRecommendation"
 Description: "The strength of the recommendation assigned to this reference. The code system used specifies the rating scale used to rate this recommendation while the code specifies the actual recommendation rating (represented as a coded value) associated with this recommendation."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-* ^extension[=].valueCode = #fhir
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 1
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #fhir
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 * ^version = "4.3.0"
 * ^status = #draft
 * ^experimental = false
@@ -24,7 +22,5 @@ Description: "The strength of the recommendation assigned to this reference. The
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from StrengthOfRecommendationRating (example)
-* value[x] ^binding.extension[0].url = "http://hl7.org/fhir/build/StructureDefinition/binding-definition"
-* value[x] ^binding.extension[=].valueString = "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems."
-* value[x] ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* value[x] ^binding.extension[=].valueString = "StrengthOfRecommendationRating"
+* value[x] ^binding.extension[http://hl7.org/fhir/build/StructureDefinition/binding-definition].valueString = "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems."
+* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName].valueString = "StrengthOfRecommendationRating"

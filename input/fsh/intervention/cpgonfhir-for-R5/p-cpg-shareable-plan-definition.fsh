@@ -13,12 +13,9 @@ Parent: PlanDefinition
 Id: shareableplandefinition
 Title: "Shareable PlanDefinition"
 Description: "Enforces the minimum information set for the plan definition metadata required by HL7 and other organizations that share and publish plan definitions"
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 3
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-* ^extension[=].valueCode = #cds
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 3
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #cds
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #trial-use
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.840.1.113883.4.642.5.1077"
 * ^version = "5.0.0-draft-final"
