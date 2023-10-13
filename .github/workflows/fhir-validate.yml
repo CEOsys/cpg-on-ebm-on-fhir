@@ -58,8 +58,8 @@ jobs:
       - name: Load validator
         run: curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o ./validator_cli.jar
 
-      - name: Install FHIR R5 CI
-        run: ./download-fhir-r5-ci.sh
+      - name: Install FHIR R6 CI
+        run: ./download-fhir-r6-ci.sh
 
       - name: Execute validator
         run: fsh-validator --all
