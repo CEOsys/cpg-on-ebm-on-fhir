@@ -31,7 +31,9 @@ Description: "Definition of an activity that is part of an intervention in the c
 * action contains
     drugAdministration 0..* and
     ventilatorManagement 0..* and
-    bodyPositioning 0..*
+    bodyPositioning 0..* and
+    sedationManagement 0..* and
+    painManagement 0..*
   * code 1..1 MS
     * coding 1..*
       * system 1..
@@ -48,6 +50,12 @@ Description: "Definition of an activity that is part of an intervention in the c
 * action[ventilatorManagement]
   * code = $sct#410210009 "Ventilator care management (procedure)"
   * goalId 1..* MS
+* action[sedationManagement]
+  * code = $sct#406187008 "Sedation management (procedure)"
+  * goalId 1..* MS
+* action[painManagement]
+  * code = $sct#278414003 "Pain management (procedure)"
+  * goalId 1..* MS
 * action[bodyPositioning]
   * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical only Canonical(BodyPositioningAction)
@@ -62,7 +70,8 @@ Description: "Definition of an activity that is part of an intervention in the c
 * goal ^slicing.rules = #closed
 * goal contains
     ventilatorManagement 0..* and
-    laboratoryValue 0..*
+    laboratoryValue 0..* and
+    assessmentScale 0..*
 * goal[ventilatorManagement]
   * category = $sct#385857005 "Ventilator care and adjustment (regime/therapy)"
   * target 1..*
@@ -77,6 +86,12 @@ Description: "Definition of an activity that is part of an intervention in the c
         * ^patternCoding.system = $loinc
         * system 1.. MS
         * code 1.. MS
+    * detail[x] 1..1 MS
+* goal[assessmentScale]
+  * category = $sct#273249006 "Assessment scales (assessment scale)"
+  * target 1..*
+    * measure 1..1 MS
+    * measure from vs-assessment-scales
     * detail[x] 1..1 MS
 
 Invariant: goal-must-be-linked
