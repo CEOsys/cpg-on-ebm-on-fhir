@@ -92,6 +92,10 @@ Description: "Definition of an activity that is part of an intervention in the c
         * code 1.. MS
     * detail[x] 1..1 MS
 * goal[assessmentScale]
+  * category 1..1
+    * coding 1..*
+      * system 1..
+      * code 1..
   * category = $sct#273249006 "Assessment scales (assessment scale)"
   * target 1..*
     * measure 1..1 MS
