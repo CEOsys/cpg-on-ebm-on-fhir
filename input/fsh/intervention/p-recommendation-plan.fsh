@@ -33,7 +33,8 @@ Description: "Definition of an activity that is part of an intervention in the c
     ventilatorManagement 0..* and
     bodyPositioning 0..* and
     sedationManagement 0..* and
-    painManagement 0..*
+    painManagement 0..* and
+    assessment 0..*
   * code 1..1 MS
     * coding 1..*
       * system 1..
@@ -59,6 +60,9 @@ Description: "Definition of an activity that is part of an intervention in the c
 * action[bodyPositioning]
   * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical only Canonical(BodyPositioningAction)
+* action[assessment]
+  * code = $sct#386053000 "Evaluation procedure (procedure)"
+  * definitionCanonical only Canonical(AssessmentAction)
 * goal 0..* MS
   * category 1..1 MS
     * coding 1..*
