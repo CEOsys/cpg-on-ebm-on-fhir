@@ -1,14 +1,14 @@
 {
-  "name": "ceosys.de.template",
-  "id": "ceosys.de.template",
+  "name": "de.netzwerk-universitaetsmedizin.ceosys.template",
   "version": "0.1.0",
   "type": "fhir.template",
   "license": "CC0-1.0",
-  "description": "ceosys template extension for FHIR IG",
+  "description": "CEOsys template extension for FHIR IG",
   "author": "Gregor Lichtner",
   "base": "fhir.base.template",
+  "canonical": "https://www.netzwerk-universitaetsmedizin.de/fhir/ceosys/ig-template-ceosys",
   "dependencies": {
-    "fhir.base.template": "0.4.0",
-    "hl7.fhir.r5.core": "5.0.0-snapshot3"
+    "fhir.base.template": "0.6.0",
+    "hl7.fhir.r5.core": "5.0.0"
   }
 }
