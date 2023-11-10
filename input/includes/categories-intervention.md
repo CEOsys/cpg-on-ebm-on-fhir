@@ -17,6 +17,9 @@ The categories are defined as slices of the `action` element in the [Recommendat
 | Laboratory Observation | <center> ❌ *not required*<br>⚠️ *this might change* </center> | laboratoryValue | *n/a* |
 | Ventilation Measure/Setting | ventilatorManagement | ventilatorManagement | *n/a* |
 | Body position | bodyPositioning | <center>❌ *not required* </center> | BodyPositioningAction |
+| Sedation Management | sedationManagement | assessmentScale | n/a |
+| Pain Management | painManagement | assessmentScale | n/a |
+| Assessment | assessment | any | AssessmentAction |
 {:.grid}
 
 #### Examples
@@ -107,5 +110,64 @@ Description: "Example of a body positioning action."
 * url = "https://www.ceosys.de/fhir/canonical/recommendation-action/body-positioning-example"
 * code = $sct#431182000 "Placing subject in prone position (procedure)"
 ```
+
+
+##### Sedation Management
+```C
+// in RecommendationPlan instance
+* action[sedationManagement][+]
+  * code = $sct#406187008 "Sedation management (procedure)"
+  * goalId[+] = "sedation-management-RASS-0-goal"
+
+* goal[assessmentScale][+]
+  * id = "sedation-management-RASS-0-goal"
+  * description.text = "RASS should be 0 or 1"
+  * category = $sct#273249006 "Assessment scales (assessment scale)"
+  * target
+    * measure = $sct-us#457441000124102 "Richmond agitation-sedation scale"
+    * detailRange
+      * low = -1 'score'
+      * high = 0 'score'
+```
+
+##### Pain Management
+```C
+// in RecommendationPlan instance
+* action[painManagement][+]
+  * code = $sct#278414003 "Pain management (procedure)"
+  * goalId[+] = "pain-management-goal"
+
+* goal[assessmentScale][+]
+  * id = "pain-management-goal"
+  * description.text = "NRS should not be >4"
+  * target
+    * measure = $loinc#72514-3 "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+    * detailRange
+      * high = 3 'score'
+```
+
+##### Assessment
+```C
+// in RecommendationPlan instance
+* action[assessment][+]
+  * definitionCanonical = Canonical (PainMonitoringNRS)
+  * selectionBehavior = #one-or-more
+  * code = $sct#386053000 "Evaluation procedure (procedure)"
+
+
+// in PainMonitoringNRS
+Instance: PainMonitoringNRS
+InstanceOf: assessment-action
+Usage: #definition
+Title: "Pain Monitoring with NRS"
+Description: "Pain Monitoring in ICU Patients with NRS"
+* insert canonical-url(patients-icu-pain-monitoring, recommended-action/pain-monitoring-NRS)
+* insert publisher-experimental-version(0.1)
+* name = "PainMonitoringWithNRSPlan"
+* status = #active
+* description = "Pain monitoring in ICU Patients with NRS"
+* code = $loinc#72514-3 "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+* timingTiming.code = #Q8H
+``````
 
 {% include link-list.md %}

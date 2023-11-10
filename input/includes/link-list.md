@@ -1,48 +1,58 @@
+[ArtifactAssessment Publication Status]: StructureDefinition-ceosys-extension-artifact-assessment-publication-status.html
+[ArtifactAssessment Version]: StructureDefinition-ceosys-extension-artifact-assessment-version.html
+[Assessment Action]: StructureDefinition-assessment-action.html
 [Body Positioning Action]: StructureDefinition-body-positioning-action.html
+[CEOsys Code System]: CodeSystem-ceosys-code-system.html
+[Certainty of Evidence Rating]: StructureDefinition-certainty-of-evidence-rating.html
+[Clinical Importance of Outcome]: CodeSystem-cs-clinical-importance.html
+[Clinical Practice Guideline]: StructureDefinition-guideline.html
+[Cochrane Core Ontology]: CodeSystem-cochrane-core-ontology.html
+[Cochrane PICO Ontology]: CodeSystem-cochrane-pico-ontology.html
+[Cohorts]: StructureDefinition-cohorts.html
 [CPGComputablePlanDefinition]: StructureDefinition-cpg-computableplandefinition.html
 [CPGRecommendationDefinition]: StructureDefinition-cpg-recommendationdefinition.html
 [CPGShareablePlanDefinition]: StructureDefinition-cpg-shareableplandefinition.html
 [CPGStrategyDefinition]: StructureDefinition-cpg-strategydefinition.html
-[Certainty of Evidence Rating]: StructureDefinition-certainty-of-evidence-rating.html
-[Cohorts]: StructureDefinition-cohorts.html
+[CQFM Artifact Comment]: StructureDefinition-cqfm-artifactComment.html
+[Dosage Condition]: StructureDefinition-ext-dosage-condition.html
 [Drug Administration Action]: StructureDefinition-drug-administration-action.html
 [Eligibility Criteria]: StructureDefinition-eligibility-criteria.html
+[Evidence Certainty Rating]: CodeSystem-certainty-rating.html
 [Evidence Data Set]: StructureDefinition-evidence-data-set.html
 [Evidence Synthesis Cohorts]: StructureDefinition-evidence-synthesis-cohorts.html
-[Clinical Practice Guideline]: StructureDefinition-guideline.html
+[Evidence To Decision Certainty Rating]: CodeSystem-cs-evidence-to-decision-certainty-rating.html
+[Evidence To Decision Certainty type]: CodeSystem-cs-evidence-to-decision-certainty-type.html
 [Guideline Bundle]: StructureDefinition-guideline-bundle.html
 [Guideline Citation]: StructureDefinition-guideline-citation.html
+[Guideline Stage Classification]: CodeSystem-cs-guideline-stage-classification.html
 [Intervention Definition]: StructureDefinition-intervention-definition.html
 [Net Effect Estimate]: StructureDefinition-net-effect-estimate.html
 [Outcome Definition]: StructureDefinition-outcome-definition.html
 [Outcome Evidence]: StructureDefinition-outcome-evidence.html
 [Outcome Evidence Synthesis]: StructureDefinition-outcome-evidence-synthesis.html
 [PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
+[qualityOfEvidence]: StructureDefinition-cqf-qualityOfEvidence.html
 [Recommendation]: StructureDefinition-recommendation.html
 [Recommendation Action]: StructureDefinition-recommendation-action.html
 [Recommendation Citation]: StructureDefinition-recommendation-citation.html
 [Recommendation Eligibility Criteria]: StructureDefinition-recommendation-eligibility-criteria.html
 [Recommendation Justification]: StructureDefinition-recommendation-justification.html
 [Recommendation Plan]: StructureDefinition-recommendation-plan.html
+[Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
+[Shareable PlanDefinition]: StructureDefinition-shareableplandefinition.html
+[strengthOfRecommendation]: StructureDefinition-cqf-strengthOfRecommendation.html
 [Study Citation]: StructureDefinition-study-citation.html
 [Study Cohort]: StructureDefinition-study-cohort.html
 [Study Eligibility Criteria]: StructureDefinition-study-eligibility-criteria.html
 [Study Outcome Evidence]: StructureDefinition-study-outcome-evidence.html
-[ArtifactAssessment Publication Status]: StructureDefinition-ceosys-extension-artifact-assessment-publication-status.html
-[ArtifactAssessment Version]: StructureDefinition-ceosys-extension-artifact-assessment-version.html
-[Dosage Condition]: StructureDefinition-ext-dosage-condition.html
-[CEOsys Code System]: CodeSystem-ceosys-code-system.html
-[Clinical Importance of Outcome]: CodeSystem-cs-clinical-importance.html
-[Cochrane Core Ontology]: CodeSystem-cochrane-core-ontology.html
-[Cochrane PICO Ontology]: CodeSystem-cochrane-pico-ontology.html
-[Evidence To Decision Certainty Rating]: CodeSystem-cs-evidence-to-decision-certainty-rating.html
-[Evidence To Decision Certainty type]: CodeSystem-cs-evidence-to-decision-certainty-type.html
-[Guideline Stage Classification]: CodeSystem-cs-guideline-stage-classification.html
-[Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
+[SynthesisType]: CodeSystem-synthesis-type.html
 
 [VS Action Selection Behavior Required]: ValueSet-vs-action-selection-behavior-required.html
 [VS Allergic Disposition SCT]: ValueSet-vs-allergic-disposition-sct.html
+[VS Assessment]: ValueSet-vs-assessment.html
+[VS Assessment Scales]: ValueSet-vs-assessment-scales.html
 [VS Body Positioning SNOMED CT]: ValueSet-vs-body-positioning-snomed.html
+[VS Clinical Importance of Outcome]: ValueSet-vs-rating-clinical-importance.html
 [VS Cochrane PICO]: ValueSet-cochrane-pico.html
 [VS Cochrane PICO Intervention]: ValueSet-cochrane-pico-intervention.html
 [VS Cochrane PICO Outcome]: ValueSet-cochrane-pico-outcome.html
@@ -56,7 +66,6 @@
 [VS Rating Acceptability]: ValueSet-vs-rating-acceptability.html
 [VS Rating Benefit And Harms]: ValueSet-vs-rating-benefit-and-harms.html
 [VS Rating Certainty Of Evidence]: ValueSet-vs-rating-certainty-of-evidence.html
-[VS Clinical Importance of Outcome]: ValueSet-vs-rating-clinical-importance.html
 [VS Rating Concern Degree]: ValueSet-vs-rating-concern-degree.html
 [VS Rating Consensus]: ValueSet-vs-rating-consensus.html
 [VS Rating Equity]: ValueSet-vs-rating-equity.html

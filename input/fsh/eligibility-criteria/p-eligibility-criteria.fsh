@@ -62,4 +62,4 @@ RuleSet: characteristic-definition
   * valueCodeableConcept from $vs-procedures-sct (required)
 * characteristic[assessmentScale].definitionByTypeAndValue
   * type from vs-assessment-scales (required)
-    //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
+    //* value[x] only CodeableConcept or Range or Quantity // 22-07-22 @glichtner: removed due to sushi error

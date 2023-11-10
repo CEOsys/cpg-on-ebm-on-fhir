@@ -6,6 +6,15 @@ The {{site.data.fhir.ig.title}} Implementation Guide is currently under developm
 
 ### History
 
+
+#### Version v0.7.0
+- Changed IG id to ebm-cpg.netzwerk-universitaetsmedizin.de
+- Added characteristics: assessmentScale, painManagement, sedationManagement
+- Added action: assessment
+- Fixed Aliases
+- Updated snomed codes
+- Updated IG texts
+
 #### Version v0.5.0
 
 - Update to FHIR 5.0.0-snapshot3

@@ -51,15 +51,15 @@ Description: "Definition of an activity that is part of an intervention in the c
 * action[ventilatorManagement]
   * code = $sct#410210009 "Ventilator care management (procedure)"
   * goalId 1..* MS
+* action[bodyPositioning]
+  * code = $sct#229824005 "Positioning patient (procedure)"
+  * definitionCanonical only Canonical(BodyPositioningAction)
 * action[sedationManagement]
   * code = $sct#406187008 "Sedation management (procedure)"
   * goalId 1..* MS
 * action[painManagement]
   * code = $sct#278414003 "Pain management (procedure)"
   * goalId 1..* MS
-* action[bodyPositioning]
-  * code = $sct#229824005 "Positioning patient (procedure)"
-  * definitionCanonical only Canonical(BodyPositioningAction)
 * action[assessment]
   * code = $sct#386053000 "Evaluation procedure (procedure)"
   * definitionCanonical only Canonical(AssessmentAction)
