@@ -13,13 +13,13 @@ The categories are defined as slices of the `action` element in the [Recommendat
 
 | Type | .action Slice Name | .goal Slice Name | Action ProfileName |
 | --- | --- | --- | --- |
-| Drug Administration | drugAdministration | <center>❌ *not required* </center> | DrugAdministrationAction |
+| Drug Administration | drugAdministration | <center>❌ *not required* </center> | [Drug Administration Action][Drug Administration Action] |
 | Laboratory Observation | <center> ❌ *not required*<br>⚠️ *this might change* </center> | laboratoryValue | *n/a* |
 | Ventilation Measure/Setting | ventilatorManagement | ventilatorManagement | *n/a* |
-| Body position | bodyPositioning | <center>❌ *not required* </center> | BodyPositioningAction |
+| Body position | bodyPositioning | <center>❌ *not required* </center> | [Body Positioning Action][Body Positioning Action] |
 | Sedation Management | sedationManagement | assessmentScale | n/a |
 | Pain Management | painManagement | assessmentScale | n/a |
-| Assessment | assessment | any | AssessmentAction |
+| Assessment | assessment | any | [Assessment Action][Assessment Action] |
 {:.grid}
 
 #### Examples

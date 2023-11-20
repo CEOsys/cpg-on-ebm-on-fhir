@@ -4,7 +4,7 @@ Parent: RecommendationAction
 Id: assessment-action
 Title: "Assessment Action"
 Description: "Definition of an assessment action."
-* insert metadata(2022-09-06, #draft, 0.3.1)
+* insert metadata(2023-11-20, #draft, 0.3.1)
 * kind = $cs-fhir-types#ServiceRequest "ServiceRequest"
 * code 1..1
 * product[x] 0..0
