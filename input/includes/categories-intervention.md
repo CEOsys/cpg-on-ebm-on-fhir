@@ -116,7 +116,7 @@ Description: "Example of a body positioning action."
 ```C
 // in RecommendationPlan instance
 * action[sedationManagement][+]
-  * code = $sct#406187008 "Sedation management (procedure)"
+  * code = $sct#406187008 "Sedation management (regime/therapy)"
   * goalId[+] = "sedation-management-RASS-0-goal"
 
 * goal[assessmentScale][+]

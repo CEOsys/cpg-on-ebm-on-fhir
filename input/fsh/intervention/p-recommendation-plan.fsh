@@ -55,7 +55,7 @@ Description: "Definition of an activity that is part of an intervention in the c
   * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical only Canonical(BodyPositioningAction)
 * action[sedationManagement]
-  * code = $sct#406187008 "Sedation management (procedure)"
+  * code = $sct#406187008 "Sedation management (regime/therapy)"
   * goalId 1..* MS
 * action[painManagement]
   * code = $sct#278414003 "Pain management (procedure)"
