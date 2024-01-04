@@ -16,3 +16,23 @@ Invariant: selection-behavior-unique-or-no-value
 Description: "If selectionBehavior is present, it must be the same for all actions in the group"
 Expression: "action.selectionBehavior.distinct().count() <= 1"
 Severity: #error
+
+Invariant: no-timing-if-dosage-specified
+Description: "If a dosage is specified, there SHALL be no timing element at the same level (instead the timing element of dosage should be used)"
+Expression: "dosage.exists() implies timing.exists().not()"
+Severity: #error
+
+Invariant: dosage-if-administration-should-be-performed
+Description: "Dosage should be defined if the drug administration should be performed"
+Expression: "(doNotPerform = false) implies dosage.exists()"
+Severity: #error
+
+Invariant: code-xor-repeat
+Description: "Either a code or a repeat structure should be defined, but not both"
+Expression: "code.exists() xor repeat.exists()"
+Severity: #error
+
+Invariant: bounds-or-count
+Description: "Either a bounds or a count/countMax should be defined, but not both"
+Expression: "bounds.exists() xor (count.exists() or countMax.exists())"
+Severity: #error

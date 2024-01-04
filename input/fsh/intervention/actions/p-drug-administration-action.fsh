@@ -8,6 +8,7 @@ Description: "Definition of a drug administration action as part of a recommende
 * obeys dosage-if-administration-should-be-performed
 * kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * code = $sct#432102000 "Administration of substance (procedure)"
+* timing[x] 0..0 // we don't use timing for drug administrations, instead use dosage.timing
 * product[x] only CodeableConcept
 * productCodeableConcept
   * coding ^slicing.discriminator.type = #pattern
@@ -30,11 +31,6 @@ Description: "Definition of a drug administration action as part of a recommende
   * doseAndRate 1..*
 * quantity 0..0 // we don't use quantity, instead use dosage
 * timing[x] 0..0 // we don't use timing, instead use dosage.timing
-
-Invariant: dosage-if-administration-should-be-performed
-Description: "Dosage should be defined if the drug administration should be performed"
-Expression: "(doNotPerform = false) implies dosage.exists()"
-Severity: #warning
 
 Instance: ExampleDrugAdministrationAction
 InstanceOf: drug-administration-action
