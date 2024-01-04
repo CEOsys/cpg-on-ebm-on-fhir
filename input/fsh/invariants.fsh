@@ -29,10 +29,10 @@ Severity: #error
 
 Invariant: code-xor-repeat
 Description: "Either a code or a repeat structure should be defined, but not both"
-Expression: "code.exists() xor repeat.exists()"
+Expression: "code.empty() or repeat.empty()"
 Severity: #error
 
 Invariant: bounds-or-count
 Description: "Either a bounds or a count/countMax should be defined, but not both"
-Expression: "bounds.exists() xor (count.exists() or countMax.exists())"
+Expression: "bounds.empty() or (count.empty() and countMax.empty())"
 Severity: #error
