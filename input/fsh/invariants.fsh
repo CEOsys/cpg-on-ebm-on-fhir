@@ -25,7 +25,7 @@ Severity: #error
 Invariant: dosage-if-administration-should-be-performed
 Description: "Dosage should be defined if the drug administration should be performed"
 Expression: "(doNotPerform = false) implies dosage.exists()"
-Severity: #error
+Severity: #warning // no error, because there are drugs where the dose is not specified, but the effects on some measureable parameter (e.g. agartroban and aPTT)
 
 Invariant: code-xor-repeat
 Description: "Either a code or a repeat structure should be defined, but not both"
