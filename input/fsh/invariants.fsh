@@ -31,8 +31,3 @@ Invariant: code-xor-repeat
 Description: "Either a code or a repeat structure should be defined, but not both"
 Expression: "code.empty() or repeat.empty()"
 Severity: #error
-
-Invariant: bounds-or-count
-Description: "Either a bounds or a count/countMax should be defined, but not both"
-Expression: "bounds.empty() or (count.empty() and countMax.empty())"
-Severity: #error
