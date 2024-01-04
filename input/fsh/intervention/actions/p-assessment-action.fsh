@@ -7,6 +7,7 @@ Description: "Definition of an assessment action."
 * insert metadata(2023-11-20, #draft, 0.3.1)
 * kind = $cs-fhir-types#ServiceRequest "ServiceRequest"
 * code 1..1
+* timingTiming 1..1
 * product[x] 0..0
 * dosage 0..0
 * quantity 0..0
@@ -21,6 +22,11 @@ Description: "Example of an assessment action."
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * description = "Example of an assessment action."
+* timingTiming
+  * repeat
+    * frequency = 1
+    * period = 1
+    * periodUnit = #d "d"
 * status = #active
 * insert canonical-url(example/recommendation-action/assessment-example)
 * code = $sct#406127006 "Pain intensity (observable entity)"
