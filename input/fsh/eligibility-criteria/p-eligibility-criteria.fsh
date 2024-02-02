@@ -12,7 +12,6 @@ Description: "Definition of a population (e.g. for guideline recommendation, cli
   * valueCodeableConcept.coding 1..1 MS
 * characteristic.definitionByCombination
   * insert characteristic-definition
-  * characteristic.definitionByCombination 0..0 // disallow more than one level of nesting
 
 RuleSet: characteristic-definition
 * characteristic 1..* MS
