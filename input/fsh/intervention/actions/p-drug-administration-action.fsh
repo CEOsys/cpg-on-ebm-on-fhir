@@ -27,6 +27,7 @@ Description: "Definition of a drug administration action as part of a recommende
 * dosage 0..1
   * extension contains DosageCondition named condition 0..1 MS
   * route MS
+  * route from $vs-route-codes (required)
   * timing 1..1
   * doseAndRate 1..*
 * quantity 0..0 // we don't use quantity, instead use dosage
