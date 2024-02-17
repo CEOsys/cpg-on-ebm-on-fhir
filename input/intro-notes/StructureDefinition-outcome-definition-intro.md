@@ -3,7 +3,7 @@
 {% assign resource = site.data.structuredefinitions.[id] %}
 
 ### Guidance
-This profile describe the metadata of the outcome for a specific [Recommendation][Recommendation] and references or specifies the (expected) outcomes of the intervention on the population.
+This profile describe the metadata of the outcome for a specific [Recommendation][SD:Recommendation] and references or specifies the (expected) outcomes of the intervention on the population.
 
 | Field | Description |
 | ----- | ----------- |

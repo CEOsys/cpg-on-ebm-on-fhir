@@ -4,7 +4,7 @@
 
 ### Guidance
 
-This profile describe the metadata of the net effect for a specific [Recommendation][Recommendation] and references the [Outcome Definition][Outcome Definition] that are aggregated to yield the net effect.
+This profile describe the metadata of the net effect for a specific [Recommendation][SD:Recommendation] and references the [Outcome Definition][SD:Outcome Definition] that are aggregated to yield the net effect.
 
 For more information on the net effect, see
 [Alper, B. S. et al. Defining certainty of net benefit: a GRADE concept paper. BMJ Open 9, e027445 (2019)](https://bmjopen.bmj.com/content/9/6/e027445.long).
@@ -13,7 +13,7 @@ For more information on the net effect, see
 | ----- | ----------- |
 | `characteristicCombination` | Fixed to `#net-effect`. |
 | `characteristic.type` | Type of outcome . |
-| `characteristic.definition` | Reference to a [Outcome Definition EvidenceVariable resource][Outcome Definition] describing the (expected) outcome. |
+| `characteristic.definition` | Reference to a [Outcome Definition EvidenceVariable resource][SD:Outcome Definition] describing the (expected) outcome. |
 | `characteristic.exclude` | Fixed to `false`. |
 {:.grid}
 

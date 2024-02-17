@@ -1,5 +1,5 @@
 ### Categories
-The following categories are used to describe the population of the patients in the [Eligibility Criteria resources][Eligibility Criteria] ([Recommendation Eligibility Criteria][Recommendation Eligibility Criteria], [Study Eligibility Criteria][Study Eligibility Criteria]).
+The following categories are used to describe the population of the patients in the [Eligibility Criteria resources][SD:Eligibility Criteria] ([Recommendation Eligibility Criteria][SD:Recommendation Eligibility Criteria], [Study Eligibility Criteria][SD:Study Eligibility Criteria]).
 
 The categories are defined as slices of the `characteristic` element in the respective resource.
 

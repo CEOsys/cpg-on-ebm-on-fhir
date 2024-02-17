@@ -4,9 +4,9 @@
 
 ### Guidance
 
-This profile defines a specific recommended plan as part of an intervention recommended by a specific [Recommendation][Recommendation].
+This profile defines a specific recommended plan as part of an intervention recommended by a specific [Recommendation][SD:Recommendation].
 
-The actions to be performed are specified using the [Recommendation Action][Recommendation Action].
+The actions to be performed are specified using the [Recommendation Action][SD:Recommendation Action].
 
 {% include categories-intervention.md %}
 

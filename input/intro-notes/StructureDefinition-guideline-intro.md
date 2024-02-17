@@ -4,7 +4,7 @@
 
 ### Guidance
 
-This profile represents a single clinical practice guideline. It serves as a container for the guideline metadata and the individual [Recommendation resources][Recommendation] that represent the recommendations of the guideline.
+This profile represents a single clinical practice guideline. It serves as a container for the guideline metadata and the individual [Recommendation resources][SD:Recommendation] that represent the recommendations of the guideline.
 
 It thus provides a structured presentation of the whole guideline contents including the guideline metadata.
 
