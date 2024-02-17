@@ -108,6 +108,22 @@ definition:
       system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
     value: https://simplifier.net
   resource:
+  - description: Extension used on PlanDefinition.action to specify a method for combining
+      the actions.
+    isExample: false
+    name: Action Combination Method
+    reference:
+      reference: StructureDefinition/ext-action-combination-method
+  - description: Value set for the method used to combine actions in a PlanDefinition.
+    isExample: false
+    name: Action Combination Method
+    reference:
+      reference: ValueSet/vs-action-combination-method
+  - description: Code system for the combination of actions in a PlanDefinition.
+    isExample: false
+    name: Action Combination Method
+    reference:
+      reference: CodeSystem/cs-action-combination-method
   - description: Action selection behavior with only codes that require at least one
       action to be performed.
     isExample: false
