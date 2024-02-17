@@ -122,6 +122,7 @@ RuleSet: rs-action-slices
   * code = $sct#386053000 "Evaluation procedure (procedure)"
   * definitionCanonical only Canonical(AssessmentAction)
 * action[other]
+  * code = $sct#74964007 "Other (qualifier value)"
   * insert rs-action-code-required
 
 RuleSet: rs-action-combination-slice
