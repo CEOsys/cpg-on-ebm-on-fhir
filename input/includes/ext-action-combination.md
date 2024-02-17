@@ -1,4 +1,4 @@
-### Action Combination
+#### Action Combination
 
 If at least one action is defined, the combination of actions is defined using the [Action Combination Method Extension][SD:Action Combination Method].
 
@@ -6,12 +6,12 @@ To ease the use of the extension, the following rulesets can be used:
 
 | Type | Description | Treshold required | RuleSet |
 |------|-------------|-------------------|---------|
-| exactly | All actions must be performed exactly the number of times specified | Yes | `rs-combination-exactly(threshold)` |
-| at-least | At least the number of times specified | Yes | `rs-combination-at-least(threshold)` |
-| at-most | At most the number of times specified | Yes | `rs-combination-at-most(threshold)` |
-| one-or-more | At least one action must be performed | No | `rs-combination-one-or-more` |
-| all | All actions must be performed | No | `rs-combination-all` |
-| any | Any combination of actions | No | `rs-combination-any` |
+| [`#exactly`][CS:Action Combination Method] | Exactly `threshold` actions out of the combination must be performed | Yes | `rs-combination-exactly(threshold)` |
+| [`#at-least`][CS:Action Combination Method] | At least `threshold` actions out of the combination must be performed | Yes | `rs-combination-at-least(threshold)` |
+| [`#at-most`][CS:Action Combination Method] | At most `threshold` actions out of the combination must be performed | Yes | `rs-combination-at-most(threshold)` |
+| [`#one-or-more`][CS:Action Combination Method] | At least one action must be performed (equivalent to `at-least` with `threshold=1`) | No | `rs-combination-one-or-more` |
+| [`#all`][CS:Action Combination Method] | All actions must be performed | No | `rs-combination-all` |
+| [`#any`][CS:Action Combination Method] | Any combination of actions (but at least one) must be performed (equivalent to `at-least` with `threshold=1`) | No | `rs-combination-any` |
 {:.grid}
 
 #### Aliases
