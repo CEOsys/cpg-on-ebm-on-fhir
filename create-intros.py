@@ -72,16 +72,19 @@ with open(ig_fname, 'r') as f:
     ig = yaml.safe_load(f)
 
 linklist = {}
-linklist_vs = {}
 
 for resource in ig["definition"]["resource"]:
     ref = resource["reference"]["reference"]
+    
+    type_ = ref.split('/')[0]
+
+    link_name = ''.join(filter(str.isupper, type_)) + ':' + resource["name"]
 
     if ref.startswith('ValueSet/'):
-        linklist_vs[resource["name"]] = ref.replace('/', '-') + '.html'
+        linklist[link_name] = ref.replace('/', '-') + '.html'
 
     if ref.startswith('CodeSystem/'):
-        linklist[resource["name"]] = ref.replace('/', '-') + '.html'
+        linklist[link_name] = ref.replace('/', '-') + '.html'
 
     if not ref.startswith('StructureDefinition/') and not ref.startswith('Questionnaire/'):
       continue
@@ -89,11 +92,11 @@ for resource in ig["definition"]["resource"]:
     fname = output_path / (ref.replace('/', '-') + '-intro.md')
 
     if not fname.exists():
-        print(resource["name"])
+        print(link_name)
         with open(fname, 'w') as f:
             f.write(template_md)
 
-    linklist[resource["name"]] = ref.replace('/', '-') + '.html'
+    linklist[link_name] = ref.replace('/', '-') + '.html'
 
 
 if not linklist_fname.parent.exists():
@@ -107,8 +110,8 @@ with open(linklist_fname, 'w') as f:
         if newline:
             f.write("\n")
 
-    write_links(linklist)
-    write_links(linklist_vs, prefix="VS ")
+    for prefix in ['VS:', 'CS:', 'SD:', 'QU:']:
+        write_links({k: v for k, v in linklist.items() if k.startswith(prefix)}, newline=True)
     write_links(linklist_general, newline=False)
 
 print(profiles_fname.name)
@@ -125,7 +128,9 @@ with open(profiles_fname, 'w') as f:
 print(valuesets_fname.name)
 with open(valuesets_fname, "w") as f:
     f.write('### Value Sets\n\n')
-    for name in linklist_vs:
+    for name in linklist:
+        if not name.startswith('VS:'):
+            continue
         f.write(f"{{% include valueset-reference.md name='{name}' %}}\n")
 
 print("Done")
