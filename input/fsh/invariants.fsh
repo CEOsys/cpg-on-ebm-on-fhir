@@ -34,5 +34,5 @@ Severity: #error
 
 Invariant: nested-action-requires-combination-method
 Description: "If a nested action is present, a combination method must be present."
-Expression: "action.exists() implies action.extension[combinationMethod].exists()"
+Expression: "action.exists() implies extension[combinationMethod].exists()"
 Severity: #error
