@@ -16,18 +16,17 @@ Description: "Application of Dexamethasone for ventilated patients only"
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(PopulationCOVID19Ventilated)
+* insert rs-combination-one-or-more
 * action[+]
   * title = "Dexamethasone Application"
   * code = $cs-common-process#guideline-based-care
   * description = "Application of Dexamethasone: 6 mg once per day for 10 days p.o. or i.v. for ventilated COVID-19 patients"
   * definitionCanonical = Canonical(COVID19VentilatedPatientsDexamethasoneApplicationPlan)
-  * selectionBehavior = #exactly-one
 * action[+]
   * title = "No Dexamethasone Application"
   * code = $cs-common-process#guideline-based-care
   * description = "No Dexamethasone Application for non-ventilated COVID-19 patients"
   * definitionCanonical = Canonical(COVID19NonVentilatedPatientsDexamethasoneApplicationPlan)
-  * selectionBehavior = #exactly-one
 * relatedArtifact[recommendationJustification].resourceReference = Reference(DexamethasoneRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(DexamethasoneRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(COVID19IntensiveCareTreatmentGuidelineCitation)
@@ -48,12 +47,11 @@ Description: "Application of Dexamethasone: 6 mg once per day for 10 days p.o. o
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(PopulationCOVID19Ventilated)
 * extension[partOf].valueCanonical = Canonical(COVID19DexamethasoneApplication)
+* insert rs-combination-exactly(1)
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActionOral)
-  * selectionBehavior = #exactly-one
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(DexamethasoneApplicationActionIntravenous)
-  * selectionBehavior = #exactly-one
 
 Instance: COVID19NonVentilatedPatientsDexamethasoneApplicationPlan
 InstanceOf: recommendation-plan
@@ -71,9 +69,9 @@ Description: "No application of Dexamethasone for non-ventilated COVID-19 patien
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(PopulationCOVID19NonVentilated)
 * extension[partOf].valueCanonical = Canonical(COVID19DexamethasoneApplication)
+* insert rs-combination-exactly(1)
 * action[drugAdministration][+]
   * definitionCanonical = Canonical(NoDexamethasoneApplication)
-  * selectionBehavior = #exactly-one
 
 Instance: DexamethasoneRecommendationCitation
 InstanceOf: recommendation-citation

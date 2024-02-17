@@ -31,3 +31,8 @@ Invariant: code-xor-repeat
 Description: "Either a code or a repeat structure should be defined, but not both"
 Expression: "code.empty() or repeat.empty()"
 Severity: #error
+
+Invariant: nested-action-requires-combination-method
+Description: "If a nested action is present, a combination method must be present."
+Expression: "action.action.exists() implies action.extension[combinationMethod].exists()"
+Severity: #error
