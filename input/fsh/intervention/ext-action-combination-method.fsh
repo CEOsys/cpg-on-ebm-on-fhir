@@ -1,4 +1,8 @@
 // Author: Gregor Lichtner @glichtner
+
+// use a fixed URL to make sure it is properly referenced in the the nested-action-requires-combination-method invariant
+Alias: $ext-action-combination-method = https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method
+
 Extension: ActionCombinationMethod
 Id: ext-action-combination-method
 Title: "Action Combination Method"
@@ -7,7 +11,8 @@ Description: "Extension used on PlanDefinition.action to specify a method for co
 * . ^short = "combinationMethod"
 * . ^definition = "Extension used on PlanDefinition.action to specify a method for combining the actions."
 * ^context.type = #fhirpath
-* ^context.expression = "PlanDefinition"
+* ^context.expression = "PlanDefinition | PlanDefinition.action | BackboneElement"
+* ^url = $ext-action-combination-method
 * extension contains method 1..1 and threshold 0..1
 * extension[method] ^short = "Expresses the method for combining the actions"
 * extension[method].value[x] only CodeableConcept
