@@ -10,7 +10,6 @@ The categories are defined as slices of the `action` element in the [Recommendat
 > * `action.code`  **must** be exactly as defined in the example
 > * `goal.category`  **must** be exactly as defined in the example
 
-
 | Type | .action Slice Name | .goal Slice Name | Action ProfileName |
 | --- | --- | --- | --- |
 | Drug Administration | drugAdministration | <center>❌ *not required* </center> | [Drug Administration Action][Drug Administration Action] |
@@ -20,9 +19,21 @@ The categories are defined as slices of the `action` element in the [Recommendat
 | Sedation Management | sedationManagement | assessmentScale | n/a |
 | Pain Management | painManagement | assessmentScale | n/a |
 | Assessment | assessment | any | [Assessment Action][Assessment Action] |
+| Any other / Custom | other | <center>❌ *not required* </center> | *n/a* |
 {:.grid}
 
-#### Examples
+For nested actions, you must use the `combination` slice of the `action` element in the [Recommendation Plan resource][Recommendation Plan].
+
+| Type | .action Slice Name | .goal Slice Name | Action ProfileName |
+| --- | --- | --- | --- |
+| Nested Actions | combination | <center>*n/a*</center> | <center>*n/a*</center> |
+{:.grid}
+
+### Combinations
+
+{% include ext-action-combination.md %}
+
+### Examples
 
 ##### Drug Administration
 ```C

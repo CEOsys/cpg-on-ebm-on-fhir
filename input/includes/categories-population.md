@@ -18,7 +18,7 @@ The categories are defined as slices of the `characteristic` element in the resp
 | Ventilation | ventilationObservableSNOMED | from vs-ventilation-observable-sct (preferred)SCT *is-a* [364698001 "Ventilator observable (observable entity)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=364698001&edition=MAIN/2022-04-30&release=&languages=en) | ❌ | ✔️ |
 | Ventilation | ventilationObservableLOINC | from [MII\_Code\_Observation\_Beatmung\_LOINC](https://simplifier.net/medizininformatikinitiative-modul-intensivmedizin/valueset-code-observation-beatmung-loinc) | ❌ | ✔️ |
 | Procedure | procedure | SCT [71388002 "Procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=71388002&edition=MAIN/2022-05-31&release=&languages=en)" | from `<http://hl7.org/fhir/ValueSet/procedure-code>` | ❌ |
-| Assessment Scale | assessmentScale | from [vs-assessment-scales][VS Assessment Scales] | ✔️  | ✔️ |
+| Assessment Scale | assessmentScale | from [vs-assessment-scales][VS:Assessment Scales] | ✔️  | ✔️ |
 {:.grid}
 
 #### Examples

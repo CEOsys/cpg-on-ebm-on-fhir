@@ -25,6 +25,9 @@
 {% include valueset-reference.md name='Body Positioning SNOMED CT' %}
 {% include valueset-reference.md name='Substances SNOMED CT' %}
 {% include valueset-reference.md name='Action Selection Behavior Required' %}
+{% include valueset-reference.md name='Action Combination Method' %}
+{% include valueset-reference.md name='Assessment' %}
+{% include valueset-reference.md name='Assessment Scales' %}
 
 ### Cochrane PICO ontology
 {% include valueset-reference.md name='Cochrane PICO' %}
