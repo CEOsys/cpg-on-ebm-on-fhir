@@ -25,44 +25,8 @@ Description: "Definition of an activity that is part of an intervention in the c
   * valueCanonical 1..1 MS
   * valueCanonical only Canonical(Recommendation)
 * action 1..*
-* action ^slicing.discriminator.type = #pattern
-* action ^slicing.discriminator.path = "code"
-* action ^slicing.rules = #open
-* action contains
-    drugAdministration 0..* and
-    ventilatorManagement 0..* and
-    bodyPositioning 0..* and
-    sedationManagement 0..* and
-    painManagement 0..* and
-    assessment 0..*
-  * code 1..1 MS
-    * coding 1..*
-      * system 1..
-      * code 1..
-  * goalId
-    * obeys goal-must-be-linked
-  * definition[x] 0..1 MS
-  * definition[x] only canonical
-  * definitionCanonical only Canonical(RecommendationAction)
-  * selectionBehavior from vs-action-selection-behavior-required (required)
-* action[drugAdministration]
-  * code = $sct#432102000 "Administration of substance (procedure)"
-  * definitionCanonical only Canonical(DrugAdministrationAction)
-* action[ventilatorManagement]
-  * code = $sct#410210009 "Ventilator care management (procedure)"
-  * goalId 1..* MS
-* action[bodyPositioning]
-  * code = $sct#229824005 "Positioning patient (procedure)"
-  * definitionCanonical only Canonical(BodyPositioningAction)
-* action[sedationManagement]
-  * code = $sct#406187008 "Sedation management (regime/therapy)"
-  * goalId 1..* MS
-* action[painManagement]
-  * code = $sct#278414003 "Pain management (procedure)"
-  * goalId 1..* MS
-* action[assessment]
-  * code = $sct#386053000 "Evaluation procedure (procedure)"
-  * definitionCanonical only Canonical(AssessmentAction)
+* insert rs-action-slices
+* insert rs-action-combination-slice
 * goal 0..* MS
   * category 1..1 MS
     * coding 1..*
@@ -102,6 +66,70 @@ Description: "Definition of an activity that is part of an intervention in the c
     * measure from vs-assessment-scales
     * detail[x] 1..1 MS
 
+RuleSet: rs-action-code-required
+* code 1..1 MS
+  * coding 1..*
+    * system 1..
+    * code 1..
+* goalId
+  * obeys goal-must-be-linked
+* definition[x] 0..1 MS
+* definition[x] only canonical
+* definitionCanonical only Canonical(RecommendationAction)
+
+RuleSet: rs-action-slices
+* insert rs-action-combination-method
+* action ^slicing.discriminator.type = #pattern
+* action ^slicing.discriminator.path = "code"
+* action ^slicing.rules = #closed
+* action contains
+    combination 0..* and
+    drugAdministration 0..* and
+    ventilatorManagement 0..* and
+    bodyPositioning 0..* and
+    sedationManagement 0..* and
+    painManagement 0..* and
+    assessment 0..* and
+    other 0..*
+    //* selectionBehavior from vs-action-selection-behavior-required (required)
+* action[combination]
+  * code 0..0
+  * goalId 0..0
+  * definition[x] 0..0
+  * action 1..* MS
+* action[drugAdministration]
+  * insert rs-action-code-required
+  * code = $sct#432102000 "Administration of substance (procedure)"
+  * definitionCanonical only Canonical(DrugAdministrationAction)
+* action[ventilatorManagement]
+  * insert rs-action-code-required
+  * code = $sct#410210009 "Ventilator care management (procedure)"
+  * goalId 1..* MS
+* action[bodyPositioning]
+  * insert rs-action-code-required
+  * code = $sct#229824005 "Positioning patient (procedure)"
+  * definitionCanonical only Canonical(BodyPositioningAction)
+* action[sedationManagement]
+  * insert rs-action-code-required
+  * code = $sct#406187008 "Sedation management (regime/therapy)"
+  * goalId 1..* MS
+* action[painManagement]
+  * insert rs-action-code-required
+  * code = $sct#278414003 "Pain management (procedure)"
+  * goalId 1..* MS
+* action[assessment]
+  * insert rs-action-code-required
+  * code = $sct#386053000 "Evaluation procedure (procedure)"
+  * definitionCanonical only Canonical(AssessmentAction)
+* action[other]
+  * code = $sct#74964007 "Other (qualifier value)"
+  * insert rs-action-code-required
+
+RuleSet: rs-action-combination-slice
+// can't use this directly in rs-action-slices because sushi complains about circular references
+* action[combination]
+  * insert rs-action-slices
+
 Invariant: goal-must-be-linked
 Description: "The goal linked by goalId is not defined"
 Expression: "$this in %resource.goal.id"
@@ -123,18 +151,22 @@ Description: "An active recommendation plan."
 * publisher = "CPGonEBMonFHIR"
 * subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
 * extension[partOf].valueCanonical = Canonical(ExampleRecommendation)
+* insert rs-combination-exactly(1)
 * action[drugAdministration][+]
   * code = $sct#432102000 "Administration of substance (procedure)"
   * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
-  * selectionBehavior = #exactly-one
 * action[bodyPositioning][+]
   * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical = Canonical(ExampleBodyPositioningAction)
   * goalId[+] = "ventilator-management-goal"
-  * selectionBehavior = #exactly-one
 * action[ventilatorManagement][+]
   * code = $sct#410210009 "Ventilator care management (procedure)"
   * goalId[+] = "ventilator-management-goal"
+* action[combination][+]
+  * insert rs-combination-one-or-more
+  * action[ventilatorManagement][+]
+    * code = $sct#410210009 "Ventilator care management (procedure)"
+    * goalId[+] = "ventilator-management-goal"
 * goal[ventilatorManagement][+]
   * category = $sct#385857005 "Ventilator care and adjustment (regime/therapy)"
   * id = "ventilator-management-goal"

@@ -4,7 +4,7 @@
 
 ### Guidance
 
-This resource is used to define the eligibility criteria for a specific [Recommendation Plan][Recommendation Plan].
+This resource is used to define the eligibility criteria for a specific [Recommendation Plan][SD:Recommendation Plan].
 
 {% include categories-population.md %}
 

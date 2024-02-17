@@ -12,13 +12,16 @@ Description: "A recommendation as part of a clinical practice guideline."
 * extension[knowledgeRepresentationLevel] 1..1
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
+* insert rs-action-combination-method
 * action
   * definitionCanonical 1..1
   * definition[x] only canonical
   * definitionCanonical only Canonical(RecommendationPlan)
   * selectionBehavior 1..1 MS
+  * selectionBehavior = $cs-action-selection-behavior#one-or-more
   * code 1..1 MS
 * insert recommendation-related-artifacts
+
 
 Instance: ExampleRecommendation
 InstanceOf: recommendation
@@ -34,18 +37,17 @@ Description: "Recommendation"
 * insert canonical-url(example/recommendation-plan/example-recommendation)
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
+* insert rs-combination-at-least(2)
 * action[+]
   * title = "example recommendation"
   * code = $cs-common-process#guideline-based-care
   * description = "Example recommendation"
   * definitionCanonical = Canonical(ExampleRecommendationPlan)
-  * selectionBehavior = #all
 * action[+]
   * title = "example recommendation"
   * code = $cs-common-process#guideline-based-care
   * description = "Example recommendation"
   * definitionCanonical = Canonical(ExampleRecommendationPlan)
-  * selectionBehavior = #all
 * relatedArtifact[recommendationJustification].resourceReference = Reference(ExampleRecommendationJustification)
 * relatedArtifact[recommendationCitation].resourceReference = Reference(ExampleRecommendationCitation)
 * relatedArtifact[guidelineCitation].resourceReference = Reference(ExampleGuidelineCitation)

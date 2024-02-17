@@ -1,8 +1,8 @@
 ### Categories
 
-The following categories are used to describe the intervention action in the [Recommendation Plan resource][Recommendation Plan].
+The following categories are used to describe the intervention action in the [Recommendation Plan profile][SD:Recommendation Plan].
 
-The categories are defined as slices of the `action` element in the [Recommendation Plan resource][Recommendation Plan].
+The categories are defined as slices of the `action` element in the [Recommendation Plan profile][SD:Recommendation Plan].
 
 > Fixed Codes:
 >
@@ -10,19 +10,30 @@ The categories are defined as slices of the `action` element in the [Recommendat
 > * `action.code`  **must** be exactly as defined in the example
 > * `goal.category`  **must** be exactly as defined in the example
 
+| Type | .action Slice Name | .goal Slice Name | Action ProfileName |
+| --- | --- | --- | --- |
+| Drug Administration | drugAdministration | <center>❌ *not required* </center> | [Drug Administration Action][SD:Drug Administration Action] |
+| Laboratory Observation | <center> ❌ *not required*<br>⚠️ *this might change* </center> | laboratoryValue | *n/a* |
+| Ventilation Measure/Setting | ventilatorManagement | ventilatorManagement | *n/a* |
+| Body position | bodyPositioning | <center>❌ *not required* </center> | [Body Positioning Action][SD:Body Positioning Action] |
+| Sedation Management | sedationManagement | assessmentScale | n/a |
+| Pain Management | painManagement | assessmentScale | n/a |
+| Assessment | assessment | any | [Assessment Action][SD:Assessment Action] |
+| Any other / Custom | other | <center>❌ *not required* </center> | *n/a* |
+{:.grid}
+
+For nested actions, you must use the `combination` slice of the `action` element in the [Recommendation Plan profile][SD:Recommendation Plan].
 
 | Type | .action Slice Name | .goal Slice Name | Action ProfileName |
 | --- | --- | --- | --- |
-| Drug Administration | drugAdministration | <center>❌ *not required* </center> | [Drug Administration Action][Drug Administration Action] |
-| Laboratory Observation | <center> ❌ *not required*<br>⚠️ *this might change* </center> | laboratoryValue | *n/a* |
-| Ventilation Measure/Setting | ventilatorManagement | ventilatorManagement | *n/a* |
-| Body position | bodyPositioning | <center>❌ *not required* </center> | [Body Positioning Action][Body Positioning Action] |
-| Sedation Management | sedationManagement | assessmentScale | n/a |
-| Pain Management | painManagement | assessmentScale | n/a |
-| Assessment | assessment | any | [Assessment Action][Assessment Action] |
+| Nested Actions | combination | <center>*n/a*</center> | <center>*n/a*</center> |
 {:.grid}
 
-#### Examples
+### Combinations
+
+{% include ext-action-combination.md %}
+
+### Examples
 
 ##### Drug Administration
 ```C

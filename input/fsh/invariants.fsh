@@ -31,3 +31,8 @@ Invariant: code-xor-repeat
 Description: "Either a code or a repeat structure should be defined, but not both"
 Expression: "code.empty() or repeat.empty()"
 Severity: #error
+
+Invariant: nested-action-requires-combination-method
+Description: "If a nested action is present, a combination method must be present."
+Expression: "action.exists() implies extension('https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method').exists()"
+Severity: #error
