@@ -14,6 +14,12 @@ To ease the use of the extension, the following rulesets can be used:
 | any | Any combination of actions | No | `rs-combination-any` |
 {:.grid}
 
+#### Aliases
+
+```C
+Alias: $combinationMethod = https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method
+Alias: $cs-action-combination-method = https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method
+```
 
 #### Exactly
 
