@@ -4,6 +4,7 @@
 
 ### Guidance
 
+{% include ext-action-combination.md %}
 
 
 {% capture resource_inheritance %}
