@@ -66,11 +66,7 @@ Description: "Definition of an activity that is part of an intervention in the c
     * measure from vs-assessment-scales
     * detail[x] 1..1 MS
 
-RuleSet: rs-action-code-required
-* code 1..1 MS
-  * coding 1..*
-    * system 1..
-    * code 1..
+RuleSet: rs-action-goal-definition-binding
 * goalId
   * obeys goal-must-be-linked
 * definition[x] 0..1 MS
@@ -92,38 +88,43 @@ RuleSet: rs-action-slices
     assessment 0..* and
     other 0..*
     //* selectionBehavior from vs-action-selection-behavior-required (required)
+* action
+  * code 1..1 MS
+    * coding 1..*
+      * system 1..
+      * code 1..
 * action[combination]
-  * code 0..0
+  * code = $sct#89780004 "Combined (qualifier value)"
   * goalId 0..0
   * definition[x] 0..0
   * action 1..* MS
 * action[drugAdministration]
-  * insert rs-action-code-required
+  * insert rs-action-goal-definition-binding
   * code = $sct#432102000 "Administration of substance (procedure)"
   * definitionCanonical only Canonical(DrugAdministrationAction)
 * action[ventilatorManagement]
-  * insert rs-action-code-required
+  * insert rs-action-goal-definition-binding
   * code = $sct#410210009 "Ventilator care management (procedure)"
   * goalId 1..* MS
 * action[bodyPositioning]
-  * insert rs-action-code-required
+  * insert rs-action-goal-definition-binding
   * code = $sct#229824005 "Positioning patient (procedure)"
   * definitionCanonical only Canonical(BodyPositioningAction)
 * action[sedationManagement]
-  * insert rs-action-code-required
+  * insert rs-action-goal-definition-binding
   * code = $sct#406187008 "Sedation management (regime/therapy)"
   * goalId 1..* MS
 * action[painManagement]
-  * insert rs-action-code-required
+  * insert rs-action-goal-definition-binding
   * code = $sct#278414003 "Pain management (procedure)"
   * goalId 1..* MS
 * action[assessment]
-  * insert rs-action-code-required
+  * insert rs-action-goal-definition-binding
   * code = $sct#386053000 "Evaluation procedure (procedure)"
   * definitionCanonical only Canonical(AssessmentAction)
 * action[other]
   * code = $sct#74964007 "Other (qualifier value)"
-  * insert rs-action-code-required
+  * insert rs-action-goal-definition-binding
 
 RuleSet: rs-action-combination-slice
 // can't use this directly in rs-action-slices because sushi complains about circular references
