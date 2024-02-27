@@ -24,7 +24,7 @@ Description: "Definition of a drug administration action as part of a recommende
   * insert code-system-pattern(atc, $atc)
   * insert code-system-pattern(rxnorm, $rxnorm)
   * insert code-system-pattern(atcde, $atcde)
-* dosage 0..1
+* dosage 0..*
   * extension contains DosageCondition named condition 0..1 MS
   * route MS
   * route from $vs-route-codes (required)
