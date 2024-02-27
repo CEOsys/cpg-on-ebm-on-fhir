@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActivityDefinition xmlns="http://hl7.org/fhir">
+  <id value="ExampleDrugAdministrationAction"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ActivityDefinition</b><a name="ExampleDrugAdministrationAction"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ActivityDefinition &quot;ExampleDrugAdministrationAction&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-drug-administration-action.html">Drug Administration Action</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-action/drug-administration-example</code></p><p><b>version</b>: 1.0</p><p><b>name</b>: DrugAdministrationAction</p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: Patient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R5/codesystem-fhir-types.html">All FHIR Types</a>#Patient)</span></p><p><b>date</b>: 2024-02-27 18:20:47+0000</p><p><b>publisher</b>: CPGonEBMonFHIR</p><p><b>description</b>: A drug administration that should be performed.</p><p><b>kind</b>: MedicationRequest</p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>product</b>: Dexamethasone (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#372584003; atc#C05AA09 &quot;Dexamethason&quot;)</span></p><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: ?-70</p></blockquote><p><b>timing</b>: Count 10 times, Duration 10days, Once per 1 days</p><p><b>route</b>: Oral route <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#26643006)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-action/drug-administration-example"/>
+  <version value="1.0"/>
+  <name value="DrugAdministrationAction"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <subjectCodeableConcept>
+    <coding>
+      <system value="http://hl7.org/fhir/fhir-types"/>
+      <code value="Patient"/>
+    </coding>
+  </subjectCodeableConcept>
+  <date value="2024-02-27T18:20:47+00:00"/>
+  <publisher value="CPGonEBMonFHIR"/>
+  <description value="A drug administration that should be performed."/>
+  <kind value="MedicationRequest"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="432102000"/>
+      <display value="Administration of substance (procedure)"/>
+    </coding>
+  </code>
+  <productCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="372584003"/>
+      <display value="Dexamethasone (substance)"/>
+    </coding>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <code value="C05AA09"/>
+      <display value="Dexamethason"/>
+    </coding>
+  </productCodeableConcept>
+  <dosage>
+    <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition">
+      <extension url="type">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="29463-7"/>
+            <display value="Body weight"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="value">
+        <valueRange>
+          <high>
+            <value value="70"/>
+            <unit value="kg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="kg"/>
+          </high>
+        </valueRange>
+      </extension>
+    </extension>
+    <timing>
+      <repeat>
+        <count value="10"/>
+        <duration value="10"/>
+        <durationUnit value="d"/>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral route"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="6"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+      <rateQuantity>
+        <value value="1"/>
+        <unit value="/d"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="/d"/>
+      </rateQuantity>
+    </doseAndRate>
+  </dosage>
+</ActivityDefinition>

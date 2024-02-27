@@ -1,0 +1,48 @@
+{
+  "resourceType" : "Citation",
+  "id" : "SystemicCorticosteroidsForTheTreatmentOfCOVID19",
+  "meta" : {
+    "profile" : ["https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/study-citation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Citation</b><a name=\"SystemicCorticosteroidsForTheTreatmentOfCOVID19\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Citation &quot;SystemicCorticosteroidsForTheTreatmentOfCOVID19&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-study-citation.html\">Study Citation</a></p></div><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19</code></p><p><b>name</b>: SystemicCorticosteroidsForTheTreatmentOfCOVID19</p><p><b>status</b>: active</p><p><b>date</b>: 2024-02-27 18:20:47+0000</p><blockquote><p><b>citedArtifact</b></p><p><b>identifier</b>: <code>https://pubmed.ncbi.nlm.nih.gov</code>/34396514, <code>https://doi.org</code>/10.1002/14651858.CD014963, <code>https://www.ncbi.nlm.nih.gov/pmc/</code>/PMC8406706</p><h3>Titles</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td>Systemic corticosteroids for the treatment of COVID-19</td></tr></table><h3>Classifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Classifier</b></td></tr><tr><td style=\"display: none\">*</td><td>Publication Type <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-cited-artifact-classification-type.html\">Cited Artifact Classification Type</a>#publication-type)</span></td><td>Journal Article <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-citation-artifact-classifier.html\">Citation Artifact Classifier</a>#D016428)</span></td></tr></table></blockquote></div>"
+  },
+  "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/Citation/SystemicCorticosteroidsForTheTreatmentOfCOVID19",
+  "name" : "SystemicCorticosteroidsForTheTreatmentOfCOVID19",
+  "status" : "active",
+  "date" : "2024-02-27T18:20:47+00:00",
+  "citedArtifact" : {
+    "identifier" : [{
+      "system" : "https://pubmed.ncbi.nlm.nih.gov",
+      "value" : "34396514"
+    },
+    {
+      "system" : "https://doi.org",
+      "value" : "10.1002/14651858.CD014963"
+    },
+    {
+      "system" : "https://www.ncbi.nlm.nih.gov/pmc/",
+      "value" : "PMC8406706"
+    }],
+    "title" : [{
+      "text" : "Systemic corticosteroids for the treatment of COVID-19"
+    }],
+    "classification" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/cited-artifact-classification-type",
+          "code" : "publication-type",
+          "display" : "Publication Type"
+        }]
+      },
+      "classifier" : [{
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/citation-artifact-classifier",
+          "code" : "D016428",
+          "display" : "Journal Article"
+        }]
+      }]
+    }]
+  }
+}
