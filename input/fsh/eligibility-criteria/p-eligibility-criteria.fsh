@@ -61,7 +61,7 @@ RuleSet: characteristic-definition
   //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
   * valueCodeableConcept from $vs-procedures-sct (required)
 * characteristic[assessmentScale].definitionByTypeAndValue
-  * type from vs-assessment-scales (extensible)
+  * type from vs-assessment-scales (required)
     //* value[x] only CodeableConcept or Range or Quantity // 22-07-22 @glichtner: removed due to sushi error
 * characteristic[device].definitionByTypeAndValue
   * type = $sct#49062001 "Device (physical object)"
