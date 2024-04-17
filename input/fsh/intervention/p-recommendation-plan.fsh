@@ -39,7 +39,8 @@ Description: "Definition of an activity that is part of an intervention in the c
 * goal contains
     ventilatorManagement 0..* and
     laboratoryValue 0..* and
-    assessmentScale 0..*
+    assessmentScale 0..* and
+    other 0..*
 * goal[ventilatorManagement]
   * category = $sct#385857005 "Ventilator care and adjustment (regime/therapy)"
   * target 1..*
@@ -65,6 +66,16 @@ Description: "Definition of an activity that is part of an intervention in the c
     * measure 1..1 MS
     * measure from vs-assessment-scales
     * detail[x] 1..1 MS
+* goal[other]
+  * category 1..1
+    * coding 1..*
+      * system 1..
+      * code 1..
+  * category = $sct#74964007 "Other (qualifier value)"
+  * target 1..*
+    * measure 1..1 MS
+    * detail[x] 1..1 MS
+
 
 RuleSet: rs-action-goal-definition-binding
 * goalId
