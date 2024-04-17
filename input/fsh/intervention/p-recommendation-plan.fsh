@@ -64,7 +64,7 @@ Description: "Definition of an activity that is part of an intervention in the c
   * category = $sct#273249006 "Assessment scales (assessment scale)"
   * target 1..*
     * measure 1..1 MS
-    * measure from vs-assessment-scales
+    * measure from vs-assessment-scales (extensible)
     * detail[x] 1..1 MS
 * goal[other]
   * category 1..1
