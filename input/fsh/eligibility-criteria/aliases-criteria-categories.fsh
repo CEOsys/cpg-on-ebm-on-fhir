@@ -8,5 +8,6 @@ Alias: $vs-ventilation-observable-loinc = https://medizininformatik-initiative.d
 Alias: $vs-ventilation-observable-sct = vs-ventilation-observable-sct
 Alias: $vs-laboratory-observation-loinc = vs-laboratory-observations
 Alias: $vs-procedures-sct = http://hl7.org/fhir/ValueSet/procedure-code
+Alias: $vs-devices = http://hl7.org/fhir/ValueSet/device-type
 
 Alias: $cs-kontaktart-de = http://fhir.de/CodeSystem/kontaktart-de

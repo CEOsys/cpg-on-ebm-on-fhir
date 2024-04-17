@@ -27,7 +27,8 @@ RuleSet: characteristic-definition
   ventilationObservableSCT 0..* and
   ventilationObservableLOINC 0..* and
   procedure 0..* and
-  assessmentScale 0..*
+  assessmentScale 0..* and
+  device 0..*
 * characteristic.definitionByTypeAndValue
   * value[x] only Quantity or Range or CodeableConcept // 22-11-02 @glichtner: required, otherwise "* valueCodeableConcept.coding 1..1 MS" leads to FHIR validator error
 * characteristic[condition].definitionByTypeAndValue
@@ -62,3 +63,7 @@ RuleSet: characteristic-definition
 * characteristic[assessmentScale].definitionByTypeAndValue
   * type from vs-assessment-scales (required)
     //* value[x] only CodeableConcept or Range or Quantity // 22-07-22 @glichtner: removed due to sushi error
+* characteristic[device].definitionByTypeAndValue
+  * type = $sct#49062001 "Device (physical object)"
+  //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
+  * valueCodeableConcept from $vs-devices (required)
