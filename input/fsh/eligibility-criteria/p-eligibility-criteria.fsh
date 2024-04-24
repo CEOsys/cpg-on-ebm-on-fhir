@@ -28,7 +28,8 @@ RuleSet: characteristic-definition
   ventilationObservableLOINC 0..* and
   procedure 0..* and
   assessmentScale 0..* and
-  device 0..*
+  device 0..* and 
+  other 0..*
 * characteristic.definitionByTypeAndValue
   * value[x] only Quantity or Range or CodeableConcept // 22-11-02 @glichtner: required, otherwise "* valueCodeableConcept.coding 1..1 MS" leads to FHIR validator error
 * characteristic[condition].definitionByTypeAndValue
