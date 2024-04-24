@@ -16,5 +16,14 @@ Description: "Example of a population element of a PICO construct that evidence 
 * insert canonical-url(example/recommendation-eligibility-criteria)
 * status = #active
 * name = "PopulationExample"
-* characteristic[condition].definitionByTypeAndValue
+* characteristic[other][+]
+  * definitionByTypeAndValue
+    * type = $sct#424144002 "Current chronological age (observable entity)" // alternatively #age from http://terminology.hl7.org/CodeSystem/usage-context-type
+    * valueRange
+      * low
+        * value = 18
+        * unit = "years"
+        * system = "http://unitsofmeasure.org"
+        * code = #a
+* characteristic[condition][+].definitionByTypeAndValue
   * valueCodeableConcept = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
