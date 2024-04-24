@@ -10,15 +10,17 @@ The categories are defined as slices of the `characteristic` element in the resp
 
 | Type | Slice Name | typeCodeableConcept | valueCodeableConcept | valueQuantity/valueRange |
 | --- | --- | --- | --- | :---: |
-| Condition | condition | SCT [404684003 "Clinical finding (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=404684003&edition=MAIN/2022-04-30&release=&languages=en)" | from <http://hl7.org/fhir/ValueSet/clinical-findings> | ❌ |
-| Allergy | allergy | SCT [609328004 "Allergic disposition (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=609328004&edition=MAIN/2022-04-30&release=&languages=en)" | SCT *is-a* [609328004 "Allergic disposition (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=609328004&edition=MAIN/2022-04-30&release=&languages=en)" | ❌ |
-| Radiology Finding | radiologyFinding | SCT [118247008 "Radiologic finding (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=118247008&edition=MAIN/2022-04-30&release=&languages=en)" | SCT *is-a* [118247008 "Radiologic finding (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=118247008&edition=MAIN/2022-04-30&release=&languages=en)" | ❌ |
-| Episode of Care | episodeOfCare | LOINC [78030-4 "Episode of care Type](https://loinc.org/78030-4/)" | from `<http://fhir.de/CodeSystem/kontaktart-de>` | ❌ |
+| Condition | condition | SCT [404684003 "Clinical finding (finding)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=404684003&edition=MAIN/2022-04-30&release=&languages=en)" | from <http://hl7.org/fhir/ValueSet/clinical-findings> | ❌ |
+| Allergy | allergy | SCT [609328004 "Allergic disposition (finding)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=609328004&edition=MAIN/2022-04-30&release=&languages=en)" | SCT *is-a* [609328004 "Allergic disposition (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=609328004&edition=MAIN/2022-04-30&release=&languages=en)" | ❌ |
+| Radiology Finding | radiologyFinding | SCT [118247008 "Radiologic finding (finding)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=118247008&edition=MAIN/2022-04-30&release=&languages=en)" | SCT *is-a* [118247008 "Radiologic finding (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=118247008&edition=MAIN/2022-04-30&release=&languages=en)" | ❌ |
+| Episode of Care | episodeOfCare | LOINC [78030-4 "Episode of care Type"](https://loinc.org/78030-4/)" | from `<http://fhir.de/CodeSystem/kontaktart-de>` | ❌ |
 | Lab Value | laboratory | from <http://loinc.org/vs/top-2000-lab-observations-si> | ❌ | ✔️ |
 | Ventilation | ventilationObservableSNOMED | from vs-ventilation-observable-sct (preferred)SCT *is-a* [364698001 "Ventilator observable (observable entity)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=364698001&edition=MAIN/2022-04-30&release=&languages=en) | ❌ | ✔️ |
 | Ventilation | ventilationObservableLOINC | from [MII\_Code\_Observation\_Beatmung\_LOINC](https://simplifier.net/medizininformatikinitiative-modul-intensivmedizin/valueset-code-observation-beatmung-loinc) | ❌ | ✔️ |
-| Procedure | procedure | SCT [71388002 "Procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=71388002&edition=MAIN/2022-05-31&release=&languages=en)" | from `<http://hl7.org/fhir/ValueSet/procedure-code>` | ❌ |
+| Procedure | procedure | SCT [71388002 "Procedure (procedure)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=71388002&edition=MAIN/2022-05-31&release=&languages=en)" | from `<http://hl7.org/fhir/ValueSet/procedure-code>` | ❌ |
 | Assessment Scale | assessmentScale | from [vs-assessment-scales][VS:Assessment Scales] | ✔️  | ✔️ |
+| Device | device | SCT [49062001 "Device (physical object)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=49062001&edition=MAIN/2022-04-30&release=&languages=en)"  | ✔️  | ❌ |
+| Other  (uncategorized) | other | any | ✔️ | ✔️ |
 {:.grid}
 
 #### Examples
