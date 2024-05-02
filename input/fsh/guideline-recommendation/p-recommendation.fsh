@@ -13,14 +13,12 @@ Description: "A recommendation as part of a clinical practice guideline."
   * valueCode 1..1
   * valueCode = $cs-cpg-knowledgeRepresentationLevel#structured "Structured"
 * insert rs-action-combination-method
+* insert recommendation-related-artifacts
 * action
   * definitionCanonical 1..1
   * definition[x] only canonical
   * definitionCanonical only Canonical(RecommendationPlan)
-  * selectionBehavior 1..1 MS
-  * selectionBehavior = $cs-action-selection-behavior#one-or-more
   * code 1..1 MS
-* insert recommendation-related-artifacts
 
 
 Instance: ExampleRecommendation
