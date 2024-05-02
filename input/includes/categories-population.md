@@ -19,6 +19,7 @@ The categories are defined as slices of the `characteristic` element in the resp
 | Ventilation | ventilationObservableLOINC | from [MII\_Code\_Observation\_Beatmung\_LOINC](https://simplifier.net/medizininformatikinitiative-modul-intensivmedizin/valueset-code-observation-beatmung-loinc) | ❌ | ✔️ |
 | Procedure | procedure | SCT [71388002 "Procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=71388002&edition=MAIN/2022-05-31&release=&languages=en)" | from `<http://hl7.org/fhir/ValueSet/procedure-code>` | ❌ |
 | Assessment Scale | assessmentScale | from [vs-assessment-scales][VS:Assessment Scales] | ✔️  | ✔️ |
+| Device | device | SCT [49062001 "Device (physical object)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=49062001&edition=MAIN/2022-04-30&release=&languages=en)"  | ✔️  | ❌ |
 {:.grid}
 
 #### Examples
