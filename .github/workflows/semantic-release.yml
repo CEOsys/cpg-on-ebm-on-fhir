@@ -1,0 +1,231 @@
+name: Release Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-release:
+    runs-on: ubuntu-latest
+    concurrency: check-release
+    permissions:
+      id-token: write
+      contents: write
+
+    outputs:
+      new_release_published: ${{ steps.semantic_release_version.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic_release_version.outputs.new_release_version }}
+      prerelease: ${{ steps.check-prerelease.outputs.prerelease }}
+      
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: |
+          sudo snap install yq
+          npm install @semantic-release/changelog @semantic-release/github
+
+      - name: Semantic Release (Determine new version)
+        id: semantic_release_version
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/github
+          dry_run: true
+          ci: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Output new release version
+        run: |
+          echo Version: ${{ steps.semantic_release_version.outputs.new_release_version }}
+          echo new_release_published: ${{ steps.semantic_release_version.outputs.new_release_published }}
+
+      - name: Check pre-release
+        id: check-prerelease
+        run: |
+          if [[ "${{ steps.semantic_release_version.outputs.new_release_version }}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "prerelease=false" >> $GITHUB_OUTPUT
+          else
+            echo "prerelease=true" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+      - name: Echo Prelease
+        run: |
+          echo pre-release: ${{ steps.check-prerelease.outputs.prerelease }}
+
+  perform-release:
+    needs: check-release
+    if: needs.check-release.outputs.new_release_published == 'true'
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: write
+
+    outputs:
+      new_release_published: ${{ steps.semantic_release.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic_release.outputs.new_release_version }}
+      new_release_git_tag: ${{ steps.semantic_release.outputs.new_release_git_tag }}
+      prerelease: ${{ needs.check-release.outputs.prerelease }}
+      ig_canonical: ${{ steps.yaml-data.outputs.canonical }}
+      ig_id: ${{ steps.yaml-data.outputs.id }}
+      ig_asset_filename: ${{ steps.generate-asset-filename.outputs.ig_asset_filename }}
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: |
+          sudo snap install yq
+          npm install @semantic-release/changelog @semantic-release/github
+
+      - name: Update sushi-config.yaml with new version
+        run: |
+          yq eval '.version = "${{ needs.check-release.outputs.new_release_version }}"' -i sushi-config.yaml
+
+      # read id, version and canonical from sushi-config.yaml
+      - name: Read YAML file
+        id: yaml-data
+        run: |
+          VERSION=$(yq eval '.version' sushi-config.yaml)
+          ID=$(yq eval '.id' sushi-config.yaml)
+          CANONICAL=$(yq eval '.canonical' sushi-config.yaml)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "id=$ID" >> $GITHUB_OUTPUT
+          echo "canonical=$CANONICAL" >> $GITHUB_OUTPUT
+
+      - name: Generate asset filename
+        id: generate-asset-filename
+        run: echo "ig_asset_filename=${{ steps.yaml-data.outputs.id }}-${{ needs.check-release.outputs.new_release_version }}.tgz" >> $GITHUB_OUTPUT
+
+      # display outputs from read-yaml action
+      - name: Display read-yaml output
+        run: |
+          echo "id: ${{ steps.yaml-data.outputs.id }}"
+          echo "target url: ${{ steps.yaml-data.outputs.canonical }}"
+          echo "version: ${{ steps.yaml-data.outputs.version }}"
+          echo "asset filename: ${{ steps.generate-asset-filename.outputs.ig_asset_filename }}"
+
+      - name: Run the IG publisher
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: ./run-ig-publisher.sh
+
+      - name: Move package.tgz to output directory
+        run: |
+          mkdir -p dist/
+          mv ./output/package.tgz dist/${{ steps.generate-asset-filename.outputs.ig_asset_filename }}
+
+      - name: Deploy to GitHub Pages
+        if: needs.check-release.outputs.prerelease == 'false'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          force_orphan: true
+
+      - name: Semantic Release (Create release)
+        id: semantic_release
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/github
+          ci: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  update-package-feed:
+    needs: perform-release
+    if: needs.perform-release.outputs.new_release_published == 'true' && needs.perform-release.outputs.prerelease == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output new release version
+        run: |
+          echo ${{ needs.perform-release.outputs.new_release_version }}
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y xmlstarlet gh
+
+      # Checkout the external repository where package-feed.xml is located
+      - name: Checkout external repository
+        uses: actions/checkout@v3
+        with:
+          repository: 'umg-minai/fhir-package-feed'
+          token: ${{ secrets.FHIR_PACKAGE_FEED_REPO_TOKEN }}
+          path: 'external-repo'
+
+      # Update package-feed.xml in the external repository
+      - name: Update package-feed.xml
+        run: |
+          cd external-repo
+
+          TITLE="${{ needs.perform-release.outputs.ig_id }}#${{ needs.perform-release.outputs.new_release_version }}"
+          NEW_LINK="https://github.com/${{ github.repository }}/releases/download/${{ needs.perform-release.outputs.new_release_git_tag }}/${{ needs.perform-release.outputs.ig_asset_filename }}?raw=true"
+          NEW_GUID=$NEW_LINK
+          DESCRIPTION="Release ${{ needs.perform-release.outputs.new_release_version }} of ${{ needs.perform-release.outputs.ig_id }}"
+          PUB_DATE=$(date -u +"%a, %d %b %Y %H:%M:%S %Z")
+          VERSION="${{ needs.perform-release.outputs.new_release_version }}"
+          CREATOR="${{ github.actor }}"
+          KIND="IG"
+
+          XML_FILE="package-feed.xml"
+          ITEM_EXISTS=$(xmlstarlet sel -t -v "count(/rss/channel/item[title='$TITLE'])" $XML_FILE)
+
+          if [ "$ITEM_EXISTS" -eq "0" ]; then
+            echo "Item does not exist, adding new item..."
+            xmlstarlet ed --inplace \
+              -s /rss/channel -t elem -n item -v "" \
+              -s "//item[last()]" -t elem -n title -v "$TITLE" \
+              -s "//item[last()]" -t elem -n description -v "$DESCRIPTION" \
+              -s "//item[last()]" -t elem -n link -v "$NEW_LINK" \
+              -s "//item[last()]" -t elem -n guid -v "$NEW_GUID" \
+              -s "//item[last()]" -t elem -n dc:creator -v "$CREATOR" \
+              -s "//item[last()]" -t elem -n fhir:version -v "$VERSION" \
+              -s "//item[last()]" -t elem -n fhir:kind -v "$KIND" \
+              -s "//item[last()]" -t elem -n pubDate -v "$PUB_DATE" \
+              $XML_FILE
+          else
+            echo "Item exists, updating..."
+            xmlstarlet ed --inplace \
+              -u "/rss/channel/item[title='$TITLE']/link" -v "$NEW_LINK" \
+              -u "/rss/channel/item[title='$TITLE']/guid" -v "$NEW_GUID" \
+              -u "/rss/channel/item[title='$TITLE']/description" -v "$DESCRIPTION" \
+              -u "/rss/channel/item[title='$TITLE']/dc:creator" -v "$CREATOR" \
+              -u "/rss/channel/item[title='$TITLE']/fhir:version" -v "$VERSION" \
+              -u "/rss/channel/item[title='$TITLE']/fhir:kind" -v "$KIND" \
+              -u "/rss/channel/item[title='$TITLE']/pubDate" -v "$PUB_DATE" \
+              $XML_FILE
+          fi
+        shell: bash
+
+      - name: Push new branch
+        run: |
+          cd external-repo
+          git config user.name '${{ github.actor }}'
+          git config user.email '${{ github.actor }}@users.noreply.github.com'
+          NEW_BRANCH="update-package-feed-${{ needs.perform-release.outputs.ig_id }}-${{ needs.perform-release.outputs.new_release_version }}"
+          git checkout -b $NEW_BRANCH
+          git add package-feed.xml
+          git commit -m "Update package-feed.xml with new release information"
+          git push --set-upstream origin $NEW_BRANCH
+          gh pr create --repo umg-minai/fhir-package-feed-test --head $NEW_BRANCH --base main --title "Add ${{ needs.perform-release.outputs.ig_id }}-${{ needs.perform-release.outputs.new_release_version }}" --body "Automated update of package-feed.xml with new release information"
+        env:
+          GITHUB_TOKEN: ${{ secrets.FHIR_PACKAGE_FEED_REPO_TOKEN }}
