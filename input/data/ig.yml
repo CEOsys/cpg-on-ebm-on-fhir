@@ -606,6 +606,11 @@ definition:
     name: Intervention Definition
     reference:
       reference: StructureDefinition/intervention-definition
+  - description: Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung
+    isExample: false
+    name: KontaktArtDe
+    reference:
+      reference: CodeSystem/KontaktArtDe
   - description: Most important
     isExample: false
     name: Laboratory Observations
@@ -651,6 +656,11 @@ definition:
     - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-justification
     reference:
       reference: ArtifactAssessment/NoDexamethasoneRecommendationJustification
+  - description: Observable Entities from SNOMED CT
+    isExample: false
+    name: Observations SCT
+    reference:
+      reference: ValueSet/vs-observations-sct
   - description: Description of the outcome element of a PICO construct that evidence
       is about.
     isExample: false
@@ -818,6 +828,11 @@ definition:
     name: Relative Effect Type
     reference:
       reference: ValueSet/vs-relative-effect-type
+  - description: Timing in which the characteristic is determined.
+    isExample: false
+    name: RelativeTime
+    reference:
+      reference: StructureDefinition/relative-time
   - description: Enforces the minimum information set for the plan definition metadata
       required by HL7 and other organizations that share and publish plan definitions
     isExample: false

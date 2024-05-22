@@ -12,6 +12,10 @@ The following profiles are used to define specific actions:
 * [Body Positioning Action][SD:Body Positioning Action] - for describing the action of positioning a patient
 * [Drug Administration Action][SD:Drug Administration Action] - for describing the action of administering a drug
 
+The [RelativeTime][SD:RelativeTime] datatype can be used via the [RelativeTime extension][SD:RelativeTime] to define the timing of the action.
+
+{% include datatype-timing.md %}
+
 {% include fhir-structure-detailed.md name='08-intervention-activity' alt='FHIR Intervention Activity' %}
 
 {% capture resource_inheritance %}

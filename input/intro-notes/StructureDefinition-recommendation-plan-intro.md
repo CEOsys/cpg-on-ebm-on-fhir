@@ -10,6 +10,8 @@ The actions to be performed are specified using the [Recommendation Action][SD:R
 
 {% include categories-intervention.md %}
 
+The [RelativeTime][SD:RelativeTime] datatype can be used via the [RelativeTime extension][SD:RelativeTime] on the `action` field to define the timing of the action.
+
 {% include fhir-structure-detailed.md name='07-intervention-plan' alt='FHIR Intervention Plan' %}
 
 {% capture resource_inheritance %}
