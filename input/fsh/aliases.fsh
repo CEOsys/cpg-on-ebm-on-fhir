@@ -68,3 +68,7 @@ Alias: $cs-common-process = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-pro
 Alias: $cs-action-selection-behavior = http://hl7.org/fhir/action-selection-behavior
 
 Alias: $vs-route-codes = http://hl7.org/fhir/ValueSet/route-codes
+
+Alias: $vs-subject-type = http://hl7.org/fhir/ValueSet/subject-type
+Alias: $cs-resource-types = http://hl7.org/fhir/resource-types
+Alias: $vs-characteristic-combination = http://hl7.org/fhir/ValueSet/characteristic-combination
