@@ -219,6 +219,12 @@ jobs:
               -u "/rss/channel/item[title='$TITLE']/pubDate" -v "$PUB_DATE" \
               $XML_FILE
           fi
+
+          # Update the lastBuildDate and pubDate for the feed
+          xmlstarlet ed --inplace \
+            -u "/rss/channel/lastBuildDate" -v "$PUB_DATE" \
+            -u "/rss/channel/pubDate" -v "$PUB_DATE" \
+            $XML_FILE
         shell: bash
 
       - name: Push new branch
