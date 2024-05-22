@@ -15,6 +15,7 @@ Description: "Definition of a population (e.g. for guideline recommendation, cli
 
 RuleSet: characteristic-definition
 * characteristic 1..* MS
+  * extension contains RelativeTime named relativeTime 0..*
 * characteristic ^slicing.discriminator.type = #pattern
 * characteristic ^slicing.discriminator.path = "definitionByTypeAndValue.type"
 * characteristic ^slicing.rules = #open
