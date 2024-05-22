@@ -3,6 +3,9 @@ name: Release Workflow
 on:
   workflow_dispatch:
 
+env:
+  FHIR_PACKAGE_FEED_REPO: umg-minai/fhir-package-feed
+
 jobs:
   check-release:
     runs-on: ubuntu-latest
@@ -168,7 +171,7 @@ jobs:
       - name: Checkout external repository
         uses: actions/checkout@v3
         with:
-          repository: 'umg-minai/fhir-package-feed'
+          repository: ${{ env.FHIR_PACKAGE_FEED_REPO }}
           token: ${{ secrets.FHIR_PACKAGE_FEED_REPO_TOKEN }}
           path: 'external-repo'
 
@@ -226,6 +229,6 @@ jobs:
           git add package-feed.xml
           git commit -m "Update package-feed.xml with new release information"
           git push --set-upstream origin $NEW_BRANCH
-          gh pr create --repo umg-minai/fhir-package-feed-test --head $NEW_BRANCH --base main --title "Add ${{ needs.perform-release.outputs.ig_id }}-${{ needs.perform-release.outputs.new_release_version }}" --body "Automated update of package-feed.xml with new release information"
+          gh pr create --repo ${{ env.FHIR_PACKAGE_FEED_REPO }} --head $NEW_BRANCH --base main --title "Add ${{ needs.perform-release.outputs.ig_id }}-${{ needs.perform-release.outputs.new_release_version }}" --body "Automated update of package-feed.xml with new release information"
         env:
           GITHUB_TOKEN: ${{ secrets.FHIR_PACKAGE_FEED_REPO_TOKEN }}
