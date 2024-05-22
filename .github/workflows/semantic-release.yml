@@ -200,6 +200,7 @@ jobs:
               -s "//item[last()]" -t elem -n description -v "$DESCRIPTION" \
               -s "//item[last()]" -t elem -n link -v "$NEW_LINK" \
               -s "//item[last()]" -t elem -n guid -v "$NEW_GUID" \
+              -i "//item[last()]/guid" -t attr -n isPermaLink -v "true" \
               -s "//item[last()]" -t elem -n dc:creator -v "$CREATOR" \
               -s "//item[last()]" -t elem -n fhir:version -v "$VERSION" \
               -s "//item[last()]" -t elem -n fhir:kind -v "$KIND" \
@@ -210,6 +211,7 @@ jobs:
             xmlstarlet ed --inplace \
               -u "/rss/channel/item[title='$TITLE']/link" -v "$NEW_LINK" \
               -u "/rss/channel/item[title='$TITLE']/guid" -v "$NEW_GUID" \
+              -i "/rss/channel/item[title='$TITLE']/guid" -t attr -n isPermaLink -v "true" \
               -u "/rss/channel/item[title='$TITLE']/description" -v "$DESCRIPTION" \
               -u "/rss/channel/item[title='$TITLE']/dc:creator" -v "$CREATOR" \
               -u "/rss/channel/item[title='$TITLE']/fhir:version" -v "$VERSION" \
