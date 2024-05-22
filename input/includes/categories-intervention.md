@@ -19,6 +19,7 @@ The categories are defined as slices of the `action` element in the [Recommendat
 | Sedation Management | sedationManagement | assessmentScale | n/a |
 | Pain Management | painManagement | assessmentScale | n/a |
 | Assessment | assessment | any | [Assessment Action][SD:Assessment Action] |
+| Procedure | procedure | <center>❌ *not required* </center> | [Procedure Action][SD:Procedure Action] |
 | Any other / Custom | other | <center>❌ *not required* </center> | *n/a* |
 {:.grid}
 

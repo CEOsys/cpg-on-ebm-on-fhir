@@ -21,6 +21,9 @@
 {% include profile-reference.md name='Recommendation Action' %}
 {% include profile-reference.md name='Drug Administration Action' %}
 {% include profile-reference.md name='Body Positioning Action' %}
+{% include profile-reference.md name='Assessment Action' %}
+{% include profile-reference.md name='Procedure Action' %}
+
 
 #### Studies
 {% include profile-reference.md name='Intervention Definition' %}

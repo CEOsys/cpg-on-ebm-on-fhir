@@ -97,6 +97,7 @@ RuleSet: rs-action-slices
     sedationManagement 0..* and
     painManagement 0..* and
     assessment 0..* and
+    procedure 0..* and
     other 0..*
     //* selectionBehavior from vs-action-selection-behavior-required (required)
 * action
@@ -104,6 +105,7 @@ RuleSet: rs-action-slices
     * coding 1..*
       * system 1..
       * code 1..
+  * extension contains RelativeTime named timingRelativeTime 0..*
 * action[combination]
   * code = $sct#89780004 "Combined (qualifier value)"
   * goalId 0..0
@@ -133,6 +135,9 @@ RuleSet: rs-action-slices
   * insert rs-action-goal-definition-binding
   * code = $sct#386053000 "Evaluation procedure (procedure)"
   * definitionCanonical only Canonical(AssessmentAction)
+* action[procedure]
+  * code = $sct#71388002 "Procedure (procedure)"
+  * definitionCanonical only Canonical(ProcedureAction)
 * action[other]
   * code = $sct#74964007 "Other (qualifier value)"
   * insert rs-action-goal-definition-binding

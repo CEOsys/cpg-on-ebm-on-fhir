@@ -14,6 +14,8 @@
 [VS:Guideline Stage Classification]: ValueSet-vs-guideline-stage-classification.html
 [VS:Laboratory Observations]: ValueSet-vs-laboratory-observations.html
 [VS:Mean Difference Type]: ValueSet-vs-mean-difference-type.html
+[VS:Observations SCT]: ValueSet-vs-observations-sct.html
+[VS:Procedures]: ValueSet-vs-procedures.html
 [VS:Radiologic Finding SCT]: ValueSet-vs-radiologic-finding-sct.html
 [VS:Rating Acceptability]: ValueSet-vs-rating-acceptability.html
 [VS:Rating Benefit And Harms]: ValueSet-vs-rating-benefit-and-harms.html
@@ -40,6 +42,7 @@
 [CS:Evidence To Decision Certainty Rating]: CodeSystem-cs-evidence-to-decision-certainty-rating.html
 [CS:Evidence To Decision Certainty type]: CodeSystem-cs-evidence-to-decision-certainty-type.html
 [CS:Guideline Stage Classification]: CodeSystem-cs-guideline-stage-classification.html
+[CS:KontaktArtDe]: CodeSystem-KontaktArtDe.html
 [CS:Recommendation Strength]: CodeSystem-ceosys-cs-recommendation-strength.html
 [CS:SynthesisType]: CodeSystem-synthesis-type.html
 
@@ -69,6 +72,7 @@
 [SD:Outcome Evidence]: StructureDefinition-outcome-evidence.html
 [SD:Outcome Evidence Synthesis]: StructureDefinition-outcome-evidence-synthesis.html
 [SD:PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
+[SD:Procedure Action]: StructureDefinition-procedure-action.html
 [SD:qualityOfEvidence]: StructureDefinition-cqf-qualityOfEvidence.html
 [SD:Recommendation]: StructureDefinition-recommendation.html
 [SD:Recommendation Action]: StructureDefinition-recommendation-action.html
@@ -76,6 +80,7 @@
 [SD:Recommendation Eligibility Criteria]: StructureDefinition-recommendation-eligibility-criteria.html
 [SD:Recommendation Justification]: StructureDefinition-recommendation-justification.html
 [SD:Recommendation Plan]: StructureDefinition-recommendation-plan.html
+[SD:RelativeTime]: StructureDefinition-relative-time.html
 [SD:Shareable PlanDefinition]: StructureDefinition-shareableplandefinition.html
 [SD:strengthOfRecommendation]: StructureDefinition-cqf-strengthOfRecommendation.html
 [SD:Study Citation]: StructureDefinition-study-citation.html
