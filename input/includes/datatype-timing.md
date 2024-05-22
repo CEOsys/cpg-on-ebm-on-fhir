@@ -4,12 +4,12 @@ This Implementation guide has a modified interpretation of the `Timing` datatype
 
 These changes pertain to the following profiles / elements:
 
-- [`RecommendationEligibilityCriteria.characteristic`][SD:Recommendation Eligibility Criteria]
-- [`RecommendationAction`][SD:Recommendation Action]
-- [`RecommendationPlan.action`][SD:Recommendation Plan]
+- [RecommendationEligibilityCriteria.characteristic][SD:Recommendation Eligibility Criteria]
+- [RecommendationAction][SD:Recommendation Action]
+- [RecommendationPlan.action][SD:Recommendation Plan]
 
 
-##### Changes to Timing Datatype
+**Changes to Timing Datatype**
 
 | Field        | Description                                                                                                 | Example                                                                 |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -21,9 +21,9 @@ These changes pertain to the following profiles / elements:
 | frequencyMax | **Indicates the maximum number of repetitions that should occur within a period.**                          | `frequencyMax: 4` means the event should occur no more than four times per period. |
 | period       | **The minimal duration to which the frequency applies.**                                                    | `period: 1` (assuming units are days) means the frequency applies to at least 1 day. |
 | periodMax    | **The maximum duration to which the frequency applies.**                                                    | `periodMax: 7` (assuming units are days) means the frequency applies to no more than 7 days. |
+{:.grid}
 
-
-##### Examples
+**Examples**
 
 * Example 1: Exact number of Occurrences
   ```json
@@ -69,7 +69,7 @@ These changes pertain to the following profiles / elements:
   ```
   - This indicates the event should last no more than two hours.
 
-##### Implementation Notes
+**Implementation Notes**
 
 - Ensure that when setting the exact value, both the base field and its corresponding "Max" field are set to the same value.
 - These changes aim to provide more flexibility and clarity in specifying the timing and frequency of events, ensuring that minimal and maximal constraints are clear to implementers.

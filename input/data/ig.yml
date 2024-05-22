@@ -497,6 +497,13 @@ definition:
     - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/outcome-evidence-synthesis
     reference:
       reference: Evidence/ExampleOutcomeEvidenceSynthesis
+  - description: Example of a procedure action.
+    isExample: true
+    name: Example Procedure Action
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/procedure-action
+    reference:
+      reference: ActivityDefinition/ExampleProcedureAction
   - description: Example of a Citation of a clinical practice guideline recommendation
     isExample: true
     name: Example Recommendation Citation
@@ -701,6 +708,16 @@ definition:
     - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria
     reference:
       reference: EvidenceVariable/PopulationCOVID19Ventilated
+  - description: Definition of a procedure action.
+    isExample: false
+    name: Procedure Action
+    reference:
+      reference: StructureDefinition/procedure-action
+  - description: Procedures
+    isExample: false
+    name: Procedures
+    reference:
+      reference: ValueSet/vs-procedures
   - description: The quality of the evidence described. The code system used specifies
       the quality scale used to grade this evidence source while the code specifies
       the actual quality score (represented as a coded value) associated with the

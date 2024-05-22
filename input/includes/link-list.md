@@ -15,6 +15,7 @@
 [VS:Laboratory Observations]: ValueSet-vs-laboratory-observations.html
 [VS:Mean Difference Type]: ValueSet-vs-mean-difference-type.html
 [VS:Observations SCT]: ValueSet-vs-observations-sct.html
+[VS:Procedures]: ValueSet-vs-procedures.html
 [VS:Radiologic Finding SCT]: ValueSet-vs-radiologic-finding-sct.html
 [VS:Rating Acceptability]: ValueSet-vs-rating-acceptability.html
 [VS:Rating Benefit And Harms]: ValueSet-vs-rating-benefit-and-harms.html
@@ -71,6 +72,7 @@
 [SD:Outcome Evidence]: StructureDefinition-outcome-evidence.html
 [SD:Outcome Evidence Synthesis]: StructureDefinition-outcome-evidence-synthesis.html
 [SD:PICO Evidence Variable]: StructureDefinition-pico-evidence-variable.html
+[SD:Procedure Action]: StructureDefinition-procedure-action.html
 [SD:qualityOfEvidence]: StructureDefinition-cqf-qualityOfEvidence.html
 [SD:Recommendation]: StructureDefinition-recommendation.html
 [SD:Recommendation Action]: StructureDefinition-recommendation-action.html
