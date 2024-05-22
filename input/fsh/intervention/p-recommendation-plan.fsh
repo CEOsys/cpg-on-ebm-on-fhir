@@ -97,6 +97,7 @@ RuleSet: rs-action-slices
     sedationManagement 0..* and
     painManagement 0..* and
     assessment 0..* and
+    procedure 0..* and
     other 0..*
     //* selectionBehavior from vs-action-selection-behavior-required (required)
 * action
@@ -134,6 +135,9 @@ RuleSet: rs-action-slices
   * insert rs-action-goal-definition-binding
   * code = $sct#386053000 "Evaluation procedure (procedure)"
   * definitionCanonical only Canonical(AssessmentAction)
+* action[procedure]
+  * code = $sct#71388002 "Procedure (procedure)"
+  * definitionCanonical only Canonical(ProcedureAction)
 * action[other]
   * code = $sct#74964007 "Other (qualifier value)"
   * insert rs-action-goal-definition-binding
