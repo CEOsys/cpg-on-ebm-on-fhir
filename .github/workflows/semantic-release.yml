@@ -82,6 +82,7 @@ jobs:
       ig_canonical: ${{ steps.yaml-data.outputs.canonical }}
       ig_id: ${{ steps.yaml-data.outputs.id }}
       ig_asset_filename: ${{ steps.generate-asset-filename.outputs.ig_asset_filename }}
+      ig_fhir_version: ${{ steps.yaml-data.outputs.fhirVersion }}
     
     steps:
       - uses: actions/checkout@v4
@@ -109,9 +110,11 @@ jobs:
           VERSION=$(yq eval '.version' sushi-config.yaml)
           ID=$(yq eval '.id' sushi-config.yaml)
           CANONICAL=$(yq eval '.canonical' sushi-config.yaml)
+          FHIRVERSION=$(yq eval '.fhirVersion' sushi-config.yaml)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "id=$ID" >> $GITHUB_OUTPUT
           echo "canonical=$CANONICAL" >> $GITHUB_OUTPUT
+          echo "fhir_version=$FHIRVERSION" >> $GITHUB_OUTPUT
 
       - name: Generate asset filename
         id: generate-asset-filename
@@ -124,6 +127,7 @@ jobs:
           echo "target url: ${{ steps.yaml-data.outputs.canonical }}"
           echo "version: ${{ steps.yaml-data.outputs.version }}"
           echo "asset filename: ${{ steps.generate-asset-filename.outputs.ig_asset_filename }}"
+          echo "fhir_version: ${{ steps.yaml-data.outputs.fhir_version }}"
 
       - name: Run the IG publisher
         uses: docker://hl7fhir/ig-publisher-base:latest
@@ -187,6 +191,7 @@ jobs:
           PUB_DATE=$(date -u +"%a, %d %b %Y %H:%M:%S %Z")
           VERSION="${{ needs.perform-release.outputs.new_release_version }}"
           CREATOR="${{ github.actor }}"
+          FHIR_VERSION="${{ needs.perform-release.outputs.ig_fhir_version }}"
           KIND="IG"
 
           XML_FILE="package-feed.xml"
@@ -202,7 +207,7 @@ jobs:
               -s "//item[last()]" -t elem -n guid -v "$NEW_GUID" \
               -i "//item[last()]/guid" -t attr -n isPermaLink -v "true" \
               -s "//item[last()]" -t elem -n dc:creator -v "$CREATOR" \
-              -s "//item[last()]" -t elem -n fhir:version -v "$VERSION" \
+              -s "//item[last()]" -t elem -n fhir:version -v "$FHIR_VERSION" \
               -s "//item[last()]" -t elem -n fhir:kind -v "$KIND" \
               -s "//item[last()]" -t elem -n pubDate -v "$PUB_DATE" \
               $XML_FILE
@@ -214,7 +219,7 @@ jobs:
               -i "/rss/channel/item[title='$TITLE']/guid" -t attr -n isPermaLink -v "true" \
               -u "/rss/channel/item[title='$TITLE']/description" -v "$DESCRIPTION" \
               -u "/rss/channel/item[title='$TITLE']/dc:creator" -v "$CREATOR" \
-              -u "/rss/channel/item[title='$TITLE']/fhir:version" -v "$VERSION" \
+              -u "/rss/channel/item[title='$TITLE']/fhir:version" -v "$FHIR_VERSION" \
               -u "/rss/channel/item[title='$TITLE']/fhir:kind" -v "$KIND" \
               -u "/rss/channel/item[title='$TITLE']/pubDate" -v "$PUB_DATE" \
               $XML_FILE
