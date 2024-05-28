@@ -15,6 +15,8 @@ Description: "Definition of a population (e.g. for guideline recommendation, cli
     * insert characteristic-definition
     * characteristic.definitionByCombination
       * insert characteristic-definition
+      * characteristic.definitionByCombination
+        * insert characteristic-definition
 
 RuleSet: characteristic-definition
 * characteristic 1..* MS
