@@ -37,7 +37,8 @@ RuleSet: characteristic-definition
   procedure 0..* and
   assessmentScale 0..* and
   device 0..* and
-  observation 0..*
+  observation 0..* and
+  drugAdministration 0..*
 * characteristic.definitionByTypeAndValue
   * value[x] only Quantity or Range or CodeableConcept // 22-11-02 @glichtner: required, otherwise "* valueCodeableConcept.coding 1..1 MS" leads to FHIR validator error
 * characteristic[condition].definitionByTypeAndValue
@@ -76,3 +77,7 @@ RuleSet: characteristic-definition
 * characteristic[observation].definitionByTypeAndValue
   * type from vs-observations (required)
   //* value[x] only Range or Quantity // 22-07-22 @glichtner: removed due to sushi error
+* characteristic[drugAdministration].definitionByTypeAndValue
+  * type = $sct#432102000 "Administration of substance (procedure)"
+  * valueCodeableConcept from vs-drugs (required)
+  * extension contains CharacteristicDosage named dosage 0..*
