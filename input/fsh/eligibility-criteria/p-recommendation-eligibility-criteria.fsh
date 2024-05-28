@@ -18,3 +18,23 @@ Description: "Example of a population element of a PICO construct that evidence 
 * name = "PopulationExample"
 * characteristic[condition].definitionByTypeAndValue
   * valueCodeableConcept = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+
+
+Instance: ExampleRecommendationEligibilityCriteria5Levels
+InstanceOf: recommendation-eligibility-criteria
+Usage: #example
+Title: "Example Recommendation Eligibility Criteria"
+Description: "Example of a population element of a PICO construct that evidence is about."
+* insert canonical-url(example/recommendation-eligibility-criteria)
+* status = #active
+* name = "PopulationExample"
+* characteristic[+].definitionByCombination
+  * code = #all-of
+  * characteristic[+].definitionByCombination
+    * code = #all-of
+    * characteristic[+].definitionByCombination
+      * code = #all-of
+      * characteristic[+].definitionByCombination
+        * code = #all-of
+        * characteristic[condition][+].definitionByTypeAndValue
+          * valueCodeableConcept = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"  
