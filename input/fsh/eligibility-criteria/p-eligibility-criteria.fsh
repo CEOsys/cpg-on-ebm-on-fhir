@@ -7,15 +7,21 @@ Description: "Definition of a population (e.g. for guideline recommendation, cli
 * insert metadata(2022-05-15, #draft, 0.2.0)
 * ^abstract = true
 * insert characteristic-definition
-* characteristic.definitionByTypeAndValue // allow only a single type and single valueCodeableConcept coding
-  * type.coding 1..1 MS
-  * valueCodeableConcept.coding 1..1 MS
-* characteristic.definitionByCombination
+* characteristic.definitionByCombination  //  ecursive profiling should be perfomred using the 
+                                          // http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element extension 
+                                          // (see "Extension for Profiling BackboneElements" in https://github.com/FHIR/sushi/releases/tag/v2.0.0)
   * insert characteristic-definition
+  * characteristic.definitionByCombination
+    * insert characteristic-definition
+    * characteristic.definitionByCombination
+      * insert characteristic-definition
 
 RuleSet: characteristic-definition
 * characteristic 1..* MS
   * extension contains RelativeTime named relativeTime 0..*
+  * definitionByTypeAndValue // allow only a single type and single valueCodeableConcept coding
+    * type.coding 1..1 MS
+    * valueCodeableConcept.coding 1..1 MS
 * characteristic ^slicing.discriminator.type = #pattern
 * characteristic ^slicing.discriminator.path = "definitionByTypeAndValue.type"
 * characteristic ^slicing.rules = #open
