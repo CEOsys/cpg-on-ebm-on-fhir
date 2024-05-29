@@ -103,6 +103,14 @@ jobs:
         run: |
           yq eval '.version = "${{ needs.check-release.outputs.new_release_version }}"' -i sushi-config.yaml
 
+      - name: Commit and push updated sushi-config.yaml
+        run: |
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
+          git add sushi-config.yaml
+          git commit -m "Update sushi-config.yaml for release ${{ needs.check-release.outputs.new_release_version }}"
+          git push
+
       # read id, version and canonical from sushi-config.yaml
       - name: Read YAML file
         id: yaml-data
