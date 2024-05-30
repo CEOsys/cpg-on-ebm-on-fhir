@@ -1,0 +1,108 @@
+{
+  "resourceType" : "ArtifactAssessment",
+  "id" : "ExampleCertaintyOfEvidenceRating",
+  "meta" : {
+    "profile" : ["https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/certainty-of-evidence-rating"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ArtifactAssessment </b><a name=\"ExampleCertaintyOfEvidenceRating\"> </a><a name=\"hcExampleCertaintyOfEvidenceRating\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceArtifactAssessment &quot;ExampleCertaintyOfEvidenceRating&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-certainty-of-evidence-rating.html\">Certainty of Evidence Rating</a></p></div><p><b>ArtifactAssessment Version</b>: 0.1.1</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2022-03-11</p><p><b>artifact</b>: <a href=\"Evidence-ExampleStudyOutcomeEvidence.html\">Evidence/ExampleStudyOutcomeEvidence</a> &quot;ExampleStudyOutcomeEvidence&quot;</p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-certainty-type.html\">Evidence Certainty Type</a>#Overall)</span></p><p><b>classifier</b>: Moderate quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-certainty-rating.html\">Evidence Certainty Rating</a>#moderate)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Risk of bias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-certainty-type.html\">Evidence Certainty Type</a>#RiskOfBias)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-certainty-rating.html\">Evidence Certainty Rating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Imprecision <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-certainty-type.html\">Evidence Certainty Type</a>#Imprecision)</span></p><p><b>classifier</b>: serious concern <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-certainty-rating.html\">Evidence Certainty Rating</a>#serious-concern)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Large effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-certainty-type.html\">Evidence Certainty Type</a>#LargeEffect)</span></p><p><b>classifier</b>: increase rating: +2 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-certainty-rating.html\">Evidence Certainty Rating</a>#upcode2)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Plausible confounding <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-certainty-type.html\">Evidence Certainty Type</a>#PlausibleConfounding)</span></p><p><b>classifier</b>: increase rating: +1 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-certainty-rating.html\">Evidence Certainty Rating</a>#upcode1)</span></p></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ceosys-extension-artifact-assessment-version",
+    "valueString" : "0.1.1"
+  },
+  {
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status",
+    "valueCode" : "active"
+  }],
+  "date" : "2022-03-11",
+  "artifactReference" : {
+    "reference" : "Evidence/ExampleStudyOutcomeEvidence"
+  },
+  "content" : [{
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-type",
+        "code" : "Overall",
+        "display" : "Overall certainty"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-rating",
+        "code" : "moderate",
+        "display" : "Moderate quality"
+      }]
+    }]
+  },
+  {
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-type",
+        "code" : "RiskOfBias",
+        "display" : "Risk of bias"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-rating",
+        "code" : "serious-concern",
+        "display" : "serious concern"
+      }]
+    }]
+  },
+  {
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-type",
+        "code" : "Imprecision",
+        "display" : "Imprecision"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-rating",
+        "code" : "serious-concern",
+        "display" : "serious concern"
+      }]
+    }]
+  },
+  {
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-type",
+        "code" : "LargeEffect",
+        "display" : "Large effect"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-rating",
+        "code" : "upcode2",
+        "display" : "increase rating: +2"
+      }]
+    }]
+  },
+  {
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-type",
+        "code" : "PlausibleConfounding",
+        "display" : "Plausible confounding"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-rating",
+        "code" : "upcode1",
+        "display" : "increase rating: +1"
+      }]
+    }]
+  }]
+}

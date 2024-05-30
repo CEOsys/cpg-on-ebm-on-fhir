@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ActivityDefinition",
+  "id" : "ExampleProcedureAction",
+  "meta" : {
+    "profile" : ["https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/procedure-action"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ActivityDefinition </b><a name=\"ExampleProcedureAction\"> </a><a name=\"hcExampleProcedureAction\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceActivityDefinition &quot;ExampleProcedureAction&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-procedure-action.html\">Procedure Action</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-action/procedure-example</code></p><p><b>version</b>: 1.0</p><p><b>name</b>: ExampleProcedureAction</p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: Patient <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-fhir-types.html\">All FHIR Types</a>#Patient)</span></p><p><b>date</b>: 2024-05-30 06:53:59+0000</p><p><b>publisher</b>: CPGonEBMonFHIR</p><p><b>description</b>: Example of a procedure action.</p><p><b>kind</b>: ServiceRequest</p><p><b>code</b>: Destruction of lesion of middle ear (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl rel. null 0000]</a>#172703006)</span></p><p><b>timing</b>: Once per1 days</p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueCode" : "structured"
+  }],
+  "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-action/procedure-example",
+  "version" : "1.0",
+  "name" : "ExampleProcedureAction",
+  "status" : "active",
+  "experimental" : true,
+  "subjectCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/fhir-types",
+      "code" : "Patient"
+    }]
+  },
+  "date" : "2024-05-30T06:53:59+00:00",
+  "publisher" : "CPGonEBMonFHIR",
+  "description" : "Example of a procedure action.",
+  "kind" : "ServiceRequest",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20240201",
+      "code" : "172703006",
+      "display" : "Destruction of lesion of middle ear (procedure)"
+    }]
+  },
+  "timingTiming" : {
+    "repeat" : {
+      "frequency" : 1,
+      "period" : 1,
+      "periodUnit" : "d"
+    }
+  }
+}

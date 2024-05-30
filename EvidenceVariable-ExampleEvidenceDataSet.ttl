@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/EvidenceVariable/ExampleEvidenceDataSet> a fhir:EvidenceVariable ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleEvidenceDataSet"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/evidence-data-set"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/evidence-data-set>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: EvidenceVariable </b><a name=\"ExampleEvidenceDataSet\"> </a><a name=\"hcExampleEvidenceDataSet\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceEvidenceVariable &quot;ExampleEvidenceDataSet&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-evidence-data-set.html\">Evidence Data Set</a></p></div><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/EvidenceVariable/ExampleEvidenceDataSet</code></p><p><b>name</b>: ExampleEvidenceDataSet</p><p><b>status</b>: active</p><p><b>date</b>: 2024-05-30 06:53:59+0000</p><blockquote><p><b>characteristic</b></p><blockquote><p><b>definitionByCombination</b></p><p><b>code</b>: dataset</p><h3>Characteristics</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>DefinitionReference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"ExampleOutcomeEvidence\">ExampleOutcomeEvidence</a></td></tr></table></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/EvidenceVariable/ExampleEvidenceDataSet"^^xsd:anyURI] ; # 
+  fhir:name [ fhir:v "ExampleEvidenceDataSet"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-05-30T06:53:59+00:00"^^xsd:dateTime] ; # 
+  fhir:characteristic ( [
+     fhir:definitionByCombination [
+       fhir:code [ fhir:v "dataset" ] ;
+       fhir:characteristic ( [
+         fhir:definitionReference [
+           fhir:reference [ fhir:v "ExampleOutcomeEvidence" ]
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

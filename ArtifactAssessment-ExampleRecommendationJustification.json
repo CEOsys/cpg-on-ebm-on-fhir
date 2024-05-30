@@ -1,0 +1,119 @@
+{
+  "resourceType" : "ArtifactAssessment",
+  "id" : "ExampleRecommendationJustification",
+  "meta" : {
+    "profile" : ["https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-justification"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ArtifactAssessment </b><a name=\"ExampleRecommendationJustification\"> </a><a name=\"hcExampleRecommendationJustification\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceArtifactAssessment &quot;ExampleRecommendationJustification&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-recommendation-justification.html\">Recommendation Justification</a></p></div><p><b>ArtifactAssessment Version</b>: 0.1.0</p><p><b>ArtifactAssessment Publication Status</b>: active</p><p><b>date</b>: 2020-01-03</p><p><b>artifact</b>: <a href=\"PlanDefinition-ExampleRecommendationPlan.html\">PlanDefinition/ExampleRecommendationPlan</a> &quot;RecommendationPlan&quot;</p><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Strength of recommendation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#strength)</span></p><p><b>classifier</b>: Strong for an intervention <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-cs-recommendation-strength.html\">Recommendation Strength</a>#strong-for)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Overall certainty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-certainty-type.html\">Evidence Certainty Type</a>#Overall)</span></p><p><b>classifier</b>: Very low quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-certainty-rating.html\">Evidence Certainty Rating</a>#very-low)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: rating</p><p><b>type</b>: Consensus <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#consensus)</span></p><p><b>classifier</b>: Strong <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-recommendation-strength.html\">StrengthOfRecommendationRating</a>#strong)</span></p></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Certainty of evidence rating <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#certainty-of-evidence-rating)</span></p><h3>RelatedArtifacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Classifier</b></td><td><b>ResourceReference</b></td></tr><tr><td style=\"display: none\">*</td><td>justification</td><td>Certainty of evidence rating <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#certainty-of-evidence-rating)</span></td><td><a href=\"ArtifactAssessment-ExampleCertaintyOfEvidenceRating.html\">ArtifactAssessment/ExampleCertaintyOfEvidenceRating</a></td></tr></table></blockquote><blockquote><p><b>content</b></p><p><b>informationType</b>: container</p><p><b>type</b>: Net effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#net-effect)</span></p><h3>RelatedArtifacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Classifier</b></td><td><b>ResourceReference</b></td></tr><tr><td style=\"display: none\">*</td><td>supported-with</td><td>Net effect <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ceosys-code-system.html\">CEOsys Code System</a>#net-effect)</span></td><td><a href=\"Evidence-ExampleNetEffectEstimate.html\">Evidence/ExampleNetEffectEstimate</a> &quot;NetEffectExample&quot;</td></tr></table></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ceosys-extension-artifact-assessment-version",
+    "valueString" : "0.1.0"
+  },
+  {
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ceosys-extension-artifact-assessment-publication-status",
+    "valueCode" : "active"
+  }],
+  "date" : "2020-01-03",
+  "artifactReference" : {
+    "reference" : "PlanDefinition/ExampleRecommendationPlan"
+  },
+  "content" : [{
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/ceosys-code-system",
+        "code" : "strength",
+        "display" : "Strength of recommendation"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/ceosys-cs-recommendation-strength",
+        "code" : "strong-for"
+      }]
+    }]
+  },
+  {
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-type",
+        "code" : "Overall",
+        "display" : "Overall certainty"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/certainty-rating",
+        "code" : "very-low",
+        "display" : "Very low quality"
+      }]
+    }]
+  },
+  {
+    "informationType" : "rating",
+    "type" : {
+      "coding" : [{
+        "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/ceosys-code-system",
+        "code" : "consensus",
+        "display" : "Consensus"
+      }]
+    },
+    "classifier" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/recommendation-strength",
+        "code" : "strong",
+        "display" : "Strong"
+      }]
+    }]
+  },
+  {
+    "informationType" : "container",
+    "type" : {
+      "coding" : [{
+        "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/ceosys-code-system",
+        "code" : "certainty-of-evidence-rating",
+        "display" : "Certainty of evidence rating"
+      }]
+    },
+    "relatedArtifact" : [{
+      "type" : "justification",
+      "classifier" : [{
+        "coding" : [{
+          "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/ceosys-code-system",
+          "code" : "certainty-of-evidence-rating",
+          "display" : "Certainty of evidence rating"
+        }]
+      }],
+      "resourceReference" : {
+        "reference" : "ArtifactAssessment/ExampleCertaintyOfEvidenceRating"
+      }
+    }]
+  },
+  {
+    "informationType" : "container",
+    "type" : {
+      "coding" : [{
+        "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/ceosys-code-system",
+        "code" : "net-effect",
+        "display" : "Net effect"
+      }]
+    },
+    "relatedArtifact" : [{
+      "type" : "supported-with",
+      "classifier" : [{
+        "coding" : [{
+          "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/ceosys-code-system",
+          "code" : "net-effect",
+          "display" : "Net effect"
+        }]
+      }],
+      "resourceReference" : {
+        "reference" : "Evidence/ExampleNetEffectEstimate"
+      }
+    }]
+  }]
+}
