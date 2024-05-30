@@ -3,18 +3,16 @@ canonical: https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir
 name: CPG-on-EBMonFHIR
 title: Clinical Practice Guidelines (CPG) on EBMonFHIR
 status: draft
-version: 0.8.0-snapshot
+version: 0.9.1
 fhirVersion: 5.0.0
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
   name: Universitätsmedizin Greifswald
   url: https://www.med.uni-greifswald.de/
-
 dependencies:
   hl7.fhir.uv.cpg:
     version: 1.0.0
-
 pages:
   index.md:
     title: Clinical Practice Guidelines (CPG) on EBMonFHIR
@@ -27,8 +25,6 @@ pages:
   examples.md:
   downloads.xml:
   history.md:
-
-
 menu:
   Home: index.html
   Profiles: profiles.html
@@ -38,8 +34,7 @@ menu:
   Examples: examples.html
   Downloads: downloads.html
   History: history.html
-
-parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   active-tables: 'true' # Whether to generate active tables in the generated fragments (tables that will expand and contract).
   apply-contact: 'false' # if true, overwrite all canonical resource contact details with that found in the IG.
   apply-jurisdiction: 'false' # if true, overwrite all canonical resource jurisdiction details with that found in the IG.
@@ -53,5 +48,5 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludemap: 'true' # when true, these parameters will cause the publisher to exclude the generation of the respective formats - xml, json or ttl  - and to exclude the respective tabs from the implementation guide pages.
   excludeexample: 'true'
   extension-domain: # An external domain from which extensions are allowed to come (else they'll be flagged as invalid when validating).
-  - https://www.netzwerk-universitaetsmedizin.de
-  - https://simplifier.net
+    - https://www.netzwerk-universitaetsmedizin.de
+    - https://simplifier.net
