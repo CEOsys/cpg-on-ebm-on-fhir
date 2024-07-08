@@ -205,6 +205,11 @@ definition:
     name: Certainty of Evidence Rating
     reference:
       reference: StructureDefinition/certainty-of-evidence-rating
+  - description: Adds Dosage type to characteristic
+    isExample: false
+    name: Characteristic Dosage
+    reference:
+      reference: StructureDefinition/ext-characteristic-dosage
   - description: Clinical Importance of Outcome
     isExample: false
     name: Clinical Importance of Outcome
@@ -364,6 +369,11 @@ definition:
     name: Drug Administration Action
     reference:
       reference: StructureDefinition/drug-administration-action
+  - description: Drugs
+    isExample: false
+    name: Drugs
+    reference:
+      reference: ValueSet/vs-drugs
   - description: Definition of a population (e.g. for guideline recommendation, clinical
       study) via the eligibility criteria.
     isExample: false
@@ -519,6 +529,22 @@ definition:
     - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria
     reference:
       reference: EvidenceVariable/ExampleRecommendationEligibilityCriteria
+  - description: Example of a population element of a PICO construct that evidence
+      is about.
+    isExample: true
+    name: Example Recommendation Eligibility Criteria
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria
+    reference:
+      reference: EvidenceVariable/ExampleRecommendationEligibilityCriteria5Levels
+  - description: Example of a population element of a PICO construct that evidence
+      is about.
+    isExample: true
+    name: Example Recommendation Eligibility Criteria
+    profile:
+    - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria
+    reference:
+      reference: EvidenceVariable/ExampleRecommendationEligibilityCriteriaDrugs
   - description: Example of a recommendation justification
     isExample: true
     name: Example Recommendation Justification
@@ -618,11 +644,6 @@ definition:
     name: KontaktArtDe
     reference:
       reference: CodeSystem/KontaktArtDe
-  - description: Most important
-    isExample: false
-    name: Laboratory Observations
-    reference:
-      reference: ValueSet/vs-laboratory-observations
   - description: Mean difference types
     isExample: false
     name: Mean Difference Type
@@ -663,11 +684,13 @@ definition:
     - https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-justification
     reference:
       reference: ArtifactAssessment/NoDexamethasoneRecommendationJustification
-  - description: Observable Entities from SNOMED CT
+  - description: Observations are measurements of a patient's state of health. They
+      are typically made by a healthcare professional, but can also be self-reported
+      by the patient.
     isExample: false
-    name: Observations SCT
+    name: Observations
     reference:
-      reference: ValueSet/vs-observations-sct
+      reference: ValueSet/vs-observations
   - description: Description of the outcome element of a PICO construct that evidence
       is about.
     isExample: false
@@ -932,6 +955,12 @@ definition:
     name: Ventilation Observable SCT
     reference:
       reference: ValueSet/vs-ventilation-observable-sct
+  - description: "Dieses ValueSet enth\xE4lt Codes f\xFCr die im Kontext einer Beatmung\
+      \ eingestellten oder gemessenen Parametern."
+    isExample: false
+    name: VS MII ICU Code Observation Beatmung [LOINC]
+    reference:
+      reference: ValueSet/vs-mii-icu-code-observation-beatmung-loinc
 dependsOn:
 - id: hl7_fhir_uv_cpg
   packageId: hl7.fhir.uv.cpg
