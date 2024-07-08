@@ -9,4 +9,4 @@ Description: "Observations are measurements of a patient's state of health. They
 // compare http://hl7.org/fhir/loinc.html#props
 // CLASSTYPE: 1=Laboratory class; 2=Clinical class; 3=Claims attachments; 4=Surveys
 // ORDER_OBS: Provides users with an idea of the intended use of the term by categorizing it as an order only, observation only, or both
-* include codes from system $loinc where CLASSTYPE = "1" and STATUS = "Active" and ORDER_OBS regex /Order|Both/
+* include codes from system $loinc where CLASSTYPE = "Laboratory class" and STATUS = "ACTIVE" and ORDER_OBS regex /Order|Both/
