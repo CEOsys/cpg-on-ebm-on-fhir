@@ -30,8 +30,6 @@ RuleSet: characteristic-definition
   allergy 0..* and
   radiologyFinding 0..* and
   episodeOfCare 0..* and
-  ventilationObservableSCT 0..* and
-  ventilationObservableLOINC 0..* and
   procedure 0..* and
   assessmentScale 0..* and
   device 0..* and
@@ -73,18 +71,6 @@ RuleSet: characteristic-definition
     //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
     * valueCodeableConcept from $vs-episode-of-care-type (required)
     * valueCodeableConcept.coding 1..1 MS
-
-* characteristic[ventilationObservableSCT]
-  * definitionByCombination 0..0
-  * definitionByTypeAndValue 1..1
-    * type from $vs-ventilation-observable-sct (required)
-    //* value[x] only Range or Quantity // 22-07-22 @glichtner: removed due to sushi error
-
-* characteristic[ventilationObservableLOINC]
-  * definitionByCombination 0..0
-  * definitionByTypeAndValue 1..1
-    * type from $vs-ventilation-observable-loinc (required)
-    //* value[x] only Range or Quantity // 22-07-22 @glichtner: removed due to sushi error
 
 * characteristic[procedure]
   * definitionByCombination 0..0

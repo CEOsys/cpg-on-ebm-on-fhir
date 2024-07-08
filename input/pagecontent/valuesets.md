@@ -17,10 +17,8 @@
 {% include valueset-reference.md name='Allergic Disposition SCT' %}
 {% include valueset-reference.md name='Episode Of Care Type' %}
 {% include valueset-reference.md name='Radiologic Finding SCT' %}
-{% include valueset-reference.md name='Ventilation Observable SCT' %}
 {% include valueset-reference.md name='Drugs' %}
 {% include valueset-reference.md name='Observations' %}
-{% include valueset-reference.md name='VS MII ICU Code Observation Beatmung [LOINC]' %}
 
 ### Recommended actions
 {% include valueset-reference.md name='Body Positioning SNOMED CT' %}
