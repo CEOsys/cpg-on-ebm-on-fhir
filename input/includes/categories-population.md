@@ -15,6 +15,7 @@ The categories are defined as slices of the `characteristic` element in the resp
 | Radiology Finding | radiologyFinding | SCT [118247008 "Radiologic finding (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=118247008&edition=MAIN/2022-04-30&release=&languages=en)" | SCT *is-a* [118247008 "Radiologic finding (finding)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=118247008&edition=MAIN/2022-04-30&release=&languages=en)" | ❌ |
 | Episode of Care | episodeOfCare | LOINC [78030-4 "Episode of care Type](https://loinc.org/78030-4/)" | from `<http://fhir.de/CodeSystem/kontaktart-de>` | ❌ |
 | Observation / Lab Value | observation | SCT *is-a* `363787002 "Observable entity (observable entity)` or LOINC Laboratory Class | ❌ | ✔️ |
+| Procedure | procedure | SCT `71388002 "Procedure (procedure)"`  | SCT *is-a* `71388002 Procedure (Procedure)` | ❌ |
 | Assessment Scale | assessmentScale | from [vs-assessment-scales][VS:Assessment Scales] | ✔️  | ✔️ |
 | Device | device | SCT [49062001 "Device (physical object)"](https://browser.ihtsdotools.org/?perspective=full&conceptId1=49062001&edition=MAIN/2022-04-30&release=&languages=en)"  | ✔️  | ❌ |
 {:.grid}
@@ -61,9 +62,9 @@ The categories are defined as slices of the `characteristic` element in the resp
    * valueCodeableConcept = $cs-kontaktart-de#intensivstationaer "Intensivstationär"
 ```
 
-##### Lab Value
+##### Measurement / Observation / Lab Value
 ```C
-* characteristic[laboratory][+]
+* characteristic[observation][+]
   * linkId = "ddimer-range"
   * definitionByTypeAndValue
     // typeCodeableConcept *must* be from the valueset defined in typeCodeableConcept column (left)
