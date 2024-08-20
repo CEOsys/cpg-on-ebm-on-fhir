@@ -14,8 +14,9 @@ Description: "Definition of a drug administration action as part of a recommende
   * coding ^slicing.discriminator.type = #pattern
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
+  * coding 1..*
   * coding contains
-      sct 1..1 and
+      sct 0..1 and
       atc 0..1 and
       rxnorm 0..1 and
       atcde 0..1
