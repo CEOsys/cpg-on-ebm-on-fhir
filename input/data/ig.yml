@@ -2,7 +2,7 @@ contact:
 - name: "Universit\xE4tsmedizin Greifswald"
   telecom:
   - system: url
-    value: https://www.med.uni-greifswald.de/
+    value: https://www.medizin.uni-greifswald.de/
 definition:
   page:
     generation: html
