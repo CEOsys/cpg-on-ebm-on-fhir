@@ -1,0 +1,6 @@
+{
+  "version" : "1.0.1",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20240823091915",
+  "name" : "de.netzwerk-universitaetsmedizin.ebm-cpg"
+}
