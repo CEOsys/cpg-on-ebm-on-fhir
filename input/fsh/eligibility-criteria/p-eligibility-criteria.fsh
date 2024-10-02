@@ -45,7 +45,7 @@ RuleSet: characteristic-definition
   * definitionByTypeAndValue 1..1
     * type = $sct#404684003 "Clinical finding (finding)"
     //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
-    * valueCodeableConcept from $vs-clinical-findings-sct (required)
+    * valueCodeableConcept from $vs-clinical-findings-sct (extensible)
     * valueCodeableConcept.coding 1..1 MS
 
 * characteristic[allergy]
@@ -53,7 +53,7 @@ RuleSet: characteristic-definition
   * definitionByTypeAndValue 1..1
     * type = $sct#609328004 "Allergic disposition (finding)"
     //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
-    * valueCodeableConcept from $vs-allergic-disposition-sct (required)
+    * valueCodeableConcept from $vs-allergic-disposition-sct (extensible)
     * valueCodeableConcept.coding 1..1 MS
 
 * characteristic[radiologyFinding]
@@ -61,7 +61,7 @@ RuleSet: characteristic-definition
   * definitionByTypeAndValue 1..1
     * type = $sct#118247008 "Radiologic finding (finding)"
     //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
-    * valueCodeableConcept from $vs-radiologic-finding-sct (required)
+    * valueCodeableConcept from $vs-radiologic-finding-sct (extensible)
     * valueCodeableConcept.coding 1..1 MS
 
 * characteristic[episodeOfCare]
@@ -69,7 +69,7 @@ RuleSet: characteristic-definition
   * definitionByTypeAndValue 1..1
     * type = $loinc#78030-4 "Episode of care Type"
     //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
-    * valueCodeableConcept from $vs-episode-of-care-type (required)
+    * valueCodeableConcept from $vs-episode-of-care-type (extensible)
     * valueCodeableConcept.coding 1..1 MS
 
 * characteristic[procedure]
@@ -77,7 +77,7 @@ RuleSet: characteristic-definition
   * definitionByTypeAndValue 1..1
     * type = $sct#71388002 "Procedure (procedure)"
     //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
-    * valueCodeableConcept from $vs-procedures-sct (required)
+    * valueCodeableConcept from $vs-procedures-sct (extensible)
     * valueCodeableConcept.coding 1..1 MS
 
 * characteristic[assessmentScale]
@@ -91,7 +91,7 @@ RuleSet: characteristic-definition
   * definitionByTypeAndValue 1..1
     * type = $sct#49062001 "Device (physical object)"
     //* value[x] only CodeableConcept // 22-07-22 @glichtner: removed due to sushi error
-    * valueCodeableConcept from $vs-devices (required)
+    * valueCodeableConcept from $vs-devices (extensible)
     * valueCodeableConcept.coding 1..1 MS
 
 * characteristic[observation]
@@ -104,6 +104,6 @@ RuleSet: characteristic-definition
   * definitionByCombination 0..0
   * definitionByTypeAndValue 1..1
     * type = $sct#432102000 "Administration of substance (procedure)"
-    * valueCodeableConcept from vs-drugs (required)
+    * valueCodeableConcept from vs-drugs (extensible)
     * valueCodeableConcept.coding 1..1 MS
     * extension contains CharacteristicDosage named dosage 0..*
