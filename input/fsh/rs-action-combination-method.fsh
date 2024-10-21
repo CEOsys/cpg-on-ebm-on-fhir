@@ -1,5 +1,5 @@
 RuleSet: rs-action-combination-method
-* extension contains ActionCombinationMethod named combinationMethod 1..1 MS
+* extension contains ActionCombinationMethod named combinationMethod 0..1 MS
 * obeys nested-action-requires-combination-method
 
 RuleSet: rs-combination-exactly(threshold)
