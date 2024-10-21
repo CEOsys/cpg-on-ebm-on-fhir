@@ -24,4 +24,4 @@ Description: "Example of an evidence data set"
 * name = "ExampleEvidenceDataSet"
 * status = #active
 * characteristic.definitionByCombination
-  * characteristic[+].definitionReference = Reference(ExampleOutcomeEvidence)
+  * characteristic[+].definitionReference = Reference(ExampleStudyOutcomeEvidence)
