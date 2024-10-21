@@ -4,9 +4,9 @@ Description: "Timing in which the characteristic is determined."
 * ^context[0].type = #element
 * ^context[0].expression = "EvidenceVariable.characteristic"
 * ^context[1].type = #element
-* ^context[1].expression = "PlanDefinition.action.timingTiming"
+* ^context[1].expression = "PlanDefinition.action.timing[x]"
 * ^context[2].type = #element
-* ^context[2].expression = "ActivityDefinition.timingTiming"
+* ^context[2].expression = "ActivityDefinition.timing[x]"
 * value[x] 0..0
 * . ^short = "Timing in which the characteristic is determined"
 * . ^definition = "Timing in which the characteristic is determined."
