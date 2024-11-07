@@ -25,11 +25,11 @@ Description: "Definition of a drug administration action as part of a recommende
   * insert code-system-pattern(atc, $atc)
   * insert code-system-pattern(rxnorm, $rxnorm)
   * insert code-system-pattern(atcde, $atcde)
-* dosage 0..*
+* dosage 1..*
   * extension contains DosageCondition named condition 0..1 MS
   * route MS
   * route from $vs-route-codes (required)
-  * timing 1..1
+  * timing 0..1
   * doseAndRate 1..*
 * quantity 0..0 // we don't use quantity, instead use dosage
 * timing[x] 0..0 // we don't use timing, instead use dosage.timing
@@ -46,6 +46,7 @@ Description: "A drug administration that should be performed."
 * experimental = true
 * publisher = "CPGonEBMonFHIR"
 * description = "A drug administration that should be performed."
+* kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
