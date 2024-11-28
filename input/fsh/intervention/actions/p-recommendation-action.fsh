@@ -30,7 +30,6 @@ Description: "Definition of an activity that is part of an intervention in the c
 * timingTiming
   * insert timing-restrictions
   * extension contains RelativeTime named relativeTime 0..*
-* timingTiming.repeat 1..1 MS
 * product[x] MS
 * quantity MS
 * dosage MS
