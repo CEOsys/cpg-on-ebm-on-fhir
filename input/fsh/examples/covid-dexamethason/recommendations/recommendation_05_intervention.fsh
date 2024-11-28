@@ -167,4 +167,9 @@ Description: "No Application of Dexamethasone"
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
+* dosage
+  * route = $sct#26643006 "Oral route"
+  * doseAndRate
+    * doseQuantity = 6 'mg' "mg"
+    * rateQuantity = 1 '/d' "/d"
 * doNotPerform = true

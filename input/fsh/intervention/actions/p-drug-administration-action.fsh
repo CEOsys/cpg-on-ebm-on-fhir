@@ -83,4 +83,17 @@ Description: "A drug administration that should not be performed."
 * productCodeableConcept
   * coding[atcde] = $atcde#C05AA09 "Dexamethason"
   * coding[sct] = $sct#372584003 "Dexamethasone (substance)"
+* dosage
+  * route = $sct#26643006 "Oral route"
+  * timing
+    * repeat
+      * count = 10
+      * duration = 10
+      * durationUnit = $ucum#d "d"
+      * frequency = 1
+      * period = 1
+      * periodUnit = $ucum#d "d"
+  * doseAndRate
+    * doseQuantity = 6 'mg' "mg"
+    * rateQuantity = 1 '/d' "/d"
 * doNotPerform = true
