@@ -9,7 +9,7 @@ copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
   name: Universitätsmedizin Greifswald
-  url: https://www.med.uni-greifswald.de/
+  url: https://www.medizin.uni-greifswald.de/
 dependencies:
   hl7.fhir.uv.cpg:
     version: 1.0.0

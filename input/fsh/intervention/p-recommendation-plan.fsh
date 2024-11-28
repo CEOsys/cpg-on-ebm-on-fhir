@@ -105,7 +105,9 @@ RuleSet: rs-action-slices
     * coding 1..*
       * system 1..
       * code 1..
-  * extension contains RelativeTime named timingRelativeTime 0..*
+  * timing[x] only Timing
+  * timingTiming
+    * extension contains RelativeTime named timingRelativeTime 0..*
 * action[combination]
   * code = $sct#89780004 "Combined (qualifier value)"
   * goalId 0..0
