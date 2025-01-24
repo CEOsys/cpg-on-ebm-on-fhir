@@ -82,7 +82,7 @@ jobs:
       ig_canonical: ${{ steps.yaml-data.outputs.canonical }}
       ig_id: ${{ steps.yaml-data.outputs.id }}
       ig_asset_filename: ${{ steps.generate-asset-filename.outputs.ig_asset_filename }}
-      ig_fhir_version: ${{ steps.yaml-data.outputs.fhirVersion }}
+      ig_fhir_version: ${{ steps.yaml-data.outputs.fhir_version }}
     
     steps:
       - uses: actions/checkout@v4
