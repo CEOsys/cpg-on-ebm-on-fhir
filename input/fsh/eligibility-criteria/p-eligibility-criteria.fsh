@@ -103,7 +103,7 @@ RuleSet: characteristic-definition
 * characteristic[drugAdministration]
   * definitionByCombination 0..0
   * definitionByTypeAndValue 1..1
-    * type = $sct#432102000 "Administration of substance (procedure)"
+    * type = $sct#18629005 "Administration of drug or medicament (procedure)"
     * valueCodeableConcept from vs-drugs (extensible)
     * valueCodeableConcept.coding 1..1 MS
     * extension contains CharacteristicDosage named dosage 0..*

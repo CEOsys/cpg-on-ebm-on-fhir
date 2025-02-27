@@ -41,7 +41,7 @@ For nested actions, you must use the `combination` slice of the `action` element
 // in RecommendationPlan instance
 * action[drugAdministration][+]
   // code *must* use the code below
-  * code = $sct#432102000 "Administration of substance (procedure)"
+  * code = $sct#18629005 "Administration of drug or medicament (procedure)"
   * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
 
 // in ExampleDrugAdministrationAction

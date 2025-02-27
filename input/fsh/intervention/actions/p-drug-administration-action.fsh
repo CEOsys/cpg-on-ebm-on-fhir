@@ -7,7 +7,7 @@ Description: "Definition of a drug administration action as part of a recommende
 * insert metadata(2022-09-06, #draft, 0.3.1)
 * obeys dosage-if-administration-should-be-performed
 * kind = $cs-fhir-types#MedicationRequest "MedicationRequest"
-* code = $sct#432102000 "Administration of substance (procedure)"
+* code = $sct#18629005 "Administration of drug or medicament (procedure)"
 * timing[x] 0..0 // we don't use timing for drug administrations, instead use dosage.timing
 * product[x] only CodeableConcept
 * productCodeableConcept

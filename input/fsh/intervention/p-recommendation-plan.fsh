@@ -115,7 +115,7 @@ RuleSet: rs-action-slices
   * action 1..* MS
 * action[drugAdministration]
   * insert rs-action-goal-definition-binding
-  * code = $sct#432102000 "Administration of substance (procedure)"
+  * code = $sct#18629005 "Administration of drug or medicament (procedure)"
   * definitionCanonical only Canonical(DrugAdministrationAction)
 * action[ventilatorManagement]
   * insert rs-action-goal-definition-binding
@@ -172,7 +172,7 @@ Description: "An active recommendation plan."
 * extension[partOf].valueCanonical = Canonical(ExampleRecommendation)
 * insert rs-combination-exactly(1)
 * action[drugAdministration][+]
-  * code = $sct#432102000 "Administration of substance (procedure)"
+  * code = $sct#18629005 "Administration of drug or medicament (procedure)"
   * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
 * action[bodyPositioning][+]
   * code = $sct#229824005 "Positioning patient (procedure)"
