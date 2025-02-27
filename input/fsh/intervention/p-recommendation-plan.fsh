@@ -25,6 +25,13 @@ Description: "Definition of an activity that is part of an intervention in the c
   * valueCanonical 1..1 MS
   * valueCanonical only Canonical(Recommendation)
 * action 1..*
+  * timing[x] only Timing
+  * timingTiming
+    * extension contains RelativeTime named timingRelativeTime 0..*
+  * action
+    * timing[x] only Timing
+    * timingTiming
+      * extension contains RelativeTime named timingRelativeTime 0..*
 * insert rs-action-slices
 * insert rs-action-combination-slice
 * goal 0..* MS
@@ -105,9 +112,6 @@ RuleSet: rs-action-slices
     * coding 1..*
       * system 1..
       * code 1..
-  * timing[x] only Timing
-  * timingTiming
-    * extension contains RelativeTime named timingRelativeTime 0..*
 * action[combination]
   * code = $sct#89780004 "Combined (qualifier value)"
   * goalId 0..0
