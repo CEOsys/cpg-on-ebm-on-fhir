@@ -10,8 +10,14 @@ Description: "Extension used on PlanDefinition.action to specify a method for co
 * insert metadata(2022-07-06, #draft, 0.1.0)
 * . ^short = "combinationMethod"
 * . ^definition = "Extension used on PlanDefinition.action to specify a method for combining the actions."
-* ^context.type = #fhirpath
-* ^context.expression = "PlanDefinition | PlanDefinition.action | BackboneElement"
+* ^context[+].type = #element
+* ^context[=].expression = "PlanDefinition"
+* ^context[+].type = #element
+* ^context[=].expression = "PlanDefinition.action"
+* ^context[+].type = #element
+* ^context[=].expression = "ElementDefinition"
+* ^context[+].type = #element
+* ^context[=].expression = "BackboneElement"
 * ^url = $ext-action-combination-method
 * extension contains method 1..1 and threshold 0..1
 * extension[method] ^short = "Expresses the method for combining the actions"
