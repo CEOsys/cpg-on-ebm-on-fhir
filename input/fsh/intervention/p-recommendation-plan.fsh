@@ -24,16 +24,30 @@ Description: "Definition of an activity that is part of an intervention in the c
 * extension[partOf] 1..1
   * valueCanonical 1..1 MS
   * valueCanonical only Canonical(Recommendation)
+
+
+// recursive definition of action constraints doesn't work:
+// - slicing is not recursed https://chat.fhir.org/#narrow/channel/215610-shorthand/topic/define.20slices.20recursively.20on.20backbone.20element/near/503082621)
+// - but if using slicing in the second layer, the publisher/validator cannot generate a snapshot (for whatever reason)
+// Workaround: We just define a number of layers explicitly (certainly not the best solution)
+
+// This does not work (see above)
+// * action ^type.profile = Canonical(RecommendationPlan)
+// * action ^type.profile.extension.url = http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element
+// * action ^type.profile.extension.valueString = "PlanDefinition.action"
+
 * action 1..*
-  * timing[x] only Timing
-  * timingTiming
-    * extension contains RelativeTime named timingRelativeTime 0..*
-  * action
-    * timing[x] only Timing
-    * timingTiming
-      * extension contains RelativeTime named timingRelativeTime 0..*
+
 * insert rs-action-slices
-* insert rs-action-combination-slice
+* action[combination]
+  * insert rs-action-slices
+  * action[combination]
+    * insert rs-action-slices
+    * action[combination]
+      * insert rs-action-slices
+      * action[combination]
+        * insert rs-action-slices
+
 * goal 0..* MS
   * category 1..1 MS
     * coding 1..*
@@ -93,6 +107,10 @@ RuleSet: rs-action-goal-definition-binding
 
 RuleSet: rs-action-slices
 * insert rs-action-combination-method
+* action
+  * timing[x] only Timing
+  * timingTiming
+    * extension contains RelativeTime named timingRelativeTime 0..*
 * action ^slicing.discriminator.type = #pattern
 * action ^slicing.discriminator.path = "code"
 * action ^slicing.rules = #closed
@@ -148,11 +166,6 @@ RuleSet: rs-action-slices
   * code = $sct#74964007 "Other (qualifier value)"
   * insert rs-action-goal-definition-binding
 
-RuleSet: rs-action-combination-slice
-// can't use this directly in rs-action-slices because sushi complains about circular references
-* action[combination]
-  * insert rs-action-slices
-
 Invariant: goal-must-be-linked
 Description: "The goal linked by goalId is not defined"
 Expression: "$this in %resource.goal.id"
@@ -207,3 +220,31 @@ Description: "An active recommendation plan."
     * measure = $loinc#48066-5 "Fibrin D-dimer DDU [Mass/volume] in Platelet poor plasma"
     * detailRange
       * high = 250 'ng/mL'
+
+Instance: ExampleRecommendationPlanNestedCombination
+InstanceOf: recommendation-plan
+Usage: #example
+Title: "Example Recommendation plan with nested combination"
+Description: "An active recommendation plan with nested combination."
+* name = "RecommendationPlanNestedCombination"
+* title = "Recommendation Plan with Nested Combination"
+* version = "1.0"
+* date = "2022-02-14"
+* status = #active
+* description = "Example Recommendation Plan with Nested Combination"
+* insert canonical-url(example/recommendation-plan/example-recommendation-plan-nested-combination)
+* experimental = true
+* publisher = "CPGonEBMonFHIR"
+* subjectCanonical = Canonical(ExampleRecommendationEligibilityCriteria)
+* extension[partOf].valueCanonical = Canonical(ExampleRecommendation)
+* insert rs-combination-exactly(1)
+* action[combination][+]
+  * insert rs-combination-one-or-more
+  * action[combination][+]
+    * insert rs-combination-one-or-more
+    * action[drugAdministration][+]
+      * code = $sct#18629005 "Administration of drug or medicament (procedure)"
+      * definitionCanonical = Canonical(ExampleDrugAdministrationAction)
+      * timingTiming.extension[timingRelativeTime]
+        * extension[contextCode].valueCodeableConcept = $sct#385857005 "Ventilator care and adjustment (regime/therapy)"
+        * extension[offset].valueDuration = 1 'd'
