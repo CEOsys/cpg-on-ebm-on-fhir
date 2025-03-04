@@ -1,5 +1,5 @@
 // Author: Gregor Lichtner @glichtner
-CodeSystem: RecommendationStrength
+CodeSystem: RecommendationStrengthCS
 Id: ceosys-cs-recommendation-strength
 Title: "Recommendation Strength"
 Description: "Strength of a clinical guideline recommendation."

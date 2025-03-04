@@ -1,5 +1,5 @@
 // Author: Gregor Lichtner @glichtner
-ValueSet: GuidelineStageClassification
+ValueSet: GuidelineStageClassificationVS
 Id: vs-guideline-stage-classification
 Title: "Guideline Stage Classification"
 Description: "Stage classification according to systematics"

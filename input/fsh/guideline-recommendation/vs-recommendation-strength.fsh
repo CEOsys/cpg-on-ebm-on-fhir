@@ -1,5 +1,5 @@
 // Author: Gregor Lichtner @glichtner
-ValueSet: RecommendationStrength
+ValueSet: RecommendationStrengthVS
 Id: ceosys-vs-recommendation-strength
 Title: "Recommendation Strength"
 Description: "Strength of a clinical guideline recommendation."
