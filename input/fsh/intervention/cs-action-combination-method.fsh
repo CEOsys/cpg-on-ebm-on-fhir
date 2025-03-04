@@ -2,7 +2,7 @@
 
 Alias: $cs-action-combination-method = https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method
 
-CodeSystem: ActionCombinationMethod
+CodeSystem: ActionCombinationMethodCS
 Id: cs-action-combination-method
 Title: "Action Combination Method"
 Description: "Code system for the combination of actions in a PlanDefinition."

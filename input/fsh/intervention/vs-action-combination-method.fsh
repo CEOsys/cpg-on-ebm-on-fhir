@@ -1,4 +1,4 @@
-ValueSet: ActionCombinationMethod
+ValueSet: ActionCombinationMethodVS
 Id: vs-action-combination-method
 Title: "Action Combination Method"
 Description: "Value set for the method used to combine actions in a PlanDefinition."

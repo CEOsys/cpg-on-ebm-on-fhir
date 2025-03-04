@@ -1,5 +1,5 @@
 // Author: Gregor Lichtner @glichtner
-CodeSystem: GuidelineStageClassification
+CodeSystem: GuidelineStageClassificationCS
 Id: cs-guideline-stage-classification
 Title: "Guideline Stage Classification"
 Description: "Stage classification according to systematics"
