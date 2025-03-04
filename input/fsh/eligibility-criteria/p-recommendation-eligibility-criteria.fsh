@@ -19,13 +19,26 @@ Description: "Example of a population element of a PICO construct that evidence 
 * characteristic[condition].definitionByTypeAndValue
   * valueCodeableConcept = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
 
+Instance: ExampleRecommendationEligibilityCriteriaWithAttribute
+InstanceOf: recommendation-eligibility-criteria
+Usage: #example
+Title: "Example Recommendation Eligibility Criteria With Attribute"
+Description: "Example of a population element of a PICO construct that evidence is about (with attribute)."
+* insert canonical-url(example/recommendation-eligibility-criteria-with-attribute)
+* status = #active
+* name = "PopulationExample"
+* characteristic[condition].definitionByTypeAndValue
+  * valueCodeableConcept = $sct#840539006 "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+  * extension[attribute]
+    * extension[type].valueCodeableConcept = $loinc#78927-1 "Procedure urgency"
+    * extension[value].valueCodeableConcept = $sct#103390000 "Elective (qualifier value)"
 
 Instance: ExampleRecommendationEligibilityCriteria5Levels
 InstanceOf: recommendation-eligibility-criteria
 Usage: #example
-Title: "Example Recommendation Eligibility Criteria"
-Description: "Example of a population element of a PICO construct that evidence is about."
-* insert canonical-url(example/recommendation-eligibility-criteria)
+Title: "Example Recommendation Eligibility Criteria (5 Levels)"
+Description: "Example of a population element of a PICO construct that evidence is about (with 5 levels)."
+* insert canonical-url(example/recommendation-eligibility-criteria-5-levels)
 * status = #active
 * name = "PopulationExample"
 * characteristic[+].definitionByCombination
@@ -42,9 +55,9 @@ Description: "Example of a population element of a PICO construct that evidence 
 Instance: ExampleRecommendationEligibilityCriteriaDrugs
 InstanceOf: recommendation-eligibility-criteria
 Usage: #example
-Title: "Example Recommendation Eligibility Criteria"
-Description: "Example of a population element of a PICO construct that evidence is about."
-* insert canonical-url(example/recommendation-eligibility-criteria)
+Title: "Example Recommendation Eligibility Criteria (Drugs)"
+Description: "Example of a population element of a PICO construct that evidence is about (using drug criterion)."
+* insert canonical-url(example/recommendation-eligibility-criteria-drugs)
 * status = #active
 * name = "PopulationExample"
 * characteristic[+].definitionByCombination
