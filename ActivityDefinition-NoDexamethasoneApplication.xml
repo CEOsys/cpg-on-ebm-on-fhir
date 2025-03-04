@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActivityDefinition xmlns="http://hl7.org/fhir">
+  <id value="NoDexamethasoneApplication"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ActivityDefinition NoDexamethasoneApplication</b></p><a name="NoDexamethasoneApplication"> </a><a name="hcNoDexamethasoneApplication"> </a><a name="NoDexamethasoneApplication-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-drug-administration-action.html">Drug Administration Action</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>url</b>: <a href="ActivityDefinition-NoDexamethasoneApplication.html">ActivityDefinition NoDexamethasoneApplicationActivity</a></p><p><b>version</b>: 1.0</p><p><b>name</b>: NoDexamethasoneApplicationActivity</p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>subject</b>: <span title="Codes:{http://hl7.org/fhir/fhir-types Patient}">Patient</span></p><p><b>date</b>: 2025-03-04 10:04:34+0000</p><p><b>publisher</b>: CPGonEBMonFHIR</p><p><b>description</b>: </p><div><p>No Application of Dexamethasone</p>
+</div><p><b>kind</b>: MedicationRequest</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 18629005}">Administration of drug or medicament (procedure)</span></p><p><b>doNotPerform</b>: true</p><p><b>product</b>: <span title="Codes:{http://snomed.info/sct 372584003}, {http://fhir.de/CodeSystem/bfarm/atc C05AA09}">Dexamethasone (substance)</span></p><blockquote><p><b>dosage</b></p><p><b>route</b>: <span title="Codes:{http://snomed.info/sct 26643006}">Oral route</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td><td><b>Rate[x]</b></td></tr><tr><td style="display: none">*</td><td>6 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span></td><td>1 /d<span style="background: LightGoldenRodYellow"> (Details: UCUM  code/d = '/d')</span></td></tr></table></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-action/no-dexamethasone-application"/>
+  <version value="1.0"/>
+  <name value="NoDexamethasoneApplicationActivity"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <subjectCodeableConcept>
+    <coding>
+      <system value="http://hl7.org/fhir/fhir-types"/>
+      <code value="Patient"/>
+    </coding>
+  </subjectCodeableConcept>
+  <date value="2025-03-04T10:04:34+00:00"/>
+  <publisher value="CPGonEBMonFHIR"/>
+  <description value="No Application of Dexamethasone"/>
+  <kind value="MedicationRequest"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="18629005"/>
+      <display value="Administration of drug or medicament (procedure)"/>
+    </coding>
+  </code>
+  <doNotPerform value="true"/>
+  <productCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="372584003"/>
+      <display value="Dexamethasone (substance)"/>
+    </coding>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <code value="C05AA09"/>
+      <display value="Dexamethason"/>
+    </coding>
+  </productCodeableConcept>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral route"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="6"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+      <rateQuantity>
+        <value value="1"/>
+        <unit value="/d"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="/d"/>
+      </rateQuantity>
+    </doseAndRate>
+  </dosage>
+</ActivityDefinition>

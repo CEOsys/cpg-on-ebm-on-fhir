@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="ExampleIntervention"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/intervention-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: EvidenceVariable ExampleIntervention</b></p><a name="ExampleIntervention"> </a><a name="hcExampleIntervention"> </a><a name="ExampleIntervention-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-intervention-definition.html">Intervention Definition</a></p></div><p><b>url</b>: <a href="EvidenceVariable-ExampleIntervention.html">EvidenceVariable Bariatric Surgery</a></p><p><b>name</b>: Bariatric Surgery</p><p><b>status</b>: Active</p><p><b>date</b>: 2025-03-04 10:04:34+0000</p><h3>Characteristics</h3><table class="grid"><tr><td style="display: none">-</td><td><b>DefinitionCodeableConcept</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 430715008}">Bariatric operative procedure (procedure)</span></td></tr></table></div>
+  </text>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/EvidenceVariable/ExampleIntervention"/>
+  <name value="Bariatric Surgery"/>
+  <status value="active"/>
+  <date value="2025-03-04T10:04:34+00:00"/>
+  <characteristic>
+    <definitionCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="430715008"/>
+        <display value="Bariatric operative procedure (procedure)"/>
+      </coding>
+    </definitionCodeableConcept>
+  </characteristic>
+</EvidenceVariable>

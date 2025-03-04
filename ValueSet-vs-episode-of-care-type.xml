@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-episode-of-care-type"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet vs-episode-of-care-type</b></p><a name="vs-episode-of-care-type"> </a><a name="hcvs-episode-of-care-type"> </a><a name="vs-episode-of-care-type-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html">CPGComputableValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://fhir.de/CodeSystem/kontaktart-de</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>vorstationaer</td><td>Vorstationär</td></tr><tr><td>nachstationaer</td><td>Nachstationär</td></tr><tr><td>teilstationaer</td><td>Teilstationäre Behandlung</td></tr><tr><td>normalstationaer</td><td>Normalstationär</td></tr><tr><td>intensivstationaer</td><td>Intensivstationär</td></tr><tr><td>ub</td><td>Untersuchung und Behandlung</td></tr><tr><td>stationsaequivalent</td><td>Stationsäquivalent</td></tr><tr><td>operation</td><td>Operation</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ValueSet/vs-episode-of-care-type"/>
+  <version value="0.1.1"/>
+  <name value="EpisodeOfCareType"/>
+  <title value="Episode Of Care Type"/>
+  <status value="draft"/>
+  <date value="2022-09-06"/>
+  <publisher value="Netzwerk Universitätsmedizin (NUM)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <description value="Episode Of Care Type"/>
+  <compose>
+    <include>
+      <system value="http://fhir.de/CodeSystem/kontaktart-de"/>
+      <concept>
+        <code value="vorstationaer"/>
+        <display value="Vorstationär"/>
+      </concept>
+      <concept>
+        <code value="nachstationaer"/>
+        <display value="Nachstationär"/>
+      </concept>
+      <concept>
+        <code value="teilstationaer"/>
+        <display value="Teilstationäre Behandlung"/>
+      </concept>
+      <concept>
+        <code value="normalstationaer"/>
+        <display value="Normalstationär"/>
+      </concept>
+      <concept>
+        <code value="intensivstationaer"/>
+        <display value="Intensivstationär"/>
+      </concept>
+      <concept>
+        <code value="ub"/>
+        <display value="Untersuchung und Behandlung"/>
+      </concept>
+      <concept>
+        <code value="stationsaequivalent"/>
+        <display value="Stationsäquivalent"/>
+      </concept>
+      <concept>
+        <code value="operation"/>
+        <display value="Operation"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

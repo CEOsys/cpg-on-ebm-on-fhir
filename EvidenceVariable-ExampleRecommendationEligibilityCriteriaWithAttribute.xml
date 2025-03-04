@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="ExampleRecommendationEligibilityCriteriaWithAttribute"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: EvidenceVariable ExampleRecommendationEligibilityCriteriaWithAttribute</b></p><a name="ExampleRecommendationEligibilityCriteriaWithAttribute"> </a><a name="hcExampleRecommendationEligibilityCriteriaWithAttribute"> </a><a name="ExampleRecommendationEligibilityCriteriaWithAttribute-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-recommendation-eligibility-criteria.html">Recommendation Eligibility Criteria</a></p></div><p><b>url</b>: <a href="EvidenceVariable-ExampleRecommendationEligibilityCriteriaWithAttribute.html">EvidenceVariable PopulationExample</a></p><p><b>name</b>: PopulationExample</p><p><b>status</b>: Active</p><p><b>date</b>: 2025-03-04 10:04:34+0000</p><blockquote><p><b>characteristic</b></p><h3>DefinitionByTypeAndValues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td/><td><span title="Codes:{http://snomed.info/sct 404684003}">Clinical finding (finding)</span></td><td><span title="Codes:{http://snomed.info/sct 840539006}">Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)</span></td></tr></table></blockquote></div>
+  </text>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-eligibility-criteria-with-attribute"/>
+  <name value="PopulationExample"/>
+  <status value="active"/>
+  <date value="2025-03-04T10:04:34+00:00"/>
+  <characteristic>
+    <definitionByTypeAndValue>
+      <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-characteristic-attribute">
+        <extension url="type">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="78927-1"/>
+              <display value="Procedure urgency"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="value">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="103390000"/>
+              <display value="Elective (qualifier value)"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <type>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="404684003"/>
+          <display value="Clinical finding (finding)"/>
+        </coding>
+      </type>
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="840539006"/>
+          <display value="Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"/>
+        </coding>
+      </valueCodeableConcept>
+    </definitionByTypeAndValue>
+  </characteristic>
+</EvidenceVariable>

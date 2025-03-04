@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="ExampleRecommendationPlanNestedCombination"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PlanDefinition ExampleRecommendationPlanNestedCombination</b></p><a name="ExampleRecommendationPlanNestedCombination"> </a><a name="hcExampleRecommendationPlanNestedCombination"> </a><a name="ExampleRecommendationPlanNestedCombination-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-recommendation-plan.html">Recommendation Plan</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>partOf</b>: <a href="PlanDefinition-ExampleRecommendation.html">Recommendation</a></p><blockquote><p><b>Action Combination Method</b></p><ul><li>method: <span title="Codes:{https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method exactly}">Exactly</span></li><li>threshold: 1</li></ul></blockquote><p><b>url</b>: <a href="PlanDefinition-ExampleRecommendationPlanNestedCombination.html">PlanDefinition Recommendation Plan with Nested Combination</a></p><p><b>version</b>: 1.0</p><p><b>name</b>: RecommendationPlanNestedCombination</p><p><b>title</b>: Recommendation Plan with Nested Combination</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/plan-definition-type eca-rule}">ECA Rule</span></p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>subject</b>: <a href="EvidenceVariable-ExampleRecommendationEligibilityCriteria.html">PopulationExample</a></p><p><b>date</b>: 2022-02-14</p><p><b>publisher</b>: CPGonEBMonFHIR</p><p><b>description</b>: </p><div><p>Example Recommendation Plan with Nested Combination</p>
+</div><blockquote><p><b>action</b></p><blockquote><p><b>Action Combination Method</b></p><ul><li>method: <span title="Codes:{https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method one-or-more}">One or More</span></li></ul></blockquote><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 89780004}">Combined (qualifier value)</span></p><blockquote><p><b>action</b></p><blockquote><p><b>Action Combination Method</b></p><ul><li>method: <span title="Codes:{https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method one-or-more}">One or More</span></li></ul></blockquote><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 89780004}">Combined (qualifier value)</span></p><h3>Actions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Timing[x]</b></td><td><b>Definition[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 18629005}">Administration of drug or medicament (procedure)</span></td><td></td><td><a href="Bundle-GuidelineRecommendationExample.html">DrugAdministrationAction</a></td></tr></table></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-partOf">
+    <valueCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-plan/example-recommendation"/>
+  </extension>
+  <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method">
+    <extension url="method">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"/>
+          <code value="exactly"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="threshold">
+      <valuePositiveInt value="1"/>
+    </extension>
+  </extension>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-plan/example-recommendation-plan-nested-combination"/>
+  <version value="1.0"/>
+  <name value="RecommendationPlanNestedCombination"/>
+  <title value="Recommendation Plan with Nested Combination"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <experimental value="true"/>
+  <subjectCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-eligibility-criteria"/>
+  <date value="2022-02-14"/>
+  <publisher value="CPGonEBMonFHIR"/>
+  <description value="Example Recommendation Plan with Nested Combination"/>
+  <action>
+    <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method">
+      <extension url="method">
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"/>
+            <code value="one-or-more"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </extension>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="89780004"/>
+        <display value="Combined (qualifier value)"/>
+      </coding>
+    </code>
+    <action>
+      <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method">
+        <extension url="method">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"/>
+              <code value="one-or-more"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="89780004"/>
+          <display value="Combined (qualifier value)"/>
+        </coding>
+      </code>
+      <action>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="18629005"/>
+            <display value="Administration of drug or medicament (procedure)"/>
+          </coding>
+        </code>
+        <timingTiming>
+          <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/relative-time">
+            <extension url="contextCode">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="385857005"/>
+                  <display value="Ventilator care and adjustment (regime/therapy)"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension url="offset">
+              <valueDuration>
+                <value value="1"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="d"/>
+              </valueDuration>
+            </extension>
+          </extension>
+        </timingTiming>
+        <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/example/recommendation-action/drug-administration-example"/>
+      </action>
+    </action>
+  </action>
+</PlanDefinition>

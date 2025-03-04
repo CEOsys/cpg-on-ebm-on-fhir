@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Group",
+  "id" : "ExampleEvidenceSynthesisCohorts",
+  "meta" : {
+    "profile" : ["https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/evidence-synthesis-cohorts"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Group ExampleEvidenceSynthesisCohorts</b></p><a name=\"ExampleEvidenceSynthesisCohorts\"> </a><a name=\"hcExampleEvidenceSynthesisCohorts\"> </a><a name=\"ExampleEvidenceSynthesisCohorts-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-evidence-synthesis-cohorts.html\">Evidence Synthesis Cohorts</a></p></div><p><b>type</b>: Person</p><p><b>membership</b>: Definitional</p><p><b>quantity</b>: 20</p><h3>Members</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Entity</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Group-ExampleStudyCohort.html\">Group: type = person; membership = definitional; quantity = 20</a></td></tr></table></div>"
+  },
+  "type" : "person",
+  "membership" : "definitional",
+  "quantity" : 20,
+  "member" : [{
+    "entity" : {
+      "reference" : "Group/ExampleStudyCohort"
+    }
+  }]
+}
