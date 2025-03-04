@@ -39,7 +39,8 @@ RuleSet: characteristic-definition
 * characteristic.definitionByTypeAndValue // allow only a single type and single valueCodeableConcept coding
   * type.coding 1..1 MS
   * value[x] only Quantity or Range or CodeableConcept // 22-11-02 @glichtner: required, otherwise "* valueCodeableConcept.coding 1..1 MS" leads to FHIR validator error
-
+  * extension contains ext-characteristic-attribute named attribute 0..*
+  
 * characteristic[condition]
   * definitionByCombination 0..0
   * definitionByTypeAndValue 1..1
